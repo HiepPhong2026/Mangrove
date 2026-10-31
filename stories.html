@@ -158,61 +158,45 @@
     opacity: 0.75;
   }
 
-  /* ── TITLE LIST (bottom bar) ── */
-  .title-bar {
+  /* ── SELECT BAR ── */
+  .select-bar {
     background: linear-gradient(180deg, rgba(13,61,43,0.93), rgba(10,45,28,0.98));
-    padding: 10px 12px 14px;
+    padding: 10px 14px calc(10px + env(safe-area-inset-bottom, 0px));
     flex-shrink: 0;
     box-shadow: 0 -2px 12px rgba(0,0,0,0.2);
   }
-  .bar-label {
-    text-align: center;
-    font-size: 0.62rem;
-    color: var(--leaf);
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    margin-bottom: 8px;
-    opacity: 0.65;
+  .select-wrap {
+    position: relative;
   }
-  .titles-scroll {
-    display: flex;
-    gap: 7px;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    padding-bottom: 2px;
-    scrollbar-width: none;
+  .select-wrap::after {
+    content: '▾';
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--g5);
+    font-size: 1rem;
+    pointer-events: none;
   }
-  .titles-scroll::-webkit-scrollbar { display: none; }
-
-  .t-btn {
-    flex-shrink: 0;
-    background: rgba(255,255,255,0.08);
-    border: 1.5px solid rgba(76,175,80,0.22);
+  .story-select {
+    width: 100%;
+    background: rgba(255,255,255,0.1);
+    border: 1.5px solid rgba(76,175,80,0.3);
     color: var(--leaf);
-    border-radius: 9px;
-    padding: 7px 11px;
-    cursor: pointer;
+    border-radius: 10px;
+    padding: 10px 36px 10px 12px;
     font-family: 'Quicksand', sans-serif;
-    font-size: 0.75rem;
+    font-size: 0.88rem;
     font-weight: 600;
-    white-space: nowrap;
-    display: flex;
-    align-items: center;
-    gap: 4px;
-    transition: background 0.15s, border-color 0.15s;
-    touch-action: manipulation;
+    appearance: none;
+    -webkit-appearance: none;
+    cursor: pointer;
+    outline: none;
   }
-  .t-btn:active { background: rgba(76,175,80,0.25); }
-  .t-btn.active {
-    background: linear-gradient(135deg, var(--g3), var(--g4));
-    border-color: var(--g5);
-    color: #fff;
-    box-shadow: 0 3px 10px rgba(46,139,87,0.35);
+  .story-select option {
+    background: #0d3d2b;
+    color: #e0faea;
   }
-  .t-em { font-size: 0.95rem; }
-
-  /* safe area cho iphone */
-  .title-bar { padding-bottom: calc(14px + env(safe-area-inset-bottom, 0px)); }
 </style>
 </head>
 <body>
@@ -239,9 +223,10 @@
   <button class="nav-btn" id="nextBtn" aria-label="Tiếp">▶</button>
 </div>
 
-<div class="title-bar">
-  <div class="bar-label">📖 Chọn câu chuyện</div>
-  <div class="titles-scroll" id="titlesList"></div>
+<div class="select-bar">
+  <div class="select-wrap">
+    <select class="story-select" id="storySelect"></select>
+  </div>
 </div>
 
 <script>
@@ -273,21 +258,19 @@ function render(idx, anim=true) {
   document.getElementById('sBody').innerHTML = s.b;
   document.getElementById('sBadge').textContent = `Câu ${idx+1} / ${stories.length}`;
   document.getElementById('navCtr').textContent = `${idx+1} / ${stories.length}`;
-  document.querySelectorAll('.t-btn').forEach((b,i) => b.classList.toggle('active', i===idx));
-  const ab = document.querySelectorAll('.t-btn')[idx];
-  if (ab) ab.scrollIntoView({behavior:'smooth', block:'nearest', inline:'center'});
+  document.getElementById('storySelect').value = idx;
   document.getElementById('storyWrap').scrollTo({top:0, behavior:'smooth'});
 }
 
-// build title buttons
-const list = document.getElementById('titlesList');
+// build select options
+const sel = document.getElementById('storySelect');
 stories.forEach((s,i) => {
-  const b = document.createElement('button');
-  b.className = 't-btn';
-  b.innerHTML = `<span class="t-em">${s.e}</span>${s.t}`;
-  b.addEventListener('click', () => render(i));
-  list.appendChild(b);
+  const o = document.createElement('option');
+  o.value = i;
+  o.textContent = `${s.e}  ${s.t}`;
+  sel.appendChild(o);
 });
+sel.addEventListener('change', () => render(+sel.value));
 
 // swipe support
 let sx = 0;
