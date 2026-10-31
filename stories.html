@@ -2,205 +2,217 @@
 <html lang="vi">
 <head>
 <meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
 <title>Rừng Ngập Mặn – Những Câu Chuyện Nhỏ</title>
-<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet"/>
 <style>
   :root {
-    --green1: #0d3d2b;
-    --green2: #1a5c3e;
-    --green3: #2e8b57;
-    --green4: #4caf7d;
-    --green5: #81d4a0;
-    --green6: #b7f0c8;
-    --green7: #e0faea;
-    --accent: #f0fdf4;
+    --g1: #0d3d2b;
+    --g2: #1a5c3e;
+    --g3: #2e8b57;
+    --g4: #4caf7d;
+    --g5: #81d4a0;
+    --g6: #b7f0c8;
+    --g7: #e0faea;
     --leaf: #a8e6c0;
+    --text: #0f3522;
+    --card: rgba(255,255,255,0.82);
   }
 
-  * { box-sizing: border-box; margin: 0; padding: 0; }
+  * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+
+  html, body {
+    height: 100%;
+    overflow: hidden;
+  }
 
   body {
     font-family: 'Quicksand', sans-serif;
-    background: linear-gradient(160deg, #e8f8ef 0%, #c6edd8 40%, #a8dfc0 100%);
-    min-height: 100vh;
+    background: linear-gradient(160deg, #d6f5e3 0%, #b2e8c8 50%, #8dd5b0 100%);
     display: flex;
     flex-direction: column;
-    overflow: hidden;
   }
 
+  /* ── HEADER ── */
   header {
+    background: linear-gradient(135deg, var(--g1), var(--g2));
+    padding: 16px 20px 14px;
     text-align: center;
-    padding: 28px 20px 18px;
-    background: linear-gradient(135deg, var(--green1) 0%, var(--green2) 100%);
-    position: relative;
-    overflow: hidden;
     flex-shrink: 0;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.25);
   }
   header h1 {
     font-family: 'Lora', serif;
-    font-size: clamp(1.5rem, 4vw, 2.4rem);
-    color: var(--green6);
+    font-size: 1.35rem;
+    color: var(--g6);
     letter-spacing: 0.04em;
-    text-shadow: 0 2px 12px rgba(0,0,0,0.3);
   }
   header p {
-    margin-top: 6px;
+    font-size: 0.72rem;
     color: var(--leaf);
-    font-size: 0.88rem;
-    opacity: 0.85;
+    margin-top: 3px;
+    opacity: 0.8;
   }
 
-  .layout {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    overflow: hidden;
-  }
-
-  .story-display {
+  /* ── STORY AREA ── */
+  .story-wrap {
     flex: 1;
     overflow-y: auto;
-    padding: 28px 24px 20px;
+    -webkit-overflow-scrolling: touch;
+    padding: 16px 14px 8px;
     display: flex;
-    align-items: flex-start;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
   }
+
   .story-card {
-    max-width: 680px;
     width: 100%;
-    background: rgba(255,255,255,0.72);
-    backdrop-filter: blur(12px);
-    border-radius: 20px;
-    padding: 32px 36px;
-    box-shadow: 0 8px 40px rgba(46,139,87,0.15), 0 0 0 1px rgba(76,175,80,0.12);
-    animation: fadeIn 0.4s ease;
+    max-width: 480px;
+    background: var(--card);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 18px;
+    padding: 22px 20px 20px;
+    box-shadow: 0 6px 28px rgba(13,61,43,0.14), 0 0 0 1px rgba(76,175,80,0.13);
+    animation: slideUp 0.3s ease;
   }
-  @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(12px); }
+  @keyframes slideUp {
+    from { opacity: 0; transform: translateY(14px); }
     to   { opacity: 1; transform: translateY(0); }
   }
-  .story-emoji { font-size: 2.8rem; margin-bottom: 12px; display: block; }
+
+  .card-top {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 14px;
+  }
+  .story-emoji { font-size: 2rem; line-height: 1; }
   .story-title {
     font-family: 'Lora', serif;
-    font-size: 1.5rem;
+    font-size: 1.15rem;
     font-weight: 600;
-    color: var(--green1);
-    margin-bottom: 16px;
+    color: var(--g1);
     line-height: 1.3;
   }
+
   .story-body {
     font-family: 'Lora', serif;
-    font-size: 1.05rem;
-    color: #1e4a30;
-    line-height: 1.85;
+    font-size: 0.97rem;
+    color: #1b4530;
+    line-height: 1.8;
     font-style: italic;
   }
   .story-body em {
     font-style: normal;
     font-weight: 600;
-    color: var(--green3);
+    color: var(--g3);
   }
-  .story-meta {
-    margin-top: 18px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-  }
-  .story-num {
-    font-size: 0.75rem;
-    background: var(--green7);
-    color: var(--green3);
+
+  .badge {
+    display: inline-block;
+    margin-top: 14px;
+    font-size: 0.68rem;
+    background: var(--g7);
+    color: var(--g3);
     border-radius: 20px;
-    padding: 3px 12px;
-    font-weight: 600;
+    padding: 3px 11px;
+    font-weight: 700;
     letter-spacing: 0.05em;
-  }
-  .divider { flex: 1; height: 1px; background: linear-gradient(to right, var(--green6), transparent); }
-
-  .title-bar {
-    background: linear-gradient(180deg, rgba(13,61,43,0.92) 0%, rgba(13,61,43,0.98) 100%);
-    padding: 14px 16px 20px;
-    flex-shrink: 0;
-  }
-  .title-bar-label {
-    text-align: center;
-    font-size: 0.7rem;
-    color: var(--leaf);
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    margin-bottom: 10px;
-    opacity: 0.7;
-  }
-  .titles-list {
-    display: flex;
-    gap: 8px;
-    overflow-x: auto;
-    padding-bottom: 4px;
-    scrollbar-width: thin;
-    scrollbar-color: var(--green3) transparent;
-  }
-  .titles-list::-webkit-scrollbar { height: 3px; }
-  .titles-list::-webkit-scrollbar-thumb { background: var(--green3); border-radius: 2px; }
-
-  .title-btn {
-    flex-shrink: 0;
-    background: rgba(255,255,255,0.07);
-    border: 1.5px solid rgba(76,175,80,0.25);
-    color: var(--leaf);
-    border-radius: 10px;
-    padding: 8px 14px;
-    cursor: pointer;
     font-family: 'Quicksand', sans-serif;
-    font-size: 0.8rem;
-    font-weight: 600;
-    transition: all 0.2s;
-    white-space: nowrap;
-    display: flex;
-    align-items: center;
-    gap: 5px;
-  }
-  .title-btn:hover {
-    background: rgba(76,175,80,0.2);
-    border-color: var(--green4);
-    color: var(--green6);
-    transform: translateY(-2px);
-  }
-  .title-btn.active {
-    background: linear-gradient(135deg, var(--green3), var(--green4));
-    border-color: var(--green5);
-    color: #fff;
-    box-shadow: 0 4px 14px rgba(46,139,87,0.4);
-    transform: translateY(-2px);
+    font-style: normal;
   }
 
+  /* ── NAV BUTTONS ── */
   .nav-row {
     display: flex;
     justify-content: center;
-    gap: 12px;
-    margin-top: 12px;
+    align-items: center;
+    gap: 16px;
+    padding: 10px 14px 6px;
+    flex-shrink: 0;
+    max-width: 480px;
+    width: 100%;
+    margin: 0 auto;
   }
   .nav-btn {
-    background: rgba(76,175,80,0.15);
-    border: 1.5px solid rgba(76,175,80,0.3);
-    color: var(--leaf);
+    background: var(--g2);
+    border: none;
+    color: var(--g6);
     border-radius: 50%;
-    width: 36px; height: 36px;
+    width: 44px; height: 44px;
     font-size: 1.1rem;
     cursor: pointer;
-    transition: all 0.2s;
     display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+    transition: background 0.15s, transform 0.1s;
+    touch-action: manipulation;
   }
-  .nav-btn:hover { background: var(--green3); color: #fff; transform: scale(1.1); }
+  .nav-btn:active { background: var(--g3); transform: scale(0.93); }
   .nav-counter {
-    color: var(--leaf);
     font-size: 0.82rem;
-    opacity: 0.7;
+    color: var(--g1);
+    font-weight: 700;
+    min-width: 52px;
+    text-align: center;
+    opacity: 0.75;
+  }
+
+  /* ── TITLE LIST (bottom bar) ── */
+  .title-bar {
+    background: linear-gradient(180deg, rgba(13,61,43,0.93), rgba(10,45,28,0.98));
+    padding: 10px 12px 14px;
+    flex-shrink: 0;
+    box-shadow: 0 -2px 12px rgba(0,0,0,0.2);
+  }
+  .bar-label {
+    text-align: center;
+    font-size: 0.62rem;
+    color: var(--leaf);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    opacity: 0.65;
+  }
+  .titles-scroll {
+    display: flex;
+    gap: 7px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 2px;
+    scrollbar-width: none;
+  }
+  .titles-scroll::-webkit-scrollbar { display: none; }
+
+  .t-btn {
+    flex-shrink: 0;
+    background: rgba(255,255,255,0.08);
+    border: 1.5px solid rgba(76,175,80,0.22);
+    color: var(--leaf);
+    border-radius: 9px;
+    padding: 7px 11px;
+    cursor: pointer;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 600;
+    white-space: nowrap;
     display: flex;
     align-items: center;
-    min-width: 50px;
-    justify-content: center;
+    gap: 4px;
+    transition: background 0.15s, border-color 0.15s;
+    touch-action: manipulation;
   }
+  .t-btn:active { background: rgba(76,175,80,0.25); }
+  .t-btn.active {
+    background: linear-gradient(135deg, var(--g3), var(--g4));
+    border-color: var(--g5);
+    color: #fff;
+    box-shadow: 0 3px 10px rgba(46,139,87,0.35);
+  }
+  .t-em { font-size: 0.95rem; }
+
+  /* safe area cho iphone */
+  .title-bar { padding-bottom: calc(14px + env(safe-area-inset-bottom, 0px)); }
 </style>
 </head>
 <body>
@@ -210,80 +222,85 @@
   <p>Những câu chuyện nhỏ từ thiên nhiên</p>
 </header>
 
-<div class="layout">
-  <div class="story-display">
-    <div class="story-card" id="storyCard">
-      <span class="story-emoji" id="storyEmoji"></span>
-      <div class="story-title" id="storyTitle"></div>
-      <div class="story-body" id="storyBody"></div>
-      <div class="story-meta">
-        <span class="story-num" id="storyNum"></span>
-        <div class="divider"></div>
-      </div>
+<div class="story-wrap" id="storyWrap">
+  <div class="story-card" id="storyCard">
+    <div class="card-top">
+      <span class="story-emoji" id="sEmoji"></span>
+      <div class="story-title" id="sTitle"></div>
     </div>
+    <div class="story-body" id="sBody"></div>
+    <span class="badge" id="sBadge"></span>
   </div>
+</div>
 
-  <div class="title-bar">
-    <div class="title-bar-label">📖 Chọn câu chuyện</div>
-    <div class="titles-list" id="titlesList"></div>
-    <div class="nav-row">
-      <button class="nav-btn" id="prevBtn">◀</button>
-      <span class="nav-counter" id="navCounter"></span>
-      <button class="nav-btn" id="nextBtn">▶</button>
-    </div>
-  </div>
+<div class="nav-row">
+  <button class="nav-btn" id="prevBtn" aria-label="Trước">◀</button>
+  <span class="nav-counter" id="navCtr"></span>
+  <button class="nav-btn" id="nextBtn" aria-label="Tiếp">▶</button>
+</div>
+
+<div class="title-bar">
+  <div class="bar-label">📖 Chọn câu chuyện</div>
+  <div class="titles-scroll" id="titlesList"></div>
 </div>
 
 <script>
 const stories = [
-  { emoji:"🦀", title:"Cua Bơi Ngược", body:`Cậu cua nhỏ luôn bị bạn bè chế giễu vì bơi ngược chiều nước. "Mày kỳ lạ lắm!" — chúng nói. Cậu im lặng, cứ bơi theo bản năng. Một ngày, cơn lũ ập đến. Cả đàn bị cuốn trôi theo dòng chảy xiết. Chỉ mình cậu cua bơi ngược — đúng hướng về tổ. Sáng hôm sau, cậu đứng trên bãi bùn an toàn, nhìn bạn bè mệt mỏi tìm đường về. Đôi khi, <em>khác biệt chính là điều cứu sống bạn.</em>` },
-  { emoji:"🐟", title:"Con Cá Nhỏ Và Rễ Cây", body:`Cá con lạc mẹ trong mê cung rễ đước chằng chịt. Nó sợ hãi, cứ đâm đầu vào rễ này rễ kia. Bỗng một con cá già bơi đến. "Đừng chạy — hãy nhìn ánh sáng lọc qua kẽ rễ, đó là hướng ra." Cá con ngẩng đầu lên. Quả thật, từng tia nắng vàng xuyên qua mặt nước dẫn đường. Nó bơi theo ánh sáng và tìm được mẹ. <em>Rừng ngập mặn tối tăm, nhưng luôn có ánh sáng nếu bạn biết ngước nhìn.</em>` },
-  { emoji:"🦅", title:"Con Diệc Và Bữa Sáng", body:`Con diệc đứng bất động trên bãi bùn từ lúc bình minh. Một tiếng đồng hồ, hai tiếng. Đàn cò bay qua cười: "Đứng mãi vậy có được gì?" Diệc không trả lời. Đến khi nắng lên cao, một con cá lớn bơi qua — diệc chớp mỏ, bắt gọn. Đó là bữa sáng ngon nhất của ngày. <em>Sự kiên nhẫn không phải là lãng phí thời gian — đó là cách những kẻ khôn ngoan săn mồi mà không tốn sức.</em>` },
-  { emoji:"🐊", title:"Cá Sấu Học Làm Cha", body:`Lần đầu làm cha, cá sấu đực lúng túng khi vợ giao cho ổ trứng. Nó nằm canh suốt ba tháng, không dám rời nửa bước. Bọn cua bò qua, nó xua đuổi. Mưa lớn đến, nó che thân chắn nước. Đến ngày trứng nở, từng tiếng kêu nhỏ vang lên từ trong lòng đất. Cá sấu đực cẩn thận bới đất, nhẹ nhàng ngậm từng đứa con vào miệng — đưa ra sông. <em>Kẻ hung dữ nhất rừng ngập mặn cũng biết yêu thương.</em>` },
-  { emoji:"🦎", title:"Tắc Kè Và Màu Sắc", body:`Tắc kè rừng ngập mặn có biệt tài đổi màu. Mỗi sáng, nó thử: xanh như lá đước, nâu như bùn, vàng như nắng xuyên tán cây. Một hôm thợ săn vào rừng. Tắc kè hoá thành màu vỏ cây — bất động. Thợ săn đứng ngay cạnh mà không nhìn thấy. Khi bóng người khuất, tắc kè thở phào. <em>Đôi khi ẩn mình không phải là hèn nhát — đó là sự khôn ngoan để tồn tại qua ngày mai.</em>` },
-  { emoji:"🦋", title:"Con Bướm Lạc Rừng", body:`Bướm từ vườn hoa bay lạc vào rừng ngập mặn. Mọi thứ ẩm ướt, tối tăm, xa lạ. Nó muốn quay về nhưng không nhớ đường. Cây đước thì thầm: "Hãy theo dòng nước ra biển, rồi bay về phía mặt trời mọc." Bướm tin lời cây, bay theo kênh rạch, ra cửa sông, rồi về đất liền. Dọc đường, nó thấy những bông hoa mắm trắng tinh — đẹp theo cách riêng của rừng. <em>Đôi khi lạc đường lại cho ta thấy những vẻ đẹp chưa từng biết.</em>` },
-  { emoji:"🦟", title:"Muỗi Và Bài Học Lớn", body:`Muỗi con hỏi mẹ: "Tại sao mình nhỏ bé thế mà sống được ở đây?" Mẹ muỗi đáp: "Vì mình biết mình nhỏ." Con không hiểu. Mẹ giải thích: "Cá sấu to lớn, nhiều kẻ muốn giết nó. Cò trắng đẹp đẽ, người ta bẫy nó. Còn mình — nhỏ bé, nhanh nhẹn, không ai thèm để ý." Muỗi con gật đầu. Từ đó, mỗi khi muốn lớn lên nhanh, nó lại nhớ lời mẹ — <em>và học cách tận dụng sự nhỏ bé của mình.</em>` },
-  { emoji:"🐚", title:"Ốc Len Và Giấc Mơ", body:`Ốc len sống cả đời leo lên leo xuống rễ đước. Ngày qua ngày, cùng một cái cây, cùng một bãi bùn. Một con chim bay qua hỏi: "Mày không chán sao?" Ốc đáp: "Tao chưa leo hết cái cây này." Chim cười bay đi. Mùa sau quay lại, ốc len vẫn ở đó — nhưng đã lên đến ngọn. Từ đây, nó nhìn thấy cả rừng xanh trải dài đến chân trời. <em>Không cần đi xa. Đôi khi chinh phục những gì ngay trước mặt đã là cả một hành trình.</em>` },
-  { emoji:"🦈", title:"Cá Đuối Và Đứa Trẻ", body:`Một đứa trẻ theo cha ra bãi triều, thấy cá đuối nằm trên bùn liền chạy đến sờ. Cá đuối giật mình phóng đi, đứa trẻ ngã sõng soài. Nó khóc. Cha bước đến, không dỗ ngay mà hỏi: "Con có đau không?" — "Có." — "Cá đuối cũng sợ. Cũng đau nếu bị bắt." Đứa trẻ nín khóc, nhìn theo vệt nước cá đuối trốn đi. <em>Lần đầu tiên nó hiểu: mọi sinh vật đều có nỗi sợ riêng, và tôn trọng chúng là điều con người cần học.</em>` },
-  { emoji:"🌙", title:"Đom Đóm Cuối Rừng", body:`Đêm xuống, rừng ngập mặn tối đen như mực. Một con đom đóm nhỏ leo lên ngọn đước cao nhất, bật sáng. Chỉ một mình, giữa bóng tối mênh mông. Bạn bè bảo: "Ánh sáng mày bé lắm, chẳng soi được gì." Đom đóm vẫn sáng. Rồi một con nữa bay đến. Rồi mười con. Rồi cả ngàn con — cả rừng lung linh như sao sa. Tất cả bắt đầu từ một con đom đóm dám sáng trước. <em>Đừng đợi người khác — cứ toả sáng đi đã.</em>` }
+  { e:"🦀", t:"Cua Bơi Ngược", b:`Cậu cua nhỏ luôn bị bạn bè chế giễu vì bơi ngược chiều nước. "Mày kỳ lạ lắm!" — chúng nói. Cậu im lặng, cứ bơi theo bản năng. Một ngày, cơn lũ ập đến. Cả đàn bị cuốn trôi theo dòng chảy xiết. Chỉ mình cậu cua bơi ngược — đúng hướng về tổ. Sáng hôm sau, cậu đứng trên bãi bùn an toàn, nhìn bạn bè mệt mỏi tìm đường về. Đôi khi, <em>khác biệt chính là điều cứu sống bạn.</em>` },
+  { e:"🐟", t:"Con Cá Nhỏ Và Rễ Cây", b:`Cá con lạc mẹ trong mê cung rễ đước chằng chịt. Nó sợ hãi, cứ đâm đầu vào rễ này rễ kia. Bỗng một con cá già bơi đến. "Đừng chạy — hãy nhìn ánh sáng lọc qua kẽ rễ, đó là hướng ra." Cá con ngẩng đầu lên. Quả thật, từng tia nắng vàng xuyên qua mặt nước dẫn đường. Nó bơi theo ánh sáng và tìm được mẹ. <em>Rừng ngập mặn tối tăm, nhưng luôn có ánh sáng nếu bạn biết ngước nhìn.</em>` },
+  { e:"🦅", t:"Con Diệc Và Bữa Sáng", b:`Con diệc đứng bất động trên bãi bùn từ lúc bình minh. Một tiếng đồng hồ, hai tiếng. Đàn cò bay qua cười: "Đứng mãi vậy có được gì?" Diệc không trả lời. Đến khi nắng lên cao, một con cá lớn bơi qua — diệc chớp mỏ, bắt gọn. Đó là bữa sáng ngon nhất của ngày. <em>Sự kiên nhẫn không phải là lãng phí thời gian — đó là cách những kẻ khôn ngoan săn mồi mà không tốn sức.</em>` },
+  { e:"🐊", t:"Cá Sấu Học Làm Cha", b:`Lần đầu làm cha, cá sấu đực lúng túng khi vợ giao cho ổ trứng. Nó nằm canh suốt ba tháng, không dám rời nửa bước. Bọn cua bò qua, nó xua đuổi. Mưa lớn đến, nó che thân chắn nước. Đến ngày trứng nở, từng tiếng kêu nhỏ vang lên từ trong lòng đất. Cá sấu đực cẩn thận bới đất, nhẹ nhàng ngậm từng đứa con vào miệng — đưa ra sông. <em>Kẻ hung dữ nhất rừng ngập mặn cũng biết yêu thương.</em>` },
+  { e:"🦎", t:"Tắc Kè Và Màu Sắc", b:`Tắc kè rừng ngập mặn có biệt tài đổi màu. Mỗi sáng, nó thử: xanh như lá đước, nâu như bùn, vàng như nắng xuyên tán cây. Một hôm thợ săn vào rừng. Tắc kè hoá thành màu vỏ cây — bất động. Thợ săn đứng ngay cạnh mà không nhìn thấy. Khi bóng người khuất, tắc kè thở phào. <em>Đôi khi ẩn mình không phải là hèn nhát — đó là sự khôn ngoan để tồn tại qua ngày mai.</em>` },
+  { e:"🦋", t:"Con Bướm Lạc Rừng", b:`Bướm từ vườn hoa bay lạc vào rừng ngập mặn. Mọi thứ ẩm ướt, tối tăm, xa lạ. Nó muốn quay về nhưng không nhớ đường. Cây đước thì thầm: "Hãy theo dòng nước ra biển, rồi bay về phía mặt trời mọc." Bướm tin lời cây, bay theo kênh rạch, ra cửa sông, rồi về đất liền. Dọc đường, nó thấy những bông hoa mắm trắng tinh — đẹp theo cách riêng của rừng. <em>Đôi khi lạc đường lại cho ta thấy những vẻ đẹp chưa từng biết.</em>` },
+  { e:"🦟", t:"Muỗi Và Bài Học Lớn", b:`Muỗi con hỏi mẹ: "Tại sao mình nhỏ bé thế mà sống được ở đây?" Mẹ muỗi đáp: "Vì mình biết mình nhỏ." Con không hiểu. Mẹ giải thích: "Cá sấu to lớn, nhiều kẻ muốn giết nó. Cò trắng đẹp đẽ, người ta bẫy nó. Còn mình — nhỏ bé, nhanh nhẹn, không ai thèm để ý." Muỗi con gật đầu. Từ đó, mỗi khi muốn lớn lên nhanh, nó lại nhớ lời mẹ — <em>và học cách tận dụng sự nhỏ bé của mình.</em>` },
+  { e:"🐚", t:"Ốc Len Và Giấc Mơ", b:`Ốc len sống cả đời leo lên leo xuống rễ đước. Ngày qua ngày, cùng một cái cây, cùng một bãi bùn. Một con chim bay qua hỏi: "Mày không chán sao?" Ốc đáp: "Tao chưa leo hết cái cây này." Chim cười bay đi. Mùa sau quay lại, ốc len vẫn ở đó — nhưng đã lên đến ngọn. Từ đây, nó nhìn thấy cả rừng xanh trải dài đến chân trời. <em>Không cần đi xa. Đôi khi chinh phục những gì ngay trước mặt đã là cả một hành trình.</em>` },
+  { e:"🦈", t:"Cá Đuối Và Đứa Trẻ", b:`Một đứa trẻ theo cha ra bãi triều, thấy cá đuối nằm trên bùn liền chạy đến sờ. Cá đuối giật mình phóng đi, đứa trẻ ngã sõng soài. Nó khóc. Cha bước đến, không dỗ ngay mà hỏi: "Con có đau không?" — "Có." — "Cá đuối cũng sợ. Cũng đau nếu bị bắt." Đứa trẻ nín khóc, nhìn theo vệt nước cá đuối trốn đi. <em>Lần đầu tiên nó hiểu: mọi sinh vật đều có nỗi sợ riêng, và tôn trọng chúng là điều con người cần học.</em>` },
+  { e:"🌙", t:"Đom Đóm Cuối Rừng", b:`Đêm xuống, rừng ngập mặn tối đen như mực. Một con đom đóm nhỏ leo lên ngọn đước cao nhất, bật sáng. Chỉ một mình, giữa bóng tối mênh mông. Bạn bè bảo: "Ánh sáng mày bé lắm, chẳng soi được gì." Đom đóm vẫn sáng. Rồi một con nữa bay đến. Rồi mười con. Rồi cả ngàn con — cả rừng lung linh như sao sa. Tất cả bắt đầu từ một con đom đóm dám sáng trước. <em>Đừng đợi người khác — cứ toả sáng đi đã.</em>` }
 ];
 
-let current = 0;
+let cur = 0;
 
-function render(idx, animate=true) {
-  current = idx;
+function render(idx, anim=true) {
+  cur = idx;
   const s = stories[idx];
-  if (animate) {
-    const card = document.getElementById('storyCard');
-    card.style.animation = 'none';
-    card.offsetHeight;
-    card.style.animation = 'fadeIn 0.35s ease';
+  if (anim) {
+    const c = document.getElementById('storyCard');
+    c.style.animation = 'none'; c.offsetHeight;
+    c.style.animation = 'slideUp 0.3s ease';
   }
-  document.getElementById('storyEmoji').textContent = s.emoji;
-  document.getElementById('storyTitle').textContent = s.title;
-  document.getElementById('storyBody').innerHTML = s.body;
-  document.getElementById('storyNum').textContent = `Câu ${idx+1} / ${stories.length}`;
-  document.getElementById('navCounter').textContent = `${idx+1} / ${stories.length}`;
-  document.querySelectorAll('.title-btn').forEach((btn, i) => btn.classList.toggle('active', i === idx));
-  const activeBtn = document.querySelectorAll('.title-btn')[idx];
-  if (activeBtn) activeBtn.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+  document.getElementById('sEmoji').textContent = s.e;
+  document.getElementById('sTitle').textContent = s.t;
+  document.getElementById('sBody').innerHTML = s.b;
+  document.getElementById('sBadge').textContent = `Câu ${idx+1} / ${stories.length}`;
+  document.getElementById('navCtr').textContent = `${idx+1} / ${stories.length}`;
+  document.querySelectorAll('.t-btn').forEach((b,i) => b.classList.toggle('active', i===idx));
+  const ab = document.querySelectorAll('.t-btn')[idx];
+  if (ab) ab.scrollIntoView({behavior:'smooth', block:'nearest', inline:'center'});
+  document.getElementById('storyWrap').scrollTo({top:0, behavior:'smooth'});
 }
 
-function buildTitles() {
-  const list = document.getElementById('titlesList');
-  stories.forEach((s, i) => {
-    const btn = document.createElement('button');
-    btn.className = 'title-btn';
-    btn.innerHTML = `<span>${s.emoji}</span>${s.title}`;
-    btn.addEventListener('click', () => render(i));
-    list.appendChild(btn);
-  });
-}
+// build title buttons
+const list = document.getElementById('titlesList');
+stories.forEach((s,i) => {
+  const b = document.createElement('button');
+  b.className = 't-btn';
+  b.innerHTML = `<span class="t-em">${s.e}</span>${s.t}`;
+  b.addEventListener('click', () => render(i));
+  list.appendChild(b);
+});
 
-document.getElementById('prevBtn').addEventListener('click', () => render((current - 1 + stories.length) % stories.length));
-document.getElementById('nextBtn').addEventListener('click', () => render((current + 1) % stories.length));
+// swipe support
+let sx = 0;
+const wrap = document.getElementById('storyWrap');
+wrap.addEventListener('touchstart', e => { sx = e.touches[0].clientX; }, {passive:true});
+wrap.addEventListener('touchend', e => {
+  const dx = e.changedTouches[0].clientX - sx;
+  if (Math.abs(dx) > 50) render(dx < 0 ? (cur+1)%stories.length : (cur-1+stories.length)%stories.length);
+}, {passive:true});
 
-buildTitles();
+document.getElementById('prevBtn').addEventListener('click', () => render((cur-1+stories.length)%stories.length));
+document.getElementById('nextBtn').addEventListener('click', () => render((cur+1)%stories.length));
+
 render(0, false);
 </script>
 </body>
