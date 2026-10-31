@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://hiepphong2026.github.io/Mangrove/sitemap.xml
