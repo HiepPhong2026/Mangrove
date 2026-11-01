@@ -84,7 +84,13 @@ header{width:100%;padding:16px;text-align:center;background:linear-gradient(135d
 header h1{font-size:1.4rem;letter-spacing:.5px}
 header p{color:var(--sub);font-size:.85rem;margin-top:4px}
 
-#vol-bar{display:flex;gap:8px;padding:12px 16px;overflow-x:auto;width:100%;max-width:480px;scrollbar-width:none}
+#ses-bar{display:flex;gap:8px;padding:10px 16px 4px;overflow-x:auto;width:100%;max-width:480px;scrollbar-width:none;border-bottom:1px solid var(--g2)}
+#ses-bar::-webkit-scrollbar{display:none}
+.ses-btn{flex:0 0 auto;padding:5px 18px;border:1.5px solid var(--g3);border-radius:20px;background:transparent;color:var(--dim);font-size:.8rem;font-weight:600;letter-spacing:.5px;cursor:pointer;transition:.2s}
+.ses-btn.active{background:var(--g3);border-color:var(--g4);color:var(--g7)}
+.ses-btn:hover:not(.active){border-color:var(--g4);color:var(--sub)}
+
+#vol-bar{display:flex;gap:8px;padding:8px 16px;overflow-x:auto;width:100%;max-width:480px;scrollbar-width:none}
 #vol-bar::-webkit-scrollbar{display:none}
 .vol-btn{flex:0 0 auto;padding:6px 16px;border:1.5px solid var(--g4);border-radius:20px;background:transparent;color:var(--sub);font-size:.85rem;cursor:pointer;transition:.2s}
 .vol-btn.active{background:var(--leaf);border-color:var(--leaf);color:#fff;font-weight:600}
@@ -122,6 +128,10 @@ header p{color:var(--sub);font-size:.85rem;margin-top:4px}
   <h1>🌿 Câu Chuyện Rừng Ngập Mặn</h1>
   <p>Những bài học từ thiên nhiên</p>
 </header>
+
+<div id="ses-bar">
+  <button class="ses-btn active" data-ses="0">Season 1</button>
+</div>
 
 <div id="vol-bar">
   <button class="vol-btn active" data-vol="0">Vol 1</button>
@@ -1358,10 +1368,18 @@ const vol12=[{"e":`🦀`,"t":`Cua và ngôn ngữ của càng`,"b":`Cua bùn gia
 {"e":`🦀`,"t":`Cua và ngôn ngữ xây dựng hang`,"b":`Khi cua xây hang, hình dạng và vị trí hang nói lên nhiều về con cua đó — tuổi, kích thước, sức khỏe. Người biết đọc hang có thể đọc nhiều thông tin về chủ nhân mà không cần gặp nó. Những gì ta tạo ra — sản phẩm, môi trường làm việc, cách tổ chức — phản ánh và giao tiếp về ta hơn bất kỳ lời giới thiệu nào. **Những gì ta tạo ra phản ánh và giao tiếp về ta — sản phẩm, môi trường, cách tổ chức nói nhiều hơn bất kỳ lời giới thiệu nào.**`},
 {"e":`🌲`,"t":`Rừng và tất cả ngôn ngữ hội tụ`,"b":`Trong khoảnh khắc bình yên giữa rừng ngập mặn — khi triều lặng, gió ngừng, mặt trời chiếu nhẹ — tất cả ngôn ngữ của rừng hội tụ: mùi muối và bùn, âm thanh nhẹ của nước, màu xanh của cây, cảm giác ẩm ướt trong không khí. Rừng không nói bằng một ngôn ngữ — nó nói bằng tất cả các giác quan cùng lúc. Khi nhiều kênh giao tiếp cùng xác nhận một thông điệp, đó là thông điệp đáng tin nhất. **Khi nhiều kênh giao tiếp và giác quan cùng xác nhận một điều — đó là thông điệp đáng tin nhất và sâu sắc nhất.**`},
 {"e":`🌲`,"t":`Rừng và câu chuyện không bao giờ kết thúc`,"b":`Rừng ngập mặn đã giao tiếp với biển, với đất, với bầu trời, với sinh vật trong nó và xung quanh nó trong hàng ngàn năm — và sẽ tiếp tục giao tiếp trong hàng ngàn năm tới. Câu chuyện không kết thúc — nó chỉ tiếp diễn qua những sinh vật mới, những ngôn ngữ mới, những mối liên hệ mới. Ta cũng là một phần của câu chuyện giao tiếp lớn hơn — không phải người cuối cùng, không phải người đầu tiên, mà là một mắt xích trong chuỗi dài vô tận. **Ta không phải người đầu tiên hay cuối cùng trong câu chuyện lớn của sự sống — ta là một mắt xích trong chuỗi dài vô tận, nhận thông điệp từ quá khứ và gửi thông điệp cho tương lai.**`}];
-const VOLS=[vol1,vol2,vol3,vol4,vol5,vol6,vol7,vol8,vol9,vol10,vol11,vol12];
-const VOL_THEMES=["Tổng Hợp","Khí Hậu & Thủy Triều","Sinh Vật Nhỏ Bé","Con Người & Rừng","Tình Bạn & Cộng Sinh","Thích Nghi & Sinh Tồn","Vòng Đời & Biến Đổi","Cảm Xúc & Trí Tuệ","Thời Gian & Kiên Nhẫn","Ranh Giới & Tự Do","Ánh Sáng & Bóng Tối","Ngôn Ngữ & Giao Tiếp"];
+// Session 1: Vol 1–12
+const SES1_VOLS=[vol1,vol2,vol3,vol4,vol5,vol6,vol7,vol8,vol9,vol10,vol11,vol12];
+const SES1_THEMES=["Tổng Hợp","Khí Hậu & Thủy Triều","Sinh Vật Nhỏ Bé","Con Người & Rừng","Tình Bạn & Cộng Sinh","Thích Nghi & Sinh Tồn","Vòng Đời & Biến Đổi","Cảm Xúc & Trí Tuệ","Thời Gian & Kiên Nhẫn","Ranh Giới & Tự Do","Ánh Sáng & Bóng Tối","Ngôn Ngữ & Giao Tiếp"];
 
-let curVol=0, stories=VOLS[0], idx=0;
+// Registry of all sessions – add new sessions here
+const SESSIONS=[
+  {name:"Season 1", vols:SES1_VOLS, themes:SES1_THEMES},
+];
+
+let curSes=0, curVolInSes=0;
+let sesVols=SESSIONS[0].vols, sesThemes=SESSIONS[0].themes;
+let stories=sesVols[0], idx=0;
 
 function md(text){
   return text.replace(/\*\*(.+?)\*\*/g,'<strong>$1</strong>');
@@ -1417,9 +1435,33 @@ function rand(){
   },160);
 }
 
+function buildVolBar(){
+  const bar=document.getElementById('vol-bar');
+  bar.innerHTML='';
+  sesVols.forEach((_,i)=>{
+    const b=document.createElement('button');
+    b.className='vol-btn'+(i===curVolInSes?' active':'');
+    b.dataset.vol=i;
+    b.textContent='Vol '+(curSes*12+i+1);
+    b.addEventListener('click',()=>switchVol(i));
+    bar.appendChild(b);
+  });
+}
+
 function switchVol(v){
-  curVol=v; stories=VOLS[v]; idx=0;
+  curVolInSes=v; stories=sesVols[v]; idx=0;
   document.querySelectorAll('.vol-btn').forEach((b,i)=>b.classList.toggle('active',i===v));
+  buildSelect();
+  buildCard(document.getElementById('card'),stories[0],'left');
+  updateCounter();
+}
+
+function switchSes(s){
+  curSes=s; curVolInSes=0;
+  sesVols=SESSIONS[s].vols; sesThemes=SESSIONS[s].themes;
+  stories=sesVols[0]; idx=0;
+  document.querySelectorAll('.ses-btn').forEach((b,i)=>b.classList.toggle('active',i===s));
+  buildVolBar();
   buildSelect();
   buildCard(document.getElementById('card'),stories[0],'left');
   updateCounter();
@@ -1438,8 +1480,8 @@ document.getElementById('story-sel').addEventListener('change',function(){
   },160);
 });
 
-document.querySelectorAll('.vol-btn').forEach(btn=>{
-  btn.addEventListener('click',()=>switchVol(parseInt(btn.dataset.vol)));
+document.querySelectorAll('.ses-btn').forEach(btn=>{
+  btn.addEventListener('click',()=>switchSes(parseInt(btn.dataset.ses)));
 });
 
 // Touch swipe
@@ -1452,6 +1494,7 @@ wrap.addEventListener('touchend',e=>{
 },{passive:true});
 
 // Init
+buildVolBar();
 buildCard(document.getElementById('card'),stories[0]);
 buildSelect();
 updateCounter();
