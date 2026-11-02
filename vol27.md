@@ -1,502 +1,502 @@
 # Vol 27: 🌊 Trưởng Thành & Trải Nghiệm
 
-## Câu chuyện 1: Hạt Đước Bên Rìa Rừng  
+## Câu chuyện 1: Hạt Đước Bên Rìa Rừng
 
 Một hạt đước mọc ở rìa khu rừng, nơi thường xuyên hứng gió mạnh. Nó luôn ghen tị với những cây ở sâu bên trong. Nhưng chính nó là cây đầu tiên giữ lại lớp phù sa mới mỗi mùa nước lên.  
 **Bài học:** Vị trí khó khăn thường đi kèm trách nhiệm và cơ hội lớn hơn.
 
-## Câu chuyện 2: Con Cua Và Chiếc Hang Nhỏ  
+## Câu chuyện 2: Con Cua Và Chiếc Hang Nhỏ
 
 Một con cua luôn mơ về chiếc## 181. Con Cá Và Vòng Sóng Nhỏ  
 Một con cá nhỏ nhận thấy những vòng sóng xuất hiện đều đặn mỗi sáng. Trong khi các bạn bơi qua mà không chú ý, nó dành thời gian quan sát. Nhờ đó, nó phát hiện một dòng nước ngầm luôn mang thức ăn đến khu vực ấy. Từ đó, cả đàn có thêm một nơi kiếm ăn ổn định.  
 **Bài học:** Những điều lặp lại thường ẩn chứa quy luật đáng để học hỏi.
 
-## Câu chuyện 3: Hạt Đước Trên Bãi Cát  
+## Câu chuyện 3: Hạt Đước Trên Bãi Cát
 
 Một hạt đước bị thủy triều đẩy lên bãi cát khô thay vì vùng bùn màu mỡ. Nó nghĩ mình đã gặp vận rủi. Nhưng cơn mưa đầu mùa mang theo lớp phù sa mới đến đúng nơi ấy. Hạt đước nhanh chóng bén rễ và phát triển.  
 **Bài học:** Đừng kết luận quá sớm về hoàn cảnh của mình.
 
-## Câu chuyện 4: Con Còng Và Mảnh Gỗ Trôi  
+## Câu chuyện 4: Con Còng Và Mảnh Gỗ Trôi
 
 Một mảnh gỗ lớn chắn trước cửa hang khiến con còng bực bội. Nó lo việc ra vào sẽ bất tiện hơn. Nhưng khi chim săn mồi xuất hiện, mảnh gỗ ấy lại che khuất hang của nó. Từ đó, con còng học được cách nhìn mọi việc từ nhiều góc độ.  
 **Bài học:** Điều phiền phức hôm nay có thể là sự bảo vệ ngày mai.
 
-## Câu chuyện 5: Chim Non Và Cơn Giông Xa  
+## Câu chuyện 5: Chim Non Và Cơn Giông Xa
 
 Một chú chim non nhìn thấy đám mây đen ở phía chân trời và rất lo lắng. Chim mẹ vẫn bình thản tiếp tục kiếm ăn. Cuối cùng, cơn giông đổi hướng và không đi qua khu rừng. Chú chim hiểu rằng không phải mọi mối lo đều trở thành hiện thực.  
 **Bài học:** Đừng để những điều chưa xảy ra lấy mất sự bình yên hôm nay.
 
-## Câu chuyện 6: Con Hàu Ở Dòng Nước Xiết  
+## Câu chuyện 6: Con Hàu Ở Dòng Nước Xiết
 
 Một con hàu sống ở nơi dòng nước chảy rất mạnh. Nó luôn cảm thấy cuộc sống của mình khó khăn hơn những con hàu khác. Nhưng chính dòng nước ấy mang đến nhiều dưỡng chất hơn. Dần dần, nó trở thành một trong những con hàu khỏe mạnh nhất.  
 **Bài học:** Nơi thử thách lớn thường cũng là nơi có nhiều cơ hội.
 
-## Câu chuyện 7: Chiếc Lá Và Giọt Sương Cuối Cùng  
+## Câu chuyện 7: Chiếc Lá Và Giọt Sương Cuối Cùng
 
 Một chiếc lá giữ lại giọt sương cuối cùng của buổi sáng. Khi mặt trời lên cao, giọt nước ấy rơi xuống gốc một cây non. Dù rất nhỏ bé, nó giúp cây vượt qua một ngày nắng gắt. Chiếc lá chợt hiểu giá trị của những điều tưởng như rất ít ỏi.  
 **Bài học:** Một chút giúp đỡ cũng có thể tạo nên khác biệt.
 
-## Câu chuyện 8: Cây Bần Và Dòng Nước Đổi Hướng  
+## Câu chuyện 8: Cây Bần Và Dòng Nước Đổi Hướng
 
 Nhiều năm liền, cây bần quen với dòng nước chảy theo một hướng. Một mùa mưa lớn làm dòng chảy thay đổi. Ban đầu, cây gặp nhiều khó khăn để thích nghi. Nhưng sự thay đổi ấy lại giúp bộ rễ lan rộng hơn trước.  
 **Bài học:** Thay đổi có thể mở ra khả năng mới mà ta chưa từng nghĩ tới.
 
-## Câu chuyện 9: Con Tôm Và Khoảng Lặng  
+## Câu chuyện 9: Con Tôm Và Khoảng Lặng
 
 Một con tôm luôn thích những nơi nhộn nhịp. Một lần, nó bị cuốn vào một góc nước rất yên tĩnh. Trong khoảng lặng ấy, nó nhận ra nhiều điều về dòng chảy và môi trường xung quanh mà trước đây không để ý.  
 **Bài học:** Đôi khi sự tĩnh lặng giúp ta nhìn thấy nhiều hơn.
 
-## Câu chuyện 10: Chim Cò Và Chiếc Lông Rơi  
+## Câu chuyện 10: Chim Cò Và Chiếc Lông Rơi
 
 Một chiếc lông trắng rơi khỏi cánh chim cò trong mùa thay lông. Con cò tiếc nuối vì nghĩ mình đã mất đi điều đẹp đẽ. Nhưng chỉ ít lâu sau, những chiếc lông mới mọc lên khỏe mạnh hơn. Nó hiểu rằng đổi mới cần có chỗ để bắt đầu.  
 **Bài học:** Muốn trưởng thành, đôi khi phải chấp nhận buông bỏ.
 
-## Câu chuyện 11: Con Cua Và Bãi Bùn Mới  
+## Câu chuyện 11: Con Cua Và Bãi Bùn Mới
 
 Sau một cơn triều lớn, một bãi bùn mới xuất hiện. Nhiều con cua ngại chuyển đến vì chưa quen thuộc. Một con cua trẻ dũng cảm khám phá trước và phát hiện nơi đó rất giàu thức ăn. Nhờ vậy, cả đàn có thêm nơi sinh sống.  
 **Bài học:** Người dám bước đầu tiên thường mở đường cho nhiều người khác.
 
-## Câu chuyện 12: Hạt Mắm Chờ Mưa  
+## Câu chuyện 12: Hạt Mắm Chờ Mưa
 
 Một hạt mắm đã cắm rễ nhưng mãi chưa thấy mưa đến. Nó lo mình không đủ sức lớn lên. Tuy nhiên, chính quãng thời gian chờ đợi đã giúp bộ rễ ăn sâu xuống đất. Khi mùa mưa tới, nó phát triển rất nhanh.  
 **Bài học:** Thời gian chờ đợi không phải lúc nào cũng lãng phí.
 
-## Câu chuyện 13: Dòng Lạch Nhỏ Và Mặt Trời  
+## Câu chuyện 13: Dòng Lạch Nhỏ Và Mặt Trời
 
 Một con lạch nhỏ nghĩ rằng mình quá bé để được chú ý. Nhưng mỗi sáng, ánh mặt trời phản chiếu từ mặt nước của nó vào sâu trong rừng. Nhiều mầm cây nhận được ánh sáng nhờ đó.  
 **Bài học:** Sự hiện diện của bạn có thể mang lại lợi ích theo cách không ngờ tới.
 
-## Câu chuyện 14: Con Cá Và Hòn Đá Rêu  
+## Câu chuyện 14: Con Cá Và Hòn Đá Rêu
 
 Một con cá thường nghỉ bên hòn đá phủ rêu xanh. Khi dòng nước mạnh làm lớp rêu biến mất, nó thấy mọi thứ thay đổi quá nhiều. Nhưng dưới lớp rêu cũ là vô số sinh vật mới xuất hiện. Sự thay đổi mang đến một hệ sinh thái phong phú hơn.  
 **Bài học:** Kết thúc của một điều có thể là khởi đầu của điều khác.
 
-## Câu chuyện 15: Con Hàu Và Người Bạn Nhỏ  
+## Câu chuyện 15: Con Hàu Và Người Bạn Nhỏ
 
 Một sinh vật nhỏ bám trên vỏ hàu khiến nó cảm thấy khó chịu. Thời gian trôi qua, sinh vật ấy lại giúp làm sạch lớp bám trên vỏ. Hai bên cùng có lợi mà không ai ngờ tới.  
 **Bài học:** Đôi khi giá trị của người khác chỉ được nhận ra sau một thời gian.
 
-## Câu chuyện 16: Cây Đước Và Mùa Gió Mạnh  
+## Câu chuyện 16: Cây Đước Và Mùa Gió Mạnh
 
 Một mùa gió mạnh kéo dài khiến nhiều lá đước rụng sớm. Cây cảm thấy tiếc nuối. Nhưng lớp lá mục ấy tạo thành nguồn dinh dưỡng phong phú cho đất. Mùa sau, cây xanh tốt hơn trước.  
 **Bài học:** Có những mất mát mang theo hạt giống của sự hồi phục.
 
-## Câu chuyện 17: Con Tôm Và Con Đường Xa  
+## Câu chuyện 17: Con Tôm Và Con Đường Xa
 
 Một con tôm chọn con đường xa hơn để tìm thức ăn. Các bạn chê nó tốn sức. Trên đường đi, nó phát hiện thêm nhiều nơi trú ẩn an toàn cho mùa bão. Chuyến đi dài hóa ra rất đáng giá.  
 **Bài học:** Không phải mọi lợi ích đều xuất hiện ngay lập tức.
 
-## Câu chuyện 18: Chim Biển Và Cơn Gió Thuận  
+## Câu chuyện 18: Chim Biển Và Cơn Gió Thuận
 
 Một con chim biển luôn nghĩ thành công là nhờ sức mình. Một ngày không có gió thuận, nó mới hiểu mình đã nhận được sự hỗ trợ của thiên nhiên nhiều thế nào. Từ đó, nó trở nên khiêm tốn hơn.  
 **Bài học:** Thành công thường đến từ cả nỗ lực và những điều hỗ trợ quanh ta.
 
-## Câu chuyện 19: Chiếc Rễ Và Dòng Phù Sa  
+## Câu chuyện 19: Chiếc Rễ Và Dòng Phù Sa
 
 Một chiếc rễ đước ngày ngày giữ lại từng chút phù sa nhỏ. Công việc ấy có vẻ chẳng đáng kể. Nhưng qua nhiều năm, khu đất quanh nó ngày càng rộng hơn. Những điều lớn lao được tạo nên từ vô số điều nhỏ bé.  
 **Bài học:** Kiên trì với việc đúng đắn sẽ tạo nên kết quả bền vững.
 
-## Câu chuyện 20: Con Còng Và Buổi Hoàng Hôn  
+## Câu chuyện 20: Con Còng Và Buổi Hoàng Hôn
 
 Mỗi chiều, một con còng đều dừng lại vài phút để ngắm mặt trời lặn. Bạn bè cho rằng nó lãng phí thời gian. Nhưng những khoảnh khắc ấy giúp nó bình tĩnh và quan sát được nhiều thay đổi của môi trường. Nhờ vậy, nó luôn chuẩn bị tốt cho ngày hôm sau.  
 **Bài học:** Dành thời gian quan sát giúp ta sống chủ động hơn.
 
-## Câu chuyện 21: Khu Rừng Và Hạt Giống Cuối Cùng  
+## Câu chuyện 21: Khu Rừng Và Hạt Giống Cuối Cùng
 
 Vào cuối mùa, một hạt giống cuối cùng rơi xuống bãi bùn. Nó nghĩ mình quá muộn để bắt đầu. Nhưng chính vì đến sau, nó được hưởng lớp đất màu mỡ do cả mùa mưa bồi đắp. Nhiều năm sau, nó trở thành một cây lớn giữa khu rừng.  
 **Bài học:** Không bao giờ là quá muộn để bắt đầu hành trình của mình.
 
-## Câu chuyện 22: Con Cua Và Hạt Phù Sa Đầu Tiên  
+## Câu chuyện 22: Con Cua Và Hạt Phù Sa Đầu Tiên
 
 Một con cua già thích quan sát bãi bùn sau mỗi lần thủy triều rút. Nó nhận ra những hạt phù sa đầu tiên luôn bám lại ở cùng một nơi. Nhiều năm sau, vị trí ấy trở thành mảnh đất cao với nhiều cây non mọc lên. Những thay đổi lớn bắt đầu từ những dấu hiệu rất nhỏ.  
 **Bài học:** Ai chú ý đến điều nhỏ bé sẽ nhìn thấy tương lai sớm hơn.
 
-## Câu chuyện 23: Hạt Đước Và Cánh Chim  
+## Câu chuyện 23: Hạt Đước Và Cánh Chim
 
 Một hạt đước nhìn thấy đàn chim bay qua bầu trời mỗi ngày. Nó ước mình cũng có thể đi xa như chúng. Khi lớn lên thành cây đước, nó nhận ra những con chim lại chọn đậu trên cành của mình để nghỉ ngơi.  
 **Bài học:** Mỗi sinh vật có con đường riêng để tạo nên giá trị.
 
-## Câu chuyện 24: Con Tôm Và Dải Rong Xanh  
+## Câu chuyện 24: Con Tôm Và Dải Rong Xanh
 
 Một dải rong xanh bất ngờ xuất hiện gần nơi ở của con tôm. Ban đầu, nó nghĩ rong sẽ chiếm mất không gian sống. Nhưng nhờ đám rong, nhiều sinh vật nhỏ kéo đến và nguồn thức ăn trở nên dồi dào hơn.  
 **Bài học:** Điều mới xuất hiện không phải lúc nào cũng là mối đe dọa.
 
-## Câu chuyện 25: Chim Cò Đứng Một Chân  
+## Câu chuyện 25: Chim Cò Đứng Một Chân
 
 Một con cò có thói quen đứng một chân thật lâu bên mép nước. Nhiều con chim non cho rằng đó là việc kỳ lạ. Nhưng nhờ đứng yên, nó quan sát được những chuyển động nhỏ nhất của đàn cá dưới nước.  
 **Bài học:** Bình tĩnh thường giúp ta nhìn rõ hơn.
 
-## Câu chuyện 26: Cây Mắm Và Chiếc Lá Vàng  
+## Câu chuyện 26: Cây Mắm Và Chiếc Lá Vàng
 
 Một chiếc lá vàng chuẩn bị rời cành nên rất buồn. Cây mắm bảo rằng mọi chiếc lá đều có hành trình riêng. Khi rơi xuống đất, chiếc lá dần trở thành dinh dưỡng cho bộ rễ bên dưới.  
 **Bài học:** Một kết thúc tốt đẹp cũng là một sự đóng góp.
 
-## Câu chuyện 27: Con Hàu Và Hòn Đá Cũ  
+## Câu chuyện 27: Con Hàu Và Hòn Đá Cũ
 
 Một con hàu luôn nghĩ hòn đá mình bám vào quá xấu xí. Một ngày sóng lớn kéo đến, những hòn đá nhẵn đẹp đều bị ảnh hưởng mạnh. Hòn đá thô ráp lại giúp nó bám chắc hơn.  
 **Bài học:** Đừng đánh giá giá trị dựa trên vẻ ngoài.
 
-## Câu chuyện 28: Hạt Mắm Chờ Thủy Triều  
+## Câu chuyện 28: Hạt Mắm Chờ Thủy Triều
 
 Một hạt mắm nóng lòng muốn cắm rễ ngay khi chạm đất. Nhưng lớp bùn còn quá mềm. Nó kiên nhẫn chờ thêm vài ngày. Nhờ vậy, bộ rễ bám chắc hơn và không bị nước cuốn đi.  
 **Bài học:** Đúng thời điểm quan trọng không kém nỗ lực.
 
-## Câu chuyện 29: Con Còng Và Con Sóng Nhỏ  
+## Câu chuyện 29: Con Còng Và Con Sóng Nhỏ
 
 Một con sóng nhỏ liên tục đập vào cửa hang còng. Con còng nghĩ nó chẳng có sức mạnh gì. Qua nhiều tháng, con sóng tạo nên một lối nước mới giúp hang luôn khô ráo.  
 **Bài học:** Kiên trì có thể làm được điều sức mạnh nhất thời không làm được.
 
-## Câu chuyện 30: Chim Non Và Bầu Trời Mù Sương  
+## Câu chuyện 30: Chim Non Và Bầu Trời Mù Sương
 
 Một buổi sáng đầy sương mù, chim non không dám rời tổ. Chim mẹ vẫn bình tĩnh bay đi kiếm ăn. Khi mặt trời lên, sương tan rất nhanh. Chim non hiểu rằng không phải mọi trở ngại đều kéo dài mãi mãi.  
 **Bài học:** Hãy cho khó khăn thời gian để trôi qua.
 
-## Câu chuyện 31: Dòng Nước Và Chiếc Cành Khô  
+## Câu chuyện 31: Dòng Nước Và Chiếc Cành Khô
 
 Một chiếc cành khô chắn ngang con lạch nhỏ. Dòng nước không cố đẩy nó đi mà nhẹ nhàng chảy quanh. Sau một thời gian, cành khô tự dịch chuyển và dòng nước vẫn tiếp tục hành trình.  
 **Bài học:** Không phải vấn đề nào cũng cần đối đầu trực tiếp.
 
-## Câu chuyện 32: Cây Đước Và Tiếng Gió  
+## Câu chuyện 32: Cây Đước Và Tiếng Gió
 
 Một cây đước trẻ rất ghét tiếng gió rít qua cành. Nó cho rằng đó chỉ là sự làm phiền. Nhưng tiếng gió giúp chim chóc biết thời tiết sắp thay đổi để tìm nơi trú ẩn.  
 **Bài học:** Những điều ta xem thường có thể hữu ích với người khác.
 
-## Câu chuyện 33: Con Tôm Và Chiếc Bong Bóng Khí  
+## Câu chuyện 33: Con Tôm Và Chiếc Bong Bóng Khí
 
 Một bong bóng khí nổi lên từ lớp bùn khiến con tôm tò mò. Nó theo dõi nhiều ngày và nhận ra đó là dấu hiệu của vùng đất giàu dinh dưỡng. Nhờ khám phá ấy, nhiều sinh vật tìm được nơi sống tốt hơn.  
 **Bài học:** Tò mò đúng cách dẫn đến hiểu biết.
 
-## Câu chuyện 34: Hạt Giống Trong Mùa Gió  
+## Câu chuyện 34: Hạt Giống Trong Mùa Gió
 
 Một hạt giống liên tục bị gió thổi đổi hướng. Nó cảm thấy cuộc sống quá bất ổn. Nhưng chính những cơn gió ấy đã đưa nó đến nơi có ánh sáng phù hợp nhất.  
 **Bài học:** Có những thay đổi đang âm thầm dẫn ta đến điều tốt hơn.
 
-## Câu chuyện 35: Con Cá Và Dòng Nước Đêm  
+## Câu chuyện 35: Con Cá Và Dòng Nước Đêm
 
 Ban đêm, dòng nước thay đổi rất khác ban ngày. Một con cá trẻ không hiểu điều đó và nhiều lần bơi lạc. Sau khi kiên nhẫn quan sát, nó học được quy luật của thủy triều.  
 **Bài học:** Kinh nghiệm được tích lũy từ việc quan sát và học hỏi.
 
-## Câu chuyện 36: Chiếc Lá Non Cuối Cành  
+## Câu chuyện 36: Chiếc Lá Non Cuối Cành
 
 Chiếc lá non mọc ở vị trí cuối cành nên luôn rung lắc mạnh. Nó ghen tị với những chiếc lá ở gần thân cây. Về sau, chính nó lại nhận được nhiều ánh sáng nhất.  
 **Bài học:** Vị trí khó khăn thường đi cùng lợi thế riêng.
 
-## Câu chuyện 37: Con Hàu Và Người Bạn Rong Biển  
+## Câu chuyện 37: Con Hàu Và Người Bạn Rong Biển
 
 Một nhánh rong biển bám gần con hàu khiến nó khó chịu. Nhưng rong biển làm chậm dòng nước và giúp con hàu ít bị sóng đánh hơn. Hai sinh vật dần quen với sự hiện diện của nhau.  
 **Bài học:** Hợp tác đôi khi bắt đầu từ sự khác biệt.
 
-## Câu chuyện 38: Con Cua Và Bãi Đất Cao  
+## Câu chuyện 38: Con Cua Và Bãi Đất Cao
 
 Một con cua thường leo lên bãi đất cao để nhìn ra xa. Bạn bè cho rằng việc đó vô ích. Nhờ quan sát từ xa, nó là con đầu tiên phát hiện cơn bão đang đến.  
 **Bài học:** Tầm nhìn xa giúp chuẩn bị tốt hơn cho tương lai.
 
-## Câu chuyện 39: Hạt Đước Và Mùa Nắng  
+## Câu chuyện 39: Hạt Đước Và Mùa Nắng
 
 Một mùa nắng kéo dài làm hạt đước non rất lo lắng. Nó tập trung phát triển bộ rễ thay vì cố vươn cao. Khi mùa mưa đến, nền tảng vững chắc giúp nó lớn nhanh hơn mọi cây khác.  
 **Bài học:** Những lúc khó khăn là thời gian tốt để xây nền tảng.
 
-## Câu chuyện 40: Chim Cò Và Chiếc Bóng Dưới Nước  
+## Câu chuyện 40: Chim Cò Và Chiếc Bóng Dưới Nước
 
 Một con cò trẻ nhiều lần bị lừa bởi bóng của đàn cá dưới mặt nước. Cò già dạy nó quan sát kỹ trước khi hành động. Từ đó, nó săn mồi hiệu quả hơn và ít mắc sai lầm.  
 **Bài học:** Cẩn trọng giúp tránh những quyết định vội vàng.
 
-## Câu chuyện 41: Khu Rừng Và Mầm Cây Cuối Cùng  
+## Câu chuyện 41: Khu Rừng Và Mầm Cây Cuối Cùng
 
 Cuối mùa phát tán hạt giống, chỉ còn một mầm cây nhỏ xuất hiện ở mép rừng. Nhiều sinh vật không để ý đến nó. Nhiều năm sau, mầm cây ấy trở thành một cây đước lớn che chở cho cả khu vực xung quanh.  
 **Bài học:** Những khởi đầu nhỏ bé có thể tạo nên tương lai lớn lao.
 
-## Câu chuyện 42: Con Cá Và Vệt Nước Bạc  
+## Câu chuyện 42: Con Cá Và Vệt Nước Bạc
 
 Mỗi sáng, một con cá nhỏ nhìn thấy vệt sáng bạc trên mặt nước. Nó nghĩ đó chỉ là ánh nắng vô nghĩa. Một ngày, nó nhận ra vệt sáng luôn xuất hiện ở nơi dòng nước mang nhiều sinh vật phù du nhất. Từ đó, nó không còn bỏ qua những dấu hiệu nhỏ quanh mình.  
 **Bài học:** Những điều hữu ích thường xuất hiện dưới hình thức rất giản dị.
 
-## Câu chuyện 43: Hạt Đước Và Chiếc Bóng Cây  
+## Câu chuyện 43: Hạt Đước Và Chiếc Bóng Cây
 
 Một hạt đước rơi xuống dưới bóng của cây lớn. Nó buồn vì nghĩ mình sẽ không nhận đủ ánh sáng để phát triển. Nhưng bóng cây giúp nó tránh được những ngày nắng gắt nhất. Khi đủ mạnh, nó mới vươn lên đón ánh mặt trời.  
 **Bài học:** Sự che chở đôi khi là bước chuẩn bị cho trưởng thành.
 
-## Câu chuyện 44: Con Cua Và Đường Nứt Trên Đất  
+## Câu chuyện 44: Con Cua Và Đường Nứt Trên Đất
 
 Một vết nứt nhỏ xuất hiện trên bãi bùn và khiến con cua lo lắng. Nó nghĩ đó là dấu hiệu của điều xấu. Nhưng khi nước lên, chính khe nứt ấy giúp thoát nước nhanh và bảo vệ nhiều hang cua.  
 **Bài học:** Không phải mọi thay đổi đều mang ý nghĩa tiêu cực.
 
-## Câu chuyện 45: Chim Sẻ Bên Rìa Rừng  
+## Câu chuyện 45: Chim Sẻ Bên Rìa Rừng
 
 Một con chim sẻ làm tổ ở rìa rừng, nơi ít chim khác sinh sống. Ban đầu nó thấy cô đơn. Nhưng nhờ vị trí đó, nó là con đầu tiên phát hiện mùa hoa mới nở và có nguồn thức ăn dồi dào.  
 **Bài học:** Đi một con đường khác có thể giúp tìm thấy cơ hội riêng.
 
-## Câu chuyện 46: Con Hàu Và Giọt Mưa Đầu Mùa  
+## Câu chuyện 46: Con Hàu Và Giọt Mưa Đầu Mùa
 
 Giọt mưa đầu mùa rơi xuống vỏ hàu rồi nhanh chóng biến mất. Con hàu nghĩ nó chẳng để lại điều gì. Nhưng hàng nghìn giọt mưa sau đó khiến vùng nước trở nên dễ chịu hơn cho nhiều sinh vật.  
 **Bài học:** Những thay đổi lớn thường bắt đầu từ dấu hiệu nhỏ đầu tiên.
 
-## Câu chuyện 47: Cây Mắm Và Cành Khô  
+## Câu chuyện 47: Cây Mắm Và Cành Khô
 
 Một cành khô treo lơ lửng trên cây mắm làm mọi người nghĩ nó vô dụng. Trong mùa chim làm tổ, chính cành ấy trở thành nơi đậu lý tưởng cho chim non tập bay.  
 **Bài học:** Giá trị của một điều phụ thuộc vào cách nó được sử dụng.
 
-## Câu chuyện 48: Con Tôm Và Dòng Nước Chậm  
+## Câu chuyện 48: Con Tôm Và Dòng Nước Chậm
 
 Một con tôm luôn thích vùng nước chảy mạnh. Nó cho rằng dòng nước chậm quá nhàm chán. Một ngày, nó nhận ra vùng nước yên là nơi nhiều con tôm non học cách sinh tồn.  
 **Bài học:** Mỗi môi trường đều có vai trò riêng của nó.
 
-## Câu chuyện 49: Hạt Giống Trong Vệt Bùn  
+## Câu chuyện 49: Hạt Giống Trong Vệt Bùn
 
 Một hạt giống mắc trong vệt bùn hẹp và không thể di chuyển tiếp. Nó nghĩ hành trình của mình đã kết thúc. Nhưng chính nơi ấy có đủ độ ẩm và ánh sáng để nó nảy mầm.  
 **Bài học:** Điểm dừng chân đôi khi chính là đích đến.
 
-## Câu chuyện 50: Con Cá Và Mùa Nước Đục  
+## Câu chuyện 50: Con Cá Và Mùa Nước Đục
 
 Mùa mưa làm nước trở nên đục ngầu. Nhiều con cá chỉ biết than phiền. Một con cá khác học cách sử dụng cảm nhận của dòng nước để định hướng. Cuối cùng nó thích nghi tốt hơn tất cả.  
 **Bài học:** Khi hoàn cảnh thay đổi, kỹ năng mới trở nên quan trọng.
 
-## Câu chuyện 51: Chim Cò Và Bãi Cỏ Ngập Nước  
+## Câu chuyện 51: Chim Cò Và Bãi Cỏ Ngập Nước
 
 Một bãi cỏ bị ngập sau nhiều ngày mưa. Chim cò cho rằng nơi ấy đã mất giá trị. Nhưng khi nước rút, vô số loài sinh vật nhỏ xuất hiện và biến nơi đó thành bãi săn lý tưởng.  
 **Bài học:** Hãy kiên nhẫn chờ đợi kết quả của sự thay đổi.
 
-## Câu chuyện 52: Con Còng Trên Gò Đất  
+## Câu chuyện 52: Con Còng Trên Gò Đất
 
 Một con còng thích leo lên gò đất cao mỗi chiều. Bạn bè cho rằng nó lãng phí thời gian. Nhưng nhờ quan sát từ xa, nó luôn biết khi nào nước lên và khi nào nên trở về hang.  
 **Bài học:** Tầm nhìn rộng giúp đưa ra quyết định tốt hơn.
 
-## Câu chuyện 53: Chiếc Lá Và Hạt Sương  
+## Câu chuyện 53: Chiếc Lá Và Hạt Sương
 
 Một hạt sương nằm trên lá suốt buổi sáng. Nó lo sợ khi thấy mặt trời dần lên cao. Trước khi bốc hơi, nó rơi xuống và tưới mát một mầm cây nhỏ.  
 **Bài học:** Ngay cả khoảnh khắc cuối cùng cũng có thể tạo nên ý nghĩa.
 
-## Câu chuyện 54: Con Hàu Và Dòng Triều Mới  
+## Câu chuyện 54: Con Hàu Và Dòng Triều Mới
 
 Một năm nọ, dòng triều đổi hướng khác thường. Con hàu già không thích điều đó. Nhưng hướng nước mới mang đến nhiều thức ăn hơn và giúp các sinh vật quanh nó phát triển.  
 **Bài học:** Thay đổi không phải lúc nào cũng là mất mát.
 
-## Câu chuyện 55: Hạt Đước Và Đàn Kiến  
+## Câu chuyện 55: Hạt Đước Và Đàn Kiến
 
 Một đàn kiến đi ngang qua hạt đước non mỗi ngày. Chúng vô tình làm đất quanh hạt tơi xốp hơn. Nhờ vậy, hạt đước bén rễ dễ dàng hơn trước.  
 **Bài học:** Nhiều sự giúp đỡ đến từ những điều rất bình thường.
 
-## Câu chuyện 56: Con Tôm Và Ánh Trăng Non  
+## Câu chuyện 56: Con Tôm Và Ánh Trăng Non
 
 Một con tôm thích ngắm trăng non phản chiếu trên nước. Trong những đêm quan sát ấy, nó học được nhịp điệu của thủy triều. Điều từng chỉ là thú vui trở thành kiến thức hữu ích.  
 **Bài học:** Đam mê có thể dẫn đường cho sự học hỏi.
 
-## Câu chuyện 57: Cây Đước Và Chồi Bên Cạnh  
+## Câu chuyện 57: Cây Đước Và Chồi Bên Cạnh
 
 Một chồi non mọc sát gốc cây đước lớn. Nhiều người nghĩ nó sẽ không có cơ hội phát triển. Nhưng cây lớn chắn gió cho chồi trong nhiều năm đầu đời.  
 **Bài học:** Sự cạnh tranh và hỗ trợ đôi khi cùng tồn tại.
 
-## Câu chuyện 58: Con Cá Và Chiếc Vỏ Ốc  
+## Câu chuyện 58: Con Cá Và Chiếc Vỏ Ốc
 
 Một chiếc vỏ ốc trống nằm dưới đáy nước nhiều ngày. Con cá nhỏ thường đến nghỉ bên cạnh. Nhờ quan sát từ đó, nó luôn phát hiện kẻ săn mồi sớm hơn các bạn.  
 **Bài học:** Một nơi bình thường cũng có thể trở thành lợi thế.
 
-## Câu chuyện 59: Bãi Bùn Sau Cơn Triều  
+## Câu chuyện 59: Bãi Bùn Sau Cơn Triều
 
 Sau cơn triều lớn, bãi bùn đầy những dấu vết lạ. Nhiều sinh vật chỉ nhìn thấy sự hỗn loạn. Một con cua già lại nhìn thấy cơ hội để hiểu thêm về khu rừng.  
 **Bài học:** Cách nhìn nhận quyết định điều ta học được từ trải nghiệm.
 
-## Câu chuyện 60: Chim Non Và Khoảng Trời Nhỏ  
+## Câu chuyện 60: Chim Non Và Khoảng Trời Nhỏ
 
 Một chú chim non chỉ quen nhìn bầu trời qua tán lá. Nó nghĩ thế giới rất nhỏ. Ngày đầu tiên bay cao, chú kinh ngạc trước không gian rộng lớn phía trên.  
 **Bài học:** Trải nghiệm mới giúp mở rộng giới hạn nhận thức.
 
-## Câu chuyện 61: Cây Mắm Và Mùa Hạt Mới  
+## Câu chuyện 61: Cây Mắm Và Mùa Hạt Mới
 
 Mỗi năm, cây mắm đều thả hạt xuống nước. Không phải hạt nào cũng lớn lên thành cây. Nhưng cây vẫn tiếp tục cho hạt mỗi mùa. Nó hiểu rằng giá trị nằm ở việc tiếp tục gieo cơ hội cho tương lai.  
 **Bài học:** Thành công không đến từ một lần cố gắng, mà từ sự bền bỉ lâu dài.
 
-## Câu chuyện 62: Con Cá Và Chiếc Lá Xoay Tròn  
+## Câu chuyện 62: Con Cá Và Chiếc Lá Xoay Tròn
 
 Một chiếc lá khô xoay tròn mãi trong dòng nước khiến con cá nhỏ tò mò. Nó dành thời gian quan sát và nhận ra nơi nào có lá xoay tròn thì dòng nước đang đổi hướng. Nhờ hiểu quy luật ấy, nó tìm được đường bơi an toàn hơn mỗi mùa mưa.  
 **Bài học:** Sự quan sát kiên nhẫn có thể biến điều bình thường thành bài học quý giá.
 
-## Câu chuyện 63: Hạt Mắm Và Cơn Gió Biển  
+## Câu chuyện 63: Hạt Mắm Và Cơn Gió Biển
 
 Một hạt mắm non luôn phàn nàn vì gió biển thổi quá mạnh. Nó không biết rằng gió giúp thân cây quen với sự dao động từ rất sớm. Khi bão lớn đến, cây vẫn đứng vững trong khi nhiều cây khác bị nghiêng đổ.  
 **Bài học:** Những thử thách nhỏ thường là sự chuẩn bị cho thử thách lớn.
 
-## Câu chuyện 64: Con Cua Và Đường Hầm Thứ Hai  
+## Câu chuyện 64: Con Cua Và Đường Hầm Thứ Hai
 
 Một con cua chăm chỉ đào thêm một đường hầm phụ bên cạnh hang chính. Các bạn cho rằng việc đó không cần thiết. Đến mùa nước lớn, lối phụ trở thành đường thoát hiểm giúp cả gia đình cua an toàn.  
 **Bài học:** Chuẩn bị trước luôn tốt hơn chờ nguy hiểm xuất hiện.
 
-## Câu chuyện 65: Chim Cò Và Đám Cỏ Dại  
+## Câu chuyện 65: Chim Cò Và Đám Cỏ Dại
 
 Một bãi cỏ dại mọc um tùm bên mép nước khiến chim cò khó chịu. Về sau, nơi ấy trở thành chỗ trú ẩn của nhiều loài cá non. Nhờ đó, chim cò cũng có nguồn thức ăn dồi dào hơn.  
 **Bài học:** Điều hữu ích đôi khi xuất hiện dưới vẻ ngoài không hấp dẫn.
 
-## Câu chuyện 66: Cây Đước Và Giọt Nước Mặn  
+## Câu chuyện 66: Cây Đước Và Giọt Nước Mặn
 
 Một giọt nước biển mắc lại trên lá đước sau khi thủy triều rút. Nó nghĩ mình quá nhỏ để tạo ảnh hưởng. Khi bốc hơi, nó để lại khoáng chất giúp chiếc lá khỏe mạnh hơn.  
 **Bài học:** Mọi đóng góp đều có giá trị, dù rất nhỏ.
 
-## Câu chuyện 67: Con Tôm Và Khoảng Trống Dưới Rễ  
+## Câu chuyện 67: Con Tôm Và Khoảng Trống Dưới Rễ
 
 Một con tôm tình cờ phát hiện khoảng trống dưới bộ rễ đước lớn. Nó dọn dẹp nơi đó và biến thành chỗ trú ngụ an toàn. Nhiều sinh vật nhỏ sau này cũng tìm đến sinh sống.  
 **Bài học:** Cơ hội thường nằm trong những góc khuất ít người để ý.
 
-## Câu chuyện 68: Hạt Đước Muộn Màng  
+## Câu chuyện 68: Hạt Đước Muộn Màng
 
 Một hạt đước rơi khỏi cành sau khi mùa phát tán gần kết thúc. Nó nghĩ mình đã lỡ thời cơ. Nhưng nhờ lớp phù sa mới bồi đắp, nơi nó cắm rễ lại màu mỡ nhất vùng.  
 **Bài học:** Đến sau không có nghĩa là bất lợi.
 
-## Câu chuyện 69: Con Hàu Và Mảng Rêu Xanh  
+## Câu chuyện 69: Con Hàu Và Mảng Rêu Xanh
 
 Một mảng rêu phủ lên vỏ hàu khiến nó khó chịu. Nhưng lớp rêu ấy giúp che bớt ánh nắng gắt khi nước xuống thấp. Con hàu học được rằng không phải mọi điều bất tiện đều gây hại.  
 **Bài học:** Đừng đánh giá sự việc quá vội vàng.
 
-## Câu chuyện 70: Con Cá Và Tiếng Mưa  
+## Câu chuyện 70: Con Cá Và Tiếng Mưa
 
 Một con cá rất sợ âm thanh lộp bộp của cơn mưa trên mặt nước. Sau nhiều mùa mưa, nó nhận ra tiếng mưa thường mang theo nguồn nước mới và thức ăn mới. Từ đó, nó mong đợi những cơn mưa hơn là sợ chúng.  
 **Bài học:** Hiểu biết có thể biến nỗi sợ thành sự trân trọng.
 
-## Câu chuyện 71: Chiếc Lá Bị Sâu Ăn  
+## Câu chuyện 71: Chiếc Lá Bị Sâu Ăn
 
 Một chiếc lá bị sâu ăn mất một góc nên luôn tự ti. Thế nhưng chính khoảng trống đó giúp ánh sáng chiếu xuống một mầm cây phía dưới. Mầm cây lớn lên khỏe mạnh nhờ điều tưởng như khuyết điểm ấy.  
 **Bài học:** Điều không hoàn hảo vẫn có thể tạo nên giá trị.
 
-## Câu chuyện 72: Con Còng Và Bãi Bùn Mới  
+## Câu chuyện 72: Con Còng Và Bãi Bùn Mới
 
 Một bãi bùn mới hình thành sau mùa lũ. Nhiều con còng không muốn chuyển đến vì chưa quen thuộc. Một con còng trẻ mạnh dạn khám phá trước và tìm thấy nguồn thức ăn phong phú.  
 **Bài học:** Cơ hội thường thuộc về người dám bước những bước đầu tiên.
 
-## Câu chuyện 73: Chim Non Và Cành Cây Thấp  
+## Câu chuyện 73: Chim Non Và Cành Cây Thấp
 
 Một chú chim non chỉ thích đậu trên cành thấp vì sợ độ cao. Mỗi ngày, nó bay lên cao hơn một chút. Đến cuối mùa, chú đã có thể bay ngang tán cây cao nhất khu rừng.  
 **Bài học:** Sự tiến bộ lớn được tạo nên từ những bước nhỏ.
 
-## Câu chuyện 74: Con Tôm Và Dòng Nước Lạnh  
+## Câu chuyện 74: Con Tôm Và Dòng Nước Lạnh
 
 Một dòng nước lạnh bất ngờ chảy qua khu vực sinh sống của đàn tôm. Ai cũng khó chịu vì sự thay đổi. Nhưng dòng nước ấy mang nhiều dinh dưỡng hơn bình thường.  
 **Bài học:** Điều mới mẻ có thể mang theo những lợi ích chưa nhìn thấy ngay.
 
-## Câu chuyện 75: Cây Mắm Và Hạt Giống Lạc  
+## Câu chuyện 75: Cây Mắm Và Hạt Giống Lạc
 
 Một hạt giống lạ trôi dạt đến dưới gốc cây mắm. Thay vì xem đó là sự xâm nhập, cây mắm để nó phát triển bên cạnh. Vài năm sau, hai loài cây cùng giúp giữ đất tốt hơn.  
 **Bài học:** Khác biệt có thể tạo nên sức mạnh khi biết hợp tác.
 
-## Câu chuyện 76: Con Cá Và Ánh Hoàng Hôn  
+## Câu chuyện 76: Con Cá Và Ánh Hoàng Hôn
 
 Một con cá thích ngắm ánh hoàng hôn phản chiếu trên mặt nước. Nhờ thói quen ấy, nó nhận ra thời điểm thủy triều đổi chiều mỗi ngày. Điều bắt đầu từ sở thích trở thành kỹ năng hữu ích.  
 **Bài học:** Niềm yêu thích có thể dẫn đến sự hiểu biết sâu sắc.
 
-## Câu chuyện 77: Hạt Mắm Dưới Cơn Mưa Dài  
+## Câu chuyện 77: Hạt Mắm Dưới Cơn Mưa Dài
 
 Một trận mưa kéo dài nhiều ngày khiến hạt mắm non lo lắng. Nó nghĩ mình quá yếu để chịu đựng. Nhưng lượng nước dồi dào giúp bộ rễ phát triển nhanh hơn bao giờ hết.  
 **Bài học:** Khó khăn đôi khi đang góp phần giúp ta lớn lên.
 
-## Câu chuyện 78: Con Hàu Và Chiếc Bóng Cá  
+## Câu chuyện 78: Con Hàu Và Chiếc Bóng Cá
 
 Một con cá lớn thường bơi ngang qua và tạo bóng trên vỏ hàu. Ban đầu hàu rất khó chịu. Sau đó nó nhận ra chiếc bóng giúp giảm nhiệt trong những ngày nắng gắt.  
 **Bài học:** Có những lợi ích đến từ những điều ta từng không thích.
 
-## Câu chuyện 79: Con Cua Và Hòn Sỏi Tròn  
+## Câu chuyện 79: Con Cua Và Hòn Sỏi Tròn
 
 Một hòn sỏi tròn lăn đến trước cửa hang cua. Con cua định đẩy nó đi. Nhưng trong mùa mưa, hòn sỏi lại giúp chắn bớt dòng nước chảy mạnh vào hang.  
 **Bài học:** Trước khi loại bỏ điều gì, hãy hiểu hết giá trị của nó.
 
-## Câu chuyện 80: Chim Cò Và Đàn Cá Non  
+## Câu chuyện 80: Chim Cò Và Đàn Cá Non
 
 Một đàn cá non luôn bơi rất nhanh mỗi khi thấy chim cò. Một con cò già chỉ đứng yên quan sát và không săn đuổi. Dần dần, đàn cá hiểu rằng không phải lúc nào cũng cần hoảng sợ.  
 **Bài học:** Bình tĩnh giúp nhìn nhận tình huống chính xác hơn.
 
-## Câu chuyện 81: Cây Đước Và Mùa Phù Sa  
+## Câu chuyện 81: Cây Đước Và Mùa Phù Sa
 
 Mỗi mùa nước lên, cây đước đều giữ lại thêm một ít phù sa quanh gốc. Sự thay đổi quá nhỏ để nhận ra trong một ngày. Nhưng sau nhiều năm, khu đất quanh cây rộng ra đáng kể và trở thành nơi sinh sống của nhiều loài mới.  
 **Bài học:** Những kết quả lớn lao thường được xây dựng từ các nỗ lực nhỏ bền bỉ.
 
-## Câu chuyện 82: Con Cá Và Đám Bèo Trôi  
+## Câu chuyện 82: Con Cá Và Đám Bèo Trôi
 
 Một con cá nhỏ luôn tránh xa những đám bèo trôi vì sợ bị mắc kẹt. Một ngày nắng gắt, chính bóng mát từ đám bèo đã giúp nó tránh được nhiều kẻ săn mồi. Từ đó, nó học cách quan sát kỹ trước khi kết luận.  
 **Bài học:** Đừng đánh giá một sự vật chỉ từ ấn tượng ban đầu.
 
-## Câu chuyện 83: Hạt Đước Bên Tảng Đá Đen  
+## Câu chuyện 83: Hạt Đước Bên Tảng Đá Đen
 
 Một hạt đước nảy mầm cạnh tảng đá đen hấp thụ nhiều nhiệt. Nó than phiền vì nơi mình sống nóng hơn những chỗ khác. Nhưng chính hơi ấm ấy giúp nó phát triển nhanh trong mùa lạnh.  
 **Bài học:** Hoàn cảnh khó chịu đôi khi cũng mang lại lợi ích riêng.
 
-## Câu chuyện 84: Con Cua Và Chiếc Càng Mới  
+## Câu chuyện 84: Con Cua Và Chiếc Càng Mới
 
 Sau một lần gặp nạn, con cua mất đi một chiếc càng. Nó buồn bã suốt thời gian dài. Khi chiếc càng mới mọc lại, nó hiểu rằng cơ thể và cuộc sống đều có khả năng hồi phục.  
 **Bài học:** Mất mát không phải lúc nào cũng là kết thúc.
 
-## Câu chuyện 85: Chim Cò Và Dòng Gió Xoáy  
+## Câu chuyện 85: Chim Cò Và Dòng Gió Xoáy
 
 Một con cò trẻ sợ những luồng gió xoáy trên cánh đồng ven biển. Chim già dạy nó cách nghiêng cánh theo gió thay vì chống lại. Chẳng bao lâu, nó bay còn dễ dàng hơn trước.  
 **Bài học:** Thích nghi thường hiệu quả hơn chống đối.
 
-## Câu chuyện 86: Con Hàu Và Dòng Nước Ấm  
+## Câu chuyện 86: Con Hàu Và Dòng Nước Ấm
 
 Một năm nọ, dòng nước trở nên ấm hơn thường lệ. Con hàu già lo lắng vì mọi thứ thay đổi. Nhưng chính sự thay đổi ấy khiến nhiều sinh vật mới xuất hiện, làm hệ sinh thái trở nên phong phú hơn.  
 **Bài học:** Sự thay đổi thường mang theo cả thách thức lẫn cơ hội.
 
-## Câu chuyện 87: Hạt Mắm Và Con Đường Quanh Co  
+## Câu chuyện 87: Hạt Mắm Và Con Đường Quanh Co
 
 Một hạt mắm bị nước cuốn qua rất nhiều khúc quanh trước khi cập bờ. Nó nghĩ mình đã đi quá xa. Nhưng nơi đến lại là vùng đất màu mỡ nhất mà nó từng thấy.  
 **Bài học:** Hành trình dài đôi khi dẫn ta đến nơi tốt đẹp hơn.
 
-## Câu chuyện 88: Con Tôm Và Bọt Nước  
+## Câu chuyện 88: Con Tôm Và Bọt Nước
 
 Một con tôm thích ngắm những bọt nước nổi lên từ đáy bùn. Các bạn cười vì cho rằng đó là việc vô ích. Nhờ quan sát lâu ngày, nó nhận ra nơi nào có nguồn dinh dưỡng dồi dào.  
 **Bài học:** Kiến thức thường bắt đầu từ sự chú ý đến những điều nhỏ bé.
 
-## Câu chuyện 89: Cây Đước Và Đàn Chim Di Cư  
+## Câu chuyện 89: Cây Đước Và Đàn Chim Di Cư
 
 Mỗi năm, những đàn chim lạ lại ghé nghỉ trên cây đước rồi tiếp tục hành trình. Cây đước không giữ được chúng nhưng vẫn vui vì được góp phần vào chuyến đi của chúng.  
 **Bài học:** Không phải mọi điều tốt đẹp đều cần giữ lại cho riêng mình.
 
-## Câu chuyện 90: Con Còng Và Mặt Nước Phẳng Lặng  
+## Câu chuyện 90: Con Còng Và Mặt Nước Phẳng Lặng
 
 Một ngày mặt nước yên lặng bất thường khiến con còng cảm thấy lo lắng. Nó quan sát kỹ và nhận ra thủy triều đang chuẩn bị thay đổi. Cả đàn nhờ đó có thời gian chuẩn bị.  
 **Bài học:** Sự bình lặng đôi khi cũng gửi đi những tín hiệu quan trọng.
 
-## Câu chuyện 91: Chim Non Và Cành Cây Nghiêng  
+## Câu chuyện 91: Chim Non Và Cành Cây Nghiêng
 
 Một chú chim non không thích chiếc cành nghiêng nơi mình sống. Nó luôn ước có cành thẳng như những tổ khác. Nhưng khi mưa bão đến, cành nghiêng giúp nước chảy đi nhanh hơn và tổ vẫn an toàn.  
 **Bài học:** Điều khác biệt có thể là lợi thế chưa được nhận ra.
 
-## Câu chuyện 92: Vỏ Ốc Và Giọt Mưa  
+## Câu chuyện 92: Vỏ Ốc Và Giọt Mưa
 
 Một giọt mưa rơi vào chiếc vỏ ốc trống rồi đọng lại đó. Nhiều côn trùng nhỏ tìm đến uống nước trong ngày nắng. Chiếc vỏ ốc nhận ra mình vẫn còn hữu ích.  
 **Bài học:** Giá trị không phụ thuộc vào việc ta còn mới hay đã cũ.
 
-## Câu chuyện 93: Con Cá Và Dòng Chảy Ngược  
+## Câu chuyện 93: Con Cá Và Dòng Chảy Ngược
 
 Một con cá trẻ luôn muốn bơi theo dòng nước. Cá già lại dạy nó thử bơi ngược dòng trong những đoạn ngắn. Nhờ vậy, cơ thể nó ngày càng khỏe mạnh.  
 **Bài học:** Những thử thách tự nguyện giúp ta trưởng thành.
 
-## Câu chuyện 94: Cây Bần Và Mùa Hoa Muộn  
+## Câu chuyện 94: Cây Bần Và Mùa Hoa Muộn
 
 Cây bần nở hoa muộn hơn mọi cây khác. Nó lo rằng sẽ không còn ong đến thăm. Nhưng đúng lúc ấy, một đàn ong mới xuất hiện và tìm được nguồn mật quý giá.  
 **Bài học:** Mỗi sự việc đều có thời điểm phù hợp riêng.
 
-## Câu chuyện 95: Con Tôm Giữ Lời Hứa  
+## Câu chuyện 95: Con Tôm Giữ Lời Hứa
 
 Một con tôm hứa sẽ dẫn bạn mình đến nơi có thức ăn. Dù gặp nhiều trở ngại, nó vẫn tìm đường và giữ đúng lời hứa. Từ đó, bạn bè ngày càng tin tưởng nó.  
 **Bài học:** Sự tin cậy được xây dựng từ những lời hứa được thực hiện.
 
-## Câu chuyện 96: Hạt Đước Dưới Mưa Đêm  
+## Câu chuyện 96: Hạt Đước Dưới Mưa Đêm
 
 Một hạt đước âm thầm hấp thụ nước mưa trong đêm tối. Không ai nhìn thấy sự thay đổi ấy. Nhưng đến mùa sau, nó là một trong những cây lớn nhất khu vực.  
 **Bài học:** Sự phát triển quan trọng nhất thường diễn ra trong âm thầm.
 
-## Câu chuyện 97: Con Cua Và Vệt Sao Trời  
+## Câu chuyện 97: Con Cua Và Vệt Sao Trời
 
 Một đêm trời quang, con cua nhìn thấy những ngôi sao phản chiếu trên mặt nước. Nó nhận ra thế giới rộng lớn hơn rất nhiều so với chiếc hang nhỏ của mình.  
 **Bài học:** Mở rộng tầm nhìn giúp mở rộng suy nghĩ.
 
-## Câu chuyện 98: Con Hàu Và Hòn Sỏi Nhỏ  
+## Câu chuyện 98: Con Hàu Và Hòn Sỏi Nhỏ
 
 Một hòn sỏi nhỏ liên tục va vào vỏ hàu theo dòng nước. Ban đầu nó rất khó chịu. Dần dần, lớp vỏ của nó trở nên cứng cáp hơn nhờ những tác động ấy.  
 **Bài học:** Những va chạm nhỏ trong cuộc sống có thể làm ta mạnh mẽ hơn.
 
-## Câu chuyện 99: Chiếc Lá Trôi Xa  
+## Câu chuyện 99: Chiếc Lá Trôi Xa
 
 Một chiếc lá khô bị gió cuốn rời khỏi khu rừng quen thuộc. Nó sợ hãi vì không biết nơi mình đến là đâu. Cuối cùng, nó trở thành lớp mùn nuôi dưỡng một bãi đất mới.  
 **Bài học:** Hành trình xa lạ vẫn có thể mang lại giá trị tốt đẹp.
 
-## Câu chuyện 100: Khu Rừng Sau Mùa Nước  
+## Câu chuyện 100: Khu Rừng Sau Mùa Nước
 
 Sau một mùa nước dài, nhiều thứ trong rừng đã thay đổi. Có cây lớn hơn, có vùng đất mới, có sinh vật vừa sinh ra. Khu rừng hiểu rằng chính những đổi thay ấy giúp sự sống tiếp tục phát triển.  
 **Bài học:** Sự phát triển luôn đi cùng với thay đổi.
