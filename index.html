@@ -108,6 +108,7 @@ header p{color:var(--sub);font-size:.85rem;margin-top:4px}
 .card-body strong{color:var(--g6);font-style:italic}
 
 #nav{display:flex;justify-content:space-between;align-items:center;width:100%;max-width:480px;padding:8px 16px 20px}
+#visit-counter{text-align:center;padding:8px 0 16px;color:var(--g6);font-size:0.78rem;opacity:0.7;letter-spacing:0.03em}
 .nav-btn{background:var(--g2);border:1.5px solid var(--g4);color:var(--txt);padding:10px 22px;border-radius:12px;font-size:1rem;cursor:pointer;transition:.2s}
 .nav-btn:hover{background:var(--g3);border-color:var(--g5)}
 .nav-btn:disabled{opacity:.3;cursor:default}
@@ -168,6 +169,7 @@ header p{color:var(--sub);font-size:.85rem;margin-top:4px}
   <button class="nav-btn" id="rand-btn" onclick="rand()">&#127922;</button>
   <button class="nav-btn" id="next-btn" onclick="go(1)">Sau &#8594;</button>
 </div>
+<div id="visit-counter">🌿 <span id="visit-count">...</span> lượt ghé thăm</div>
 
 <script>
 const vol1=[{"e":`🐟`,"t":`Cá Thòi Lòi và bài học đầu tiên`,"b":`Cá thòi lòi con lần đầu leo lên mặt bùn, mắt tròn xoe nhìn thế giới trên cạn. Nắng chiếu chói, gió lạ, không khí khô khốc — tất cả đều xa lạ. Nó trượt chân, ngã úp mặt vào bùn. Mẹ không đến đỡ. Nó tự chống vây đứng dậy, thử lại. Ngã. Lại đứng. Đến lần thứ mười, nó đứng vững và nhìn thấy cả bãi triều rộng lớn trải ra trước mắt. **Mọi kỹ năng đều bắt đầu bằng lần ngã đầu tiên.**`},
@@ -4702,6 +4704,20 @@ wrap.addEventListener('touchend',e=>{
   const dx=e.changedTouches[0].clientX-tx;
   if(Math.abs(dx)>50) go(dx<0?1:-1);
 },{passive:true});
+
+// Visit counter
+(function(){
+  fetch('https://api.countapi.xyz/hit/hiepphong2026-mangrove/visits')
+    .then(r=>r.json())
+    .then(d=>{
+      const el=document.getElementById('visit-count');
+      if(el&&d.value) el.textContent=d.value.toLocaleString('vi-VN');
+    })
+    .catch(()=>{
+      const el=document.getElementById('visit-count');
+      if(el) el.textContent='nhiều';
+    });
+})();
 
 // Init
 buildVolBar();
