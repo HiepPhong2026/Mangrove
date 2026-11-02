@@ -419,3 +419,82 @@ Cành cây mục nằm ngang dòng nước suốt nhiều năm. Từng chút ph�
 
 Trong khu rừng ngập mặn, không gì thực sự bị bỏ đi. Lá già thành đất, vỏ cũ thành nơi chứa nước, cành gãy thành chỗ trú ẩn và phù sa nhỏ bé thành đất mới. Nhờ biết tận dụng và tái sinh mọi nguồn lực, khu rừng ngày càng xanh tốt qua các thế hệ.  
 **Bài học:** Người biết tiết kiệm, tái sử dụng và tạo giá trị từ điều nhỏ bé sẽ xây dựng được những thành quả lớn lao.
+## Câu chuyện 85: Con Cua Và Hang Chưa Biết
+
+Mỗi ngày con cua đi qua một cái hang tối phía sau gốc đước, nhưng chưa bao giờ dám vào. Nó sợ bóng tối, sợ điều mình không biết bên trong. Một hôm trời mưa lớn, nước dâng cao, cua phải chui vào hang đó trú ẩn. Bên trong hang rộng rãi, khô ráo, có cả nguồn nước ngọt nhỏ. Cua ở lại cả đêm, an toàn hơn bao giờ hết.
+**Bài học:** Điều ta sợ nhất đôi khi lại là nơi trú ẩn tốt nhất đang chờ ta khám phá.
+
+## Câu chuyện 86: Hạt Đước Và Dòng Chảy Lạ
+
+Một hạt đước bị cuốn theo dòng chảy lạ chưa từng thấy. Nó lo lắng, không biết mình sẽ dạt về đâu. Nhưng thay vì chống lại, nó buông mình theo dòng nước. Sau ba ngày, hạt đước mắc vào một bãi bùn màu mỡ chưa có cây nào mọc, ánh sáng chan hòa. Nó nảy mầm và trở thành cây đước đầu tiên của vùng đất mới.
+**Bài học:** Đôi khi buông mình theo điều chưa biết lại dẫn ta đến nơi ta cần đến nhất.
+
+## Câu chuyện 87: Chim Non Và Cành Cây Xa
+
+Chim non thấy một cành cây xa tít bên kia lạch nước. Trên đó có tổ côn trùng béo tốt – thức ăn cho cả tuần. Nhưng khoảng cách quá xa so với những lần bay trước. Chim non đứng trên cành nhà mình, nhìn mãi. Rồi nó nhắm mắt, vỗ cánh mạnh hết sức. Khi mở mắt ra, nó đã đậu trên cành cây xa đó, tim đập rộn ràng.
+**Bài học:** Giới hạn của ta thường nhỏ hơn khả năng thật sự của ta.
+
+## Câu chuyện 88: Con Còng Và Vùng Bãi Mới
+
+Con còng sống cả đời ở một góc bãi quen thuộc. Một ngày nó thấy phía xa có ánh sáng lạ phản chiếu trên mặt nước. Tò mò, nó bò đi suốt buổi sáng để tìm hiểu. Đó là một vũng nước trong vắt đọng giữa những rễ đước, đầy tôm nhỏ. Không con còng nào biết đến đó. Từ đó, đây trở thành địa điểm săn mồi bí mật của nó.
+**Bài học:** Sự tò mò dẫn đến những phát hiện mà sự thụ động không bao giờ có được.
+
+## Câu chuyện 89: Cây Mắm Và Hướng Gió Mới
+
+Cây mắm trẻ quen lớn về hướng đông vì gió thường thổi từ đó. Một mùa gió đổi chiều, nó bối rối không biết phải vươn về đâu. Những cây già bảo cứ theo gió mới mà lớn. Cây mắm trẻ e ngại nhưng rồi thử vươn về hướng tây – hướng chưa quen. Mùa đó nó lớn nhanh hơn bao giờ hết vì hướng tây có khoảng trống rộng và nhiều ánh sáng hơn.
+**Bài học:** Thay đổi hướng đi đôi khi mở ra không gian phát triển rộng lớn hơn.
+
+## Câu chuyện 90: Con Cá Và Hang Đá Bí Ẩn
+
+Dưới đáy lạch có một hang đá mà mọi con cá đều tránh vì nghe nói có dòng xoáy bên trong. Con cá nhỏ một hôm bơi lạc vào miệng hang. Dòng xoáy có thật, nhưng chỉ ở cửa hang. Bên trong hang là khoảng nước yên tĩnh kỳ lạ, mát rượi, đầy tảo xanh. Con cá ở lại nghỉ ngơi rồi bơi ra, mang theo chút tảo cho cả đàn ăn thử.
+**Bài học:** Những nơi người khác sợ hãi đôi khi chứa đựng điều tốt đẹp chỉ người dũng cảm mới tìm ra.
+
+## Câu chuyện 91: Hạt Giống Và Vách Đất Dựng Đứng
+
+Hạt giống rơi vào một vách đất dựng đứng bên bờ lạch. Các hạt giống khác bảo nó không thể nảy mầm ở đó – quá dốc, quá khó. Hạt giống không có lựa chọn nào khác, nó cứ thế mà cắm rễ vào vách đất. Rễ nó mọc ngang để giữ thân, thân nó mọc cong rồi vươn thẳng lên. Sau một năm, nó là cây duy nhất giữ cho cả vách đất không sạt lở.
+**Bài học:** Hoàn cảnh khó khăn buộc ta tìm ra cách sống sót mà trong dễ chịu ta không bao giờ nghĩ ra.
+
+## Câu chuyện 92: Con Tôm Và Khu Vực Cấm
+
+Mọi con tôm đều bảo nhau đừng bơi ra vùng nước sáng giữa lạch vì dễ bị nhìn thấy. Con tôm nhỏ một lần vô tình bơi ra đó lúc hoàng hôn. Ánh sáng cam rực chiếu xuống nước, nó nhìn thấy toàn bộ lạch từ giữa dòng – điều chưa con tôm nào từng thấy. Nó nhanh chóng bơi về, nhưng mang theo trong mình bản đồ toàn cảnh của cả khu rừng.
+**Bài học:** Đôi khi vượt qua giới hạn an toàn cho ta cái nhìn rộng lớn hơn về thế giới mình đang sống.
+
+## Câu chuyện 93: Chim Cò Và Đảo Nhỏ Giữa Sông
+
+Chim cò thường bay dọc bờ, không bao giờ dám bay ra giữa sông vì sợ gió lớn. Một lần nó nhìn thấy một đảo nhỏ giữa dòng, đầy cá. Nó đứng trên bờ nhìn mãi ba ngày. Ngày thứ tư, nó bay ra. Gió có lớn thật, nhưng nó vỗ cánh mạnh hơn. Trên đảo cá nhiều vô kể, không có con cò nào cạnh tranh cả.
+**Bài học:** Nỗ lực vượt qua chướng ngại vật đưa ta đến nơi không ai khác dám đến.
+
+## Câu chuyện 94: Con Hàu Và Viên Đá Xa
+
+Con hàu bám chặt trên một tảng đá quen từ nhỏ. Nó thấy phía xa có viên đá lớn hơn, nước chảy qua nhiều hơn, mang theo nhiều thức ăn hơn. Nhưng để đến đó phải thả bám, trôi theo dòng – điều cực kỳ nguy hiểm với hàu. Một đợt sóng lớn bất ngờ bứt nó ra. Thay vì hoảng loạn, nó khép vỏ lại và để dòng nước dẫn đi. Nó đậu xuống đúng viên đá lớn đó.
+**Bài học:** Đôi khi ta cần buông bỏ sự an toàn quen thuộc để dòng chảy cuộc sống đưa ta đến nơi ta xứng đáng được ở.
+
+## Câu chuyện 95: Cây Đước Và Vùng Nước Lợ
+
+Cây đước non được trồng ở vùng nước lợ – không hoàn toàn mặn, không hoàn toàn ngọt. Nhiều người nghĩ nó sẽ không sống được ở vùng giao thoa đó. Cây đước loay hoay điều chỉnh rễ, thân và lá để thích nghi với cả hai loại nước. Sau một năm, nó không chỉ sống sót mà còn phát triển mạnh hơn cả những cây ở vùng nước thuần. Vùng giao thoa đã rèn luyện nó thành cây đước linh hoạt nhất.
+**Bài học:** Sống ở ranh giới giữa hai thế giới tuy khó khăn nhưng tạo ra sức mạnh thích nghi mà kẻ chỉ sống trong một môi trường không bao giờ có.
+
+## Câu chuyện 96: Con Cua Và Lần Leo Đầu Tiên
+
+Cua thường chỉ bò ngang mặt đất, chưa bao giờ leo lên cao. Một hôm thức ăn của nó rơi vào hốc cây cao ngang mình. Cua nhìn lên, rồi thử cắm càng vào vỏ cây. Khó hơn bò ngang nhiều. Nó trượt xuống ba lần. Đến lần thứ tư, nó leo được đến hốc cây, lấy được thức ăn. Nhìn xuống từ trên cao, nó thấy thế giới hoàn toàn khác.
+**Bài học:** Thử thách buộc ta học kỹ năng mới – và kỹ năng mới mở ra tầm nhìn mới.
+
+## Câu chuyện 97: Con Cá Và Đêm Bơi Một Mình
+
+Con cá nhỏ chưa bao giờ rời đàn sau khi mặt trời lặn. Ban đêm nước tối, nguy hiểm rình rập. Một hôm nó lạc đàn lúc hoàng hôn. Thay vì đứng yên chờ sáng, nó quyết định tự bơi về. Đêm đó nó học được cách đọc hướng từ ánh trăng phản chiếu, nghe tiếng nước đổ để biết nơi dòng chảy đổ về. Khi tìm được đàn lúc bình minh, nó đã biết nhiều hơn cả những con cá già trong đàn.
+**Bài học:** Những đêm đơn độc đôi khi dạy ta nhiều hơn cả những ngày có đồng hành.
+
+## Câu chuyện 98: Hạt Mắm Và Vùng Đất Khô
+
+Hạt mắm theo gió rơi vào vùng đất khô xa bờ nước. Mọi người nghĩ nó sẽ chết. Hạt mắm không biết điều đó, cứ thế mà cắm rễ xuống. Rễ nó mọc sâu hơn bình thường để tìm nguồn nước ngầm. Rễ đó phá vỡ lớp đất cứng, tạo đường cho nước thấm vào. Sau vài năm, vùng đất khô quanh nó dần ẩm trở lại, thu hút thêm những hạt giống khác đến.
+**Bài học:** Khi ta kiên trì thích nghi với môi trường khắc nghiệt, ta không chỉ sống sót mà còn cải tạo cả môi trường đó cho những người đến sau.
+
+## Câu chuyện 99: Chim Non Và Bầu Trời Đêm
+
+Chim non chỉ biết bay ban ngày. Một đêm trăng sáng nó thức dậy và nhìn lên bầu trời đầy sao – khác hoàn toàn bầu trời ban ngày nó quen. Tò mò, nó vỗ cánh bay lên một đoạn ngắn. Không khí đêm mát lạnh, yên tĩnh, không có cạnh tranh. Nó nhìn thấy rừng ngập mặn từ trên cao trong ánh trăng bạc – một vẻ đẹp chưa bao giờ thấy. Nó hạ xuống, lòng đầy ngạc nhiên.
+**Bài học:** Thế giới có nhiều chiều mà ta chưa khám phá – chỉ cần ta dám thức dậy vào một thời điểm khác để nhìn.
+
+## Câu chuyện 100: Khu Rừng Và Hạt Giống Dũng Cảm
+
+Trong khu rừng ngập mặn, mỗi mùa có vô số hạt giống rơi xuống. Phần lớn chọn những chỗ đất quen, gần nguồn nước quen. Nhưng năm đó có một hạt giống nhỏ bị gió mang đi xa tít, rơi xuống vùng đất chưa có cây nào mọc. Không có cây che chắn, không có rễ lân cận hỗ trợ, chỉ có đất trống và bầu trời rộng. Hạt giống đó nảy mầm, rồi lớn lên thành cây đước đầu tiên của một khu rừng mới. Vài năm sau, những hạt giống khác tìm đến, và khu rừng mới bắt đầu.
+**Bài học:** Người dám đi đến nơi chưa ai đến không chỉ tìm thấy chỗ đứng cho mình mà còn mở ra con đường cho cả một thế hệ đi sau.
