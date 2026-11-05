@@ -6827,6 +6827,7 @@ updateCounter();
 
 // ===== FAB (Floating Action Button) =====
 function toggleFab(){
+  if(window._fabDragged) return; // bỏ qua click nếu vừa kéo
   const fab=document.getElementById('fab');
   const menu=document.getElementById('fab-menu');
   const bd=document.getElementById('fab-backdrop');
@@ -6850,6 +6851,75 @@ function closeFab(){
   fab.classList.remove('open');
   fab.textContent='🌿';
 }
+
+/* ── FAB drag-to-move ─────────────────────────────── */
+(function(){
+  const fab=document.getElementById('fab');
+  let dragging=false, startX, startY, origRight, origBottom;
+
+  function getPos(){
+    const style=getComputedStyle(fab);
+    // fab dùng right/bottom; convert sang left/top nếu cần
+    const r=parseInt(fab.style.right)||20;
+    const b=parseInt(fab.style.bottom)||24;
+    return {r,b};
+  }
+
+  function pointerDown(e){
+    if(e.type==='mousedown' && e.button!==0) return;
+    const pt=e.touches?e.touches[0]:e;
+    startX=pt.clientX; startY=pt.clientY;
+    const {r,b}=getPos();
+    origRight=r; origBottom=b;
+    dragging=false;
+    window._fabDragged=false;
+    fab.style.transition='none';
+    document.addEventListener('mousemove',pointerMove,{passive:false});
+    document.addEventListener('touchmove',pointerMove,{passive:false});
+    document.addEventListener('mouseup',pointerUp);
+    document.addEventListener('touchend',pointerUp);
+  }
+
+  function pointerMove(e){
+    const pt=e.touches?e.touches[0]:e;
+    const dx=pt.clientX-startX;
+    const dy=pt.clientY-startY;
+    if(!dragging && Math.hypot(dx,dy)<6) return;
+    dragging=true;
+    window._fabDragged=true;
+    e.preventDefault();
+
+    const W=window.innerWidth, H=window.innerHeight;
+    const SIZE=52;
+    const MARGIN=12;
+    // right giảm khi kéo phải, tăng khi kéo trái
+    let newRight=origRight-dx;
+    let newBottom=origBottom-dy;
+    newRight=Math.max(MARGIN, Math.min(W-SIZE-MARGIN, newRight));
+    newBottom=Math.max(MARGIN, Math.min(H-SIZE-MARGIN, newBottom));
+    fab.style.right=newRight+'px';
+    fab.style.bottom=newBottom+'px';
+
+    // di chuyển menu theo nút
+    const menu=document.getElementById('fab-menu');
+    menu.style.right=newRight+'px';
+    menu.style.bottom=(newBottom+SIZE+8)+'px';
+  }
+
+  function pointerUp(){
+    fab.style.transition='';
+    document.removeEventListener('mousemove',pointerMove);
+    document.removeEventListener('touchmove',pointerMove);
+    document.removeEventListener('mouseup',pointerUp);
+    document.removeEventListener('touchend',pointerUp);
+    // reset flag sau 1 frame để onclick không fire
+    if(dragging) setTimeout(()=>{ window._fabDragged=false; },50);
+    dragging=false;
+  }
+
+  fab.addEventListener('mousedown',pointerDown);
+  fab.addEventListener('touchstart',pointerDown,{passive:true});
+})();
 
 function goTop(){
   window.scrollTo({top:0,behavior:'smooth'});
