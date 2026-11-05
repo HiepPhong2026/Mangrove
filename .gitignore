@@ -1,0 +1,7 @@
+# Cache thư mục yt-dlp
+/cache/
+*.mp3
+
+# Binary yt-dlp (tải riêng lên Hostinger)
+/yt-dlp
+/yt-dlp.exe

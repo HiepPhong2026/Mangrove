@@ -115,6 +115,88 @@ header p{color:var(--sub);font-size:.85rem;margin-top:4px}
 
 #visit-counter{text-align:center;padding:8px 0 16px;color:var(--g6);font-size:0.78rem;opacity:0.7;letter-spacing:0.03em}
 
+/* ===== MUSIC MODAL ===== */
+#music-overlay{
+  position:fixed;inset:0;z-index:1200;
+  background:rgba(0,0,0,0.55);
+  backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);
+  display:flex;align-items:flex-end;justify-content:center;
+  opacity:0;pointer-events:none;transition:opacity .25s;
+}
+#music-overlay.open{opacity:1;pointer-events:auto;}
+#music-sheet{
+  width:100%;max-width:480px;
+  background:linear-gradient(160deg,#0d3b22,#0a2e1a);
+  border:1.5px solid rgba(255,255,255,0.12);
+  border-radius:24px 24px 0 0;
+  padding:20px 20px 32px;
+  transform:translateY(100%);transition:transform .3s cubic-bezier(.4,0,.2,1);
+  max-height:88dvh;overflow-y:auto;
+}
+#music-overlay.open #music-sheet{transform:translateY(0);}
+.ms-handle{width:36px;height:4px;border-radius:2px;background:rgba(255,255,255,0.2);margin:0 auto 18px;}
+.ms-title{font-size:1rem;font-weight:700;color:var(--g7);margin-bottom:16px;}
+.ms-tabs{display:flex;gap:8px;margin-bottom:16px;}
+.ms-tab{flex:1;padding:8px;border-radius:10px;border:1.5px solid var(--g3);
+  background:transparent;color:var(--sub);font-size:.8rem;cursor:pointer;transition:.2s;}
+.ms-tab.active{background:var(--g3);border-color:var(--g4);color:#fff;font-weight:600;}
+.ms-panel{display:none;flex-direction:column;gap:10px;}
+.ms-panel.active{display:flex;}
+.ms-input{
+  width:100%;padding:11px 14px;border-radius:12px;
+  border:1.5px solid var(--g3);background:var(--g2);
+  color:var(--txt);font-size:.9rem;outline:none;
+}
+.ms-input:focus{border-color:var(--g5);}
+.ms-hint{font-size:.75rem;color:var(--dim);}
+.ms-btn{
+  width:100%;padding:13px;border-radius:12px;
+  background:var(--leaf);border:none;color:#fff;
+  font-size:.95rem;font-weight:600;cursor:pointer;
+  transition:.2s;display:flex;align-items:center;justify-content:center;gap:8px;
+}
+.ms-btn:active{opacity:.8;}
+.ms-btn:disabled{opacity:.5;cursor:not-allowed;}
+.ms-btn-sec{background:var(--g3);}
+.ms-upload-box{
+  border:2px dashed var(--g4);border-radius:12px;
+  padding:28px 16px;text-align:center;cursor:pointer;
+  transition:.2s;color:var(--sub);font-size:.88rem;
+}
+.ms-upload-box:hover{border-color:var(--g5);color:var(--txt);}
+.ms-upload-box input{display:none;}
+#ms-status{font-size:.82rem;color:var(--sub);min-height:20px;text-align:center;}
+#ms-status.err{color:#ff7070;}
+#ms-status.ok{color:#6fdd9a;}
+
+/* ===== MUSIC PLAYER BAR ===== */
+#music-bar{
+  position:fixed;bottom:0;left:0;right:0;
+  background:rgba(10,30,18,0.92);
+  backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);
+  border-top:1px solid rgba(255,255,255,0.12);
+  padding:10px 16px 14px;
+  display:none;flex-direction:column;gap:8px;
+  z-index:900;max-width:480px;margin:0 auto;
+  /* center on wide screens */
+  left:50%;transform:translateX(-50%);width:100%;
+}
+#music-bar.show{display:flex;}
+#mb-track{font-size:.82rem;color:var(--sub);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+#mb-controls{display:flex;align-items:center;gap:10px;}
+#mb-play{
+  width:36px;height:36px;border-radius:50%;
+  background:var(--leaf);border:none;color:#fff;
+  font-size:1rem;cursor:pointer;flex-shrink:0;
+  display:flex;align-items:center;justify-content:center;
+}
+#mb-progress{flex:1;accent-color:var(--leaf);cursor:pointer;}
+#mb-time{font-size:.72rem;color:var(--dim);white-space:nowrap;min-width:72px;text-align:right;}
+#mb-close{
+  position:absolute;top:8px;right:12px;
+  background:none;border:none;color:var(--dim);font-size:1rem;cursor:pointer;
+}
+
 /* ===== FLOATING ACTION BUTTON (iOS style) ===== */
 #fab{
   position:fixed;
@@ -257,6 +339,12 @@ header p{color:var(--sub);font-size:.85rem;margin-top:4px}
       <span class="fab-sub" id="theme-sub">Chuyển sang sáng</span>
     </span>
   </button>
+  <button class="fab-item" onclick="openMusicModal();closeFab()">
+    <span class="fab-icon">🎵</span>
+    <span class="fab-label">Lấy nhạc từ link / file
+      <span class="fab-sub">YouTube, URL, MP3 từ máy</span>
+    </span>
+  </button>
   <button class="fab-item" onclick="showInfo();closeFab()">
     <span class="fab-icon">🌿</span>
     <span class="fab-label">Về ứng dụng
@@ -266,6 +354,67 @@ header p{color:var(--sub);font-size:.85rem;margin-top:4px}
 </div>
 
 <button id="fab" onclick="toggleFab()" aria-label="Menu">🌿</button>
+
+<!-- ===== MUSIC MODAL ===== -->
+<div id="music-overlay" onclick="if(event.target===this)closeMusicModal()">
+  <div id="music-sheet" onclick="event.stopPropagation()">
+    <div class="ms-handle"></div>
+    <div class="ms-title">🎵 Lấy nhạc &amp; phát nhạc</div>
+
+    <!-- Tabs -->
+    <div class="ms-tabs">
+      <button class="ms-tab active" onclick="switchMsTab('url')">🔗 Từ link</button>
+      <button class="ms-tab" onclick="switchMsTab('file')">📁 Từ máy</button>
+    </div>
+
+    <!-- Panel: URL -->
+    <div class="ms-panel active" id="ms-panel-url">
+      <input class="ms-input" id="ms-url" type="url"
+        placeholder="Dán link YouTube, SoundCloud, MP3..." autocomplete="off">
+      <div class="ms-hint">⚡ Hỗ trợ YouTube, SoundCloud, và 1000+ trang web khác</div>
+      <button class="ms-btn" id="ms-dl-btn" onclick="fetchMusicFromUrl()">
+        <span>⬇️</span> Tải &amp; phát nhạc
+      </button>
+    </div>
+
+    <!-- Panel: File -->
+    <div class="ms-panel" id="ms-panel-file">
+      <label class="ms-upload-box" id="ms-upload-label">
+        <input type="file" id="ms-file-input" accept="audio/*,.mp3,.ogg,.wav,.flac,.m4a"
+          onchange="handleFileUpload(event)">
+        <div style="font-size:2rem;margin-bottom:8px">🎵</div>
+        <div>Nhấn để chọn file nhạc</div>
+        <div class="ms-hint" style="margin-top:4px">MP3, OGG, WAV, FLAC, M4A...</div>
+      </label>
+    </div>
+
+    <div id="ms-status"></div>
+
+    <!-- Mini player inside modal -->
+    <div id="ms-player" style="display:none;flex-direction:column;gap:10px;margin-top:4px">
+      <div id="ms-track" style="font-size:.82rem;color:var(--sub);text-align:center"></div>
+      <audio id="ms-audio" preload="metadata" style="width:100%;border-radius:8px;accent-color:var(--leaf)"></audio>
+      <div style="display:flex;gap:8px">
+        <button class="ms-btn ms-btn-sec" style="flex:1" onclick="pinToBar()">📌 Ghim thanh phát</button>
+        <button class="ms-btn ms-btn-sec" style="width:44px;padding:0" onclick="closeMusicModal()">✕</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== MUSIC BAR (bottom bar) ===== -->
+<div id="music-bar">
+  <button id="mb-close" onclick="closeMusicBar()">✕</button>
+  <div id="mb-track">🎵 Chưa có bài nhạc</div>
+  <div id="mb-controls">
+    <button id="mb-play" onclick="toggleBarPlay()">▶</button>
+    <input type="range" id="mb-progress" min="0" max="100" value="0"
+      oninput="seekBar(this.value)">
+    <span id="mb-time">0:00 / 0:00</span>
+  </div>
+</div>
+<!-- hidden audio for bar -->
+<audio id="bar-audio" style="display:none"></audio>
 
 <div id="visit-counter">🌿 <img src="https://hits.sh/hiepphong2026.github.io/Mangrove.svg?style=flat&label=l%C6%B0%E1%BB%A3t+gh%C3%A9+th%C4%83m&color=4a7c59&labelColor=f0f7f0" alt="Lượt ghé thăm" style="height:18px;vertical-align:middle;border-radius:4px;opacity:0.85"></div>
 
@@ -6799,6 +6948,149 @@ function showToast(msg){
   t.style.opacity='1';
   clearTimeout(t._timer);
   t._timer=setTimeout(()=>{ t.style.opacity='0'; },2500);
+}
+
+/* ============================================================
+   MUSIC MODAL + PLAYER
+   ============================================================ */
+
+function openMusicModal(){
+  document.getElementById('music-overlay').classList.add('open');
+}
+function closeMusicModal(){
+  document.getElementById('music-overlay').classList.remove('open');
+}
+
+function switchMsTab(tab){
+  document.querySelectorAll('.ms-tab').forEach((t,i)=>{
+    t.classList.toggle('active', (i===0&&tab==='url')||(i===1&&tab==='file'));
+  });
+  document.getElementById('ms-panel-url').classList.toggle('active',tab==='url');
+  document.getElementById('ms-panel-file').classList.toggle('active',tab==='file');
+  setMsStatus('');
+}
+
+function setMsStatus(msg, type=''){
+  const el=document.getElementById('ms-status');
+  el.textContent=msg;
+  el.className=type;
+}
+
+/* ---------- Fetch from URL (via PHP backend) ---------- */
+async function fetchMusicFromUrl(){
+  const url=document.getElementById('ms-url').value.trim();
+  if(!url){ setMsStatus('⚠️ Vui lòng nhập link nhạc','err'); return; }
+
+  const btn=document.getElementById('ms-dl-btn');
+  btn.disabled=true;
+  setMsStatus('⏳ Đang xử lý link...');
+
+  try{
+    // Backend PHP sẽ trả về JSON {status:"ok", url:"...", title:"..."}
+    // hoặc {status:"error", message:"..."}
+    const res=await fetch('download.php', {
+      method:'POST',
+      headers:{'Content-Type':'application/x-www-form-urlencoded'},
+      body:'url='+encodeURIComponent(url)
+    });
+    if(!res.ok) throw new Error('Server lỗi: '+res.status);
+    const data=await res.json();
+    if(data.status==='error') throw new Error(data.message||'Không tải được');
+    playInModal(data.url, data.title||url);
+    setMsStatus('✅ Tải xong! Đang phát...','ok');
+  }catch(err){
+    // Nếu chưa có backend (GitHub Pages), thử phát link trực tiếp
+    if(url.match(/\.(mp3|ogg|wav|flac|m4a)(\?.*)?$/i)){
+      playInModal(url, url.split('/').pop().replace(/\?.*$/,''));
+      setMsStatus('✅ Đang phát link trực tiếp','ok');
+    } else {
+      setMsStatus('❌ '+err.message+'. (Backend yt-dlp cần trên Hostinger)','err');
+    }
+  }finally{
+    btn.disabled=false;
+  }
+}
+
+/* ---------- Local file upload ---------- */
+function handleFileUpload(e){
+  const file=e.target.files[0];
+  if(!file){ return; }
+  const blobUrl=URL.createObjectURL(file);
+  playInModal(blobUrl, file.name.replace(/\.[^.]+$/,''));
+  setMsStatus('✅ Đã tải file: '+file.name,'ok');
+  document.getElementById('ms-upload-label').style.borderColor='var(--g5)';
+}
+
+/* ---------- Play in modal mini-player ---------- */
+function playInModal(src, title){
+  const audio=document.getElementById('ms-audio');
+  const trackEl=document.getElementById('ms-track');
+  const playerEl=document.getElementById('ms-player');
+  audio.src=src;
+  trackEl.textContent='🎵 '+title;
+  playerEl.style.display='flex';
+  audio.play().catch(()=>{});
+  // keep ref for bar
+  window._msCurrentSrc=src;
+  window._msCurrentTitle=title;
+}
+
+/* ---------- Pin to bottom bar ---------- */
+function pinToBar(){
+  const src=window._msCurrentSrc;
+  const title=window._msCurrentTitle;
+  if(!src){ return; }
+  const modalAudio=document.getElementById('ms-audio');
+  const curTime=modalAudio.currentTime;
+  modalAudio.pause();
+
+  const bar=document.getElementById('music-bar');
+  const barAudio=document.getElementById('bar-audio');
+  document.getElementById('mb-track').textContent='🎵 '+title;
+  barAudio.src=src;
+  barAudio.currentTime=curTime;
+  bar.classList.add('show');
+  barAudio.play().catch(()=>{});
+  document.getElementById('mb-play').textContent='⏸';
+
+  barAudio.ontimeupdate=updateBarProgress;
+  barAudio.onended=()=>{ document.getElementById('mb-play').textContent='▶'; };
+
+  closeMusicModal();
+  showToast('📌 Đã ghim – nhạc tiếp tục phát dưới màn hình');
+}
+
+function toggleBarPlay(){
+  const a=document.getElementById('bar-audio');
+  const btn=document.getElementById('mb-play');
+  if(a.paused){ a.play(); btn.textContent='⏸'; }
+  else { a.pause(); btn.textContent='▶'; }
+}
+
+function seekBar(val){
+  const a=document.getElementById('bar-audio');
+  if(a.duration) a.currentTime=(val/100)*a.duration;
+}
+
+function updateBarProgress(){
+  const a=document.getElementById('bar-audio');
+  if(!a.duration) return;
+  const pct=(a.currentTime/a.duration)*100;
+  document.getElementById('mb-progress').value=pct;
+  document.getElementById('mb-time').textContent=fmtTime(a.currentTime)+' / '+fmtTime(a.duration);
+}
+
+function closeMusicBar(){
+  const a=document.getElementById('bar-audio');
+  a.pause(); a.src='';
+  document.getElementById('music-bar').classList.remove('show');
+}
+
+function fmtTime(s){
+  if(isNaN(s)) return '0:00';
+  const m=Math.floor(s/60);
+  const sec=Math.floor(s%60).toString().padStart(2,'0');
+  return m+':'+sec;
 }
 </script>
 </body>
