@@ -7064,48 +7064,84 @@ function playInModal(src, title){
   nameInput.value=title.replace(/[\\/:*?"<>|]/g,'_');
 }
 
-/* ---------- Lưu âm thanh xuống máy (trích từ video nếu cần) ---------- */
+/* ---------- Lưu âm thanh xuống máy ---------- */
 async function saveMp3(){
+  const origFile=window._msCurrentFile;
   const src=window._msCurrentSrc;
-  const origFile=window._msCurrentFile; // file gốc (có thể là video)
-  if(!src){ setMsStatus('⚠️ Chưa có file để lưu','err'); return; }
+  if(!src && !origFile){ setMsStatus('⚠️ Chưa có file để lưu','err'); return; }
 
   let baseName=(document.getElementById('ms-save-name').value.trim()||window._msCurrentTitle||'audio');
-  baseName=baseName.replace(/\.[^.]+$/,'').replace(/[\\/:*?"<>|]/g,'_'); // bỏ đuôi cũ
+  baseName=baseName.replace(/\.[^.]+$/,'').replace(/[\\/:*?"<>|]/g,'_');
 
   const btn=document.querySelector('#ms-save-box .ms-btn');
   btn.disabled=true;
-  setMsStatus('⏳ Đang trích âm thanh...','');
 
+  // --- Cách 1: decodeAudioData (nhanh, không cần phát lại) ---
   try{
-    // Lấy ArrayBuffer của file gốc
+    setMsStatus('⏳ Đang trích âm thanh...','');
     let arrayBuf;
-    if(origFile){
-      arrayBuf=await origFile.arrayBuffer();
-    } else {
-      const res=await fetch(src);
-      arrayBuf=await res.arrayBuffer();
+    if(origFile) arrayBuf=await origFile.arrayBuffer();
+    else { const r=await fetch(src); arrayBuf=await r.arrayBuffer(); }
+
+    const audioCtx=new (window.AudioContext||window.webkitAudioContext)();
+    const audioBuffer=await new Promise((res,rej)=>{
+      audioCtx.decodeAudioData(arrayBuf, res, rej);
+    });
+    audioCtx.close();
+    const wavBlob=audioBufferToWav(audioBuffer);
+    downloadBlob(wavBlob, baseName+'.wav');
+    setMsStatus('✅ Đã lưu: '+baseName+'.wav','ok');
+    btn.disabled=false;
+    return;
+  }catch(_){}
+
+  // --- Cách 2: Record lại từ thẻ audio đang phát (iOS fallback) ---
+  try{
+    setMsStatus('⏳ Đang ghi âm... (đừng tắt màn hình)','');
+    const audio=document.getElementById('ms-audio');
+
+    // Kiểm tra hỗ trợ
+    if(typeof audio.captureStream!=='function' && typeof audio.mozCaptureStream!=='function'){
+      throw new Error('Trình duyệt không hỗ trợ ghi âm trực tiếp');
+    }
+    if(!window.MediaRecorder){
+      throw new Error('MediaRecorder không khả dụng');
     }
 
-    // Decode audio (hỗ trợ cả video lẫn audio)
-    const audioCtx=new (window.AudioContext||window.webkitAudioContext)();
-    const audioBuffer=await audioCtx.decodeAudioData(arrayBuf);
-    audioCtx.close();
+    const stream=audio.captureStream ? audio.captureStream() : audio.mozCaptureStream();
+    const mimeType=['audio/webm;codecs=opus','audio/webm','audio/ogg'].find(m=>MediaRecorder.isTypeSupported(m))||'';
+    const recorder=new MediaRecorder(stream, mimeType?{mimeType}:{});
+    const chunks=[];
+    recorder.ondataavailable=e=>{ if(e.data.size>0) chunks.push(e.data); };
 
-    // Encode sang WAV
-    const wavBlob=audioBufferToWav(audioBuffer);
-    const url=URL.createObjectURL(wavBlob);
-    const a=document.createElement('a');
-    a.href=url;
-    a.download=baseName+'.wav';
-    a.click();
-    setTimeout(()=>URL.revokeObjectURL(url),8000);
-    setMsStatus('✅ Đã lưu: '+baseName+'.wav','ok');
+    recorder.start(100);
+    audio.currentTime=0;
+    await audio.play();
+
+    await new Promise(res=>{
+      audio.onended=res;
+      recorder.onstop=res;
+      // dừng sớm nếu audio kết thúc
+      audio.addEventListener('ended', ()=>recorder.stop(), {once:true});
+    });
+    if(recorder.state!=='inactive') recorder.stop();
+
+    const blob=new Blob(chunks, {type: mimeType||'audio/webm'});
+    const ext=mimeType.includes('ogg')?'ogg':'webm';
+    downloadBlob(blob, baseName+'.'+ext);
+    setMsStatus('✅ Đã lưu: '+baseName+'.'+ext,'ok');
   }catch(e){
-    setMsStatus('❌ Lỗi: '+e.message,'err');
+    setMsStatus('❌ Không lưu được: '+e.message+'. Hãy thử file MP3/AAC thay vì MOV.','err');
   }finally{
     btn.disabled=false;
   }
+}
+
+function downloadBlob(blob, filename){
+  const url=URL.createObjectURL(blob);
+  const a=document.createElement('a');
+  a.href=url; a.download=filename; a.click();
+  setTimeout(()=>URL.revokeObjectURL(url),8000);
 }
 
 /* Encode AudioBuffer → WAV Blob */
@@ -7113,7 +7149,7 @@ function audioBufferToWav(buf){
   const numCh=buf.numberOfChannels;
   const sr=buf.sampleRate;
   const len=buf.length;
-  const bytesPerSample=2; // 16-bit PCM
+  const bytesPerSample=2;
   const blockAlign=numCh*bytesPerSample;
   const byteRate=sr*blockAlign;
   const dataSize=len*blockAlign;
