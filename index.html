@@ -369,7 +369,7 @@ header p{color:var(--sub);font-size:.85rem;margin-top:4px}
       <!-- Lưu MP3 -->
       <div id="ms-save-box" style="display:flex;gap:8px;align-items:center">
         <input id="ms-save-name" class="ms-input" type="text" placeholder="Đặt tên file..." style="flex:1;padding:9px 12px">
-        <button class="ms-btn" style="width:auto;padding:9px 14px;white-space:nowrap" onclick="saveMp3()">💾 Lưu MP3</button>
+        <button class="ms-btn" style="width:auto;padding:9px 14px;white-space:nowrap" onclick="saveMp3()">💾 Lưu WAV</button>
       </div>
 
       <div style="display:flex;gap:8px">
@@ -7049,8 +7049,10 @@ function handleFileUpload(e){
   const file=e.target.files[0];
   if(!file){ return; }
   const blobUrl=URL.createObjectURL(file);
-  playInModal(blobUrl, file.name.replace(/\.[^.]+$/,''));
-  setMsStatus('✅ Đã tải file: '+file.name,'ok');
+  const baseName=file.name.replace(/\.[^.]+$/,'');
+  playInModal(blobUrl, baseName);
+  window._msCurrentFile=file; // giữ file gốc để trích âm thanh khi lưu
+  setMsStatus('✅ Đã tải: '+file.name,'ok');
   document.getElementById('ms-upload-label').style.borderColor='var(--g5)';
 }
 
@@ -7071,37 +7073,83 @@ function playInModal(src, title){
   nameInput.value=title.replace(/[\\/:*?"<>|]/g,'_');
 }
 
-/* ---------- Lưu MP3 xuống máy ---------- */
-function saveMp3(){
+/* ---------- Lưu âm thanh xuống máy (trích từ video nếu cần) ---------- */
+async function saveMp3(){
   const src=window._msCurrentSrc;
+  const origFile=window._msCurrentFile; // file gốc (có thể là video)
   if(!src){ setMsStatus('⚠️ Chưa có file để lưu','err'); return; }
 
-  let name=(document.getElementById('ms-save-name').value.trim()||window._msCurrentTitle||'audio');
-  // đảm bảo đuôi .mp3
-  if(!/\.(mp3|ogg|wav|flac|m4a)$/i.test(name)) name+='.mp3';
+  let baseName=(document.getElementById('ms-save-name').value.trim()||window._msCurrentTitle||'audio');
+  baseName=baseName.replace(/\.[^.]+$/,'').replace(/[\\/:*?"<>|]/g,'_'); // bỏ đuôi cũ
 
-  // Với blob URL (file từ máy): fetch → download
-  // Với URL thông thường: tạo thẻ a[download] trỏ thẳng
-  if(src.startsWith('blob:')){
-    fetch(src)
-      .then(r=>r.blob())
-      .then(blob=>{
-        const a=document.createElement('a');
-        a.href=URL.createObjectURL(blob);
-        a.download=name;
-        a.click();
-        setTimeout(()=>URL.revokeObjectURL(a.href),5000);
-        setMsStatus('✅ Đã lưu: '+name,'ok');
-      })
-      .catch(()=>setMsStatus('❌ Không lưu được file','err'));
-  } else {
+  const btn=document.querySelector('#ms-save-box .ms-btn');
+  btn.disabled=true;
+  setMsStatus('⏳ Đang trích âm thanh...','');
+
+  try{
+    // Lấy ArrayBuffer của file gốc
+    let arrayBuf;
+    if(origFile){
+      arrayBuf=await origFile.arrayBuffer();
+    } else {
+      const res=await fetch(src);
+      arrayBuf=await res.arrayBuffer();
+    }
+
+    // Decode audio (hỗ trợ cả video lẫn audio)
+    const audioCtx=new (window.AudioContext||window.webkitAudioContext)();
+    const audioBuffer=await audioCtx.decodeAudioData(arrayBuf);
+    audioCtx.close();
+
+    // Encode sang WAV
+    const wavBlob=audioBufferToWav(audioBuffer);
+    const url=URL.createObjectURL(wavBlob);
     const a=document.createElement('a');
-    a.href=src;
-    a.download=name;
-    a.target='_blank';
+    a.href=url;
+    a.download=baseName+'.wav';
     a.click();
-    setMsStatus('✅ Đang tải xuống: '+name,'ok');
+    setTimeout(()=>URL.revokeObjectURL(url),8000);
+    setMsStatus('✅ Đã lưu: '+baseName+'.wav','ok');
+  }catch(e){
+    setMsStatus('❌ Lỗi: '+e.message,'err');
+  }finally{
+    btn.disabled=false;
   }
+}
+
+/* Encode AudioBuffer → WAV Blob */
+function audioBufferToWav(buf){
+  const numCh=buf.numberOfChannels;
+  const sr=buf.sampleRate;
+  const len=buf.length;
+  const bytesPerSample=2; // 16-bit PCM
+  const blockAlign=numCh*bytesPerSample;
+  const byteRate=sr*blockAlign;
+  const dataSize=len*blockAlign;
+  const ab=new ArrayBuffer(44+dataSize);
+  const view=new DataView(ab);
+
+  function write(offset,str){ for(let i=0;i<str.length;i++) view.setUint8(offset+i,str.charCodeAt(i)); }
+  function u32(o,v){ view.setUint32(o,v,true); }
+  function u16(o,v){ view.setUint16(o,v,true); }
+
+  write(0,'RIFF'); u32(4,36+dataSize); write(8,'WAVE');
+  write(12,'fmt '); u32(16,16); u16(20,1); u16(22,numCh);
+  u32(24,sr); u32(28,byteRate); u16(32,blockAlign); u16(34,16);
+  write(36,'data'); u32(40,dataSize);
+
+  // interleave channels
+  const channels=[];
+  for(let c=0;c<numCh;c++) channels.push(buf.getChannelData(c));
+  let offset=44;
+  for(let i=0;i<len;i++){
+    for(let c=0;c<numCh;c++){
+      const s=Math.max(-1,Math.min(1,channels[c][i]));
+      view.setInt16(offset,s<0?s*0x8000:s*0x7fff,true);
+      offset+=2;
+    }
+  }
+  return new Blob([ab],{type:'audio/wav'});
 }
 
 /* ---------- Pin to bottom bar ---------- */
