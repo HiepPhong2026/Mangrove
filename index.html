@@ -170,6 +170,8 @@ header p{color:var(--sub);font-size:.85rem;margin-top:4px}
   left:50%;transform:translateX(-50%);width:100%;
 }
 #music-bar.show{display:flex;}
+body.music-playing{padding-bottom:80px;}
+body.music-playing #fab{ bottom:104px; }
 #mb-track{font-size:.82rem;color:var(--sub);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
 #mb-controls{display:flex;align-items:center;gap:10px;}
 #mb-play{
@@ -7167,6 +7169,7 @@ function pinToBar(){
   barAudio.src=src;
   barAudio.currentTime=curTime;
   bar.classList.add('show');
+  document.body.classList.add('music-playing');
   barAudio.play().catch(()=>{});
   document.getElementById('mb-play').textContent='⏸';
 
@@ -7201,6 +7204,7 @@ function closeMusicBar(){
   const a=document.getElementById('bar-audio');
   a.pause(); a.src='';
   document.getElementById('music-bar').classList.remove('show');
+  document.body.classList.remove('music-playing');
 }
 
 function fmtTime(s){
