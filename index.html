@@ -7076,7 +7076,7 @@ async function saveMp3(){
   const btn=document.querySelector('#ms-save-box .ms-btn');
   btn.disabled=true;
 
-  // --- Cách 1: decodeAudioData (nhanh, không cần phát lại) ---
+  // --- Cách 1: decodeAudioData (nhanh, MP3/WAV/AAC/M4A) ---
   try{
     setMsStatus('⏳ Đang trích âm thanh...','');
     let arrayBuf;
@@ -7095,43 +7095,67 @@ async function saveMp3(){
     return;
   }catch(_){}
 
-  // --- Cách 2: Record lại từ thẻ audio đang phát (iOS fallback) ---
+  // --- Cách 2: Record real-time qua ScriptProcessor (iOS Safari với .mov) ---
   try{
-    setMsStatus('⏳ Đang ghi âm... (đừng tắt màn hình)','');
-    const audio=document.getElementById('ms-audio');
+    setMsStatus('⏳ Đang ghi âm – đừng tắt màn hình...','');
 
-    // Kiểm tra hỗ trợ
-    if(typeof audio.captureStream!=='function' && typeof audio.mozCaptureStream!=='function'){
-      throw new Error('Trình duyệt không hỗ trợ ghi âm trực tiếp');
-    }
-    if(!window.MediaRecorder){
-      throw new Error('MediaRecorder không khả dụng');
-    }
-
-    const stream=audio.captureStream ? audio.captureStream() : audio.mozCaptureStream();
-    const mimeType=['audio/webm;codecs=opus','audio/webm','audio/ogg'].find(m=>MediaRecorder.isTypeSupported(m))||'';
-    const recorder=new MediaRecorder(stream, mimeType?{mimeType}:{});
-    const chunks=[];
-    recorder.ondataavailable=e=>{ if(e.data.size>0) chunks.push(e.data); };
-
-    recorder.start(100);
-    audio.currentTime=0;
-    await audio.play();
-
-    await new Promise(res=>{
-      audio.onended=res;
-      recorder.onstop=res;
-      // dừng sớm nếu audio kết thúc
-      audio.addEventListener('ended', ()=>recorder.stop(), {once:true});
+    // Dùng thẻ video ẩn để Safari decode .mov
+    const vid=document.createElement('video');
+    vid.src=src; vid.muted=false; vid.preload='auto';
+    vid.style.display='none'; document.body.appendChild(vid);
+    await new Promise((res,rej)=>{
+      vid.oncanplay=res;
+      vid.onerror=()=>rej(new Error('Không phát được file này trên trình duyệt'));
+      setTimeout(()=>rej(new Error('Timeout tải file')),10000);
     });
-    if(recorder.state!=='inactive') recorder.stop();
 
-    const blob=new Blob(chunks, {type: mimeType||'audio/webm'});
-    const ext=mimeType.includes('ogg')?'ogg':'webm';
-    downloadBlob(blob, baseName+'.'+ext);
-    setMsStatus('✅ Đã lưu: '+baseName+'.'+ext,'ok');
+    const duration=vid.duration;
+    const SR=44100;
+    const numCh=2;
+    const audioCtx=new (window.AudioContext||window.webkitAudioContext)({sampleRate:SR});
+    const source=audioCtx.createMediaElementSource(vid);
+    const bufSize=4096;
+    const processor=audioCtx.createScriptProcessor(bufSize,numCh,numCh);
+
+    // Gom PCM samples
+    const recorded=[[],[]];
+    processor.onaudioprocess=e=>{
+      for(let c=0;c<numCh;c++){
+        const ch=e.inputBuffer.getChannelData(c);
+        recorded[c].push(new Float32Array(ch));
+      }
+    };
+    source.connect(processor);
+    processor.connect(audioCtx.destination);
+
+    // Phát từ đầu
+    vid.currentTime=0;
+    await vid.play();
+
+    // Chờ hết bài
+    await new Promise(res=>{
+      vid.onended=res;
+      setTimeout(res,(duration+2)*1000); // fallback timeout
+    });
+
+    processor.disconnect(); source.disconnect(); audioCtx.close();
+    document.body.removeChild(vid);
+
+    // Ghép samples thành AudioBuffer
+    const totalLen=recorded[0].reduce((a,b)=>a+b.length,0);
+    const offCtx=new OfflineAudioContext(numCh,totalLen,SR);
+    const finalBuf=offCtx.createBuffer(numCh,totalLen,SR);
+    for(let c=0;c<numCh;c++){
+      const ch=finalBuf.getChannelData(c);
+      let off=0;
+      for(const chunk of recorded[c]){ ch.set(chunk,off); off+=chunk.length; }
+    }
+
+    const wavBlob=audioBufferToWav(finalBuf);
+    downloadBlob(wavBlob, baseName+'.wav');
+    setMsStatus('✅ Đã lưu: '+baseName+'.wav','ok');
   }catch(e){
-    setMsStatus('❌ Không lưu được: '+e.message+'. Hãy thử file MP3/AAC thay vì MOV.','err');
+    setMsStatus('❌ '+e.message,'err');
   }finally{
     btn.disabled=false;
   }
