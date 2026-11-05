@@ -329,8 +329,8 @@ header p{color:var(--sub);font-size:.85rem;margin-top:4px}
   </button>
   <button class="fab-item" onclick="openMusicModal();closeFab()">
     <span class="fab-icon">🎵</span>
-    <span class="fab-label">Phát nhạc từ máy
-      <span class="fab-sub">Chọn file MP3, WAV, FLAC...</span>
+    <span class="fab-label">Lấy âm thanh từ file clip
+      <span class="fab-sub">MP3, video, nhạc trong máy</span>
     </span>
   </button>
   <button class="fab-item" onclick="showInfo();closeFab()">
@@ -347,7 +347,7 @@ header p{color:var(--sub);font-size:.85rem;margin-top:4px}
 <div id="music-overlay" onclick="if(event.target===this)closeMusicModal()">
   <div id="music-sheet" onclick="event.stopPropagation()">
     <div class="ms-handle"></div>
-    <div class="ms-title">🎵 Phát nhạc từ máy</div>
+    <div class="ms-title">🎵 Lấy âm thanh từ file clip trong máy</div>
 
     <!-- File upload only -->
     <label class="ms-upload-box" id="ms-upload-label">
