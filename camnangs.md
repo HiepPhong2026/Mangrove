@@ -628,3 +628,77 @@ chu_de: Làm chủ công nghệ & Khai phóng năng suất số
 - Cá nhân hóa văn phong và thổi hồn con người vào kết quả; văn bản do AI tạo ra thường bóng bẩy nhưng thiếu cảm xúc và trải nghiệm sống, hãy gọt giũa lại bằng vốn từ, giọng điệu và câu chuyện thực chứng của chính mình.
 - Dùng AI để giải phóng các tác vụ cơ bắp, lặp lại; tự động hóa việc tóm tắt tài liệu dài, trích xuất bảng biểu, dịch sơ thảo, viết mã mẫu hoặc sửa lỗi ngữ pháp để dành trọn năng lượng cho tư duy chiến lược và sáng tạo.
 - Không ngừng cập nhật năng lực và đạo đức công nghệ; rèn luyện thói quen học hỏi các tính năng mới mỗi tuần, sử dụng công nghệ với tinh thần nhân văn, tôn trọng bản quyền và không tạo ra nội dung giả mạo gây hại cho xã hội.
+
+---
+
+## Đạo Vợ Chồng & Sóng Gió Gia Đình
+emoji: 💍
+chu_de: Truyện cười hôn nhân hài hước
+
+- **Phép màu của thời gian**: Vợ đứng trước gương thở dài: "Anh thấy dạo này em có già đi tí nào không?". Chồng âu yếm: "Không hề, em vẫn giữ nguyên nét đẹp của mười năm trước... chỉ có điều diện tích khuôn mặt hơi mở rộng thêm để đón phúc lộc thôi!".
+- **Khả năng ghi nhớ**: Vợ càu nhàu: "Anh lúc nào cũng quên ngày kỷ niệm!". Chồng: "Oan quá, anh nhớ như in từng chi tiết đấy chứ!". Vợ: "Thế anh nhớ được cái gì nhất?". Chồng: "Anh nhớ từ ngày đó đến giờ chưa từng cãi thắng em một lần nào!".
+- **Mật khẩu chuẩn**: Vợ mượn điện thoại hỏi: "Mật khẩu đổi thành gì rồi?". Chồng: "EmLuonDung". Vợ cười tít: "Biết điều đấy!". Chồng lẩm bẩm: "Nhập sai một chữ là máy khóa, y hệt thực tế ở nhà".
+- **Lựa chọn thực đơn**: "Tối nay ăn gì?". "Bún bò". "Dầu mỡ lắm". "Cơm tấm?". "Khô lắm". "Lẩu nấm?". "Lại lẩu, ngán chết". "Thế muốn ăn gì?". Vợ dịu dàng: "Em ăn gì cũng được, tùy anh chọn!".
+- **Tiếng nói trong nhà**: Bạn thân hỏi: "Lấy vợ xong mất hết tiếng nói à?". Chồng dõng dạc: "Tiếng nói của tôi vang dội nhất nhà đấy!". Bạn: "Hay nói câu gì nhất?". Chồng: "Dạ, em nói chí phải!".
+- **Tiết kiệm đỉnh cao**: Vợ khoe: "Váy giảm 50%, giày mua 1 tặng 1, em tiết kiệm cho nhà gần 2 triệu!". Chồng gật gù: "Hay quá, cứ tiết kiệm kiểu này thêm vài lần nữa là tháng sau vợ chồng mình ra công viên ngủ hóng gió mát miễn phí luôn!".
+- **Điều ước Thần Đèn**: Thần cho một điều ước. Chồng: "Cho tôi hiểu khi vợ nói 'Em không sao đâu' thì trong đầu cô ấy muốn gì". Thần toát mồ hôi: "Cây cầu đi Hawaii... ngươi muốn làm hai làn hay bốn làn xe?".
+- **Bát đũa biết nghe lời**: Chồng rửa bát mặt đăm chiêu, vợ hỏi. Chồng: "Anh đang ngưỡng mộ tụi nó — bẩn một tí là được em cọ rửa nhiệt tình; còn anh ngoan cả ngày mà hễ mở miệng là bị chỉnh đốn!".
+- **Bí quyết sống thọ**: Phóng viên hỏi cụ 100 tuổi: "Làm sao sống thọ thế?". Cụ: "Không bao giờ tranh cãi với ai". Phóng viên: "Vô lý, cả đời không tranh cãi được sao?". Cụ mỉm cười: "Vâng, anh nói hoàn toàn đúng!".
+- **Lời thề bàn nhậu**: Bốn thằng bạn ôm nhau khóc: "Dù giàu hay nghèo mãi mãi là anh em!". Sáng hôm sau thanh toán tiền karaoke: Cả ba thằng kia đã chặn số điện thoại của thằng cầm hóa đơn.
+
+---
+
+## Dân Văn Phòng & Nỗi Niềm Deadline
+emoji: 💼
+chu_de: Truyện cười chuyện công sở
+
+- **Phỏng vấn trung thực**: Người phỏng vấn: "Điểm yếu lớn nhất của bạn là gì?". Ứng viên: "Tôi quá thật thà". Người phỏng vấn: "Tôi nghĩ thật thà đâu phải điểm yếu?". Ứng viên: "Tôi không quan tâm ông nghĩ cái quái gì cả!".
+- **Kỹ năng làm việc nhóm**: Sếp hỏi nhân viên mới: "Em hiểu thế nào về làm việc nhóm?". Nhân viên: "Dạ, nghĩa là khi có lỗi sai thì cả nhóm cùng bị chửi, còn khi hoàn thành tốt thì công lao thuộc về sếp ạ!".
+- **Tăng lương cấp tốc**: Nhân viên: "Thưa sếp, có ba công ty lớn đang bám đuổi tôi ráo riết!". Sếp hoảng hốt: "Công ty nào?". Nhân viên: "Dạ, công ty điện lực, công ty nước và ngân hàng đòi nợ thẻ tín dụng ạ!".
+- **Lý do đi trễ**: Sếp: "Tại sao hôm nay đi làm muộn 30 phút?". Nhân viên: "Dạ vì biển báo ghi 'Khu vực trường học, xin hãy đi chậm lại' ạ!".
+- **Bí quyết tập trung**: Sếp thấy Tèo nhìn chằm chằm màn hình hai tiếng liền khen tinh thần làm việc. Tèo run rẩy: "Dạ không phải đâu sếp... máy bị đơ màn hình mà em chưa kịp bấm Save!".
+- **Cống hiến hết mình**: "Ở đây chúng tôi xem nhân viên như một gia đình lớn!". Nhân viên thầm với bạn: "Đúng thật, hèn chi cày bục mặt mà chẳng bao giờ thấy nhắc chuyện trả tiền sòng phẳng!".
+- **Email sếp gửi**: Tiêu đề: "Không khẩn cấp, mai xử lý cũng được". Nội dung: "Nhưng nếu làm xong trước 6 giờ sáng mai thì tốt biết mấy!".
+- **Đơn xin nghỉ việc ngắn nhất**: "Kính gửi Ban Giám đốc. Lương công ty trả chỉ đủ để tôi duy trì hơi thở đến công ty mỗi sáng, không đủ sức để làm việc. Xin từ chức!".
+
+---
+
+## Trường Lớp & Tuổi Học Trò
+emoji: 🎒
+chu_de: Truyện cười thầy cô và học sinh
+
+- **Bài văn tả con vật**: Đề bài tả con vật nuôi. Tí viết: "Nhà em có nuôi một con tôm luộc. Nó rất ngoan, cả ngày nằm im trên đĩa không sủa tiếng nào, thịt rất ngon!".
+- **Câu hỏi hóc búa**: Thầy: "Ai giúp Columbus tìm ra châu Mỹ?". Cả lớp đồng thanh: "Dạ, Google Maps ạ!".
+- **Định luật vạn vật**: Thầy hỏi học được gì từ chuyện quả táo rơi trúng đầu Newton. Tí đáp: "Dạ, bài học là ngồi học thì nên đội mũ bảo hiểm ạ!".
+- **Tiết học Tiếng Anh**: Thầy: "'Goodbye' nghĩa là gì?". Tèo: "Dạ là chúc đi mua dép mới ạ!".
+- **Họp phụ huynh**: Bố về mắng: "Thầy bảo mày dốt nhất lớp, ngồi học chỉ toàn ngủ gật!". Tèo cãi: "Nếu con ngủ gật thì làm sao biết được con dốt nhất lớp!".
+- **Trực nhật lớp**: Thầy thấy rác đầy sàn hỏi lớp trưởng. Lớp trưởng: "Thưa thầy, chúng em học tập bảo vệ môi trường, không muốn làm xáo trộn hệ sinh thái của lớp ạ!".
+- **Học giỏi giống ai**: Mẹ tự hào: "Thằng Tí thông minh giống em ghê!". Bố thở dài: "Chắc chắn rồi, chứ trí thông minh của anh nó vẫn còn nguyên trong đầu anh đây này!".
+
+---
+
+## Công Nghệ & Thời Đại Số
+emoji: 📱
+chu_de: Truyện cười điện thoại và mạng xã hội
+
+- **Mất mạng Internet**: Mạng bị rớt 2 tiếng. Tèo bước ra khỏi phòng, ngồi nói chuyện với bố mẹ rồi chia sẻ: "Hóa ra bố mẹ mình cũng là những người rất thú vị và tốt bụng!".
+- **Trợ lý ảo Siri**: "Siri ơi, tại sao tôi vẫn còn ế?". Siri: "Tôi đang kích hoạt camera trước để bạn tự tìm câu trả lời!".
+- **Mua hàng online**: "Áo ngoài đời có giống ảnh người mẫu không?". Shop: "Giống 100% ạ, chỉ có khuôn mặt và vóc dáng người mua là không giống thôi!".
+- **Thuật toán gợi ý**: Tèo lỡ miệng nói đau lưng. Mở điện thoại ra: Facebook, TikTok, Shopee đồng loạt hiển thị quảng cáo quan tài giảm giá, dịch vụ bốc mộ và ghế mát-xa trả góp.
+- **Mạng xã hội và đời thực**: Ảnh đại diện Facebook: vận động viên thể hình, doanh nhân phong thái ngời ngời. Ngoài đời thực: Đang ngồi gãi chân, mặc quần đùi rách, vừa ăn mì tôm vừa canh mã giảm giá 10k.
+- **Hỏi AI**: "Cho tôi số may mắn trúng độc đắc xổ số chiều nay". AI: "Nếu tôi biết con số đó thì bây giờ tôi đã tự mua máy chủ mới chứ không ngồi đây trả lời câu hỏi vớ vẩn của bạn!".
+- **Học làm giàu online**: Tham gia khóa 5 triệu. Bài học đầu tiên: "Hãy tìm 100 người giống bạn và bán cho mỗi người một khóa học giá 5 triệu!".
+
+---
+
+## Triết Lý Vỉa Hè & Cười Nghiêng Ngả
+emoji: 💡
+chu_de: Truyện cười góc nhìn nhân sinh
+
+- **Tiền bạc không quan trọng**: Người giàu: "Tiền bạc không mang lại hạnh phúc". Người nghèo: "Đúng, nhưng khóc trong xe Mercedes máy lạnh vẫn dễ chịu hơn ngồi khóc sau xe đạp thủng lốp dưới mưa!".
+- **Động lực dậy sớm**: Tèo dậy từ 5 giờ sáng suốt một tháng. Kết quả: Phát hiện ra lúc 5 giờ sáng trời rất lạnh và ngủ tiếp là quyết định sáng suốt nhất cuộc đời.
+- **Giảm cân khoa học**: "Tôi vừa hoàn thành chế độ ăn kiêng 30 ngày. Kết quả kỳ diệu: Tôi đã mất đi 30 ngày vui vẻ mà chẳng sụt được lạng mỡ nào!".
+- **Hôn nhân và toán học**: Tình yêu là bài toán hình học: Người thứ ba biến góc vuông thành tam giác. Hôn nhân là phép chia: Tiền lương chia hai, tự do chia mười, việc nhà nhân đôi.
+- **Tình bạn chân chính**: Tình bạn đẹp nhất là hai đứa ngồi lướt điện thoại ba tiếng không nói gì, lúc về vẫn khen: "Hôm nay nói chuyện hợp gu ghê!".
+- **Tuổi trưởng thành**: Dấu hiệu rõ nhất không phải khi kiếm được tiền, mà là khi nhìn thấy bát đĩa bẩn trong bồn rửa và tự giác đi rửa mà không cần ai dọa đánh đòn.
+- **Đúc kết nhân sinh**: Cuộc đời giống một cuộn giấy vệ sinh — càng về những đoạn cuối, nó trôi qua càng nhanh đến chóng mặt!
