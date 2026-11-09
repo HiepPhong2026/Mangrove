@@ -177,3 +177,20 @@ chu_de: Kỹ năng phục vụ & Chuyên nghiệp công sở
 - Giữ vững tác phong chỉn chu nơi làm việc; trang phục gọn gàng, khu vực phục vụ ngăn nắp sạch sẽ tạo niềm tin ban đầu vững chắc cho khách.
 - Tuyệt đối không phàn nàn hay nói xấu khách hàng; không đem chuyện bực bội của khách này trút lên khách khác hoặc cười cợt sau lưng khách.
 - Cảm ơn chân thành khi khách ra về; dù khách có mua hàng hay chỉ ghé xem, một lời cảm ơn và lời chúc tốt đẹp luôn để lại ấn tượng sâu đậm để họ quay lại.
+
+---
+
+## Cẩm nang tập thể dục dành cho dân văn phòng
+emoji: 🧘
+chu_de: Vận động công sở & Sức khỏe cột sống
+
+- Nhớ quy tắc dòng chảy thông suốt; ngồi bất động quá lâu làm ứ trệ khí huyết như đầm lầy tắc nghẽn, cứ sau 45–60 phút cần đứng dậy đi lại ít nhất 2–3 phút.
+- Giải phóng cổ vai gáy tại chỗ; gập nhẹ cằm về ngực, nghiêng đầu sang từng bên giữ 15 giây kết hợp xoay tròn bả vai về sau để tháo gỡ điểm bó cơ.
+- Mở rộng lồng ngực đón dưỡng khí; đan hai tay sau lưng, ưỡn ngực kéo căng bả vai và hít thở sâu 5 nhịp để đảo ngược tư thế gù lưng khi gõ phím.
+- Kéo giãn cột sống thắt lưng; ngồi thẳng lưng trên ghế, đặt tay phải lên thành ghế trái rồi vặn nhẹ thân người sang trái giữ 10 giây, sau đó đổi bên.
+- Thư giãn đôi mắt theo quy tắc 20-20-20; sau 20 phút nhìn màn hình, phóng tầm mắt nhìn xa 20 feet (khoảng 6 mét) trong 20 giây để giảm mỏi điều tiết mắt.
+- Kích hoạt cơ chân và khớp gối; thực hiện động tác nhón gót chân lên xuống liên tục khi đang ngồi làm việc để bơm máu từ chi dưới ngược về tim.
+- Đứng dậy thực hiện bài tập squat ghế; đứng lên ngồi xuống chạm nhẹ mép ghế 10–15 lần mỗi buổi chiều để đánh thức cơ đùi và cơ mông bị chèn ép.
+- Tận dụng cầu thang bộ thay thang máy; leo 2–3 tầng lầu mỗi ngày như cách rễ cây cắm sâu vào đất, vừa tăng cường sức bền tim mạch vừa đốt mỡ thừa.
+- Uống đủ nước để bôi trơn đĩa đệm; đặt cốc nước nhỏ trên bàn để vừa nhắc nhở bổ sung nước vừa tạo cớ đứng dậy đi lấy nước thường xuyên.
+- Đi bộ nhẹ nhàng sau bữa trưa; dành 10–15 phút tản bộ quanh tòa nhà trước khi chợp mắt giúp hỗ trợ tiêu hóa và giảm tích tụ mỡ bụng.
