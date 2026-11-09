@@ -302,3 +302,37 @@ chu_de: Văn hóa giao thông & Ứng xử văn minh khi va chạm
 - Nhờ pháp luật phân xử khi bất đồng lớn; nếu không thể tự thỏa thuận hoặc có thiệt hại nặng, giữ nguyên hiện trường và gọi ngay Cảnh sát giao thông đến lập biên bản xử lý đúng luật.
 - Bảo vệ tài sản và giấy tờ cá nhân; không giao chìa khóa xe, giấy tờ tùy thân gốc cho đối phương giữ khi chưa có sự can thiệp của cơ quan chức năng.
 - Rút kinh nghiệm sâu sắc cho bản thân; xem mỗi lần va chạm là bài học cảnh tỉnh về sự tập trung, tốc độ và tính kiên nhẫn khi cầm lái trên đường mưu sinh.
+
+---
+
+## Cẩm nang hỗ trợ người nghèo
+emoji: 🤲
+chu_de: Thiện nguyện nhân văn & Nâng đỡ sinh kế
+
+- Giữ gìn lòng tự trọng của người nhận; của cho không bằng cách cho, trao tặng bằng hai tay với thái độ cung kính, không ban ơn hay trịch thượng.
+- Tuyệt đối không quay phim, chụp ảnh cận cảnh để phô trương; bảo vệ danh dự và sự riêng tư của họ, không biến sự nghèo khó của đồng loại thành công cụ làm đẹp hình ảnh cá nhân.
+- Trao cần câu hơn trao con cá; cứu trợ khẩn cấp gạo mì khi hoạn nạn, nhưng lâu dài phải hỗ trợ sinh kế, công cụ làm ăn hoặc chỉ cách kiếm tiền bền vững.
+- Hỗ trợ giáo dục cho con em họ; giúp con chữ, trao học bổng, tặng sách vở là con đường bền vững nhất để thế hệ sau tự cắm rễ vươn lên thoát nghèo.
+- Tặng đồ đúng nhu cầu và còn dùng tốt; quần áo sạch sẽ lành lặn, vật dụng thiết thực, không mang đồ hỏng nát bỏ đi đem cho như dọn rác nhà mình.
+- Tìm hiểu hoàn cảnh thực tế trước khi giúp; xác minh đúng người cần cứu để lòng tốt đến đúng địa chỉ, tránh tiếp tay cho những kẻ lười lao động hoặc lợi dụng lòng trắc ẩn.
+- Khơi gợi ý chí tự lực vươn lên; động viên, khích lệ niềm tin sống thay vì chỉ chu cấp tiền bạc khiến họ rơi vào tâm lý ỷ lại, trông chờ từ thiện.
+- Kết nối nguồn lực y tế khi ốm đau; hỗ trợ thẻ bảo hiểm y tế, chỉ dẫn thủ tục khám chữa bệnh giúp họ vượt qua những biến cố lớn nhất có thể làm kiệt quệ gia cảnh.
+- Minh bạch và sòng phẳng khi kêu gọi chung; nếu đứng ra làm cầu nối quyên góp, từng đồng tiền bát gạo đều phải sao kê rõ ràng để giữ trọn chữ Tín với người gửi và người nhận.
+- Lặng thầm làm việc thiện với tâm bình đẳng; xem việc giúp người là cơ hội để tu sửa lòng trắc ẩn của chính mình, không mong cầu sự tung hô hay đền đáp ơn nghĩa.
+
+---
+
+## Cẩm nang hỗ trợ người giàu
+emoji: 💎
+chu_de: Đồng hành thịnh vượng & Tương trợ người có nguồn lực
+
+- Tôn trọng thời gian của họ như sinh mệnh; người có tài sản lớn thường gánh vác khối lượng công việc khổng lồ, làm việc đúng giờ, nói chuyện gãy gọn và vào thẳng trọng tâm vấn đề.
+- Trao cho họ sự trung thực và lời khuyên thẳng thắn; quanh người giàu có nhiều kẻ xu nịnh, một người dám nói thật điều rủi ro mà không vụ lợi là điểm tựa quý giá nhất.
+- Bảo mật tuyệt đối thông tin và đời tư; không tọc mạch, không đem chuyện tài sản, gia đình hay các mối quan hệ làm ăn của họ ra làm đề tài bàn tán với bên ngoài.
+- Ứng xử với tâm thế bình đẳng và đàng hoàng; không khúm núm tự ti, cũng không đố kỵ hay dò xét, hợp tác dựa trên sự tự trọng và giá trị thực chất của đôi bên.
+- Giúp họ giải tỏa áp lực nơi đầu sóng ngọn gió; cây càng cao càng chịu gió lớn, tạo cho họ một không gian chân thành, không bàn tính chuyện tiền bạc để nghỉ ngơi tái tạo năng lượng.
+- Không biến mối quan hệ thành nơi vay mượn hay xin xỏ; tôn trọng ranh giới tài chính, tránh biến thiện cảm ban đầu thành gánh nặng bị lợi dụng về tiền bạc.
+- Hỗ trợ họ kết nối các dự án thiện nguyện chuẩn xác; giúp họ tìm đúng địa chỉ cần giúp đỡ, khảo sát thực tế minh bạch để đồng vốn sẻ chia của họ sinh phước báu tối đa.
+- Giúp việc quản trị và bảo toàn sự nghiệp chu đáo; làm tròn trách nhiệm chuyên môn của mình ở mức xuất sắc nhất, giúp họ an tâm ủy thác mà không phải lo lắng chuyện hậu phương.
+- Cùng họ lan tỏa giá trị sống tích cực; động viên và đồng hành cùng các ý tưởng đầu tư tạo công ăn việc làm bền vững, phát triển giáo dục và phụng sự cộng đồng.
+- Nhắc nhở nhau về lối sống cân bằng và giữ gìn sức khỏe; tài sản lớn nhất của đời người là thân thể và tâm trí an lành, đồng hành nhắc họ nghỉ ngơi, vận động và giữ gìn mái ấm gia đình.
