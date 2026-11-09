@@ -336,3 +336,20 @@ chu_de: Đồng hành thịnh vượng & Tương trợ người có nguồn lự
 - Giúp việc quản trị và bảo toàn sự nghiệp chu đáo; làm tròn trách nhiệm chuyên môn của mình ở mức xuất sắc nhất, giúp họ an tâm ủy thác mà không phải lo lắng chuyện hậu phương.
 - Cùng họ lan tỏa giá trị sống tích cực; động viên và đồng hành cùng các ý tưởng đầu tư tạo công ăn việc làm bền vững, phát triển giáo dục và phụng sự cộng đồng.
 - Nhắc nhở nhau về lối sống cân bằng và giữ gìn sức khỏe; tài sản lớn nhất của đời người là thân thể và tâm trí an lành, đồng hành nhắc họ nghỉ ngơi, vận động và giữ gìn mái ấm gia đình.
+
+---
+
+## Cẩm nang về ăn uống hằng ngày để khỏe mạnh, tăng thọ và giảm bệnh
+emoji: 🥗
+chu_de: Dưỡng sinh thường nhật & Ăn uống trường thọ
+
+- Ăn no bảy tám phần là đạo dưỡng thân; chừa lại một khoảng trống để dạ dày thở và tiêu hóa nhẹ nhàng, ăn quá no khiến lục phủ ngũ tạng kiệt sức mau già.
+- Đạo của cây đước lọc nước mặn; bớt mặn, giảm đường, hạn chế dầu mỡ chiên xào để bảo vệ mạch máu thông suốt và giảm tải cho gan, thận.
+- Ưu tiên thực phẩm toàn phần tươi lành; tăng cường rau củ quả theo mùa, ngũ cốc thô nguyên cám và các loại đậu hạt để bồi đắp chất xơ như phù sa màu mỡ nuôi đường ruột.
+- Nhai kỹ no lâu, nghiền mịn dưỡng chất; nhai chậm giúp nước bọt tiết men tiêu hóa tự nhiên, giảm gánh nặng nghiền nát cho dạ dày và giúp tâm trí an định.
+- Ăn thuận theo nhịp điệu tự nhiên; bữa sáng ăn chắc bụng nạp sinh khí cho ngày mới, bữa trưa ăn vừa đủ, bữa tối ăn thanh đạm và cách giờ ngủ ít nhất 3 tiếng.
+- Uống nước đúng cách như rễ hút ẩm; uống từng ngụm nhỏ rải rác trong ngày, ưu tiên nước ấm, hạn chế nước đá lạnh làm co thắt mạch máu và suy yếu tỳ vị.
+- Lắng nghe cơ thể thay vì nuông chiều đầu lưỡi; từ bỏ đồ ăn chế biến sẵn nhiều hóa chất bảo quản, thức uống đóng chai làm vẩn đục dòng máu tươi.
+- Lấy rau xanh làm lớp đệm; trong bữa ăn nên ăn rau củ trước để tạo lớp màng xơ lót đường tiêu hóa, giúp ổn định đường huyết khi ăn tinh bột và đạm sau đó.
+- Đa dạng sắc màu trên đĩa ăn; kết hợp nhiều màu xanh, đỏ, vàng, tím, trắng từ rau củ tự nhiên để nạp đầy đủ các chất chống oxy hóa đẩy lùi gốc tự do.
+- Thức ăn tốt nhất là tâm thế khi ăn; ăn trong sự biết ơn và vui vẻ, tuyệt đối không vừa ăn vừa cãi vã, lướt điện thoại hay ôm nỗi bực tức làm biến chất thức ăn thành độc tố.
