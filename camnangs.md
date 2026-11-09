@@ -104,3 +104,21 @@ chu_de: Tình huynh đệ & Thuận hòa gia đạo
 - Khi gia đình có người thành đạt rực rỡ, thật lòng chúc phúc và tự hào; không đố kỵ, không đòi hỏi sự bao cấp vô lý.
 - Giữ nếp sum vầy vào các dịp giỗ chạp, lễ tết; cùng ngồi lại bên mâm cơm ấm cúng để con cháu các thế hệ sau noi gương gắn kết.
 - Giao ước giữ trọn chữ Hòa; dù ngoài xã hội có đối đầu bao nhiêu giông bão, quay về bên anh em ruột thịt vẫn là chốn tựa lưng an toàn nhất đời người.
+
+---
+
+## Cẩm nang bỏ túi giúp người bán hàng đạt nhiều lợi ích nhất
+emoji: 🛒
+chu_de: Tương trợ kinh doanh & Đồng hành người bán
+
+- Mua hàng bằng sự sòng phẳng và tôn trọng; không ép giá sát ván hay đòi bớt xén từng hào lẻ làm teo tóp đồng vốn mồ hôi nước mắt của họ.
+- Thanh toán dứt khoát và đúng hẹn; không chây ì công nợ hay nợ gối đầu vô tội vạ để họ luôn có dòng tiền tươi xoay vòng con nước nhập hàng mới.
+- Lan tỏa tiếng lành bằng đánh giá thực tâm; chủ động giới thiệu bạn bè, người thân hoặc viết bài khen ngợi chân thành khi nhận được sản phẩm tử tế.
+- Góp ý khiếm khuyết nơi kín đáo; thấy hạt sạn trong sản phẩm hay cách phục vụ thì khẽ khàng nhắc riêng để họ kịp sửa móng, không bêu riếu công khai triệt đường sinh kế.
+- Tương tác mở rộng luồng khách; bấm like, chia sẻ bài viết, ghé thăm gian hàng tương tác nhiệt tình lúc vắng khách để tạo sinh khí kéo phù sa tụ về.
+- Đặt hàng rõ ràng và không "bom hàng"; xác nhận đơn chuẩn xác, nghe máy nhận hàng đúng giờ để không thiêu đốt chi phí vận chuyển và thời gian của họ.
+- Chia sẻ góc nhìn khách quan của người tiêu dùng; báo cho họ biết thị hiếu mới, xu hướng giá cả hoặc các mẫu mã đang được ưa chuộng để họ đón đầu dòng chảy thị trường.
+- Mua đều đặn như triều dâng theo chu kỳ; trở thành khách quen trung thành thay vì chỉ mua ủng hộ một lần lấy lệ rồi quay lưng.
+- Hỗ trợ công cụ và kết nối nguồn lực; giới thiệu cho họ nguồn cung cấp uy tín, mặt bằng hợp lý hoặc các công cụ bán hàng tiện lợi nếu mình có hiểu biết.
+- Giữ hòa khí và thông cảm với sơ sót nhỏ; vào mùa cao điểm hay lúc mưa gió trễ hẹn, trao cho họ nụ cười bao dung thay vì những lời nặng nề làm chùn bước chân mưu sinh.
+- Tôn trọng giới hạn và biên lợi nhuận của họ; hiểu rằng việc họ có lời xứng đáng là nền tảng tất yếu để họ tồn tại và tiếp tục phục vụ xã hội lâu dài.
