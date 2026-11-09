@@ -269,18 +269,22 @@ body.music-playing #fab{ bottom:168px; }
 .enter-right{animation:enter-right .2s ease forwards}
 
 /* Cẩm nang */
-.cn-card{background:var(--g2);border:1px solid var(--g3);border-radius:16px;margin-bottom:14px;overflow:hidden}
-.cn-header{display:flex;align-items:center;gap:10px;padding:14px 16px;cursor:pointer;user-select:none}
+#cn-search{width:100%;padding:10px 14px;border-radius:12px;border:1px solid var(--g3);background:var(--g2);color:var(--txt);font-size:.95rem;margin-bottom:14px;outline:none;box-sizing:border-box}
+#cn-search::placeholder{color:var(--sub)}
+#cn-empty{display:none;text-align:center;padding:32px 0;color:var(--sub);font-size:.9rem}
+details.cn-card{background:var(--g2);border:1px solid var(--g3);border-radius:16px;margin-bottom:14px;overflow:hidden}
+details.cn-card summary{display:flex;align-items:center;gap:10px;padding:14px 16px;cursor:pointer;user-select:none;list-style:none}
+details.cn-card summary::-webkit-details-marker{display:none}
 .cn-emoji{font-size:1.4rem;flex:0 0 auto}
 .cn-title{font-size:1rem;font-weight:700;color:var(--txt);flex:1}
 .cn-chu-de{font-size:.75rem;color:var(--sub);margin-top:2px}
 .cn-arrow{font-size:.8rem;color:var(--sub);transition:.2s;flex:0 0 auto}
-.cn-card.open .cn-arrow{transform:rotate(180deg)}
-.cn-body{display:none;padding:0 16px 14px;border-top:1px solid var(--g3)}
-.cn-card.open .cn-body{display:block}
+details.cn-card[open] .cn-arrow{transform:rotate(180deg)}
+.cn-body{padding:0 16px 14px;border-top:1px solid var(--g3)}
 .cn-body ul{margin:10px 0 0;padding-left:18px}
 .cn-body li{color:var(--sub);font-size:.9rem;line-height:1.6;margin-bottom:6px}
 .cn-loading{text-align:center;padding:40px 0;color:var(--sub);font-size:.9rem}
+.cn-hidden{display:none}
 </style>
 </head>
 <body>
@@ -317,7 +321,9 @@ body.music-playing #fab{ bottom:168px; }
 
 <!-- Cẩm nang view -->
 <div id="camnangs-view" style="display:none;padding:12px 16px 24px;max-width:480px;width:100%">
+  <input id="cn-search" type="search" placeholder="🔍 Tìm cẩm nang..." autocomplete="off">
   <div id="camnangs-list"></div>
+  <div id="cn-empty">Không tìm thấy cẩm nang nào.</div>
 </div>
 
 <!-- Floating Action Button -->
@@ -586,28 +592,40 @@ function parseCamnangs(md){
 function renderCamnangs(list){
   const el=document.getElementById('camnangs-list');
   if(!list.length){
-    el.innerHTML='<div class="cn-loading">Chưa có cẩm nang nào. Điền vào file camnangs.md để bắt đầu.</div>';
+    el.innerHTML='<div class="cn-loading">Chưa có cẩm nang nào.</div>';
     return;
   }
+  // Dùng <details>/<summary> native — không cần JS toggle
   el.innerHTML=list.map((c,i)=>`
-    <div class="cn-card" id="cn-${i}">
-      <div class="cn-header" onclick="toggleCn(${i})">
+    <details class="cn-card" data-title="${c.title.toLowerCase()} ${c.chu_de.toLowerCase()}">
+      <summary>
         <span class="cn-emoji">${c.emoji}</span>
         <div style="flex:1">
           <div class="cn-title">${c.title}</div>
           ${c.chu_de?`<div class="cn-chu-de">${c.chu_de}</div>`:''}
         </div>
         <span class="cn-arrow">▼</span>
-      </div>
+      </summary>
       <div class="cn-body">
         <ul>${c.items.map(it=>`<li>${it}</li>`).join('')}</ul>
       </div>
-    </div>
+    </details>
   `).join('');
+
+  // Event delegation cho search filter
+  document.getElementById('cn-search').addEventListener('input', filterCamnangs);
 }
 
-function toggleCn(i){
-  document.getElementById('cn-'+i).classList.toggle('open');
+function filterCamnangs(){
+  const q=this.value.toLowerCase().trim();
+  const cards=document.querySelectorAll('details.cn-card');
+  let visible=0;
+  cards.forEach(c=>{
+    const match=!q||c.dataset.title.includes(q);
+    c.classList.toggle('cn-hidden',!match);
+    if(match) visible++;
+  });
+  document.getElementById('cn-empty').style.display=visible?'none':'block';
 }
 
 async function loadCamnangs(){
@@ -615,7 +633,8 @@ async function loadCamnangs(){
   const el=document.getElementById('camnangs-list');
   el.innerHTML='<div class="cn-loading">Đang tải...</div>';
   try{
-    const r=await fetch('camnangs.md?v='+Date.now());
+    // Bỏ Date.now() — để browser cache 1h theo _headers
+    const r=await fetch('camnangs.md');
     const txt=await r.text();
     renderCamnangs(parseCamnangs(txt));
     camnangsLoaded=true;
