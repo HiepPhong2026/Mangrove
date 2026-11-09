@@ -1,19 +1,85 @@
-# Cẩm Nang Bỏ Túi
+## Cẩm nang bỏ túi cho người buôn bán
+emoji: ⚖️
+chu_de: Buôn bán & Quản trị dòng tiền
 
-<!-- Cấu trúc mỗi cẩm nang:
-## [Tên cẩm nang]
-emoji: 🌿
-chu de: [Chủ đề]
+- Khách tìm về nơi có chữ Tín; bán hàng bằng chất lượng thực chứng để khách quay lại ngàn lần thay vì dùng xảo thuật ép mua một lần.
+- Đón khách khó tính như đón ngọn sóng đầu; hạ giọng lắng nghe, giải quyết thấu đáo khiếu nại để chuyển hóa khách lạ thành bạn đồng hành trung thành.
+- Thừa một tấc dạ thành hơn thiếu một lời giải thích; hàng lỗi phải chủ động nhận sai và đền bù sòng phẳng để giữ danh dự lâu dài.
+- Nhớ mặt, thuộc tên, chu đáo từng chi tiết nhỏ như nhặt cọng rau úa, dặn dò cách bảo quản để xây dựng lòng tin bền chặt.
+- Hiểu quy luật con nước để giữ dòng tiền thông suốt; thà lãi mỏng quay vòng nhanh còn hơn ôm hàng dày khiến vốn bị chôn chết.
+- Nước dâng tích lũy, nước kiệt phòng thân; lúc buôn may bán đắt phải trích lập quỹ dự phòng để vượt qua những tháng mùa vụ ế ẩm.
+- Tuyệt đối không đục móng lấy củi khô; tách bạch rạch ròi giữa tiền vốn kinh doanh và tiền sinh hoạt gia đình.
+- Cắt lỗ dứt khoát như đước dồn muối bỏ lá già; thanh lý hàng tồn đọng lỗi mốt để thu hồi dòng tiền tươi nuôi cơ hội mới.
+- Buôn có bạn, bán có phường; cả dãy phố cùng giữ giá và bán hàng văn minh mới tạo nên sức hút kéo khách thập phương đổ về.
+- Đứng đúng bậc thềm sinh tồn; tránh hạ giá sát ván với kẻ vốn dày, tập trung vào ngách phục vụ chuyên sâu và giao hàng nhanh.
+- Giữ trọn nghĩa tình với nhà cung cấp; thanh toán sòng phẳng đúng hẹn để luôn được ưu tiên nguồn hàng tốt nhất lúc thị trường biến động.
+- Không triệt hạ láng giềng; bóp nghẹt bạn đồng hành sẽ khiến mình đơn độc gánh bão khi khủng hoảng ập đến.
+- Ngày mưa gió ế ẩm không than vãn; tận dụng thời gian dọn dẹp gian hàng, kiểm kê tồn kho chuẩn bị đón con nước lớn kế tiếp.
+- Khách mặc cả gắt vẫn giữ nụ cười giải thích giá trị món hàng; không mua vẫn giữ lời chào hòa nhã, lịch thiệp.
+- Mặt bằng biến động thì lập tức cắm rễ thích nghi nơi mới, mang theo uy tín cũ để gầy dựng lại cơ nghiệp.
 
-- Nội dung mục 1
-- Nội dung mục 2
-- Nội dung mục 3
--->
+---
 
-## Cẩm nang mẫu
-emoji: 📌
-chu_de: Hướng dẫn
+## Cẩm nang bỏ túi giúp mọi người đoàn kết
+emoji: 🤝
+chu_de: Đoàn kết & Gắn kết tập thể
 
-- Đây là mục mẫu — xóa và điền nội dung thật vào đây
-- Mỗi dấu gạch đầu dòng là một mục trong cẩm nang
-- Thêm cẩm nang mới bằng cách thêm ## tiêu đề bên dưới
+- Nhận thức sức mạnh nằm ở mạng lưới; một cây đứng riêng lẻ chỉ là que củi trước bão giông, ngàn rễ đan cài mới tạo thành pháo đài bất khả xâm phạm.
+- Cùng chung một nền móng sinh tồn; nền đất sụt lở thì không một ai có thể đứng vững một mình, bớt tính toán thiệt hơn cá nhân.
+- Đoàn kết không phải là đồng màu; tôn trọng sự khác biệt giữa người tiên phong cản sóng, người giữ móng và người chăm lo hậu cần.
+- Đan rễ tương trợ thay vì giẫm chân tranh giành; người đi trước mở đường, người đi sau tiếp sức, người ở giữa giữ nhịp ổn định.
+- Chia sẻ dòng nhựa ngọt lúc gian nan; khi đồng đội gặp nạn phải chủ động đỡ đòn, không ích kỷ vơ vét dinh dưỡng về mình.
+- Hóa giải mâu thuẫn như rừng lọc mặn; ngồi lại đối thoại minh bạch, dồn bỏ hiềm khích ra ngoài để giữ gìn sinh khí chung.
+- Giữ trọn chữ Tín trong giao ước; một mắt xích buông tay thất hứa sẽ đẩy toàn bộ phòng tuyến vào nguy cơ sụp đổ dây chuyền.
+- Xem bất đồng quan điểm là góc nhìn bổ trợ; tranh luận thẳng thắn trên công việc, tuyệt đối không công kích cá nhân.
+- Khi đồng đội phạm sai lầm, chìa tay nâng đỡ và cùng sửa chữa nền móng thay vì đổ lỗi, ruồng bỏ hay cười nhạo.
+- Phân chia quyền lợi công bằng theo sức cống hiến; luôn đặt sự an nguy và sự phát triển của tập thể lên hàng đầu.
+- Không nói lời xói mòn gièm pha làm rỗng ruột tinh thần nội bộ như loài hà đục thân cây.
+- Khen ngợi công khai trước tập thể nhưng góp ý khuyết điểm nơi kín đáo và chân thành.
+- Chủ động lùi một bước khi không khí căng thẳng để giữ hòa khí quý báu cho mái nhà chung.
+- Bảo vệ danh dự tập thể trước sóng gió bên ngoài; không bao giờ vạch áo cho người ngoài xem lưng.
+- Trân trọng và biết ơn những người làm công việc thầm lặng dưới đáy bùn như người đứng nơi đầu sóng ngọn gió.
+
+---
+
+## Cẩm nang bỏ túi về ứng xử cha mẹ và con cái
+emoji: 👨‍👩‍👧‍👦
+chu_de: Gia đình & Giáo dục thế hệ
+
+- Cha mẹ nuôi mầm đủ lực trước khi buông tay; trang bị cho con nhân cách và kỹ năng tự lập thay vì bao bọc con suốt đời trong lồng kính.
+- Làm bệ đỡ vững chãi chứ không làm trần nhà giam hãm; không ép buộc con gánh vác những ước mơ dang dở của đời mình.
+- Nhường khoảng sáng cho chồi non vươn lên; biết lùi lại đúng lúc để lắng nghe và tôn trọng sự trưởng thành độc lập của con.
+- Con cái thấu hiểu vết sẹo của gốc rễ; trân trọng sự vất vả, nhọc nhằn của cha mẹ đã đổi lấy cuộc sống đủ đầy cho mình hôm nay.
+- Cắm rễ tự thân và không ỷ lại bóng râm; tự lập, tự nuôi sống bản thân và tự chịu trách nhiệm cho con đường mình chọn.
+- Bay xa vươn rộng ra biển lớn nhưng luôn nhớ cội nguồn; thành công ngoài xã hội không thể bù đắp cho sự bất kính với đấng sinh thành.
+- Khi khoảng cách thế hệ tạo bất đồng, cha mẹ mở lòng lắng nghe thời đại mới, con cái dịu giọng giải thích với lòng tôn kính.
+- Khi con vấp ngã ngoài đời, cha mẹ mở rộng vòng tay làm bến đỗ bình yên để con nạp lại năng lượng bước tiếp.
+- Khi cha mẹ già yếu chậm chạp, con cái nhẫn nại chăm sóc như cách cha mẹ từng nâng niu từng bước chân thơ dại.
+- Bữa cơm gia đình là nơi nạp sinh khí ngọt lành; không đem chuyện tiền nong, điểm số hay chì chiết lỗi lầm lên mâm cơm.
+- Hạ giọng khi giông bão nổi lên; một bên nóng giận thì bên kia làm dòng nước mát, tuyệt đối không đối thoại lúc tức giận đỉnh triều.
+- Lời xin lỗi và cảm ơn không phân biệt tuổi tác; cha mẹ sai biết nhận lỗi, con cái biết ơn từng cử chỉ chăm sóc nhỏ.
+- Tôn trọng ranh giới và không gian riêng tư của nhau để mỗi người đều có khoảng thở tự do.
+- Dành thời gian chất lượng trọn vẹn bên nhau không màn hình điện thoại để kết nối sâu sắc tâm hồn.
+- Giao ước yêu thương vô điều kiện; dù ngoài đời thành hay bại, bước qua cửa nhà tình thân vẫn vẹn nguyên ấm áp.
+
+---
+
+## Cẩm nang bỏ túi đi chùa tạo phước báu không dùng nhiều tiền
+emoji: 🪷
+chu_de: Tâm linh & Tích lũy phước đức
+
+- Hiểu đúng bản chất phước báu; Phật cần tâm thanh tịnh và hạnh lành, không cần mâm cao cỗ đầy hay đổi chác số phận.
+- Tài thí không bằng công quả và lòng từ bi; người nghèo dâng tâm khiêm nhường có phước đức sâu dày hơn người giàu cúng dường với tâm ngạo mạn.
+- Thân thí bằng việc nhỏ thầm lặng; cúi mình xếp lại đôi dép lộn xộn trước cửa điện cho người đến sau.
+- Nhặt rác, quét sạch lá rụng trên lối đi; lau chùi bậc thềm, phụ rửa bát, dọn dẹp nhà vệ sinh của chùa với tâm hoan hỷ.
+- Nhãn thí và nhan thí; dành nụ cười hòa ái, ánh mắt hiền từ và chắp tay chào hỏi tôn kính tới mọi người xung quanh.
+- Nhường lối đi, nhường chỗ ngồi hành lễ trang nghiêm cho người già yếu, tàn tật hoặc người bế con nhỏ.
+- Ngôn thí nhã nhặn; đi nhẹ, nói khẽ, giữ gìn sự thanh tịnh nơi cửa Phật, không cười cợt hay bàn tán chuyện thị phi.
+- Tùy hỷ công đức; thấy người khác làm việc thiện tâm thật lòng vui mừng tán thán, không sinh tâm đố kỵ, gièm pha.
+- Ý thí thanh tịnh; đứng trước Phật không cầu xin tài lộc danh vọng, chỉ nguyện cha mẹ bình an, muôn loài bớt khổ, lòng mình bớt tham sân si.
+- Dành vài phút tĩnh tâm niệm Phật hoặc tụng kinh trọn vẹn thay vì chạy theo cúng bái ồn ào.
+- Không thắp hương bừa bãi khói mù mịt; chỉ thắp một nén nhang hoặc dâng nén tâm hương bằng đôi bàn tay búp sen.
+- Không phóng sinh mù quáng; không mua chim cá bị bẫy nhốt bán sẵn để tránh tiếp tay cho hành vi săn bắt, sát sinh.
+- Không rải tiền lẻ lên tay tượng làm hoen ố sự trang nghiêm; nếu có lòng thành hãy bỏ vào thùng công đức đúng quy định.
+- Không đốt vàng mã lãng phí và ô nhiễm; dùng số tiền đó sẻ chia ổ bánh mì cho người nghèo khó ngoài đời thực.
+- Hồi hướng công đức trước khi rời chùa; nguyện đem mọi ý nghĩ và việc làm lành nhỏ bé trong ngày chia sẻ sự an lành cho muôn loài.
