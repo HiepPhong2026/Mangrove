@@ -194,3 +194,58 @@ chu_de: Vận động công sở & Sức khỏe cột sống
 - Tận dụng cầu thang bộ thay thang máy; leo 2–3 tầng lầu mỗi ngày như cách rễ cây cắm sâu vào đất, vừa tăng cường sức bền tim mạch vừa đốt mỡ thừa.
 - Uống đủ nước để bôi trơn đĩa đệm; đặt cốc nước nhỏ trên bàn để vừa nhắc nhở bổ sung nước vừa tạo cớ đứng dậy đi lấy nước thường xuyên.
 - Đi bộ nhẹ nhàng sau bữa trưa; dành 10–15 phút tản bộ quanh tòa nhà trước khi chợp mắt giúp hỗ trợ tiêu hóa và giảm tích tụ mỡ bụng.
+
+---
+
+## Cẩm nang bảo hộ chùa cho người dân xung quanh
+emoji: 🛕
+chu_de: Hộ trì Tam Bảo & Giữ gìn chốn thiền môn
+
+- Nhận thức chùa là ruộng phước chung của xóm làng; bảo vệ chùa thanh tịnh chính là giữ gìn bến đỗ bình an và cội rễ đạo đức cho cả cộng đồng.
+- Cùng nhau giữ gìn sự thanh tịnh ngoại vi; không mở loa đài ồn ào sát vách chùa, không chửi bới, cãi vã hay tổ chức tiệc tùng nhậu nhẹt hướng vào nơi tu tập.
+- Chung tay bảo vệ an ninh và tài sản Tam Bảo; phối hợp cùng nhà chùa trông nom tượng Phật, đồ thờ, chuông khánh, kịp thời phát hiện và ngăn chặn kẻ gian trộm cắp.
+- Tôn trọng đất đai và ranh giới nhà chùa; không lấn chiếm bờ rào, lối đi, không biến cổng chùa thành nơi buôn bán chèo kéo, đỗ xe bừa bãi hay tụ tập cờ bạc.
+- Cẩn trọng tuyệt đối với hỏa hoạn; nhắc nhở khách thập phương thắp hương đúng nơi quy định, không đốt vàng mã gần các kết cấu gỗ, kiểm tra tàn nhang trước khi ra về.
+- Giữ sạch nguồn nước và môi trường xung quanh; không xả rác thải sinh hoạt sang khuôn viên chùa, cùng quý thầy cô quét dọn lá rụng, phát quang bụi rậm định kỳ.
+- Bảo vệ cây cổ thụ và cảnh quan sinh thái; không bẻ cành hái hoa, không săn bắn chim muông, không bẫy thú trú ngụ trong vườn chùa để giữ đất lành chim đậu.
+- Trang nghiêm thân tướng khi bước qua cổng chùa; ăn mặc kín đáo lịch sự, giữ lời ăn tiếng nói nhã nhặn, làm gương sáng về phép tắc cho con cháu noi theo.
+- Thấy điều bất cập thì thiện tâm góp ý; phát hiện việc chưa hợp lý hay hư hao công trình thì thưa chuyện riêng với quý thầy trụ trì, không bàn tán thị phi ngoài ngõ.
+- Tiếp sức quý thầy cô lúc hữu sự; sẵn lòng xắn tay áo phụ giúp các ngày đại lễ, lúc chùa có Phật sự lớn hoặc khi chư Tăng Ni gặp cảnh đau ốm, già yếu.
+- Không tiếp tay cho các hủ tục mê tín; cùng nhà chùa bài trừ tệ bói toán, rải tiền lẻ, phóng sinh mù quáng hay các tệ nạn núp bóng tâm linh quanh chùa.
+- Tạo mối gắn kết keo sơn giữa đạo và đời; xem chùa như mái ấm tinh thần, người dân xung quanh là hàng rào chở che vững chắc cho chốn tu hành trường tồn.
+
+---
+
+## Cẩm nang bảo hộ đình dành cho dân làng xung quanh
+emoji: 🏛️
+chu_de: Bảo tồn di sản & Giữ gìn hồn làng
+
+- Nhận thức đình là cội nguồn tâm linh và văn hóa; đình là mái nhà chung thờ Thành hoàng và tiền nhân mở cõi, giữ đình vững chãi là giữ phúc đức cho con cháu đời sau.
+- Cùng nhau bảo vệ không gian và đất đai quanh đình; tuyệt đối không lấn chiếm sân đình, ao đình hay xê dịch mốc giới khuôn viên di tích làm của riêng.
+- Cảnh giác và bảo vệ cổ vật; chung tay tuần tra, nhắc nhở nhau trông coi các đồ thờ tự, sắc phong, hoành phi, câu đối, chuông đồng để tránh kẻ gian trộm cắp.
+- Thận trọng phòng chống cháy nổ; đình phần lớn làm bằng gỗ cổ, khi thắp hương, đốt nến phải có người trông coi, tuyệt đối không hóa vàng mã bừa bãi gần cột gỗ và mái đình.
+- Dọn dẹp vệ sinh khuôn viên thường xuyên; định kỳ cùng nhau quét dọn sân đình, nhổ cỏ dại, khơi thông cống rãnh và nhặt rác để giữ cảnh quan thanh tịnh, tôn nghiêm.
+- Kiểm tra và phòng ngừa mối mọt, dột nát; khi phát hiện ngói xô, mái dột hay chân cột bị ẩm mục, cần báo ngay cho ban khánh tiết để xử lý kịp thời, tránh sụp đổ rui mè.
+- Giữ gìn cây cổ thụ và giếng đình; không tùy tiện chặt phá, bẻ cành các cây di sản quanh đình; giữ gìn nguồn nước giếng và ao đình trong sạch, không xả nước thải.
+- Trang nghiêm thân tướng khi bước vào đình; trang phục chỉnh tề, đi nhẹ nói khẽ, không tụ tập cờ bạc, rượu chè hay cười đùa thô tục nơi tôn kính.
+- Chung tay góp công góp của tôn tạo; khi đình cần tu bổ, mỗi người góp một bàn tay, người có công góp công, người có của góp của với tâm minh bạch, tự nguyện.
+- Tuân thủ nguyên tắc trùng tu di tích; khi sửa chữa phải giữ nguyên nét kiến trúc cổ truyền, không tự ý sơn phết lòe loẹt hay đưa các hiện vật lạ lai căng vào nội tự.
+- Gắn kết tình làng nghĩa xóm trong ngày hội đình; lấy dịp lễ hội làm cơ sở hòa giải mâu thuẫn, thắt chặt tình đoàn kết, chia ngọt sẻ bùi giữa các gia đình trong thôn xóm.
+- Truyền dạy truyền thống cho thế hệ trẻ; dẫn con cháu đến đình nghe kể về lịch sử làng, công đức tiền nhân để ươm mầm lòng tự hào và trách nhiệm kế thừa quê hương.
+
+---
+
+## Cẩm nang bảo hộ nghĩa trang liệt sĩ
+emoji: 🕯️
+chu_de: Đạo lý Uống nước nhớ nguồn & Bảo vệ chốn linh thiêng
+
+- Khắc ghi đạo lý tri ân tiền nhân; nghĩa trang liệt sĩ là nơi an nghỉ thiêng liêng của các anh hùng đã hiến dâng xương máu cho độc lập dân tộc, bảo vệ nơi đây là bổn phận và niềm tự hào của muôn đời sau.
+- Giữ gìn an ninh trật tự và sự tôn nghiêm; tuyệt đối không tụ tập gây ồn ào, không chăn thả trâu bò, gia súc hay phóng uế bừa bãi làm xâm phạm không gian yên nghỉ của các liệt sĩ.
+- Tôn trọng ranh giới và bảo vệ khuôn viên; không lấn chiếm đất đai, không tự ý xê dịch ranh rào, lối đi hoặc lợi dụng khu vực nghĩa trang làm nơi tập kết vật liệu, rác thải sinh hoạt.
+- Chung tay dọn cỏ và chăm sóc phần mộ; định kỳ cùng đoàn thể nhổ cỏ dại quanh các bia mộ, lau chùi bia đá, quét dọn lá rụng và quét vôi lại tường rào cho sạch đẹp, trang nhã.
+- Thận trọng tuyệt đối trong phòng chống cháy nổ; thắp hương đúng lư hương quy định, chỉ đốt vàng mã ở lò chuyên dụng và luôn dập tắt tàn nhang, tàn lửa trước khi rời khỏi nghĩa trang.
+- Bảo vệ cây xanh và hệ thống chiếu sáng; chăm sóc thảm cỏ, tưới mát hàng cây bóng mát, bảo vệ hệ thống đèn đường, vòi nước và bảng ghi danh để công trình luôn sáng đẹp.
+- Giám sát và ngăn chặn kẻ xấu phá hoại; đề cao cảnh giác trước các hành vi trộm cắp nắp cống, lư đồng, dây điện hoặc vẽ bậy lên các đài tưởng niệm và phần mộ.
+- Trang nghiêm thân tướng khi bước vào viếng; mặc y phục chỉnh tề kín đáo, giữ thái độ cung kính, đi nhẹ nói khẽ, không đùa cợt cợt nhả nơi an nghỉ của các anh hùng.
+- Hỗ trợ thân nhân liệt sĩ từ phương xa về thăm viếng; tận tình chỉ đường, hướng dẫn tìm kiếm sơ đồ mộ phần với thái độ ấm áp, nghĩa tình và sẻ chia.
+- Giáo dục truyền thống yêu nước cho con trẻ; dẫn dắt thế hệ trẻ tham gia các buổi thắp nến tri ân ngày 27/7, ngày lễ tết để bồi đắp lòng biết ơn và ý thức trách nhiệm gìn giữ non sông.
