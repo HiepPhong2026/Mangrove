@@ -84,7 +84,7 @@ header{width:100%;padding:16px;text-align:center;background:linear-gradient(135d
 header h1{font-size:1.4rem;letter-spacing:.5px}
 header p{color:var(--sub);font-size:.85rem;margin-top:4px}
 
-#ses-bar{display:flex;gap:8px;padding:10px 16px 4px;overflow-x:auto;width:100%;max-width:480px;scrollbar-width:none;border-bottom:1px solid var(--g2)}
+#ses-bar{display:flex;gap:8px;padding:10px 16px 4px;overflow-x:auto;width:100%;max-width:480px;scrollbar-width:none}
 #ses-bar::-webkit-scrollbar{display:none}
 .ses-btn{flex:0 0 auto;padding:5px 18px;border:1.5px solid var(--g3);border-radius:20px;background:transparent;color:var(--dim);font-size:.8rem;font-weight:600;letter-spacing:.5px;cursor:pointer;transition:.2s}
 .ses-btn.active{background:var(--g3);border-color:var(--g4);color:var(--g7)}
@@ -276,9 +276,7 @@ body.music-playing #fab{ bottom:168px; }
 </header>
 
 <div id="ses-bar">
-  <button class="ses-btn active" data-ses="0">Season 1</button>
-  <button class="ses-btn" data-ses="1">Season 2</button>
-  <button class="ses-btn" data-ses="2">Season 3</button>
+  <button class="ses-btn active" data-ses="0">Câu Chuyện Rừng Đước</button>
 </div>
 
 <div id="vol-bar"></div>
@@ -6683,22 +6681,10 @@ const vol36=[{"e":`🦀`,"t":`Đôi Càng Xanh Của Con Ghẹ Rừng`,"b":`Con 
 // Sessions
 const SESSIONS=[
   {
-    name:"Season 1",
-    vols:[vol1,vol2,vol3,vol4,vol5,vol6,vol7,vol8,vol9,vol10,vol11,vol12],
-    themes:["Tổng Hợp","Khí Hậu & Thủy Triều","Sinh Vật Nhỏ Bé","Con Người & Rừng","Tình Bạn & Cộng Sinh","Thích Nghi & Sinh Tồn","Vòng Đời & Biến Đổi","Cảm Xúc & Trí Tuệ","Thời Gian & Kiên Nhẫn","Ranh Giới & Tự Do","Ánh Sáng & Bóng Tối","Ngôn Ngữ & Giao Tiếp"],
+    name:"Câu Chuyện Rừng Đước",
+    vols:[vol1,vol2,vol3,vol4,vol5,vol6,vol7,vol8,vol9,vol10,vol11,vol12,vol13,vol14,vol15,vol16,vol17,vol18,vol19,vol20,vol21,vol22,vol23,vol24,vol25,vol26,vol27,vol28,vol29,vol30,vol31,vol32,vol33,vol34,vol35,vol36],
+    themes:["Tổng Hợp","Khí Hậu & Thủy Triều","Sinh Vật Nhỏ Bé","Con Người & Rừng","Tình Bạn & Cộng Sinh","Thích Nghi & Sinh Tồn","Vòng Đời & Biến Đổi","Cảm Xúc & Trí Tuệ","Thời Gian & Kiên Nhẫn","Ranh Giới & Tự Do","Ánh Sáng & Bóng Tối","Ngôn Ngữ & Giao Tiếp","Nước & Sự Chảy","Hạt Giống & Nảy Mầm","Rễ & Nền Tảng","Thay Đổi & Chuyển Hóa","Cộng Đồng & Hệ Sinh Thái","Bóng Tối & Ánh Sáng","Dòng Chảy & Buông Bỏ","Ký Ức & Di Sản","Cân Bằng & Hài Hòa","Kiên Nhẫn & Thời Gian","Ranh Giới & Không Gian","Tái Sinh & Hy Vọng","Khác Biệt & Bản Sắc","Kiên Trì & Thích Nghi","Trưởng Thành & Trải Nghiệm","Kết Nối & Yêu Thương","Hy Vọng & Tái Sinh","Tình Bạn & Sẻ Chia","Chia Sẻ & Cảm Thông","Đổi Thay & Trưởng Thành","Buông Bỏ & Chữa Lành","Khám Phá & Dũng Cảm","Sinh Tồn & Bản Năng","Hòa Hợp & Cân Bằng"],
     startVol:1
-  },
-  {
-    name:"Season 2",
-    vols:[vol13,vol14,vol15,vol16,vol17,vol18,vol19,vol20,vol21,vol22,vol23,vol24],
-    themes:["Nước & Sự Chảy","Hạt Giống & Nảy Mầm","Rễ & Nền Tảng","Thay Đổi & Chuyển Hóa","Cộng Đồng & Hệ Sinh Thái","Bóng Tối & Ánh Sáng","Dòng Chảy & Buông Bỏ","Ký Ức & Di Sản","Cân Bằng & Hài Hòa","Kiên Nhẫn & Thời Gian","Ranh Giới & Không Gian","Tái Sinh & Hy Vọng"],
-    startVol:13
-  },
-  {
-    name:"Season 3",
-    vols:[vol25,vol26,vol27,vol28,vol29,vol30,vol31,vol32,vol33,vol34,vol35,vol36],
-    themes:["Khác Biệt & Bản Sắc","Kiên Trì & Thích Nghi","Trưởng Thành & Trải Nghiệm","Kết Nối & Yêu Thương","Hy Vọng & Tái Sinh","Tình Bạn & Sẻ Chia","Chia Sẻ & Cảm Thông","Đổi Thay & Trưởng Thành","Buông Bỏ & Chữa Lành","Khám Phá & Dũng Cảm","Sinh Tồn & Bản Năng","Hòa Hợp & Cân Bằng"],
-    startVol:25
   },
 ];
 
