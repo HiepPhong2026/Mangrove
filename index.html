@@ -267,6 +267,20 @@ body.music-playing #fab{ bottom:168px; }
 .out-right{animation:out-right .18s ease forwards}
 .enter-left{animation:enter-left .2s ease forwards}
 .enter-right{animation:enter-right .2s ease forwards}
+
+/* Cẩm nang */
+.cn-card{background:var(--g2);border:1px solid var(--g3);border-radius:16px;margin-bottom:14px;overflow:hidden}
+.cn-header{display:flex;align-items:center;gap:10px;padding:14px 16px;cursor:pointer;user-select:none}
+.cn-emoji{font-size:1.4rem;flex:0 0 auto}
+.cn-title{font-size:1rem;font-weight:700;color:var(--txt);flex:1}
+.cn-chu-de{font-size:.75rem;color:var(--sub);margin-top:2px}
+.cn-arrow{font-size:.8rem;color:var(--sub);transition:.2s;flex:0 0 auto}
+.cn-card.open .cn-arrow{transform:rotate(180deg)}
+.cn-body{display:none;padding:0 16px 14px;border-top:1px solid var(--g3)}
+.cn-card.open .cn-body{display:block}
+.cn-body ul{margin:10px 0 0;padding-left:18px}
+.cn-body li{color:var(--sub);font-size:.9rem;line-height:1.6;margin-bottom:6px}
+.cn-loading{text-align:center;padding:40px 0;color:var(--sub);font-size:.9rem}
 </style>
 </head>
 <body>
@@ -277,6 +291,7 @@ body.music-playing #fab{ bottom:168px; }
 
 <div id="ses-bar">
   <button class="ses-btn active" data-ses="0">Câu Chuyện Rừng Đước</button>
+  <button class="ses-btn" data-mode="camnangs">📋 Cẩm nang bỏ túi</button>
 </div>
 
 <div id="vol-bar"></div>
@@ -298,6 +313,11 @@ body.music-playing #fab{ bottom:168px; }
   <button class="nav-btn" id="prev-btn" onclick="go(-1)">&#8592; Trước</button>
   <button class="nav-btn" id="rand-btn" onclick="rand()">&#127922;</button>
   <button class="nav-btn" id="next-btn" onclick="go(1)">Sau &#8594;</button>
+</div>
+
+<!-- Cẩm nang view -->
+<div id="camnangs-view" style="display:none;padding:12px 16px 24px;max-width:480px;width:100%">
+  <div id="camnangs-list"></div>
 </div>
 
 <!-- Floating Action Button -->
@@ -6768,10 +6788,11 @@ function switchVol(v){
 }
 
 function switchSes(s){
+  showStories();
   curSes=s; curVolInSes=0;
   sesData=SESSIONS[s];
   stories=sesData.vols[0]; idx=0;
-  document.querySelectorAll('.ses-btn').forEach((b,i)=>b.classList.toggle('active',i===s));
+  document.querySelectorAll('.ses-btn').forEach((b,i)=>b.classList.toggle('active',!b.dataset.mode&&i===s));
   buildVolBar();
   buildSelect();
   buildCard(document.getElementById('card'),stories[0],'left');
@@ -6792,8 +6813,93 @@ document.getElementById('story-sel').addEventListener('change',function(){
 });
 
 document.querySelectorAll('.ses-btn').forEach(btn=>{
-  btn.addEventListener('click',()=>switchSes(parseInt(btn.dataset.ses)));
+  if(btn.dataset.ses!==undefined){
+    btn.addEventListener('click',()=>switchSes(parseInt(btn.dataset.ses)));
+  }
 });
+
+// ===== Cẩm nang bỏ túi =====
+let camnangsLoaded=false;
+
+function parseCamnangs(md){
+  const blocks=md.split(/^## /m).filter(b=>b.trim());
+  return blocks.map(block=>{
+    const lines=block.split('\n').filter(l=>l.trim());
+    const title=lines[0]?.trim()||'';
+    let emoji='📋', chu_de='';
+    const items=[];
+    lines.slice(1).forEach(l=>{
+      const em=l.match(/^emoji:\s*(.+)/i);
+      const cd=l.match(/^chu[_-]de:\s*(.+)/i);
+      const item=l.match(/^-\s+(.+)/);
+      if(em) emoji=em[1].trim();
+      else if(cd) chu_de=cd[1].trim();
+      else if(item) items.push(item[1].trim());
+    });
+    return {title,emoji,chu_de,items};
+  }).filter(c=>c.title&&c.items.length>0);
+}
+
+function renderCamnangs(list){
+  const el=document.getElementById('camnangs-list');
+  if(!list.length){
+    el.innerHTML='<div class="cn-loading">Chưa có cẩm nang nào. Điền vào file camnangs.md để bắt đầu.</div>';
+    return;
+  }
+  el.innerHTML=list.map((c,i)=>`
+    <div class="cn-card" id="cn-${i}">
+      <div class="cn-header" onclick="toggleCn(${i})">
+        <span class="cn-emoji">${c.emoji}</span>
+        <div style="flex:1">
+          <div class="cn-title">${c.title}</div>
+          ${c.chu_de?`<div class="cn-chu-de">${c.chu_de}</div>`:''}
+        </div>
+        <span class="cn-arrow">▼</span>
+      </div>
+      <div class="cn-body">
+        <ul>${c.items.map(it=>`<li>${it}</li>`).join('')}</ul>
+      </div>
+    </div>
+  `).join('');
+}
+
+function toggleCn(i){
+  document.getElementById('cn-'+i).classList.toggle('open');
+}
+
+async function loadCamnangs(){
+  if(camnangsLoaded) return;
+  const el=document.getElementById('camnangs-list');
+  el.innerHTML='<div class="cn-loading">Đang tải...</div>';
+  try{
+    const r=await fetch('camnangs.md?v='+Date.now());
+    const txt=await r.text();
+    renderCamnangs(parseCamnangs(txt));
+    camnangsLoaded=true;
+  }catch(e){
+    el.innerHTML='<div class="cn-loading">Không tải được dữ liệu.</div>';
+  }
+}
+
+function showCamnangs(){
+  document.getElementById('story-wrap').style.display='none';
+  document.getElementById('nav').style.display='none';
+  document.getElementById('vol-bar').style.display='none';
+  document.getElementById('controls').style.display='none';
+  document.getElementById('camnangs-view').style.display='flex';
+  document.querySelectorAll('.ses-btn').forEach(b=>b.classList.toggle('active',b.dataset.mode==='camnangs'));
+  loadCamnangs();
+}
+
+function showStories(){
+  document.getElementById('story-wrap').style.display='';
+  document.getElementById('nav').style.display='';
+  document.getElementById('vol-bar').style.display='';
+  document.getElementById('controls').style.display='';
+  document.getElementById('camnangs-view').style.display='none';
+}
+
+document.querySelector('.ses-btn[data-mode="camnangs"]').addEventListener('click', showCamnangs);
 
 // Touch swipe
 let tx=0;
