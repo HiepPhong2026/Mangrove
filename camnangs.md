@@ -702,3 +702,22 @@ chu_de: Truyện cười góc nhìn nhân sinh
 - **Tình bạn chân chính**: Tình bạn đẹp nhất là hai đứa ngồi lướt điện thoại ba tiếng không nói gì, lúc về vẫn khen: "Hôm nay nói chuyện hợp gu ghê!".
 - **Tuổi trưởng thành**: Dấu hiệu rõ nhất không phải khi kiếm được tiền, mà là khi nhìn thấy bát đĩa bẩn trong bồn rửa và tự giác đi rửa mà không cần ai dọa đánh đòn.
 - **Đúc kết nhân sinh**: Cuộc đời giống một cuộn giấy vệ sinh — càng về những đoạn cuối, nó trôi qua càng nhanh đến chóng mặt!
+
+---
+
+## Cẩm nang tiếp xúc nhiều người mà không buồn phiền
+emoji: 🌿
+chu_de: Ứng dụng Kinh Than Đước bảo toàn tâm thức khi giao tế xã hội
+
+- Nhận diện 4 điểm rò rỉ năng lượng: tâm xốp hút nước mặn cảm xúc, thói quen bốc khói tranh cãi, ảo tưởng muốn thay đổi người khác, và thiếu ranh giới bảo vệ nội tâm.
+- Định luật Hấp phụ — dùng dung lượng rỗng nano để lắng nghe, hấp phụ và vô hiệu hóa độc tố tiêu cực mà không để thấm vào bản thể.
+- Định luật Ráo nhiễm — rời khỏi cuộc gặp là dứt khoát cắt đứt liên tưởng; không mang thị phi về nhà, không đem lời cay đắng vào giấc ngủ.
+- Định luật Âm hỏa — giữ phong thái điềm đạm, ấm áp, lịch thiệp nhưng vững vàng lập trường; không bốc hỏa tranh luận làm cay mắt người.
+- Định luật Thử tiếng kim khí — xem mọi va chạm là bài kiểm tra độ đanh thép nội lực; phát ra tiếng vang trong trẻo thay vì vụn vỡ tổn thương.
+- Bước 1 - Khép cửa lò: định tâm trước khi xuất hành, không tìm kiếm sự tán thưởng từ người ngoài.
+- Bước 2 - Quy tắc hoãn xung 3 giây: hít sâu, mỉm cười nhẹ trước khi phản hồi những lời khiêu khích hoặc tọc mạch.
+- Bước 3 - Đáp lời ngắn để triệt khói: sử dụng câu trung tính đóng cuộc đối thoại, dập tắt mầm mống tranh luận.
+- Bước 4 - Phân loại đối tượng tiếp xúc: mở lòng với người thanh sạch, giữ khoảng cách tối thiểu với người mang tính phèn chua.
+- Bước 5 - Dựng ranh giới bất khả xâm phạm: quyết đoán từ chối các cuộc tụ tập vô bổ để bảo vệ sự thanh tịnh.
+- Bước 6 - Xả tróc cuối ngày: rửa mặt nước mát, buông xả mọi tạp niệm và âm thanh ngoài ngõ trước khi bước vào phòng riêng.
+- Bảng rà soát tâm thức hằng ngày: giữ tâm ráo rảnh buổi sáng — lời nói chừng mực buổi trưa — cắt đứt hoàn toàn việc công sở buổi chiều — lặng như tro êm đáy lò buổi tối để đi vào giấc ngủ sâu.
