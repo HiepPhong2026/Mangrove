@@ -141,3 +141,22 @@ chu_de: Đạo làm con & Hiếu dưỡng cội nguồn
 - Tôn trọng nếp sống và thói quen của người lớn; không tự tiện vứt bỏ những món đồ kỷ niệm cũ kỹ của cha mẹ chỉ vì thấy chúng lỗi thời.
 - Thành đạt ngoài đời không kiêu căng ở nhà; dù giữ chức vụ cao hay giàu có ngoài xã hội, bước qua ngưỡng cửa nhà vẫn cúi đầu làm đứa con ngoan.
 - Giữ nề nếp gia phong và sống thiện lương; sống một đời ngay thẳng, tử tế và có ích cho xã hội chính là cách báo hiếu rực rỡ nhất dâng lên cha mẹ.
+
+---
+
+## Cẩm nang bỏ túi về ứng xử của Phật tử
+emoji: ☸️
+chu_de: Đạo hạnh Phật tử & Chánh niệm đời thường
+
+- Kính ngưỡng Tam Bảo với tâm chí thành; tôn kính Phật - Pháp - Tăng bằng hành động tu sửa bản thân mỗi ngày chứ không dừng lại ở hình thức lễ bái bên ngoài.
+- Giữ trọn năm giới căn bản; không sát sinh hại vật, không trộm cắp gian lận, không tà dâm phá vỡ hạnh phúc gia đình, không nói lời dối trá đâm thọc, không say sưa nghiện ngập làm mờ tối tâm trí.
+- Kính trọng chư Tăng Ni với tâm bình đẳng; xưng hô lễ phép, không bàn tán thị phi hay phân biệt chùa to tượng lớn, thầy nổi tiếng hay ẩn tu.
+- Trang nghiêm thân tướng chốn thiền môn; y phục kín đáo nhã nhặn, bước đi nhẹ nhàng, nói năng nhỏ nhẹ, giữ gìn bầu không khí thanh tịnh của đại chúng.
+- Tu tại gia trước khi tu ngoài ngõ; hiếu thuận cha mẹ, hòa thuận vợ chồng, nuôi dạy con cái tử tế mới là mảnh đất gieo trồng phước báu đầu tiên.
+- Làm việc thiện bằng tâm vô cầu; giúp đỡ người nghèo khổ, làm công quả chùa chiền không cầu danh tiếng, không mong cầu sự đền đáp hay tôn xưng.
+- Ứng xử chánh niệm trong từng lời nói; nói lời chân thật, hòa ái, mang tính xây dựng; không buôn chuyện sau lưng, không đem chuyện người khác ra làm trò đùa.
+- Hóa giải nghịch cảnh bằng tâm xả buông; khi bị chê bai, vu oan hay gặp trắc trở, nhớ quán chiếu nhân quả và nhẫn nhịn như cây đước chịu sóng mặn mà không đổi dòng nhựa ngọt.
+- Tùy hỷ với điều thiện của người khác; thấy ai làm phước, tu tập tinh tấn hay thành công thì thật lòng vui mừng, quyết không để tâm đố kỵ khởi sinh.
+- Đem tinh thần Đạo Phật vào nghề nghiệp; kinh doanh buôn bán ngay thẳng, không gian lận cân đo, lấy sự phụng sự và đạo đức làm nền móng lâu bền.
+- Thực tập buông bỏ bản ngã mỗi ngày; không tự mãn mình là người tu học giỏi hơn người khác, luôn nhìn lại lỗi mình thay vì vạch lá tìm sâu lỗi người.
+- Hồi hướng công đức cho khắp pháp giới; mỗi khi tụng kinh, làm việc lành đều nguyện cầu cho cha mẹ, gia đình và muôn loài cùng được bình an, bớt khổ đau.
