@@ -83,3 +83,24 @@ chu_de: Tâm linh & Tích lũy phước đức
 - Không rải tiền lẻ lên tay tượng làm hoen ố sự trang nghiêm; nếu có lòng thành hãy bỏ vào thùng công đức đúng quy định.
 - Không đốt vàng mã lãng phí và ô nhiễm; dùng số tiền đó sẻ chia ổ bánh mì cho người nghèo khó ngoài đời thực.
 - Hồi hướng công đức trước khi rời chùa; nguyện đem mọi ý nghĩ và việc làm lành nhỏ bé trong ngày chia sẻ sự an lành cho muôn loài.
+
+---
+
+## Cẩm nang bỏ túi về ứng xử anh chị em trong gia đình
+emoji: 🌿
+chu_de: Tình huynh đệ & Thuận hòa gia đạo
+
+- Cùng chung một gốc rễ cội nguồn; anh chị em như các nhánh cây mọc từ một gốc đước, cành này gãy thì thân cây cũng rỉ nhựa xót xa.
+- Người làm anh chị biết làm gương và bao dung; dìu dắt nâng đỡ em lúc chập chững vào đời, không cậy tuổi tác để áp đặt hay lấn lướt.
+- Người làm em biết kính trên nhường dưới; ghi nhận công lao bảo bọc của anh chị, không vì được nuông chiều mà sinh thói ỷ lại, bất kính.
+- Không so bì tình thương của cha mẹ; mỗi nhánh cây đón nhận ánh nắng ở góc độ khác nhau, ghen tị ngầm là nhát kéo tự cắt đứt nhựa sống tình thân.
+- Phân định sòng phẳng tiền bạc và tài sản; anh em quý ở chữ Tình nhưng bền ở chữ Minh, nợ nần giúp đỡ phải rõ ràng để tránh mầm mống xích mích mai sau.
+- Tôn trọng mái ấm riêng của nhau khi đã lập gia đình; không can thiệp thô bạo vào chuyện nội bộ của dâu, rể để giữ hòa khí lâu dài.
+- Đồng lòng chia sẻ trách nhiệm phụng dưỡng cha mẹ; không tị nạnh ai bỏ công nhiều, ai góp tiền ít khi đấng sinh thành ốm đau già yếu.
+- Khi xảy ra tranh cãi, chủ động hạ giọng một nhịp; một bên nóng giận thì bên kia biết lùi, nhớ lại chén cơm manh áo thuở hàn vi cùng sẻ chia dưới một mái nhà.
+- Tuyệt đối không nói xấu anh chị em với người ngoài; vạch áo cho người xem lưng là tự hạ thấp danh dự của cả dòng họ và chính bản thân.
+- Khuyên can bằng sự chân thành nơi kín đáo khi thấy ruột thịt lầm đường lạc lối; không ruồng bỏ, không hùa theo thói hư tật xấu.
+- Lúc một người sa cơ thất thế, các nhánh còn lại chủ động chìa tay nâng đỡ; giúp nhau vượt qua sóng gió mà không kể công hay đòi hỏi đền đáp.
+- Khi gia đình có người thành đạt rực rỡ, thật lòng chúc phúc và tự hào; không đố kỵ, không đòi hỏi sự bao cấp vô lý.
+- Giữ nếp sum vầy vào các dịp giỗ chạp, lễ tết; cùng ngồi lại bên mâm cơm ấm cúng để con cháu các thế hệ sau noi gương gắn kết.
+- Giao ước giữ trọn chữ Hòa; dù ngoài xã hội có đối đầu bao nhiêu giông bão, quay về bên anh em ruột thịt vẫn là chốn tựa lưng an toàn nhất đời người.
