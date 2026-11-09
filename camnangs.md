@@ -160,3 +160,20 @@ chu_de: Đạo hạnh Phật tử & Chánh niệm đời thường
 - Đem tinh thần Đạo Phật vào nghề nghiệp; kinh doanh buôn bán ngay thẳng, không gian lận cân đo, lấy sự phụng sự và đạo đức làm nền móng lâu bền.
 - Thực tập buông bỏ bản ngã mỗi ngày; không tự mãn mình là người tu học giỏi hơn người khác, luôn nhìn lại lỗi mình thay vì vạch lá tìm sâu lỗi người.
 - Hồi hướng công đức cho khắp pháp giới; mỗi khi tụng kinh, làm việc lành đều nguyện cầu cho cha mẹ, gia đình và muôn loài cùng được bình an, bớt khổ đau.
+
+---
+
+## Cẩm nang ứng xử với khách hàng khi mình là nhân viên
+emoji: 💼
+chu_de: Kỹ năng phục vụ & Chuyên nghiệp công sở
+
+- Chào đón bằng sự chú tâm trọn vẹn; ánh mắt thân thiện và nụ cười tươi tắn ngay từ giây đầu tiên giúp xua tan cảm giác xa cách của khách.
+- Lắng nghe không ngắt lời; để khách nói hết nhu cầu hoặc bức xúc, gật đầu xác nhận để khách cảm thấy ý kiến của mình được tôn trọng.
+- Đón nhận khiếu nại như cây mắm đón sóng đầu; giữ thái độ bình tĩnh, hạ giọng ôn tồn, không đôi co thắng thua hay đổ lỗi cho hoàn cảnh.
+- Nhận diện vấn đề và nhận trách nhiệm chân thành; một câu xin lỗi lịch thiệp vì trải nghiệm chưa trọn vẹn của khách có sức mạnh xoa dịu hơn ngàn lời giải thích vòng vo.
+- Nắm vững kiến thức sản phẩm và dịch vụ; tư vấn chính xác, trung thực đúng nhu cầu thực tế của khách thay vì tìm cách chèo kéo, ép mua.
+- Giải quyết nhanh gọn hoặc đưa ra mốc thời gian rõ ràng; nếu việc vượt quá thẩm quyền, báo rõ với khách và chủ động kết nối ngay với cấp quản lý.
+- Tôn trọng mọi đối tượng khách hàng như nhau; phục vụ tận tình dù khách mua đơn hàng nhỏ hay lớn, khách ăn mặc giản dị hay sang trọng.
+- Giữ vững tác phong chỉn chu nơi làm việc; trang phục gọn gàng, khu vực phục vụ ngăn nắp sạch sẽ tạo niềm tin ban đầu vững chắc cho khách.
+- Tuyệt đối không phàn nàn hay nói xấu khách hàng; không đem chuyện bực bội của khách này trút lên khách khác hoặc cười cợt sau lưng khách.
+- Cảm ơn chân thành khi khách ra về; dù khách có mua hàng hay chỉ ghé xem, một lời cảm ơn và lời chúc tốt đẹp luôn để lại ấn tượng sâu đậm để họ quay lại.
