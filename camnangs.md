@@ -508,3 +508,89 @@ chu_de: Hành trang cơ động & Du lịch thông minh
 - Mang theo túi vải phụ và túi zip chống nước; dùng để phân loại quần áo bẩn, bảo vệ đồ điện tử khi gặp mưa bất ngờ hoặc đựng đồ lưu niệm phát sinh trên đường về.
 - Chừa khoảng trống trong vali; không nhét đồ quá chật ních ngay từ lúc đi, chừa lại khoảng 15–20% dung tích để chứa quà cáp và giúp việc đóng gói chặng về nhẹ nhàng.
 - Cân thử hành lý trước khi ra sân bay; nắm rõ quy định kích thước và trọng lượng của hãng bay để tránh tình trạng phát sinh chi phí quá cước đắt đỏ tại quầy thủ tục.
+
+---
+
+## Cẩm nang bỏ nhậu
+emoji: 🚫🍺
+chu_de: Tỉnh thức làm chủ & Bảo toàn sinh lực gia đạo
+
+- Nhận diện bản chất ảo ảnh của bàn nhậu; những chén chú chén anh, lời khen tung hô trong cơn say chỉ là bọt nước bãi bồi, khi đổ bệnh hay hoạn nạn chỉ có bản thân và người nhà gánh chịu.
+- Rèn luyện kỹ năng từ chối dứt khoát ngay từ đầu; dùng lý do chính đáng và bất khả xâm phạm như sức khỏe, đang uống thuốc điều trị hoặc phải lái xe đón gia đình, nói một lời rõ ràng không ỡm ờ nể nang.
+- Cắt đứt các mắt xích rủ rê kém chất lượng; hạn chế giao lưu với nhóm bạn chỉ biết gặp nhau trên bàn rượu, chủ động đổi môi trường gặp gỡ sang quán cà phê, sân thể thao hoặc thư viện.
+- Tự chuẩn bị phương án rút lui an toàn; nếu bắt buộc phải dự tiệc tiếp khách, uống nước lọc hoặc nước ngọt có màu ngụy trang, chủ động cáo lui sớm sau phần chào hỏi xã giao cần thiết.
+- Tận dụng quy định pháp luật làm lá chắn bảo vệ; lấy việc kiểm tra nồng độ cồn nghiêm ngặt và nguy cơ tai nạn giao thông làm lý do kiên quyết không đụng một giọt bia rượu.
+- Tính toán tổn thất kinh tế và thời gian thực tế; cộng dồn chi phí ăn nhậu, tiền thuốc men giải độc và một buổi sáng hôm sau mệt mỏi nằm bẹp để thấy cái giá quá đắt của vài giờ bốc đồng.
+- Thay thế thú vui bù khú bằng các hoạt động bồi đắp thân tâm; tham gia tập luyện thể thao (chạy bộ, bơi lội, đạp xe), đọc sách hoặc dành trọn buổi tối quây quần ấm cúng bên mâm cơm gia đình.
+- Lắng nghe sự phục hồi kỳ diệu của cơ thể; cảm nhận gan nhẹ nhõm, dạ dày êm ái, giấc ngủ sâu và đầu óc tỉnh táo minh mẫn mỗi sáng thức dậy để có thêm động lực kiên định đoạn tuyệt men say.
+- Tìm điểm tựa tinh thần từ ánh mắt người thân; mỗi lần muốn tặc lưỡi đi nhậu, hãy nghĩ đến hình ảnh vợ con mòn mỏi chờ cửa thâu đêm và nỗi lo âu thắt ruột của cha mẹ già.
+- Giữ vững phẩm giá người đàn ông bản lĩnh; bản lĩnh thực sự nằm ở việc dám nói "Không" trước cám dỗ và kiểm soát trọn vẹn vận mệnh đời mình, chứ không nằm ở đáy ly rượu vô bổ.
+
+---
+
+## Cẩm nang bỏ thuốc lá
+emoji: 🚭
+chu_de: Thanh lọc thân thể & Đoạn tuyệt khói độc
+
+- Xác lập tâm thế dứt khoát ngay từ ngày khởi đầu; chọn một ngày ấn định rõ ràng để cắt đứt hoàn toàn, không thỏa hiệp bằng cách hút giảm dần vài điếu mỗi ngày vì dễ tạo cớ tái nghiện.
+- Dọn sạch môi trường xung quanh không để vương tàn tích; vứt bỏ toàn bộ gạt tàn, bật lửa, các bao thuốc dự phòng trong túi áo, ngăn bàn, xe máy để triệt tiêu mọi kích thích thị giác.
+- Áp dụng nguyên tắc trì hoãn khi cơn thèm ập tới; cơn thèm nicotine đỉnh điểm thường chỉ kéo dài từ 3 đến 5 phút, uống ngay một ly nước lọc lớn hoặc hít thở sâu để làn sóng thôi thúc tự lắng xuống.
+- Đánh lừa phản xạ của bàn tay và vòm miệng; thay thế động tác cầm điếu thuốc bằng việc nhai kẹo cao su không đường, cắn tăm quế, nhai cà rốt hoặc ngậm một lát gừng tươi.
+- Nhận diện và né tránh các bẫy kích hoạt thói quen cũ; hạn chế ngồi cà phê vỉa hè tụ tập nhóm bạn hút thuốc, giảm bớt bia rượu trong 3 tuần đầu vì cồn làm suy yếu lý trí kiểm soát bản thân.
+- Đón nhận triệu chứng cai nghiện như tín hiệu phục hồi; bồn chồn, ho đờm hay khó ngủ là lúc cơ thể đang đào thải độc tố và phổi bắt đầu làm sạch, xem đó là tin vui thay vì chịu đựng đau khổ.
+- Vận động thể lực để tái tạo hoóc-môn hạnh phúc tự nhiên; chạy bộ, hít đất, bơi lội hoặc đi bộ nhanh giúp xả bớt năng lượng dư thừa, giải tỏa căng thẳng thần kinh do thiếu hụt nicotine.
+- Quy đổi tiền thuốc lá thành khoản tích lũy hữu hình; bỏ số tiền mua thuốc mỗi ngày vào một ống tiết kiệm riêng để thấy rõ sau vài tháng mình đã giữ lại được bao nhiêu tiền của mồ hôi nước mắt.
+- Tự nhắc nhở về lá chắn bảo vệ gia đình; dừng hút một điếu thuốc là cứu lấy bầu không khí trong lành của con thơ, giảm bớt nguy cơ bệnh tật cho vợ con và cha mẹ già bên cạnh.
+- Tuyệt đối không thử lại "chỉ một hơi duy nhất"; não bộ đã từng nghiện sẽ kích hoạt lại toàn bộ cơ chế thèm khát chỉ sau một lần tò mò hay cả nể, giữ vững bờ kè kiên định trước mọi cám dỗ.
+
+---
+
+## Cẩm nang hành xử của người vợ với người chồng thích nhậu
+emoji: 🛡️🍲
+chu_de: Hòa khí gia đình & Nghệ thuật ứng xử nhu thuận
+
+- Giữ im lặng tuyệt đối khi chồng đang say; không đôi co, cằn nhằn hay chất vấn lúc men rượu đang làm chủ tâm trí anh ấy, vì lời nói lúc say chỉ khơi mào cho cãi vã và bạo lực gia đình.
+- Đặt an toàn thân thể và tính mạng lên hàng đầu; chuẩn bị một ly nước ấm gừng mật ong, chậu nước mát lau mặt, để sẵn xô chậu cạnh giường và đỡ chồng nằm nghiêng tránh sặc nôn nguy hiểm.
+- Chỉ nói chuyện khi cả hai đã hoàn toàn tỉnh táo; chọn thời điểm sáng hôm sau sau khi anh ấy ăn sáng xong, dùng giọng điệu dịu dàng nhưng kiên định để chia sẻ về nỗi lo lắng thắt ruột của mẹ con mình.
+- Dùng tình thương và sự lo lắng thay cho chì chiết oán trách; thay vì nói "Sao anh vô trách nhiệm, say sưa tối ngày", hãy nói "Nhìn anh say mệt nôn thốc tháo em xót lắm, lỡ trên đường về có chuyện gì thì mẹ con em biết tựa vào ai".
+- Không thu dọn mọi hậu quả thay chồng một cách vô điều kiện; hãy để anh ấy tự giặt bộ quần áo dính bẩn hay dọn bãi nôn sau khi tỉnh táo, để chồng đối diện trực tiếp với sự phiền toái mà cơn say gây ra.
+- Thiết lập ranh giới tài chính và thời gian rõ ràng; cùng chồng thỏa thuận hạn mức tiền bạc và số ngày tối đa cho phép giao lưu trong tuần, gắn việc nhậu nhẹt với các mục tiêu chung của con cái.
+- Kéo chồng vào các trách nhiệm gia đình cụ thể; giao cho anh ấy những việc cố định như đón con, kèm con học bài hay chở mẹ con đi dạo mỗi chiều tối để cắt đứt các khoảng trống thời gian dễ bị bạn bè rủ rê.
+- Biến mâm cơm nhà thành nơi ấm cúng níu chân; nấu những món ăn ngon hợp khẩu vị, tạo không khí vui tươi rộn rã tiếng cười của con trẻ để nhà thực sự là chốn muốn về hơn quán nhậu xô bồ.
+- Giữ lá chắn an toàn cho bản thân và con trẻ; nếu chồng say xỉn có xu hướng bạo lực hoặc đập phá đồ đạc, ưu tiên bảo vệ con và rút lui sang phòng khác hoặc nhờ người thân can thiệp, không đứng lại cự cãi.
+- Kiên nhẫn bồi đắp chuyển hóa dần dần; thói quen lâu ngày như rễ bám sâu không thể nhổ bật trong một sớm một chiều, lấy sự bao dung, khôn khéo và kiên định làm lạt mềm buộc chặt để giữ lấy gia đình.
+
+---
+
+## Cẩm nang chăm sóc cha già
+emoji: 👴
+chu_de: Hiếu kính trụ cột & Chăm sóc người cao tuổi
+
+- Giữ gìn lòng tự tôn của người từng gánh vác; người cha cả đời làm trụ cột che chở gia đình, khi tuổi già sức yếu rất sợ cảm giác vô dụng, hãy luôn hỏi xin ý kiến và nhờ cha những việc nhẹ nhàng để cha thấy mình vẫn có giá trị.
+- Tôn trọng sự trầm lặng và không gian riêng; đàn ông về già thường ít bộc lộ cảm xúc ra ngoài bằng lời nói, hãy học cách thấu hiểu qua ánh mắt, cử chỉ và tôn trọng những phút giây cha ngồi tĩnh lặng bên tách trà.
+- Kiểm tra định kỳ các bệnh lý tim mạch, tiền liệt tuyến và xương khớp; đây là những căn bệnh hay âm thầm rút mòn sinh lực người già, chủ động đưa cha đi khám tầm soát để kịp thời phát hiện sớm.
+- Khéo léo nhắc nhở bỏ thuốc lá, hạn chế rượu bia; giải thích từ tốn bằng tình thương con cháu thay vì cấm đoán gay gắt làm cha tự ái, dần thay thế bằng các thức uống thanh nhiệt, thảo mộc lành tính.
+- Chuẩn bị chế độ ăn đủ chất đạm dễ tiêu và khoáng chất; nấu mềm thịt nạc, cá đồng, bổ sung các loại hạt và rau xanh giàu canxi để nuôi dưỡng khối cơ bắp và chống xơ vữa thành mạch.
+- Động viên cha duy trì thói quen vận động thường nhật; khuyến khích cha tưới cây cảnh, đi bộ chậm rãi, tập thái cực quyền hoặc chơi cờ cùng bạn bè đồng niên để đầu óc luôn minh mẫn, hoạt bát.
+- Lắng nghe những câu chuyện thời trai trẻ hào hùng; khi cha kể về thời gian bôn ba cản sóng dựng nghiệp ngày xưa, hãy chăm chú lắng nghe với sự tôn kính, đó là niềm an ủi tinh thần lớn lao nhất của cha.
+- Chú ý an toàn đi lại và sinh hoạt ban đêm; cha già hay đi tiểu đêm do bệnh tiền liệt tuyến, cần lắp công tắc đèn cảm ứng gần giường, dẹp sạch vật cản dưới sàn để phòng ngừa vấp ngã nguy hiểm.
+- Sắp xếp thuốc men khoa học và hỗ trợ tế nhị; người cha thường ngại nhờ vả con cái, hãy chủ động chuẩn bị sẵn thuốc men, đo huyết áp mỗi sáng với thái độ tự nhiên, không làm cha cảm thấy mình là gánh nặng.
+- Kết nối tình cha con qua những hành động thiết thực; cùng cha sửa sang vật dụng trong nhà, xem một trận bóng đá hay đơn giản là ngồi cạnh bóp vai cho cha sau ngày dài mỏi mệt.
+- Giữ hòa khí gia đình làm gốc bình yên cho cha; sự thành đạt, hiếu thuận và hòa thuận giữa anh em trong nhà chính là liều thuốc bổ quý giá nhất giúp cha an hưởng tuổi già thọ trường.
+
+---
+
+## Cẩm nang ứng xử của người vợ với ba mẹ chồng và gia đình chồng
+emoji: 🏡🌸
+chu_de: Hòa hợp dâu thảo & Đạo ứng xử gia tộc
+
+- Đặt sự kính trọng và lễ phép làm gốc rễ; xưng hô đúng mực, chào hỏi ân cần, giữ thái độ nhã nhặn dù có những điểm bất đồng trong lối sống hay quan điểm thế hệ.
+- Tôn trọng thói quen và nếp sinh hoạt lâu đời của nhà chồng; nhập gia tùy tục, quan sát nề nếp gia đình trước khi muốn góp ý hay thay đổi điều gì, không đem nếp nhà mẹ đẻ ra so bì, chê bai.
+- Không tranh cãi tay đôi hay tỏ thái độ bằng mặt không bằng lòng; khi có hiểu lầm hoặc bất đồng, giữ im lặng lắng nghe rồi lựa lúc thích hợp nhờ chồng làm cầu nối giải thích nhỏ nhẹ.
+- Xem chồng là chiếc cầu nối khéo léo; tâm sự với chồng về những khó khăn nơi gia đình mới bằng sự chia sẻ chân thành, không biến chồng thành nơi trút giận hay buộc anh phải chọn bên vợ bên mẹ.
+- Chăm sóc ba mẹ chồng qua những cử chỉ ấm áp đời thường; hỏi thăm sức khỏe, để ý món ăn ba mẹ thích, chuẩn bị thuốc men chu đáo khi trái gió trở trời, của cho không bằng cách trao bằng cả tấm lòng.
+- Giữ chừng mực và ranh giới tế nhị với anh chị em bên chồng; hòa đồng, sẵn lòng giúp đỡ khi gia đình có việc chung nhưng không can thiệp sâu vào chuyện riêng tư, tiền bạc hay hôn nhân của họ.
+- Tự chủ tài chính và độc lập trong cách vun vén tổ ấm nhỏ; minh bạch trong đóng góp sinh hoạt gia đình, chủ động biếu xén ba mẹ vào dịp lễ tết với sự bàn bạc đồng thuận của hai vợ chồng.
+- Tuyệt đối không đem chuyện bất hòa trong nhà chồng đi kể ra ngoài; giữ kín chuyện nội bộ gia đình, không đăng lời than thở hay bóng gió lên mạng xã hội làm tổn hại thể diện chung.
+- Dạy con cái biết yêu thương và kính trọng ông bà nội; tạo cơ hội cho con gần gũi, hỏi han ông bà, tình cảm ruột thịt thế hệ nối tiếp chính là sợi dây hàn gắn bền chặt nhất.
+- Lấy tâm thế bao dung làm lạt mềm buộc chặt; xem gia đình chồng như mảnh đất mới cần bồi đắp kiên nhẫn, chân thành gieo mầm thiện cảm rồi sẽ gặt hái được sự tin cậy và yêu thương dài lâu.
