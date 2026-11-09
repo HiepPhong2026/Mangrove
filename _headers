@@ -1,0 +1,8 @@
+/vols/*.json
+  Cache-Control: public, max-age=86400
+
+/camnangs.md
+  Cache-Control: public, max-age=3600
+
+/index.html
+  Cache-Control: public, max-age=300
