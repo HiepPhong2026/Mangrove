@@ -594,3 +594,37 @@ chu_de: Hòa hợp dâu thảo & Đạo ứng xử gia tộc
 - Tuyệt đối không đem chuyện bất hòa trong nhà chồng đi kể ra ngoài; giữ kín chuyện nội bộ gia đình, không đăng lời than thở hay bóng gió lên mạng xã hội làm tổn hại thể diện chung.
 - Dạy con cái biết yêu thương và kính trọng ông bà nội; tạo cơ hội cho con gần gũi, hỏi han ông bà, tình cảm ruột thịt thế hệ nối tiếp chính là sợi dây hàn gắn bền chặt nhất.
 - Lấy tâm thế bao dung làm lạt mềm buộc chặt; xem gia đình chồng như mảnh đất mới cần bồi đắp kiên nhẫn, chân thành gieo mầm thiện cảm rồi sẽ gặt hái được sự tin cậy và yêu thương dài lâu.
+
+---
+
+## Cẩm nang giúp dễ ngủ
+emoji: 🌙😴
+chu_de: Vệ sinh giấc ngủ & Dưỡng tâm an thần
+
+- Tắt màn hình thiết bị điện tử trước khi ngủ 60 phút; ánh sáng xanh từ điện thoại, máy tính ức chế hormone melatonin, đánh lừa não bộ rằng trời vẫn sáng khiến thần kinh căng thẳng khó vào giấc.
+- Thiết lập không gian phòng ngủ chuẩn tối, mát và yên tĩnh; dùng rèm cản sáng, giữ nhiệt độ phòng mát mẻ dễ chịu (khoảng 24–26°C), không để ánh sáng đèn ngủ rọi thẳng vào mắt.
+- Hạ nhiệt cơ thể và thư giãn mạch máu bằng nước ấm; ngâm chân nước ấm với chút muối hạt hoặc gừng, hoặc tắm nước ấm trước khi ngủ khoảng 1 tiếng giúp máu huyết dồn xuống chi dưới, làm dịu hệ thần kinh trung ương.
+- Trút bỏ suy nghĩ ra trang giấy trước khi lên giường; nếu đầu óc còn vướng bận công việc ngày mai hay âu lo chưa giải quyết, ghi chép nhanh toàn bộ ra sổ tay để giải phóng dung lượng não bộ.
+- Ngưng nạp thức ăn nặng bụng cách giờ ngủ ít nhất 3 tiếng; tránh ăn khuya đồ dầu mỡ, đồ cay nóng khiến dạ dày phải cày xới ban đêm, hạn chế cà phê, trà đậm sau 2 giờ chiều và không uống quá nhiều nước sát giờ ngủ gây tiểu đêm.
+- Giữ cố định một khung giờ thức và ngủ mỗi ngày; đi ngủ và thức dậy vào cùng một thời điểm kể cả cuối tuần để cài đặt đồng hồ sinh học chuẩn xác, đến giờ tự khắc mi mắt trĩu xuống.
+- Thực hành nhịp thở 4-7-8 làm dịu phản ứng căng thẳng; hít vào bằng mũi 4 giây, nén giữ hơi 7 giây và thở ra từ từ bằng miệng trong 8 giây, lặp lại 4–5 vòng để hạ nhịp tim và đưa thân tâm vào tĩnh lặng.
+- Không biến chiếc giường thành nơi làm việc hay giải trí; chỉ leo lên giường khi thực sự buồn ngủ để não bộ tự động liên kết: "Nằm xuống giường nghĩa là đi ngủ", không lướt mạng xã hội hay xem phim giật gân trên giường.
+- Đổi vị thế khi trằn trọc quá 20 phút; nếu nằm trằn trọc không ngủ được, hãy rời khỏi giường ra ghế ngồi đọc vài trang sách giấy hoặc nghe nhạc không lời nhẹ nhàng dưới ánh đèn vàng mờ, khi cơn buồn ngủ kéo đến mới quay lại giường.
+- Tắm nắng sáng tự nhiên để khóa nhịp sinh học ban đêm; dành 15–20 phút đón ánh nắng ban mai mỗi sớm giúp cơ thể tái thiết lập chu kỳ thức - ngủ tự nhiên, tạo nền tảng cho một giấc ngủ sâu và trọn vẹn vào đêm hôm sau.
+
+---
+
+## Cẩm nang sử dụng AI
+emoji: 🤖💡
+chu_de: Làm chủ công nghệ & Khai phóng năng suất số
+
+- Giữ vững chủ quyền tư duy của con người; xem AI là cánh tay nối dài, là trợ lý đắc lực hoặc gương soi phản biện, tuyệt đối không phó thác hoàn toàn năng lực phán đoán và trách nhiệm quyết định cho thuật toán.
+- Ra lệnh chuẩn xác bằng bối cảnh rõ ràng (Prompting); cung cấp đủ vai trò (Role), bối cảnh (Context), nhiệm vụ cụ thể (Task), định dạng mong muốn (Format) và các ràng buộc cụ thể để nhận về kết quả sát thực nhất.
+- Luôn thẩm định lại tính xác thực của dữ liệu; AI có thể "ảo giác" (hallucination) và tạo ra thông tin nghe rất thuyết phục nhưng sai lệch, luôn tra cứu nguồn gốc và kiểm chứng số liệu, trích dẫn thực tế.
+- Tận dụng AI để vượt qua nỗi sợ trang giấy trắng; dùng mô hình ngôn ngữ để động não (brainstorming), lập dàn ý, tìm góc nhìn mới hoặc gợi ý cấu trúc bài viết khi đang bị tắc nghẽn ý tưởng.
+- Tương tác theo chu trình hội thoại nhiều bước; không đòi hỏi một kết quả hoàn hảo ngay ở câu lệnh đầu tiên, trao đổi liên tục, yêu cầu chỉnh sửa, cắt tỉa và phản biện để sản phẩm hoàn thiện dần qua từng vòng lặp.
+- Bảo mật tuyệt đối dữ liệu nhạy cảm; không tải lên các mô hình AI công cộng thông tin tài chính mật khẩu, dữ liệu kinh doanh cốt lõi, bí mật công nghệ hay thông tin định danh cá nhân của người khác.
+- Yêu cầu AI đóng vai trò phản biện đa chiều; đặt AI vào vị trí của khách hàng khó tính, chuyên gia đối thủ hoặc một người có góc nhìn ngược lại để tìm ra lỗ hổng trong kế hoạch trước khi triển khai.
+- Cá nhân hóa văn phong và thổi hồn con người vào kết quả; văn bản do AI tạo ra thường bóng bẩy nhưng thiếu cảm xúc và trải nghiệm sống, hãy gọt giũa lại bằng vốn từ, giọng điệu và câu chuyện thực chứng của chính mình.
+- Dùng AI để giải phóng các tác vụ cơ bắp, lặp lại; tự động hóa việc tóm tắt tài liệu dài, trích xuất bảng biểu, dịch sơ thảo, viết mã mẫu hoặc sửa lỗi ngữ pháp để dành trọn năng lượng cho tư duy chiến lược và sáng tạo.
+- Không ngừng cập nhật năng lực và đạo đức công nghệ; rèn luyện thói quen học hỏi các tính năng mới mỗi tuần, sử dụng công nghệ với tinh thần nhân văn, tôn trọng bản quyền và không tạo ra nội dung giả mạo gây hại cho xã hội.
