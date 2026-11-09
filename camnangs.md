@@ -353,3 +353,106 @@ chu_de: Dưỡng sinh thường nhật & Ăn uống trường thọ
 - Lấy rau xanh làm lớp đệm; trong bữa ăn nên ăn rau củ trước để tạo lớp màng xơ lót đường tiêu hóa, giúp ổn định đường huyết khi ăn tinh bột và đạm sau đó.
 - Đa dạng sắc màu trên đĩa ăn; kết hợp nhiều màu xanh, đỏ, vàng, tím, trắng từ rau củ tự nhiên để nạp đầy đủ các chất chống oxy hóa đẩy lùi gốc tự do.
 - Thức ăn tốt nhất là tâm thế khi ăn; ăn trong sự biết ơn và vui vẻ, tuyệt đối không vừa ăn vừa cãi vã, lướt điện thoại hay ôm nỗi bực tức làm biến chất thức ăn thành độc tố.
+
+---
+
+## Cẩm nang học toán
+emoji: 📐
+chu_de: Tư duy logic & Nền tảng toán học
+
+- Bám chặt vào định nghĩa và tiên đề cốt lõi; rễ có sâu thì thân mới đứng vững, hiểu rõ bản chất của một định lý quan trọng gấp vạn lần học vẹt hàng chục công thức biến đổi rườm rà.
+- Truy nguyên nguồn gốc của công thức; tự tay chứng minh lại các định lý cơ bản ít nhất một lần để hiểu vì sao nó tồn tại, cắt đứt thói quen học vẹt công thức rập khuôn.
+- Vẽ hình và sơ đồ hóa bài toán trước khi tính; hình học cần trực quan chuẩn xác, đại số cần vẽ trục số hay đồ thị hàm số để biến những con số trừu tượng thành hình hài cụ thể trước mắt.
+- Chia nhỏ bài toán phức tạp thành các mắt xích đơn giản; như tách từng lớp rễ đước, phân tích đề bài thành từng dữ kiện nhỏ, giải quyết từng khâu rồi xâu chuỗi lại thành lời giải trọn vẹn.
+- Luyện tập phân tích đề và xác định giả thiết - kết luận; đọc kỹ từng câu chữ để nhận diện dữ kiện ẩn và điều kiện ràng buộc (điều kiện xác định của mẫu số, căn thức, miền giá trị), tránh mất điểm oan uổng.
+- Học từ lỗi sai qua sổ tay giải trình; mỗi khi giải sai một bài toán, ghi chép lại chính xác lý do sai (ngộ nhận định lý, nhầm dấu hay sai số tính toán) để không bao giờ bước hụt lại vào cùng một hố sụt.
+- Đa dạng hóa con đường đi đến đáp án; sau khi giải xong bằng một cách, thử tự hỏi liệu có cách giải hình học, dùng bất đẳng thức hay đổi biến nào ngắn gọn và thanh thoát hơn không.
+- Rèn luyện kỹ năng tính nhẩm và ước lượng nhanh; kiểm tra sơ bộ tính hợp lý của kết quả (dấu âm/dương, bậc của hàm số, giới hạn xấp xỉ) trước khi chuyển sang bài tiếp theo.
+- Kiên nhẫn ngồi trước bế tắc thay vì lật vội lời giải; khoảnh khắc não bộ vật lộn tìm đường ra giữa các giả thiết chính là lúc các liên kết nơ-ron tư duy logic được bồi đắp mạnh mẽ nhất.
+- Ứng dụng toán vào thực tế đời sống; nhìn nhận toán học như ngôn ngữ mô tả quy luật tự nhiên, dùng logic toán học để phân tích tài chính cá nhân, xác suất rủi ro và ra quyết định sáng suốt.
+
+---
+
+## Cẩm nang học tiếng Anh
+emoji: 🗣️
+chu_de: Phát triển năng lực ngôn ngữ & Tự học bền vững
+
+- Bám rễ từ phát âm chuẩn tắc; học kỹ bảng ký hiệu ngữ âm quốc tế (IPA) ngay từ đầu để nghe rõ từng âm tiết và nói chuẩn xác mà không rơi vào bẫy phiên âm tiếng Việt.
+- Nạp đầu vào (Input) đủ nhiều trước khi đòi hỏi đầu ra (Output); nghe và đọc như cây hút nước phù sa bồi đắp, tích lũy đủ vốn từ và ngữ cảnh thì việc nói và viết sẽ tự nhiên bật ra.
+- Học từ vựng theo cụm từ và ngữ cảnh (Collocations); không học từ đơn lẻ rời rạc, ghi nhớ cả câu hoàn chỉnh để khi nói phản xạ thành luồng tự nhiên mà không cần dịch từng chữ trong đầu.
+- Tận dụng phương pháp nghe lặp và nhại giọng (Shadowing); chọn đoạn hội thoại ngắn có phụ đề chuẩn, vừa nghe vừa nhắc lại theo đúng ngữ điệu, trọng âm và nhịp thở của người bản xứ.
+- Biến tiếng Anh thành môi trường sống xung quanh; chuyển đổi ngôn ngữ trên điện thoại, máy tính, xem video sở thích bằng tiếng Anh, biến việc tiếp xúc ngôn ngữ thành thói quen mỗi ngày thay vì tiết học nặng nề.
+- Đọc theo phương pháp mở rộng (Extensive Reading); chọn sách, truyện tranh, bài báo vừa sức (hiểu khoảng 70–80%) để đọc say mê, không tra từ điển liên tục làm đứt gãy dòng cảm hứng.
+- Đừng sợ sai phạm hay xấu hổ; xem mỗi lần phát âm vấp hay nói sai ngữ pháp là một vết cứa tôi luyện bản lĩnh phản xạ, càng sợ sai thì lưỡi càng cứng và rễ ngôn ngữ càng khó vươn xa.
+- Tập suy nghĩ trực tiếp bằng tiếng Anh; tự miêu tả thầm trong đầu những vật dụng quanh mình, các hoạt động đang làm hằng ngày bằng tiếng Anh đơn giản để cắt bỏ thói quen dịch Anh - Việt.
+- Kiên trì tích lũy đều đặn hơn là dồn sức học vội; dành 20–30 phút tập trung mỗi ngày hiệu quả gấp nhiều lần so với việc để dồn 4–5 tiếng chỉ học vào cuối tuần.
+- Lấy mục tiêu ứng dụng thực tế làm kim chỉ nam; học để giao tiếp, để đọc tài liệu chuyên môn, để mở rộng cánh cửa sự nghiệp chứ không biến ngoại ngữ thành điểm số khô cứng trên giấy.
+
+---
+
+## Cẩm nang làm lớp trưởng trong lớp học
+emoji: 🧑‍🏫
+chu_de: Quản trị tập thể & Nghệ thuật lãnh đạo học đường
+
+- Làm cầu nối vững chắc giữa thầy cô và bạn bè; truyền đạt chỉ đạo của nhà trường chính xác, đồng thời lắng nghe và phản ánh tâm tư của tập thể với lòng trung thực và khách quan.
+- Dùng sự gương mẫu thay cho quyền lực mệnh lệnh; muốn lớp đi học đúng giờ, giữ trật tự và chăm chỉ thì bản thân phải là người tiên phong thực hiện nghiêm túc nhất.
+- Vận hành ban cán sự như mạng rễ chân kiềng; phân chia đầu việc rõ ràng cho lớp phó, tổ trưởng và ban cán sự bộ môn, không ôm đồm việc một mình dẫn đến quá tải và sinh ức chế.
+- Công tâm và minh bạch trong mọi việc; ghi nhận thi đua, bình xét khen thưởng hoặc thu chi quỹ lớp phải rõ ràng đến từng đồng, tuyệt đối không thiên vị bạn thân hay trù dập người mình bất đồng.
+- Xử lý mâu thuẫn bằng sự mềm mỏng nơi kín đáo; khi có bạn vi phạm hoặc hai bạn cãi cọ, gặp riêng khuyên can và tìm hiểu nguyên do, không bêu rếu trước tập thể làm tổn thương lòng tự trọng của bạn.
+- Đứng mũi chịu sào bảo vệ quyền lợi chính đáng của lớp; dám thay mặt cả lớp đề đạt nguyện vọng hợp lý lên thầy cô chủ nhiệm một cách lễ phép, chừng mực và có sức thuyết phục.
+- Kích hoạt thế mạnh của từng cá nhân; người giỏi văn nghệ giao phụ trách phong trào, người giỏi học thuật cử làm trưởng nhóm học tập, biết đặt đúng hạt mầm vào đúng mảnh đất phù sa.
+- Luôn giữ thái độ hòa đồng và khiêm nhường; danh xưng lớp trưởng là trách nhiệm phục vụ tập thể chứ không phải cái bục để đứng trên đầu bạn bè hay tỏ vẻ trịch thượng.
+- Giữ vững nhịp học tập của bản thân; không vì mải mê việc chung mà để bảng điểm sa sút, kết quả học tập tốt chính là tấm thẻ uy tín vững chắc nhất của người đứng đầu.
+- Xây dựng tinh thần đoàn kết không bỏ rơi ai; chủ động kéo những bạn rụt rè, cô lập hoặc học lực yếu hòa nhập vào các hoạt động chung của tập thể.
+
+---
+
+## Cẩm nang làm lớp phó học tập
+emoji: 📚
+chu_de: Thúc đẩy học thuật & Nâng cao phong trào học tập
+
+- Giữ vững phong độ và nền tảng học lực; bản thân phải chăm chỉ, nắm chắc bài giảng và làm bài đầy đủ để tạo sự tin tưởng tuyệt đối từ bạn bè và thầy cô.
+- Nắm bắt chính xác lịch học và hạn nộp bài; ghi chép, nhắc nhở bài tập về nhà, đề cương ôn tập, lịch kiểm tra 15 phút, 1 tiết hoặc thi học kỳ lên bảng/nhóm lớp mỗi ngày.
+- Làm cầu nối học thuật giữa học sinh và giáo viên bộ môn; kịp thời tổng hợp những phần bài khó, dạng toán hóc búa hay câu hỏi chưa hiểu của cả lớp để xin thầy cô giải đáp lại.
+- Xây dựng mô hình "Đôi bạn cùng tiến"; ghép bạn học khá/giỏi kèm bạn còn yếu hoặc mất căn bản trên tinh thần tương trợ, kiên nhẫn bồi đắp, không phán xét hay chê bai.
+- Chia sẻ tài liệu và phương pháp học hữu ích; chủ động tổng hợp sơ đồ tư duy, tóm tắt công thức, mẹo ghi nhớ nhanh để cả lớp cùng tham khảo, không giấu nghề hay ích kỷ giữ cho riêng mình.
+- Hỗ trợ các bạn học yếu bằng sự tinh tế; hướng dẫn bài nơi kín đáo hoặc giờ ra chơi, chỉ cách tư duy từng bước thay vì chỉ đơn thuần cho bạn chép bài đối phó.
+- Phối hợp chặt chẽ cùng lớp trưởng và các cán sự bộ môn; phân công cán sự Toán, Lý, Hóa, Văn, Anh kiểm tra bài đầu giờ nhịp nhàng, tránh để tình trạng cả lớp cuống cuồng sao chép bài trước giờ vào lớp.
+- Duy trì kỷ luật và sự nghiêm túc trong giờ tự quản; nhắc nhở lớp tập trung thảo luận bài, tránh để giờ học biến thành buổi làm việc riêng, gây mất trật tự ảnh hưởng đến lớp bên cạnh.
+- Động viên, khích lệ tinh thần thi cử; trước các kỳ thi lớn, gửi lời chúc, tạo bầu không khí học tập tích cực, giúp bạn bè giải tỏa bớt áp lực căng thẳng.
+- Đặt mục tiêu nâng tầm học lực chung của cả tập thể; thước đo thành công của lớp phó học tập không chỉ là điểm số của cá nhân mình, mà là sự tiến bộ rõ rệt của từng thành viên trong lớp.
+
+---
+
+## Cẩm nang làm lớp phó kỷ luật
+emoji: ⚖️
+chu_de: Kỷ cương nề nếp & Nghệ thuật quản lý công tâm
+
+- Bản thân là thước đo đầu tiên; muốn giữ nề nếp tập thể thì chính mình phải chấp hành nghiêm túc nhất từ đồng phục, giờ giấc đến trật tự trong lớp học.
+- Giữ vững nguyên tắc công minh chính trực; ghi nhận vi phạm khách quan, không bao che cho bạn thân và tuyệt đối không trù dập người mình có hiềm khích riêng.
+- Nhắc nhở mềm mỏng trước khi ghi sổ; cho bạn cơ hội sửa sai bằng ánh mắt hoặc nhắc nhẹ nơi kín đáo, tránh thói quen vừa thấy lỗi là vội vàng ghi tên phạt ngay.
+- Phân biệt rõ giữa hiếu động và cố tình quậy phá; linh hoạt xử lý với những trò đùa vô hại của tuổi học trò, nhưng kiên quyết chấn chỉnh các hành vi bạo lực, xúc phạm hay vô lễ.
+- Phối hợp nhịp nhàng với tổ trưởng; ủy quyền việc giám sát đồng phục, vệ sinh và tác phong cơ bản cho các tổ để không phải một mình căng mắt bao quát tất cả.
+- Luôn giữ thái độ bình tĩnh và nhã nhặn; không dùng quyền hạn để lớn tiếng quát tháo, dọa dẫm hay ra oai kẻ cả làm rạn nứt tình bạn bè trong lớp.
+- Thấu hiểu hoàn cảnh đằng sau mỗi vi phạm; tìm hiểu nguyên do vì sao bạn đi trễ, ngủ gật hay bức xúc cãi vã để cùng lớp trưởng và thầy cô tìm cách tháo gỡ tận gốc.
+- Đứng mũi chắn sóng bảo vệ điểm thi đua của lớp; kịp thời nhắc nhở tập thể giữ trật tự trước khi giám thị hay thầy cô bộ môn bước vào phòng học.
+- Đề xuất biểu dương người có tiến bộ; kỷ luật không chỉ là trừng phạt người sai mà còn là ghi nhận những bạn từng cá biệt nay biết sửa đổi nền nếp.
+- Lấy mục tiêu xây dựng tập thể tự giác làm gốc; nề nếp bền vững nhất là khi cả lớp cùng đồng lòng gìn giữ, không phải vì sợ lớp phó kỷ luật mà vì tôn trọng danh dự chung của lớp.
+
+---
+
+## Cẩm nang chạy xe máy có lợi nhất cho kinh tế
+emoji: 🛵
+chu_de: Tiết kiệm nhiên liệu & Tối ưu chi phí phương tiện
+
+- Giữ đều tay ga và tránh thốc ga đột ngột; tăng ga nhẹ nhàng từ tốn và duy trì dải tốc độ tối ưu 40–50 km/h giúp động cơ đốt sạch nhiên liệu, tiết kiệm đến 15–20% lượng xăng.
+- Quan sát từ xa để giảm ga sớm thay vì phanh gấp; tận dụng quán tính lăn bánh tự nhiên khi gần đến đèn đỏ hoặc khúc cua, tránh mòn má phanh và hao xăng vô ích.
+- Về đúng số tương ứng với tốc độ và tải trọng (đối với xe số); đi số thấp ở tốc độ cao làm gầm máy ép hao xăng, đi số cao khi leo dốc hoặc chở nặng làm lì máy, mòn côn và hại pít-tông.
+- Duy trì áp suất lốp xe chuẩn định kỳ; lốp non hơi làm tăng ma sát tiếp xúc mặt đường khiến động cơ phải gồng tải nặng, vừa tốn xăng vừa làm nứt lốp nhanh hỏng.
+- Tắt máy khi dừng đèn đỏ trên 30 giây; để động cơ nổ cầm chừng quá lâu vừa đốt cháy xăng vô ích vừa làm tăng nhiệt độ buồng máy.
+- Thay dầu nhớt đúng hạn theo khuyến cáo; nhớt sạch giúp bôi trơn tối đa các chi tiết máy, giải nhiệt buồng đốt và kéo dài tuổi thọ cụm động cơ thêm nhiều năm.
+- Vệ sinh hoặc thay lọc gió định kỳ; lọc gió bẩn nghẹt làm thiếu oxy vào buồng đốt, khiến xe bị hụt hơi, xả khói đen và nuốt xăng gấp rưỡi bình thường.
+- Kiểm tra bugi, sên xích (hoặc dây curoa xe tay ga); căn chỉnh độ chùng xích và tra mỡ đều đặn giúp truyền động mượt mà, không bị thất thoát công suất cơ học.
+- Hạn chế chở quá tải trọng thiết kế; chở nặng thường xuyên làm xẹp lốp, cong vành, nhanh hỏng giảm xóc và khiến bộ ly hợp bị trượt mòn nhanh chóng.
+- Chọn đổ xăng vào buổi sáng sớm hoặc đêm muộn; thời điểm nhiệt độ mát mẻ xăng có tỷ trọng đậm đặc nhất, tránh được hiện tượng bay hơi và giãn nở thể tích do nắng nóng.
+- Không độ chế linh kiện không rõ nguồn gốc; giữ các thông số kỹ thuật nguyên bản của nhà sản xuất là cách an toàn và bền bỉ nhất để bảo toàn giá trị xe khi cần bán lại.
