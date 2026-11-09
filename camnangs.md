@@ -456,3 +456,55 @@ chu_de: Tiết kiệm nhiên liệu & Tối ưu chi phí phương tiện
 - Hạn chế chở quá tải trọng thiết kế; chở nặng thường xuyên làm xẹp lốp, cong vành, nhanh hỏng giảm xóc và khiến bộ ly hợp bị trượt mòn nhanh chóng.
 - Chọn đổ xăng vào buổi sáng sớm hoặc đêm muộn; thời điểm nhiệt độ mát mẻ xăng có tỷ trọng đậm đặc nhất, tránh được hiện tượng bay hơi và giãn nở thể tích do nắng nóng.
 - Không độ chế linh kiện không rõ nguồn gốc; giữ các thông số kỹ thuật nguyên bản của nhà sản xuất là cách an toàn và bền bỉ nhất để bảo toàn giá trị xe khi cần bán lại.
+
+---
+
+## Cẩm nang đi siêu thị
+emoji: 🛒
+chu_de: Tiêu dùng thông minh & Văn hóa mua sắm
+
+- Lên danh sách trước khi bước vào cửa hàng; xác định rõ những món đồ thực sự cần mua để tránh bị các chương trình khuyến mãi cuốn theo mua sắm bốc đồng.
+- Không đi siêu thị khi bụng đói; dạ dày đói cồn cào làm mắt mờ lý trí, kích thích bạn mua nhiều đồ ăn vặt, bánh kẹo và đồ ăn nhanh ngoài dự toán.
+- Đặt giới hạn ngân sách rõ ràng; mang lượng tiền mặt vừa đủ hoặc giới hạn số dư chi tiêu trong ví điện tử để kiểm soát ví tiền chặt chẽ.
+- So sánh đơn giá thực tế thay vì nhìn giá tổng; kiểm tra giá theo trọng lượng (ví dụ: nghìn đồng/100g hoặc nghìn đồng/lít) để biết gói to hay gói nhỏ thực sự tiết kiệm hơn.
+- Nhìn vào các kệ hàng trên cao và dưới thấp; các kệ ngang tầm mắt thường được siêu thị ưu tiên xếp những mặt hàng có biên lợi nhuận cao hoặc đắt đỏ nhất.
+- Kiểm tra kỹ hạn sử dụng (EXP/HSD) và bao bì; đồ giảm giá sâu thường cận ngày hết hạn, chỉ mua nếu có kế hoạch sử dụng ngay trong 1–2 ngày tới.
+- Xếp đồ đông lạnh và đồ tươi sống vào giỏ sau cùng; lấy đồ khô, gia vị, đồ gia dụng trước rồi mới lấy thịt cá, sữa chua, kem để giữ độ tươi ngon và tránh rã đông trên đường về.
+- Giữ văn hóa xe đẩy nơi đông người; đi đúng làn, không bỏ xe đẩy chắn ngang lối đi chung hoặc trước các quầy hàng đông khách.
+- Trả đồ về đúng vị trí cũ nếu đổi ý; nếu không muốn mua món đồ nữa, hãy mang trả về đúng quầy hoặc gửi lại nhân viên thu ngân, tuyệt đối không vứt đồ đông lạnh vào kệ bánh kẹo.
+- Chủ động chuẩn bị sẵn túi vải tái sử dụng; vừa góp phần bảo vệ môi trường, vừa tiết kiệm chi phí mua túi nilon và tiện lợi khi xách đồ về nhà.
+- Xếp đồ lên băng chuyền ngăn nắp khi thanh toán; gom nhóm đồ nặng, chai lọ chắc chắn lên trước, đồ dễ vỡ hoặc bánh mềm lên sau để nhân viên đóng gói nhanh chóng và nguyên vẹn.
+
+---
+
+## Cẩm nang làm biếng mà hiệu quả công việc
+emoji: 🦥
+chu_de: Tối ưu năng suất & Nghệ thuật làm biếng thông minh
+
+- Nắm chắc nguyên lý đòn bẩy 80/20; chỉ có 20% đầu việc tạo ra 80% kết quả cốt lõi, tập trung giải quyết triệt để phần việc này và dũng cảm buông bỏ các chi tiết thừa thãi.
+- Nương theo con nước sinh học; dồn công việc đòi hỏi tư duy nặng nhất vào khung giờ đầu óc tỉnh táo nhất trong ngày (thường là 1–2 tiếng buổi sáng), phần thời gian còn lại làm việc nhẹ hoặc nghỉ ngơi.
+- Chuẩn hóa biểu mẫu và quy trình; việc gì lặp lại quá hai lần thì tạo ngay mẫu (template), phím tắt hoặc checklist để lần sau chỉ cần sao chép, không tốn nơ-ron suy nghĩ lại từ đầu.
+- Tận dụng tự động hóa và công nghệ; để máy móc, phần mềm và các công cụ AI gánh vác các tác vụ thu thập số liệu, gửi thư tự động, tóm tắt tài liệu và nhập liệu thủ công.
+- Học cách nói "Không" khéo léo; từ chối các cuộc họp vô bổ không có mục tiêu rõ ràng và những lời nhờ vả nằm ngoài chuyên môn làm phân tán năng lượng.
+- Gom nhóm các việc vụn vặt làm một lần (Batching); không kiểm tra tin nhắn hay email rải rác cả ngày, ấn định 1–2 khung giờ cố định để xử lý dứt điểm toàn bộ hộp thư đến.
+- Áp dụng tiêu chuẩn "vừa đủ tốt"; không sa đà vào chủ nghĩa hoàn hảo cực đoan ở những khâu phụ, hoàn thành đúng hạn và đúng công năng quan trọng hơn trau chuốt hình thức thừa thãi.
+- Ủy quyền hoặc trao đổi thế mạnh; việc mình thấy chán và làm dở có thể là niềm vui của người khác, biết chia sẻ công việc hoặc nhờ đúng người có kỹ năng xử lý nhanh gọn.
+- Làm một lần cho chuẩn để đỡ phải dọn rác; làm cẩu thả sẽ mất gấp ba lần thời gian đi sửa lỗi, dồn toàn lực làm đúng ngay từ đầu để sau đó có thể ung dung "làm biếng".
+- Giữ khoảng trống để tái tạo sức bật; như đất bãi bồi cần nghỉ ngơi theo chu kỳ triều kiệt, người biết lười đúng lúc là người biết bảo dưỡng tâm trí để không bao giờ rơi vào kiệt sức (burnout).
+
+---
+
+## Cẩm nang chuẩn bị đồ khi đi du lịch
+emoji: 🧳
+chu_de: Hành trang cơ động & Du lịch thông minh
+
+- Lập danh mục theo cụm chức năng; phân nhóm đồ dùng thành Giấy tờ - Tiền tệ, Thiết bị điện tử, Trang phục, Y tế cá nhân và Đồ vệ sinh để không bỏ sót.
+- Giữ giấy tờ tùy thân và tài sản bất ly thân; CCCD/Hộ chiếu, vé tàu xe, thẻ ngân hàng và tiền mặt luôn để trong túi đeo sát người, chụp sẵn bản mềm lưu trên điện thoại và đám mây.
+- Đóng gói theo nguyên tắc tối giản và phối đồ linh hoạt; chọn trang phục chất liệu nhẹ, nhanh khô, mang tông màu trung tính để dễ dàng phối chéo nhiều bộ với số lượng ít nhất.
+- Cuộn tròn quần áo thay vì gấp phẳng; phương pháp cuộn giúp tiết kiệm diện tích vali, giảm thiểu nếp nhăn và dễ dàng nhìn thấy từng món đồ khi mở ra.
+- Chiết mỹ phẩm và chất lỏng sang chai nhỏ; dùng bộ chiết dung tích dưới 100ml để tiện mang lên máy bay, bọc thêm một lớp màng bọc thực phẩm quanh miệng nắp tránh tràn do áp suất.
+- Chuẩn bị túi thuốc dự phòng thiết yếu; mang đủ thuốc hạ sốt, đau bụng tiêu hóa, dị ứng, men tiêu hóa, băng cá nhân và thuốc chống say tàu xe.
+- Quản lý dây sạc và thiết bị điện tử gọn gàng; gom sạc, sạc dự phòng, tai nghe vào một túi chống sốc riêng; tuyệt đối để pin sạc dự phòng trong hành lý xách tay theo quy định hàng không.
+- Mang theo túi vải phụ và túi zip chống nước; dùng để phân loại quần áo bẩn, bảo vệ đồ điện tử khi gặp mưa bất ngờ hoặc đựng đồ lưu niệm phát sinh trên đường về.
+- Chừa khoảng trống trong vali; không nhét đồ quá chật ních ngay từ lúc đi, chừa lại khoảng 15–20% dung tích để chứa quà cáp và giúp việc đóng gói chặng về nhẹ nhàng.
+- Cân thử hành lý trước khi ra sân bay; nắm rõ quy định kích thước và trọng lượng của hãng bay để tránh tình trạng phát sinh chi phí quá cước đắt đỏ tại quầy thủ tục.
