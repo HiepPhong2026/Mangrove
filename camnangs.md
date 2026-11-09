@@ -122,3 +122,22 @@ chu_de: Tương trợ kinh doanh & Đồng hành người bán
 - Hỗ trợ công cụ và kết nối nguồn lực; giới thiệu cho họ nguồn cung cấp uy tín, mặt bằng hợp lý hoặc các công cụ bán hàng tiện lợi nếu mình có hiểu biết.
 - Giữ hòa khí và thông cảm với sơ sót nhỏ; vào mùa cao điểm hay lúc mưa gió trễ hẹn, trao cho họ nụ cười bao dung thay vì những lời nặng nề làm chùn bước chân mưu sinh.
 - Tôn trọng giới hạn và biên lợi nhuận của họ; hiểu rằng việc họ có lời xứng đáng là nền tảng tất yếu để họ tồn tại và tiếp tục phục vụ xã hội lâu dài.
+
+---
+
+## Cẩm nang bỏ túi về ứng xử của con cái với ba mẹ
+emoji: 🌱
+chu_de: Đạo làm con & Hiếu dưỡng cội nguồn
+
+- Thấu hiểu vết sẹo của gốc rễ; nhớ rằng mỗi bước chân vững chãi hôm nay của mình đều đổi bằng bao năm tháng cha mẹ chịu sóng gió cuộc đời mài mòn.
+- Tự lập để an lòng đấng sinh thành; tự cắm rễ đứng vững trên đôi chân của mình, không biến bản thân thành gánh nặng dây leo quấn chặt thân già.
+- Lắng nghe với lòng nhẫn nại; không cắt lời, không chê bai sự lặp lại hay chậm chạp của cha mẹ khi họ chia sẻ chuyện xưa cũ.
+- Dịu giọng khi bất đồng quan điểm; kiên nhẫn giải thích suy nghĩ của thời đại mới bằng sự tôn kính, tuyệt đối không dùng lời lẽ gay gắt hay mỉa mai.
+- Nhớ ơn từ những điều bình dị; trân trọng từng bữa cơm, từng lời nhắc nhở ân cần dù giản đơn của cha mẹ trước khi thời gian lấy đi tất cả.
+- Chăm sóc cha mẹ khi ốm đau suy kiệt; đút từng muỗng cháo, đỡ từng bước đi với sự ân cần như thuở bé thơ cha mẹ từng nâng niu mình.
+- Dành thời gian hiện diện trọn vẹn; về thăm nhà thì buông điện thoại xuống, trò chuyện và cùng ăn bữa cơm ấm cúng cùng cha mẹ.
+- Chủ động kết nối khi ở xa; một cuộc gọi hỏi thăm sức khỏe, vài câu tâm sự ngắn ngủi mỗi tuần quý giá hơn vạn lượng bạc gửi về lấy lệ.
+- Chia sẻ niềm vui và gánh vác nỗi lo; báo tin vui để cha mẹ yên lòng, chủ động đỡ đần các công việc nặng nhọc trong nhà mà không đợi nhắc nhở.
+- Tôn trọng nếp sống và thói quen của người lớn; không tự tiện vứt bỏ những món đồ kỷ niệm cũ kỹ của cha mẹ chỉ vì thấy chúng lỗi thời.
+- Thành đạt ngoài đời không kiêu căng ở nhà; dù giữ chức vụ cao hay giàu có ngoài xã hội, bước qua ngưỡng cửa nhà vẫn cúi đầu làm đứa con ngoan.
+- Giữ nề nếp gia phong và sống thiện lương; sống một đời ngay thẳng, tử tế và có ích cho xã hội chính là cách báo hiếu rực rỡ nhất dâng lên cha mẹ.
