@@ -249,3 +249,56 @@ chu_de: Đạo lý Uống nước nhớ nguồn & Bảo vệ chốn linh thiêng
 - Trang nghiêm thân tướng khi bước vào viếng; mặc y phục chỉnh tề kín đáo, giữ thái độ cung kính, đi nhẹ nói khẽ, không đùa cợt cợt nhả nơi an nghỉ của các anh hùng.
 - Hỗ trợ thân nhân liệt sĩ từ phương xa về thăm viếng; tận tình chỉ đường, hướng dẫn tìm kiếm sơ đồ mộ phần với thái độ ấm áp, nghĩa tình và sẻ chia.
 - Giáo dục truyền thống yêu nước cho con trẻ; dẫn dắt thế hệ trẻ tham gia các buổi thắp nến tri ân ngày 27/7, ngày lễ tết để bồi đắp lòng biết ơn và ý thức trách nhiệm gìn giữ non sông.
+
+---
+
+## Cẩm nang ứng xử về vệ sinh, rác thải với hàng xóm
+emoji: 🧹
+chu_de: Vệ sinh môi trường & Văn minh xóm ngõ
+
+- Buộc kín miệng túi rác trước khi mang ra ngoài; tránh để rỉ nước hôi thối hoặc bốc mùi làm ảnh hưởng đến không gian sống của nhà bên cạnh.
+- Đổ rác đúng giờ và đúng vị trí quy định; không tiện tay vứt rác trước cổng hay bờ tường nhà hàng xóm, không mang rác ra quá sớm để mèo hoang hay chuột bới tung.
+- Quét dọn phần ngõ trước cửa nhà mình mỗi ngày; gom rác vào thùng riêng, tuyệt đối không quét bụi bẩn hay lá rụng hắt sang phần sân ngõ nhà người khác.
+- Giữ khô ráo lối đi chung; rửa sân, rửa xe không xả nước thải hay bọt xà phòng tràn sang cửa nhà láng giềng gây trơn trượt, mất vệ sinh.
+- Không tự ý đốt rác trong khu dân cư; khói độc, bụi tro bay vào nhà hàng xóm gây ngột ngạt, ảnh hưởng hô hấp người già và trẻ nhỏ, tiềm ẩn nguy cơ hỏa hoạn.
+- Quản lý thú cưng chu đáo; dọn sạch ngay lập tức chất thải của chó mèo nếu chúng lỡ phóng uế ra ngõ chung, không để mùi xú uế tồn đọng làm phiền hàng xóm.
+- Gom gọn rác xây dựng khi sửa nhà; che chắn bạt tránh bụi bay mù mịt, vận chuyển phế thải đi ngay trong ngày, không đổ đống cản trở lối đi chung.
+- Nhắc nhở khéo léo và chân thành khi có sự cố; thấy nhà láng giềng rò rỉ nước hay túi rác bị rách thì sang báo nhỏ nhẹ để cùng dọn, không bực tức trách móc nặng lời.
+- Cùng tham gia ngày hội tổng vệ sinh xóm ngõ; tích cực khơi thông cống rãnh, phát quang bụi rậm quanh khu dân cư để diệt lăng quăng và phòng ngừa dịch bệnh chung.
+- Giữ sạch sẽ từ nhà ra ngõ là giữ lộc cho gia đình; tôn trọng bầu không khí của láng giềng chính là bảo vệ sức khỏe và sự bình yên cho chính mình.
+
+---
+
+## Cẩm nang ứng xử với hàng xóm
+emoji: 🏡
+chu_de: Tình làng nghĩa xóm & Văn hóa tương lân
+
+- Nhận thức giá trị của bán anh em xa mua láng giềng gần; tối lửa tắt đèn có nhau, giữ gìn hòa khí với người sát vách là tạo dựng lớp bình phong bảo vệ bình yên cho chính mái ấm của mình.
+- Chào hỏi niềm nở và giữ thái độ hòa nhã; mỗi sáng chạm mặt trao nhau nụ cười, lời chào thân tình để xóa tan khoảng cách và bồi đắp thiện cảm mỗi ngày.
+- Tôn trọng sự yên tĩnh chung; kiểm soát âm lượng tivi, loa đài, không hát karaoke quá giờ hay nói cười quá lớn vào đêm muộn và giờ nghỉ trưa làm phiền giấc ngủ của láng giềng.
+- Giữ gìn vệ sinh và không gian sinh hoạt chung; quét sạch phần ngõ trước nhà, để rác đúng nơi quy định, không quét rác hay để nước bẩn chảy sang sân nhà người khác.
+- Đỗ xe có ý thức và giữ lối đi thông thoáng; không đậu ô tô, xe máy chắn cửa ra vào hoặc cản trở giao thông chung của xóm ngõ.
+- Quản lý vật nuôi chu đáo; tiêm phòng đầy đủ, rọ mõm khi ra ngõ, dọn sạch chất thải của thú cưng ngay lập tức để không gây ô nhiễm môi trường chung.
+- Tôn trọng ranh giới đất đai và tài sản; không lấn chiếm bờ tường, tỉa bớt cành cây vươn sang sân nhà hàng xóm, không tự tiện sử dụng đồ đạc của nhau khi chưa hỏi ý kiến.
+- Báo trước và thông cảm khi nhà có việc; khi sửa nhà, đám cưới, đám tang gây bụi bặm hay ồn ào thì chủ động sang ngỏ lời xin lỗi và nhờ láng giềng thông cảm trước.
+- Góp ý văn minh và thiện chí khi có bất đồng; có xích mích thì gặp riêng nhỏ nhẹ trao đổi tìm giải pháp, tuyệt đối không chửi bới, bóng gió hay đăng mạng xã hội bêu riếu.
+- Chia sẻ chút quà quê, thơm thảo ngọt bùi; mớ rau sạch, bát canh ngon hay đĩa bánh ngày rằm mang biếu nhau thắt chặt tình cảm chân quê ấm áp.
+- Chủ động tương trợ lúc hoạn nạn; thấy nhà hàng xóm có trộm, cháy, người già ngã bệnh hay cần người nhận giúp gói hàng thì sẵn lòng đỡ đần không tính toán.
+- Không soi mói, buôn chuyện thị phi đời tư; tôn trọng cuộc sống riêng tư của từng nhà, không tọc mạch chuyện kinh tế, gia đạo của láng giềng để giữ ngõ xóm luôn bình yên.
+
+---
+
+## Cẩm nang ứng xử khi có va chạm giao thông
+emoji: 🚦
+chu_de: Văn hóa giao thông & Ứng xử văn minh khi va chạm
+
+- Giữ bình tĩnh làm đầu; hít sâu một nhịp để dập tắt cơn nóng giận, tuyệt đối không bước xuống xe với thái độ hung hăng, chửi bới hay vung tay chân.
+- Ưu tiên an toàn tính mạng; kiểm tra ngay xem bản thân, người đi cùng và đối phương có bị thương tích hay không để kịp thời sơ cứu hoặc gọi cấp cứu (115).
+- Tắt máy xe và bật cảnh báo; bật đèn khẩn cấp, đưa phương tiện vào lề đường nếu va quẹt nhẹ, hoặc đặt vật cảnh báo từ xa để tránh tai nạn liên hoàn cho người đi sau.
+- Hỏi thăm ân cần trước khi phân định đúng sai; một câu hỏi han nhẹ nhàng: "Anh/chị có bị đau ở đâu không?" có sức mạnh hóa giải phần lớn xung đột căng thẳng ban đầu.
+- Ghi nhận hiện trường trung thực; chụp ảnh toàn cảnh, cận cảnh góc va chạm, vệt phanh, biển số xe và trích xuất camera hành trình làm bằng chứng khách quan.
+- Trao đổi văn minh và tôn trọng; nói chuyện lịch thiệp, lắng nghe góc nhìn của đối phương, không dùng lời lẽ thóa mạ hay kéo người nhà đến gây áp lực, đe dọa.
+- Thỏa thuận bồi thường hợp lý; nếu va chạm nhẹ chỉ trầy xước xe, chủ động thương lượng mức đền bù thực tế trên tinh thần chia sẻ, dĩ hòa vi quý.
+- Nhờ pháp luật phân xử khi bất đồng lớn; nếu không thể tự thỏa thuận hoặc có thiệt hại nặng, giữ nguyên hiện trường và gọi ngay Cảnh sát giao thông đến lập biên bản xử lý đúng luật.
+- Bảo vệ tài sản và giấy tờ cá nhân; không giao chìa khóa xe, giấy tờ tùy thân gốc cho đối phương giữ khi chưa có sự can thiệp của cơ quan chức năng.
+- Rút kinh nghiệm sâu sắc cho bản thân; xem mỗi lần va chạm là bài học cảnh tỉnh về sự tập trung, tốc độ và tính kiên nhẫn khi cầm lái trên đường mưu sinh.
