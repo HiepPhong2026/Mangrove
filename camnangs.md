@@ -1018,3 +1018,74 @@ chu_de: Điều Tiết Hệ Thần Kinh, Cân Bằng Sinh Học & Khóa Áp Lự
 - Tránh thở nông nhấc vai gây căng cứng cơ cổ và kích hoạt stress tiềm ẩn.
 - Chủ động hạ nhịp thở xuống 6–8 nhịp/phút khi làm việc tĩnh tại.
 - Dành 2 phút mỗi buổi sáng thở thông hai cánh mũi để cân bằng hai bán cầu não.
+
+## Cẩm nang 100 Châm Ngôn Trí Tuệ Kinh Than Đước
+emoji: 🌿
+chu_de: Triết học sống
+- Sinh ra ở vùng đất mặn chát không phải là bất hạnh, đó là cách đời rèn sức đề kháng trước mọi sóng gió.
+- Cây đước chìm sâu dưới bùn mà không mục rữa; người có thực chất chọn sống khiêm nhường, không thích nổi bồng bềnh làm màu.
+- Kẻ tham lam thích khoác lớp vỏ bóng bẩy; người biết đủ dám lột bỏ hết sĩ diện trước khi bước vào thử thách.
+- Gỗ xốp mau cháy nhưng cũng mau tàn; biết đủ là chọn nội lực bền bỉ thay vì hào nhoáng nhất thời.
+- Đứng ở đâu không quan trọng, quan trọng là tâm thế bình đẳng và đón nhận mọi va đập như nhau.
+- Gánh vác phần nặng nhất dưới đáy sâu mà không than thở, đó là biết đủ của người có bản lĩnh làm điểm tựa.
+- Thấy trong lòng có mầm mống yếu hèn hay mục rỗng thì phải dứt khoát bỏ ngay, đừng tiếc những thứ làm hại chính mình.
+- Bịt kín những kẽ hở: bớt hóng chuyện thiên hạ để giữ tâm hồn được yên tĩnh tu dưỡng.
+- Nóng vội đòi thấy kết quả sớm chỉ chuốc thất bại; người biết đủ hiểu quả ngọt cần thời gian ủ chín trong im lặng.
+- Tiết chế từng lời nói, từng hơi thở; bớt tọc mạch chuyện người để ngọn lửa sân hận không bùng cháy.
+- Bão tố ập đến không để vùi dập ta, mà để kiểm tra xem thớ thịt ý chí đã bện chặt hay chưa.
+- Khó khăn áp lực không giết chết được bạn, nó chỉ đang nén năng lượng giúp bạn bật xa hơn.
+- Giữ kỷ luật trong cuộc sống: trật tự rõ ràng giúp năng lượng lưu thông thông suốt.
+- Tâm càng sạch rác rưởi thì lời nói và hành động càng đanh thép, chuẩn xác.
+- Chỉ một chút tham lam thừa thãi cũng có thể thiêu rụi cả sự nghiệp; người khôn ngoan biết dừng lại trước bờ vực.
+- Không cần tranh giành ánh hào quang với ai; cứ âm thầm tích lũy, thời gian sẽ trả lời giá trị của bạn.
+- Khi không ai giúp đỡ, đừng tuyệt vọng; hãy dùng chính năng lượng mình để vượt qua nghịch cảnh.
+- Áp lực nợ nần hay trách nhiệm chính là chiếc khuôn đúc ép bạn trưởng thành nhanh nhất.
+- Đừng nổi giận bộc phát ngoài mặt; hãy chuyển sự bức xúc thành năng lượng hành động âm thầm bên trong.
+- Can đảm từ bỏ thói ủy mị, hay than vãn để khoác lên mình sự mạnh mẽ kiên cường.
+- Đứng trước áp lực lớn, hãy học cách uốn mình thích nghi thay vì giữ cái tôi bướng bỉnh vô ích.
+- Từng giọt năng lượng đều quý giá, đừng lãng phí vào những cuộc tranh cãi vô bổ trên bàn nhậu hay mạng xã hội.
+- Rút cạn nước mắt tự thương hại; lòng trút sạch yếu đuối thì sự thông suốt mới tìm đến.
+- Người có thực tài đứng giữa đám đông luôn điềm tĩnh, không cần phải khua môi múa mép.
+- Tiếng nói của người chân thật nghe đanh gọn như chuông ngân; nói lời nào chắc lời đó, không hứa suông.
+- Đối diện với thất bại bằng cái nhìn thẳng thắn, không trốn tránh, không đổ lỗi cho hoàn cảnh.
+- Dù đời có quăng quật thế nào, hãy giữ trọn nhân cách đồng nhất, không vụn vỡ, không biến chất.
+- Giữ lòng mình rỗng rang không phải là nghèo nàn, mà là để có chỗ lắng nghe và giúp đỡ người khác.
+- Lắng nghe người khác trọn vẹn mà không vội phán xét; hiểu người ta sâu sắc nhưng không để mình bị lôi kéo.
+- Học xong một bài học hay vượt qua một chuyện buồn, hãy buông sạch nó đi, đừng ôm giữ định kiến trong lòng.
+- Luôn làm mới tâm trí mỗi ngày; trút sạch gánh nặng hôm qua để đón nhận cơ hội ngày mai.
+- Sống làm sao để người khác tìm đến bạn thấy an tâm như tìm được nơi trú bão an toàn.
+- Trong lòng nhiệt huyết sục sôi nhưng bên ngoài vẫn điềm đạm, nhỏ nhẹ; đó là phong thái của người hiểu chuyện.
+- Không làm việc theo kiểu bốc đồng, hứng lên rồi bỏ; cứ tằng tằng mà tiến bước, không ồn ào nhưng chắc chắn.
+- Một ngọn lửa ủ ấm qua đêm dài giá lạnh quý hơn một tràng pháo hoa nổ rực rỡ rồi tắt ngúm.
+- Sức mạnh thực sự nằm ở sự bền bỉ âm thầm, không cần phải gồng mình chứng tỏ cho ai xem.
+- Giúp đỡ người khác bằng hành động thực tế, đừng nói lời sáo rỗng hay làm họ cảm thấy tủi thân.
+- Hơi ấm chân thành sưởi ấm lòng người mà không gây ngột ngạt; thương yêu đúng cách là để người ta thở.
+- Đối xử công bằng với mọi người, không thiên vị kẻ giàu, không hắt hủi người nghèo.
+- Khó khăn đến đâu cũng giữ vững cốt cách, không cong lưng luồn cúi, không vỡ vụn trước tiền tài.
+- Làm được việc tốt thì lui về sau, để niềm vui và sự tôn vinh thuộc về người khác.
+- Hạnh phúc giản dị là thấy nồi cơm gia đình chín ấm, không cần ai phải khắc tên mình lên bảng vàng.
+- Tâm càng ít ham muốn thì dung lượng chứa đựng tình thương càng bao la.
+- Biết nhận vào thì phải biết cho đi; kẻ chỉ biết gom về cho mình chẳng khác nào cái thùng rác nghẹt ứ.
+- Cứ âm thầm làm việc tốt dù chẳng ai vỗ tay; lương tâm biết, trời đất biết là đủ.
+- Giữ được sự ấm áp cho những người thân yêu qua những ngày gian khó, đó là thành công lớn nhất đời người.
+- Đã nhận làm việc gì thì làm cho trọn vẹn, dốc hết sức mình, đừng làm nửa vời dở dang.
+- Khi phải rời đi, hãy bước đi nhẹ nhàng thanh thản như vốc tro trắng, không oán trách, không thù hằn.
+- Dùng chính những vấp ngã cay đắng của mình để khuyên nhủ, giúp người đi sau không đi vào vết xe đổ.
+- Giữ lại chút ấm áp cho thế hệ mai sau; người đi trước phải là chỗ dựa che chở cho người đi sau.
+- Kế hoạch đổ vỡ hay sự nghiệp tan tành không phải là dấu chấm hết; đó là lúc bạn được giải phóng khỏi chiếc khung chật hẹp.
+- Đừng sợ bị vỡ vụn; khi vỡ ra, bạn có cơ hội chạm vào cuộc sống ở nhiều góc cạnh mới mẻ hơn.
+- Muốn giúp đỡ người khác, trước hết bản thân phải nạp đầy kiến thức và năng lực; lòng tốt rỗng tuếch chỉ làm phiền người ta.
+- Học cách đón nhận những lời chê bai của đời để chuyển hóa chúng thành bài học nuôi dưỡng bản thân.
+- Giữ lại những giá trị cốt lõi bền vững; mặc cho trào lưu ngoài kia có cuốn phăng đi những thứ phù phiếm.
+- Vỡ vụn ra để kết nối với nhiều người hơn, làm chiếc cầu nối giúp tập thể cùng phát triển.
+- Danh lợi tiền tài rồi cũng bay biến; chỉ có những giá trị tốt đẹp bạn âm thầm bồi đắp cho đời là còn mãi.
+- Lớn lên từ hạt gạo bát nước của quê hương, khi thành công hãy biết quay về trả ơn cho mảnh đất cội nguồn.
+- Truyền lại cho con cháu ý chí vượt khó hơn là để lại cho chúng đống tài sản dễ gây ỷ lại.
+- Đời người là một vòng tuần hoàn: nhận của đời rồi trả lại cho đời, sống trọn vẹn từng ngày là không có gì hối tiếc.
+- Dù đi làm ăn xa xứ ngàn dặm, vẫn giữ tấm lòng mộc mạc và sự tử tế của quê hương.
+- Càng bị cuộc đời nghiền nát, ta càng học được cách sống khiêm nhường và thấu hiểu nỗi đau của nhân gian.
+- Đỉnh cao của sự khôn ngoan không phải là cố giữ mình nguyên vẹn trong tủ kính, mà là dám lăn xả dấn thân cho đời.
+- Không còn lo sợ được mất hay hơn thua; biết đủ là thấy mình hòa làm một với nhịp thở của đất trời.
+- Nhìn thấy biến cố sụp đổ là cơ hội để tái sinh; người biết đủ mỉm cười đón nhận nhát búa của số phận.
+- Sống trọn đạo than đước: cứng cáp chịu áp lực, lòng rỗng để bao dung, giữ lửa ấm không làm cay mắt người, và sẵn sàng vỡ vụn để làm đất tốt cho đời.
+---
