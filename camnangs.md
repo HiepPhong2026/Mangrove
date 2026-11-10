@@ -738,3 +738,40 @@ chu_de: Quản lý Di tích & Không gian Tín ngưỡng Cộng đồng
 - Coi trọng phòng cháy chữa cháy: kiểm tra đường điện định kỳ, ngắt cầu dao tổng khi đóng cửa, bố trí bình cứu hỏa tại vị trí thuận lợi.
 - Luôn kính trọng và tham vấn ý kiến Hội đồng bô lão trước mọi việc lớn; động viên thế hệ trẻ tham gia đội tế, đội múa rồng/lân để tiếp nối truyền thống.
 - Khi có cung tiến hiện vật lạ: khéo léo đối chiếu phong cách kiến trúc trước khi tiếp nhận, tránh phá vỡ cảnh quan di tích; sự cố khẩn cấp thì ưu tiên an toàn, giữ nguyên hiện trường và báo ngay cơ quan chức năng.
+
+---
+
+## Cẩm nang Khai Phóng Tiềm Năng Bạn Bè
+emoji: 💎
+chu_de: 30 Giá Trị Khi Giúp Bạn Bè Nhận Diện Điểm Mạnh Tiềm Ẩn
+
+- Xóa tan điểm mù nhận thức: Thu hẹp vùng mù theo mô hình Johari, giúp bạn nhìn nhận rõ ràng năng lực thực chất của bản thân.
+- Hóa giải hội chứng kẻ mạo danh: Chấm dứt sự tự ti vô căn cứ và cảm giác nghĩ rằng thành công của mình chỉ do may mắn.
+- Định hình căn tính vững chắc: Trả lời rành mạch câu hỏi "Tôi là ai, tôi có giá trị gì?", thoát khỏi các định kiến tiêu cực trong quá khứ.
+- Kích hoạt động lực nội tại: Thúc đẩy bạn hành động và cống hiến vì niềm say mê thực sự thay vì chỉ chạy theo kỳ vọng của người khác.
+- Định hướng con đường nghề nghiệp chuẩn xác: Rút ngắn thời gian thử sai, tập trung vào lĩnh vực sở trường thay vì vật lộn với sở đoản.
+- Tối ưu hóa hiệu suất làm việc: Đạt trạng thái dòng chảy dễ dàng hơn, nâng cao năng suất vượt bậc và phòng tránh hội chứng kiệt sức.
+- Tự tin đàm phán và xây dựng thương hiệu cá nhân: Nhận diện năng lực độc bản để khẳng định vị thế và giá trị trên thị trường lao động.
+- Tạo bước nhảy vọt sự nghiệp: Mở ra cơ hội thăng tiến, chuyển nghề phù hợp hoặc tạo thêm nguồn thu nhập mới từ năng khiếu tiềm ẩn.
+- Mài sắc năng lực quan sát và đánh giá con người: Rèn luyện kỹ năng nhìn thấu tiềm năng ẩn giấu — nền tảng cốt lõi của nghệ thuật lãnh đạo.
+- Hoàn thiện trí tuệ cảm xúc và nghệ thuật khai vấn: Nâng cao kỹ năng lắng nghe sâu, đặt câu hỏi gợi mở và phản hồi tinh tế mang tính xây dựng.
+- Kiểm soát cái tôi cá nhân: Rèn luyện đức tính khiêm nhường, học cách lùi lại phía sau để nâng đỡ người khác tỏa sáng.
+- Mở rộng thế giới quan và học hỏi chéo: Tiếp thu tri thức, kỹ năng và góc nhìn mới mẻ từ chính thế mạnh chuyên môn của bạn mình.
+- Xây dựng uy tín và sự nể trọng thực chất: Lời nói trở nên có trọng lượng, định hình hình ảnh một người cố vấn đáng tin cậy.
+- Trải nghiệm niềm hạnh phúc phụng sự: Giải phóng năng lượng tích cực, xua tan căng thẳng cá nhân khi làm được điều có ý nghĩa cho tha nhân.
+- Hình thành tư duy phong phú: Thoát khỏi thói đố kỵ hẹp hòi, tin rằng giá trị và thành công luôn đủ đầy cho tất cả mọi người.
+- Tìm thấy ý nghĩa sống sâu sắc: Cảm nhận rõ ràng giá trị hiện hữu của bản thân khi trở thành chiếc gương soi sáng cuộc đời người khác.
+- Nâng cấp tình bạn lên mức tri kỷ: Chia sẻ những tầng nhận thức sâu sắc, cởi bỏ hoàn toàn rào cản phòng thủ tâm lý giữa hai bên.
+- Thiết lập không gian an toàn tâm lý: Tạo ra nơi cả hai có thể thành thật bộc lộ điểm yếu mà không sợ bị phán xét hay chê bai.
+- Hình thành liên minh bổ trợ hoàn hảo: Ghép nối người mạnh chiến lược với người mạnh thực thi, tạo nên sức mạnh tổng hợp vượt bậc.
+- Triệt tiêu sự cạnh tranh ngầm: Mỗi người tự tin tỏa sáng ở một góc riêng, vui trọn vẹn trước thành công của đối phương.
+- Tạo dựng sự tin cậy và lòng trung thành trọn đời: Biến mối quan hệ thành điểm tựa vững chãi để cùng nhau vượt qua biến cố.
+- Đặt đúng người vào đúng việc: Phân bổ vai trò chuẩn xác trong các dự án chung, loại bỏ nút thắt cổ chai và sai sót vận hành.
+- Sở hữu một chuyên gia tin cậy ngay bên cạnh: Luôn có một người bạn hiểu việc sẵn sàng tư vấn và gỡ rối chuyên môn khi cần.
+- Gia tăng tỷ lệ thành công khi khởi nghiệp chung: Hợp tác làm ăn bền vững nhờ thấu suốt năng lực và giới hạn của nhau ngay từ đầu.
+- Được bảo chứng uy tín trong mạng lưới: Bạn bè tự hào giới thiệu và bảo lãnh uy tín của bạn với các mối quan hệ chất lượng cao của họ.
+- Cải thiện hạnh phúc gia đình người bạn: Người tự tin và tìm thấy giá trị bản thân sẽ bớt cáu gắt, đối xử dịu dàng hơn với người thân.
+- Giải phóng một tài năng cho xã hội: Kéo một con người ra khỏi sự lãng phí tiềm năng để đóng góp giá trị cụ thể cho cộng đồng.
+- Tạo hiệu ứng lan tỏa việc tốt: Người được bạn đánh thức tiềm năng sẽ tiếp tục đi khai phóng và nâng đỡ những người xung quanh họ.
+- Lan tỏa văn hóa nâng đỡ thay vì hạ bệ: Góp phần xây dựng một môi trường nhân văn, nơi con người nhìn nhau bằng tiềm năng thay vì định kiến.
+- Để lại một di sản tinh thần vô giá: Một tình bạn mẫu mực và sự chuyển hóa thực chất của một đời người — minh chứng đẹp đẽ cho sức mạnh của sự sẻ chia.
