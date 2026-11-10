@@ -115,6 +115,56 @@ header p{color:var(--sub);font-size:.85rem;margin-top:4px}
 
 #visit-counter{text-align:center;padding:8px 0 16px;color:var(--g6);font-size:0.78rem;opacity:0.7;letter-spacing:0.03em}
 
+/* ===== LIBRARY MODAL ===== */
+#lib-overlay{
+  position:fixed;inset:0;z-index:1200;
+  background:rgba(0,0,0,0.55);
+  backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);
+  display:flex;align-items:flex-end;justify-content:center;
+  opacity:0;pointer-events:none;transition:opacity .25s;
+}
+#lib-overlay.open{opacity:1;pointer-events:auto;}
+#lib-sheet{
+  width:100%;max-width:520px;
+  background:linear-gradient(160deg,#0d3b22,#0a2e1a);
+  border:1.5px solid rgba(255,255,255,0.12);
+  border-radius:24px 24px 0 0;
+  padding:20px 20px 36px;
+  transform:translateY(100%);transition:transform .3s cubic-bezier(.4,0,.2,1);
+  max-height:92dvh;overflow-y:auto;
+}
+#lib-overlay.open #lib-sheet{transform:translateY(0);}
+.lib-drop{
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  border:2px dashed rgba(255,255,255,0.2);border-radius:14px;
+  padding:24px 16px;cursor:pointer;transition:border-color .2s,background .2s;
+  margin-bottom:16px;
+}
+.lib-drop:hover,.lib-drop.drag-over{border-color:var(--leaf);background:rgba(63,168,101,.08)}
+.lib-drop input{display:none}
+.lib-file-item{
+  display:flex;align-items:center;gap:10px;
+  padding:10px 12px;border-radius:10px;
+  background:rgba(255,255,255,0.05);
+  margin-bottom:8px;cursor:pointer;transition:background .15s;
+}
+.lib-file-item:hover{background:rgba(255,255,255,0.1)}
+.lib-file-icon{font-size:1.4rem;flex-shrink:0}
+.lib-file-info{flex:1;min-width:0}
+.lib-file-name{font-size:.88rem;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.lib-file-meta{font-size:.74rem;color:var(--sub);margin-top:2px}
+.lib-file-actions{display:flex;gap:6px;flex-shrink:0}
+.lib-btn{background:rgba(255,255,255,0.1);border:none;color:#fff;border-radius:7px;
+  padding:5px 10px;font-size:.75rem;cursor:pointer;transition:background .15s}
+.lib-btn:hover{background:rgba(255,255,255,0.2)}
+#lib-reader-body{
+  font-size:.88rem;line-height:1.75;color:var(--txt);
+  background:rgba(0,0,0,0.25);border-radius:12px;
+  padding:16px;white-space:pre-wrap;word-break:break-word;
+  max-height:60dvh;overflow-y:auto;
+}
+#lib-reader-body iframe{width:100%;border:none;border-radius:8px;min-height:55dvh}
+
 /* ===== MUSIC MODAL ===== */
 #music-overlay{
   position:fixed;inset:0;z-index:1200;
@@ -355,6 +405,12 @@ details.cn-card[open] .cn-arrow{transform:rotate(180deg)}
       <span class="fab-sub">MP3, video, nhạc trong máy</span>
     </span>
   </button>
+  <button class="fab-item" onclick="openLibrary();closeFab()">
+    <span class="fab-icon">📚</span>
+    <span class="fab-label">Thư viện
+      <span class="fab-sub">Đọc hoặc tải file của bạn</span>
+    </span>
+  </button>
 </div>
 
 <button id="fab" onclick="toggleFab()" aria-label="Menu">🌿</button>
@@ -391,6 +447,40 @@ details.cn-card[open] .cn-arrow{transform:rotate(180deg)}
         <button class="ms-btn ms-btn-sec" style="flex:1" onclick="pinToBar()">📌 Ghim thanh phát</button>
         <button class="ms-btn ms-btn-sec" style="width:44px;padding:0" onclick="closeMusicModal()">✕</button>
       </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== LIBRARY MODAL ===== -->
+<div id="lib-overlay" onclick="if(event.target===this)closeLibrary()">
+  <div id="lib-sheet" onclick="event.stopPropagation()">
+    <div class="ms-handle"></div>
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px">
+      <div class="ms-title" style="margin:0">📚 Thư viện — Đọc &amp; Tải file</div>
+      <button class="ms-btn ms-btn-sec" style="width:36px;height:36px;padding:0;font-size:1rem" onclick="closeLibrary()">✕</button>
+    </div>
+
+    <!-- Upload zone -->
+    <label class="lib-drop" id="lib-drop" for="lib-file-input">
+      <input type="file" id="lib-file-input" multiple
+        accept=".txt,.md,.pdf,.doc,.docx,.rtf,.csv,.json,.html,.htm,.xml"
+        onchange="libHandleFiles(this.files)">
+      <span style="font-size:2rem">📂</span>
+      <span style="font-weight:600;margin-top:6px">Chọn hoặc kéo thả file vào đây</span>
+      <span style="font-size:.8rem;color:var(--sub);margin-top:4px">TXT · MD · PDF · DOC · DOCX · RTF · CSV · JSON · HTML</span>
+    </label>
+
+    <!-- File list -->
+    <div id="lib-list"></div>
+
+    <!-- Reader pane -->
+    <div id="lib-reader" style="display:none">
+      <div style="display:flex;align-items:center;gap:8px;margin-bottom:12px">
+        <button class="ms-btn ms-btn-sec" onclick="libCloseReader()" style="padding:6px 12px;font-size:.82rem">← Quay lại</button>
+        <span id="lib-reader-title" style="font-size:.9rem;font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;flex:1"></span>
+        <a id="lib-dl-btn" class="ms-btn" download style="padding:6px 14px;font-size:.82rem;text-decoration:none">⬇ Tải về</a>
+      </div>
+      <div id="lib-reader-body"></div>
     </div>
   </div>
 </div>
@@ -1124,6 +1214,131 @@ function fmtTime(s){
   const sec=Math.floor(s%60).toString().padStart(2,'0');
   return m+':'+sec;
 }
+
+/* ===== LIBRARY ===== */
+let libFiles=[];
+
+function openLibrary(){
+  document.getElementById('lib-overlay').classList.add('open');
+  libRenderList();
+}
+function closeLibrary(){
+  document.getElementById('lib-overlay').classList.remove('open');
+  libCloseReader();
+}
+
+function libHandleFiles(files){
+  for(const f of files){
+    if(!libFiles.find(x=>x.name===f.name&&x.size===f.size)){
+      libFiles.push(f);
+    }
+  }
+  document.getElementById('lib-file-input').value='';
+  libRenderList();
+}
+
+function libFileIcon(name){
+  const ext=name.split('.').pop().toLowerCase();
+  const map={pdf:'📄',doc:'📝',docx:'📝',txt:'🗒️',md:'📋',rtf:'📃',
+             csv:'📊',json:'🔧',html:'🌐',htm:'🌐',xml:'📑'};
+  return map[ext]||'📁';
+}
+
+function libFileSize(bytes){
+  if(bytes<1024)return bytes+'B';
+  if(bytes<1048576)return (bytes/1024).toFixed(1)+'KB';
+  return (bytes/1048576).toFixed(1)+'MB';
+}
+
+function libRenderList(){
+  const el=document.getElementById('lib-list');
+  if(libFiles.length===0){el.innerHTML='';return;}
+  el.innerHTML=libFiles.map((f,i)=>`
+    <div class="lib-file-item">
+      <span class="lib-file-icon">${libFileIcon(f.name)}</span>
+      <div class="lib-file-info">
+        <div class="lib-file-name">${f.name}</div>
+        <div class="lib-file-meta">${libFileSize(f.size)}</div>
+      </div>
+      <div class="lib-file-actions">
+        <button class="lib-btn" onclick="libOpenReader(${i})">👁 Đọc</button>
+        <button class="lib-btn" onclick="libDownload(${i})">⬇ Tải</button>
+        <button class="lib-btn" onclick="libRemove(${i})" style="color:#f99">✕</button>
+      </div>
+    </div>
+  `).join('');
+}
+
+function libRemove(i){
+  libFiles.splice(i,1);
+  libRenderList();
+}
+
+function libDownload(i){
+  const f=libFiles[i];
+  const url=URL.createObjectURL(f);
+  const a=document.createElement('a');
+  a.href=url;a.download=f.name;a.click();
+  setTimeout(()=>URL.revokeObjectURL(url),5000);
+}
+
+async function libOpenReader(i){
+  const f=libFiles[i];
+  const ext=f.name.split('.').pop().toLowerCase();
+  document.getElementById('lib-list').style.display='none';
+  document.getElementById('lib-drop').style.display='none';
+  const reader=document.getElementById('lib-reader');
+  reader.style.display='block';
+  document.getElementById('lib-reader-title').textContent=f.name;
+
+  // Download button
+  const dlBtn=document.getElementById('lib-dl-btn');
+  dlBtn.href=URL.createObjectURL(f);
+  dlBtn.download=f.name;
+
+  const body=document.getElementById('lib-reader-body');
+  body.innerHTML='<span style="color:var(--sub)">Đang tải...</span>';
+
+  if(['txt','md','csv','json','html','htm','xml','rtf'].includes(ext)){
+    const text=await f.text();
+    if(ext==='html'||ext==='htm'){
+      body.innerHTML=`<iframe srcdoc="${text.replace(/"/g,'&quot;')}"></iframe>`;
+    } else {
+      body.textContent=text;
+    }
+  } else if(ext==='pdf'){
+    const url=URL.createObjectURL(f);
+    body.innerHTML=`<iframe src="${url}" style="width:100%;min-height:60dvh;border:none;border-radius:8px"></iframe>`;
+  } else if(['doc','docx'].includes(ext)){
+    body.innerHTML=`<div style="text-align:center;padding:24px;color:var(--sub)">
+      <div style="font-size:2rem;margin-bottom:12px">📝</div>
+      <div style="font-weight:600;margin-bottom:8px">${f.name}</div>
+      <div style="font-size:.82rem;margin-bottom:16px">Trình duyệt không hỗ trợ đọc trực tiếp file Word.<br>Vui lòng tải về để mở bằng ứng dụng.</div>
+      <button class="ms-btn" onclick="libDownload(${i})" style="margin:0 auto">⬇ Tải file về</button>
+    </div>`;
+  } else {
+    body.innerHTML=`<div style="text-align:center;padding:24px;color:var(--sub)">Không thể đọc trực tiếp loại file này. Hãy tải về.</div>`;
+  }
+}
+
+function libCloseReader(){
+  document.getElementById('lib-reader').style.display='none';
+  document.getElementById('lib-list').style.display='';
+  document.getElementById('lib-drop').style.display='';
+  document.getElementById('lib-reader-body').innerHTML='';
+}
+
+// Drag & drop onto lib-drop zone
+(function(){
+  const zone=document.getElementById('lib-drop');
+  if(!zone)return;
+  zone.addEventListener('dragover',e=>{e.preventDefault();zone.classList.add('drag-over');});
+  zone.addEventListener('dragleave',()=>zone.classList.remove('drag-over'));
+  zone.addEventListener('drop',e=>{
+    e.preventDefault();zone.classList.remove('drag-over');
+    libHandleFiles(e.dataTransfer.files);
+  });
+})();
 </script>
 </body>
 </html>
