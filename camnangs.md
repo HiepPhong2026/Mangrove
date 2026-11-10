@@ -775,3 +775,27 @@ chu_de: 30 Giá Trị Khi Giúp Bạn Bè Nhận Diện Điểm Mạnh Tiềm �
 - Tạo hiệu ứng lan tỏa việc tốt: Người được bạn đánh thức tiềm năng sẽ tiếp tục đi khai phóng và nâng đỡ những người xung quanh họ.
 - Lan tỏa văn hóa nâng đỡ thay vì hạ bệ: Góp phần xây dựng một môi trường nhân văn, nơi con người nhìn nhau bằng tiềm năng thay vì định kiến.
 - Để lại một di sản tinh thần vô giá: Một tình bạn mẫu mực và sự chuyển hóa thực chất của một đời người — minh chứng đẹp đẽ cho sức mạnh của sự sẻ chia.
+
+---
+
+## Sổ tay Nhận Dạng Ưu Điểm Tiềm Ẩn
+emoji: 🔍
+chu_de: Phương Pháp Tinh Lọc & Khai Phóng Năng Lực Ẩn Giấu
+
+- Tốc độ nắm bắt: Điều gì họ học cực nhanh, làm trôi chảy mà không cần qua trường lớp bài bản?
+- Dòng chảy năng lượng: Việc gì họ làm quên cả thời gian, càng làm càng hăng say thay vì kiệt sức?
+- Hành động vô thức: Khi bước vào một căn phòng lộn xộn, họ lập tức dọn dẹp (tổ chức) hay quan sát nét mặt mọi người (thấu cảm)?
+- Phản xạ tự nhiên: Họ thường coi nhẹ năng khiếu của mình với câu "Ủa, chuyện này dễ mà, ai chẳng làm được!".
+- Khi khủng hoảng nổ ra: Họ là người giữ bình tĩnh (điểm tựa), người tính toán đường lui (chiến lược), hay người xông lên giải quyết (thực thi)?
+- Khi chịu bất công: Cách họ chuyển hóa uất ức thành hành động thực chất cho thấy cốt cách nội lực bền bỉ.
+- Phản ứng trước sai lầm: Dám nhận lỗi ngay và sửa đổi chứng minh tính trung thực và tiềm năng lãnh đạo.
+- Lời cầu cứu từ xung quanh: Mọi người thường tìm đến họ để nhờ vả điều gì nhất (lắng nghe, mượn tiền, sửa đồ, hay xin lời khuyên)?
+- Sự bức xúc có chọn lọc: Bực vì người khác làm ẩu chứng tỏ tiêu chuẩn chất lượng cao; bực vì thiếu công bằng chứng tỏ tố chất bảo vệ công lý.
+- Khuyết điểm nhìn từ mặt trái: Người hay do dự thường cẩn trọng, người nóng tính thường quyết đoán, người ít nói thường quan sát sâu.
+- Câu hỏi khai vấn 1: "Thời điểm nào trong quá khứ bạn cảm thấy mình tự tin và nhiều năng lượng nhất?"
+- Câu hỏi khai vấn 2: "Nếu tiền bạc và danh tiếng không thành vấn đề, bạn sẵn sàng làm việc gì miễn phí suốt cả năm?"
+- Câu hỏi khai vấn 3: "Bạn tự hào nhất về điều gì mà người khác chưa từng khen ngợi bạn?"
+- Câu hỏi khai vấn 4: "Điều gì người khác thấy rất khó nhưng với bạn lại hoàn toàn bình thường?"
+- Khen ngợi cụ thể hành vi: Không khen phẩm chất trừu tượng, hãy trích dẫn sự việc cụ thể ("Tôi thấy cách bạn lắng nghe và tóm lược ý vừa rồi cực kỳ sắc bén").
+- Tách tiềm năng khỏi kết quả hiện tại: Công nhận tố chất ngay cả khi họ vừa thất bại một dự án.
+- Trao đất để thử rễ: Tạo cơ hội nhỏ để họ ứng dụng điểm mạnh vừa được chỉ ra vào thực tế.
