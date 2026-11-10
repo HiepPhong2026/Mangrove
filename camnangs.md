@@ -721,3 +721,20 @@ chu_de: Ứng dụng Kinh Than Đước bảo toàn tâm thức khi giao tế x�
 - Bước 5 - Dựng ranh giới bất khả xâm phạm: quyết đoán từ chối các cuộc tụ tập vô bổ để bảo vệ sự thanh tịnh.
 - Bước 6 - Xả tróc cuối ngày: rửa mặt nước mát, buông xả mọi tạp niệm và âm thanh ngoài ngõ trước khi bước vào phòng riêng.
 - Bảng rà soát tâm thức hằng ngày: giữ tâm ráo rảnh buổi sáng — lời nói chừng mực buổi trưa — cắt đứt hoàn toàn việc công sở buổi chiều — lặng như tro êm đáy lò buổi tối để đi vào giấc ngủ sâu.
+
+---
+
+## Cẩm nang Quản lý Đình Làng
+emoji: 🏛️
+chu_de: Quản lý Di tích & Không gian Tín ngưỡng Cộng đồng
+
+- Giữ lòng vô tư, liêm chính và sổ sách minh bạch để tránh thị phi tiền bạc, không dung túng hủ tục dị đoan.
+- Lắng nghe đa chiều, không thiên vị dòng họ hay cá nhân, dĩ hòa vi quý khi điều hành các việc chung của làng.
+- Mở hòm công đức theo hội đồng (đủ đại diện Ban quản lý, Trưởng thôn, Mặt trận, Người cao tuổi); lập biên bản kiểm đếm ngay tại chỗ, ký xác nhận đầy đủ.
+- Phân loại rõ ràng các nguồn quỹ: quỹ trùng tu tôn tạo, quỹ hương hỏa và quỹ lễ hội; công khai bảng thu chi để dân làng cùng giám sát.
+- Nắm vững hương ước, lệ làng và lịch sóc vọng, lễ Kỳ yên, ngày kỵ húy Thành hoàng; duy trì ban thủ từ túc trực hương khói sớm tối.
+- Phân định rõ vai chủ tế, bồi tế, ban khánh tiết dựa trên sự tín nhiệm và lệ xưa, áp dụng nguyên tắc luân phiên công bằng khi có tranh chấp.
+- Lập sổ theo dõi, chụp ảnh lưu trữ sắc phong, đồ tế tự, bia ký, hoành phi câu đối; tu bổ sửa chữa phải tôn trọng yếu tố gốc và tuân thủ Luật Di sản văn hóa.
+- Coi trọng phòng cháy chữa cháy: kiểm tra đường điện định kỳ, ngắt cầu dao tổng khi đóng cửa, bố trí bình cứu hỏa tại vị trí thuận lợi.
+- Luôn kính trọng và tham vấn ý kiến Hội đồng bô lão trước mọi việc lớn; động viên thế hệ trẻ tham gia đội tế, đội múa rồng/lân để tiếp nối truyền thống.
+- Khi có cung tiến hiện vật lạ: khéo léo đối chiếu phong cách kiến trúc trước khi tiếp nhận, tránh phá vỡ cảnh quan di tích; sự cố khẩn cấp thì ưu tiên an toàn, giữ nguyên hiện trường và báo ngay cơ quan chức năng.
