@@ -906,3 +906,30 @@ chu_de: Giúp Đời Tế Nhị & Bảo Toàn Lòng Tự Trọng Của Người 
 - Nhường quyền đứng tên chính hoặc vị trí nổi bật cho người đồng hành khi dự án thành công.
 - Thành tâm cầu chúc bình an trong tâm trí cho một người lạ trông có vẻ đang kiệt sức.
 - Sống trọn một ngày hòa nhã, giữ tâm thanh thản, không trút bực dọc lên người xung quanh.
+
+---
+
+## Cẩm nang Bản Quy Ước Di Chuyển Tuyệt Khói
+emoji: 🚦
+chu_de: Mật Mã Hành Xử Trong Lò Luyện Giao Thông Đô Thị
+
+- Tuyệt đối không bấm còi khi dòng xe đã đứng im; còi vô ích chỉ là khói độc tinh thần.
+- Luôn hạ đèn chiếu gần (Cos); không rọi pha làm lóa mắt xe đối diện và gương chiếu hậu người trước.
+- Chủ động tắt máy xe khi dừng bất động trên 30 giây để cắt nguồn hơi nóng và khí độc.
+- Giữ âm lượng nhạc, đàm thoại ở mức vừa đủ, không phát tán ồn ào ra bên ngoài.
+- Không nẹt pô hoặc tăng ga giật cục gây hoảng loạn cho người xung quanh.
+- Duy trì khoảng đệm 2–3 mét với xe trước để xe bò đều, triệt tiêu phản ứng phanh gấp tạo sóng dừng.
+- Tuyệt đối không đỗ xe bịt kín miệng ngõ, hẻm nhánh hay lối quay đầu của dòng xe phụ.
+- Chủ động nép sát vào lề mở ngay hành lang sinh mệnh khi nghe tín hiệu xe cứu thương, cứu hỏa.
+- Giữ tốc độ lăn bánh nhịp nhàng, tránh thốc ga lấp đầy khoảng trống đột ngột.
+- Nhường khoảng hở an toàn cho người đi bộ qua đường đúng vạch kẻ.
+- Kiên quyết dừng trước vạch dù đèn xanh nếu nhận thấy lòng giao lộ phía trước chưa thoát.
+- Tuyệt đối không trèo lên vỉa hè chiếm dụng lối đi bộ của người già, trẻ nhỏ.
+- Không lấn sang làn đường chiều ngược lại để tránh tạo thế nghẽn đối đầu trực diện.
+- Thực hiện nguyên lý khóa kéo tại điểm nhập làn: lần lượt một xe nhánh đi, một xe trục chính tiến.
+- Giữ đúng làn đường đã chọn, hạn chế tối đa việc đảo làn liên tục gây xung đột cắt ngang.
+- Gặp va quẹt nhẹ, mỉm cười gật đầu và lập tức dạt xe vào lề giải quyết, không đứng cãi nhau giữa đường.
+- Mở lòng bao dung, không trừng mắt hay buông lời thóa mạ khi người khác vô tình chạm đuôi xe.
+- Nhẫn nại trước người tay lái yếu, không áp sát hay thúc ép khiến họ mất bình tĩnh.
+- Xem áp lực kẹt xe là lò luyện tâm tính; giữ hơi thở đều đặn và tâm thế điềm tĩnh, không bốc hỏa.
+- Sẵn sàng giơ tay làm hiệu nhường đường cho xe chở người bệnh hoặc trẻ nhỏ đang cần thoát nút nghẽn.
