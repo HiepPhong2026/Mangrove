@@ -799,3 +799,110 @@ chu_de: Phương Pháp Tinh Lọc & Khai Phóng Năng Lực Ẩn Giấu
 - Khen ngợi cụ thể hành vi: Không khen phẩm chất trừu tượng, hãy trích dẫn sự việc cụ thể ("Tôi thấy cách bạn lắng nghe và tóm lược ý vừa rồi cực kỳ sắc bén").
 - Tách tiềm năng khỏi kết quả hiện tại: Công nhận tố chất ngay cả khi họ vừa thất bại một dự án.
 - Trao đất để thử rễ: Tạo cơ hội nhỏ để họ ứng dụng điểm mạnh vừa được chỉ ra vào thực tế.
+
+---
+
+## Cẩm nang 100 Cách Giúp Người Ẩn Danh
+emoji: 🕊️
+chu_de: Giúp Đời Tế Nhị & Bảo Toàn Lòng Tự Trọng Của Người Nhận
+
+- Để lại tiền thừa hoặc tiền boa lớn dưới đĩa lót ly tại quán vắng khách rồi rời đi ngay.
+- Trả tiền trước một phần ăn sáng tại quán bình dân cho người bán vé số, lao động nghèo.
+- Thanh toán trước phần nước hoặc ly cà phê cho người xếp hàng ngay sau mình.
+- Gửi phong bì tiền mặt không tên qua khe cửa/hòm thư nhà người đang có người ốm nặng.
+- Đóng trước tiền điện, tiền nước qua app ngân hàng cho hộ nghèo khi biết mã khách hàng.
+- Mua hết rổ rau, thau cá của bà cụ bán rong lúc chiều muộn để cụ được về nghỉ sớm.
+- Thanh toán trước tiền cắt tóc tại tiệm bình dân cho người cơ nhỡ, vô gia cư.
+- Trả trước chi phí sửa xe máy, vá lốp cho người nghèo tại tiệm ven đường.
+- Đăng ký tài trợ học bổng ẩn danh qua quỹ khuyến học địa phương hoặc nhà trường.
+- Nhờ chủ trọ giảm tiền phòng cho người thất nghiệp và bí mật chuyển khoản bù phần đó.
+- Gửi mã thẻ nạp điện thoại qua tin nhắn nặc danh cho người đang cần liên lạc tìm việc.
+- Thanh toán trước tiền thuốc hạ sốt, thuốc cảm cho người khó khăn tại quầy thuốc tây.
+- Không mặc cả, trả giá khi mua nông sản, đồ ăn của người già, trẻ nhỏ, người khuyết tật.
+- Đặt đồ ăn qua app rồi nhắn tài xế giữ lại phần ăn đó cho bản thân hoặc gia đình họ.
+- Nhờ tiệm bánh kem tặng một chiếc bánh sinh nhật nhỏ cho đứa trẻ nghèo đứng ngắm ngoài cửa.
+- Mua ủng hộ toàn bộ vé số của người tàn tật ngày mưa bão rồi tặng lại cho các bác bảo vệ.
+- Để lại tiền lẻ tại cây xăng, máy bán hàng tự động để người thiếu tiền mua nước có thể dùng.
+- Trả trước viện phí khẩn cấp tại phòng tiếp đón bệnh viện cho bệnh nhân cơ nhỡ.
+- Mua đồ thủ công mỹ nghệ của người khuyết tật với số lượng lớn làm quà tặng.
+- Trả thêm tiền cước cho tài xế xe ôm công nghệ khi thời tiết chuyển giông bão dữ dội.
+- Để lại một khoản tiền nhỏ vào hòm từ thiện/cứu trợ với ghi chú "Ẩn danh".
+- Nhờ chủ tiệm tạp hóa xóa sổ nợ mua gạo, mắm muối của một gia đình nghèo trong ngõ.
+- Đóng trước phí bảo hiểm y tế năm cho một học sinh nghèo qua hội chữ thập đỏ trường.
+- Mua nông sản giải cứu trực tiếp tại điểm tập kết mà không phàn nàn về mẫu mã.
+- Mua ủng hộ các sản phẩm tăm tre, chổi đót của người khiếm thị bán dạo.
+- Đặt bao gạo 10kg trước cửa nhà người già neo đơn lúc nửa đêm kèm lời chúc sức khỏe.
+- Đặt chiếc áo ấm mùa đông lên ghế đá công viên nơi người vô gia cư thường nằm co ro.
+- Gửi bưu phẩm nặc danh chứa đồ dùng học tập, sách truyện cho trẻ em ở mái ấm.
+- Móc một túi trái cây tươi vào ghi-đông xe của cô lao công đang quét rác đêm.
+- Để lại chiếc ô che mưa ở sảnh tòa nhà chung kèm mảnh giấy "Dành cho ai cần khi trời mưa".
+- Đặt thùng mì ăn liền và sữa hạt tại điểm nhận đồ cứu trợ tự quản của khu phố.
+- Gửi tặng chiếc quạt bàn mới cho xóm trọ công nhân mùa nắng nóng qua ban quản lý.
+- Đặt hộp khẩu trang y tế và cồn sát khuẩn tại khu sinh hoạt chung của khu tập thể nghèo.
+- Tặng chiếc xe đạp cũ đã bảo dưỡng cẩn thận cho học sinh phải đi bộ xa đến trường.
+- Để túi xà phòng, bàn chải, khăn mặt mới tại khu nhà tắm công cộng của xóm nghèo.
+- Đặt một bình trà đá sạch miễn phí trước cổng nhà cho người đi đường giải khát.
+- Gửi nặc danh máy đo huyết áp điện tử tặng bác bảo vệ tổ dân phố lớn tuổi.
+- Để lại các hộp sữa tươi, bánh mềm tại hành lang khoa chạy thận của bệnh viện.
+- Đặt túi tã bỉm trẻ em trước cửa phòng của người mẹ đơn thân đang gặp khó khăn.
+- Gửi tặng bộ đồng phục học sinh mới đúng kích cỡ nhờ trường chuyển cho em nghèo.
+- Đặt chiếc đèn bàn học chống cận thị gửi nặc danh cho con người hàng xóm khó khăn.
+- Để lại sách báo, tạp chí hay đã đọc tại phòng chờ bệnh viện hoặc trạm xe buýt.
+- Gửi tặng chăn màn mới đến các hộ dân vùng lũ qua bưu điện không ghi tên gửi.
+- Đặt hộp nến, pin dự phòng và đèn pin tại khu vực xóm trọ hay bị cúp điện.
+- Gửi tặng bộ cọ vẽ và màu nước cho em nhỏ mồ côi có năng khiếu hội họa.
+- Để đôi ủng cao su chống ngập ở góc cầu thang chung cho bà con dùng khi ngập triều.
+- Mua tặng bình cứu hỏa mini đặt tại góc cầu thang chung của khu tập thể cũ.
+- Gửi nặc danh hộp thuốc bổ mắt, vitamin cho người thợ may già ở xóm lao động.
+- Đặt thùng nước suối đóng chai sạch ở bến xe buýt cho người lỡ độ đường.
+- Gửi tặng bộ đồ nghề cơ bản (kìm, búa, cờ-lê) cho thanh niên nghèo đang học nghề.
+- Nhặt đinh tặc, mảnh chai vỡ hoặc cành cây chắn ngang trên đường đi vứt vào thùng rác.
+- Gạt lại chân chống xe máy, dựng lại các xe bị nghiêng ngả trong bãi đỗ công cộng.
+- Cắm cành cây cảnh báo hoặc kê đá chắn tạm thời trước miệng hố ga mất nắp khi ngập.
+- Lau khô bồn rửa mặt và sàn nhà vệ sinh công cộng sau khi sử dụng.
+- Tắt vòi nước bị rò rỉ hoặc bóng đèn bật quên ở khu vực công cộng.
+- Nhặt cọng rác người khác vô tình làm rơi trên lối đi bộ bỏ vào thùng rác.
+- Đẩy các xe đẩy hàng siêu thị nằm rải rác ngoài bãi xe về đúng hàng lối quy định.
+- Cố tình đi chậm lại, nhường khoảng trống cho xe khác rẽ hoặc nhập làn an toàn.
+- Lau sạch gương cầu lồi ở khúc cua hẹp trong ngõ để người đi sau quan sát an toàn.
+- Giữ cửa thang máy thêm vài giây cho người mang vác nặng phía sau.
+- Đặt bậc đá hoặc miếng gỗ nhỏ giúp người đi bộ bước qua vũng bùn lầy sau mưa.
+- Nhặt đồ rơi của người đi đường chạy theo gửi lại mà không chờ đợi lời cảm ơn.
+- Xếp lại ngay ngắn các kệ hàng bị xới lộn xộn trong hiệu sách hay siêu thị.
+- Rải thức ăn, ngũ cốc ở bãi đất trống cho chim chóc hoang dã vào mùa đông giá rét.
+- Đặt bát nước sạch mát ngoài hiên cho thú cưng đi lạc hoặc chim chóc uống giải nhiệt.
+- Nhích xe sát vào lề khi dừng đèn đỏ để chừa lối cho xe rẽ phải theo quy định.
+- Gom gọn đống lá khô dễ bắt lửa vào mùa khô để hạn chế nguy cơ hỏa hoạn.
+- Lau khô yên xe máy bị ướt mưa cho người lạ dựng xe cạnh mình ngoài trời.
+- Rửa sạch vết dầu nhớt trơn trượt trên mặt đường ngõ bằng xô cát hoặc xà phòng.
+- Thu dọn đồ đạc gọn gàng, lau sạch mặt bàn sau khi rời khỏi quán cà phê/thư viện.
+- Dựng lại các biển báo giao thông hoặc biển cảnh báo bị gió bão quật nghiêng.
+- Nhẹ nhàng gỡ cứu chú chim, chú bướm mắc kẹt trong cửa kính hoặc khe lưới.
+- Gom pin cũ đã qua sử dụng đem đến đúng điểm thu gom tái chế.
+- Trồng dặm một cây xanh hoặc hoa dại ở khoảnh đất trống ven ngõ xóm.
+- Nhường chỗ ngồi trên xe công cộng bằng cách đứng dậy di chuyển ra phía cửa.
+- Sửa lại lỗi chính tả, căn lề văn bản quan trọng trước khi trình duyệt giúp đồng nghiệp.
+- Âm thầm hoàn thành nốt công việc dang dở của đồng nghiệp có người nhà đi viện gấp.
+- Tự giác thay bình nước lọc mới cho văn phòng khi thấy bình cũ vừa cạn.
+- Đổ rác và thay bao rác mới cho thùng rác chung của phòng làm việc cuối ngày.
+- Để lại giấy ghi chú động viên kèm thanh sô-cô-la trên bàn của người đang chịu áp lực.
+- Nhắc nhỏ đồng nghiệp kéo khóa balo hay chỉnh lại cổ áo bị lật một cách kín đáo.
+- Bỏ thêm giấy in vào khay máy in chung khi thấy giấy đã sắp hết.
+- Tắt chế độ chuông to của điện thoại đồng nghiệp vừa chạy ra ngoài để tránh ồn.
+- Khen ngợi năng lực và đóng góp của đồng nghiệp vắng mặt trước mặt lãnh đạo.
+- Đứng ra nhận một phần lỗi quy trình chung để giảm nhẹ áp lực cho nhân viên mới.
+- Chặn đứng tin đồn thất thiệt sau lưng ai đó bằng một lời nói khách quan rồi đổi đề tài.
+- Giữ cửa mở và hỗ trợ nút bấm thang máy cho người đang bưng bê cồng kềnh.
+- Cố tình để người nhút nhát có cơ hội phát biểu ý kiến hay trong cuộc họp nhóm.
+- Nhận ca trực thay vào ngày lễ cho đồng nghiệp có con nhỏ mà không tính toán.
+- Sao lưu dự phòng giúp người hay quên lưu dữ liệu quan trọng trên hệ thống chung.
+- Viết đánh giá tích cực 5 sao ẩn danh cho người bán hàng online hoặc tài xế tận tâm.
+- Giới thiệu cơ hội việc làm hoặc đối tác kinh doanh phù hợp qua người trung gian.
+- Kê lại bàn ghế, chỉnh lại máy chiếu ngay ngắn sau giờ họp để phục vụ nhóm kế tiếp.
+- Giữ kín hoàn toàn bí mật riêng tư mà một người từng vô tình tâm sự lúc yếu lòng.
+- Tha thứ triệt để cho người từng làm tổn thương mình mà không cần họ phải xin lỗi.
+- Vờ không nhìn thấy sự lúng túng, vụng về của người khác để giữ thể diện cho họ.
+- Mỉm cười khích lệ bằng ánh mắt với nhân viên phục vụ lỡ tay làm vỡ ly nước.
+- Nhường quyền đứng tên chính hoặc vị trí nổi bật cho người đồng hành khi dự án thành công.
+- Thành tâm cầu chúc bình an trong tâm trí cho một người lạ trông có vẻ đang kiệt sức.
+- Sống trọn một ngày hòa nhã, giữ tâm thanh thản, không trút bực dọc lên người xung quanh.
