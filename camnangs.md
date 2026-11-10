@@ -1166,3 +1166,17 @@ chu_de: Hôn nhân & gia đình
 - Gia tăng tài sản bền vững: khi nội bộ đồng lòng nhất trí, mọi nguồn lực đều tập trung phát triển kinh tế gia đình.
 - Đạt cảnh giới viên mãn: có một chốn bình yên để về, một người bạn đời rạng rỡ đồng hành, tiền tài và phúc lộc tự nhiên viên thành.
 ---
+
+## Cẩm nang Bỏ Túi Nhận Diện Người Xấu
+emoji: 🛡️
+chu_de: Tâm lý & quan hệ
+- Kẻ phá giới hạn: coi thường luật lệ chung, tự tiện xâm phạm đời tư bao biện là "thân thiết". Đối ứng: nói "không" rõ ràng ngay từ lần đầu, không nhượng bộ để lấy lòng.
+- Kẻ hứa nhiều không làm: vẽ viễn cảnh to tát rồi lặn mất khi đến hạn, luôn mập mờ trong tiền bạc để dễ phủi tay. Đối ứng: quy mọi thỏa thuận ra văn bản và deadline cụ thể.
+- Kẻ gây kịch tính drama: chuyện bé xé to, chia rẽ nội bộ, kéo bạn vào tranh cãi vô thưởng vô phạt. Đối ứng: trả lời ngắn gọn, chỉ tập trung sự việc, rời đi ngay khi xong việc.
+- Kẻ tham lam không biết dừng: luôn muốn phần hơn, vắt kiệt lòng tốt người khác mà không nghĩ đến đáp lại. Đối ứng: luôn chừa đường lui dự phòng, từ chối thẳng khi đòi hỏi vượt ngưỡng.
+- Kẻ phô trương tranh công: khoe tiền tài quan hệ nhưng năng lực yếu, tranh công khi thắng đổ lỗi khi thua, khúm núm người trên khinh người dưới. Đối ứng: đánh giá qua việc thực tế, không tin lời tự quảng cáo.
+- Kẻ đạo đức giả: miệng nói triết lý cao siêu nhưng lười nhác việc thực tế, hoặc chi li tính toán từng đồng mù tịt bức tranh lớn. Đối ứng: quan sát hành động thay vì nghe lời giảng giải.
+- Kẻ thù dai thao túng bằng quá khứ: lôi sai lầm cũ ra nhắc mỗi khi tranh luận mới để gây cảm giác tội lỗi, kiểm soát bạn. Đối ứng: một khi lỗi đã giải quyết sòng phẳng thì từ chối bàn lại, không để cảm giác tội lỗi thao túng.
+- Tâm pháp ứng xử: gặp người phá giới hạn thì giữ chặt nguyên tắc; gặp người lơ lửng thì đòi hành động cụ thể; gặp người gây chuyện thì rút lui nhanh; gặp người tham lam thì giữ phòng tuyến an toàn; gặp người thù dai thì buông bỏ quá khứ.
+- Nhận diện người không tốt không phải để ghét bỏ hay thù hận, mà để bảo vệ sự bình yên bên trong, không để năng lượng tiêu cực làm hoen ố cuộc sống của chính mình.
+---
