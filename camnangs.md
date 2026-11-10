@@ -933,3 +933,67 @@ chu_de: Mật Mã Hành Xử Trong Lò Luyện Giao Thông Đô Thị
 - Nhẫn nại trước người tay lái yếu, không áp sát hay thúc ép khiến họ mất bình tĩnh.
 - Xem áp lực kẹt xe là lò luyện tâm tính; giữ hơi thở đều đặn và tâm thế điềm tĩnh, không bốc hỏa.
 - Sẵn sàng giơ tay làm hiệu nhường đường cho xe chở người bệnh hoặc trẻ nhỏ đang cần thoát nút nghẽn.
+
+---
+
+## Cẩm nang Vệ Sinh Khoa Học & Môi Trường Sống
+emoji: 🧼
+chu_de: Kiểm Soát Mầm Bệnh, Bảo Toàn Thể Trạng & Giữ Sạch Không Gian Sống
+
+- Rửa tay bằng xà phòng ít nhất 30 giây sau khi đi vệ sinh và trước khi ăn.
+- Vệ sinh kỹ các điểm khuất khi tắm: sau tai, nách, rốn và các kẽ ngón chân.
+- Đánh răng 2 lần mỗi ngày kết hợp dùng chỉ nha khoa làm sạch kẽ răng.
+- Lau khô người hoàn toàn bằng khăn sạch trước khi mặc quần áo để tránh nấm.
+- Cắt tỉa móng tay, móng chân gọn gàng hàng tuần, không để vi khuẩn bám đọng.
+- Lau dọn nhà cửa theo nguyên tắc từ trên cao xuống thấp và từ trong ra ngoài.
+- Mở cửa sổ thông gió tự nhiên 20–30 phút mỗi sáng để đẩy lùi ẩm mốc.
+- Giữ sàn nhà tắm và các góc bếp khô ráo, tránh tích tụ rêu nhớt vi khuẩn.
+- Xử lý ngay các vết nấm mốc trên tường hoặc chân tủ bằng giấm hoặc cồn.
+- Giữ thảm chùi chân luôn khô thoáng, giặt sạch định kỳ hàng tuần.
+- Dùng cồn y tế lau sạch màn hình và ốp lưng điện thoại di động mỗi ngày.
+- Vệ sinh bàn phím, chuột máy tính và bàn làm việc ít nhất 2 lần mỗi tuần.
+- Khử khuẩn tay nắm cửa ra vào, tay vịn cầu thang và công tắc đèn định kỳ.
+- Làm sạch nút bấm điều khiển tivi, máy lạnh và chìa khóa xe hàng tuần.
+- Tránh đặt ví tiền, túi xách đi ngoài đường lên mặt bàn ăn hoặc giường ngủ.
+- Dùng dao và thớt riêng biệt tuyệt đối cho đồ ăn sống và đồ ăn chín.
+- Giặt sạch, phơi khô hoặc luộc nước sôi giẻ rửa bát; thay mới sau 2–3 tuần.
+- Đổ rác nhà bếp mỗi ngày, buộc kín túi và rửa sạch thùng rác hàng tuần.
+- Vệ sinh khay kệ tủ lạnh định kỳ, loại bỏ thực phẩm ôi thiu hoặc quá hạn.
+- Đậy nắp kín thức ăn thừa trước khi cất tủ lạnh, không để trần hở mùi.
+- Giặt ga trải giường, vỏ gối định kỳ mỗi tuần một lần bằng nước sạch.
+- Phơi nắng ruột gối, đệm định kỳ mỗi tháng để triệt tiêu mạt bụi gây dị ứng.
+- Tuyệt đối không mặc quần áo vừa đi ngoài đường bụi bặm nằm lên giường ngủ.
+- Treo khăn tắm nơi thoáng gió có ánh sáng, không để khăn ẩm ướt trong góc tối.
+- Phân loại riêng quần áo lao động ngoài trời và đồ lót khi giặt giũ.
+
+---
+
+## Cẩm nang Tối Ưu Giấc Ngủ
+emoji: 🌙
+chu_de: Khoa Học Thiết Lập Nhịp Sinh Học & Phục Hồi Thần Kinh
+
+- Khóa giờ thức dậy cố định mỗi ngày, không xê dịch quá 60 phút vào cuối tuần.
+- Tắm nắng tự nhiên 10–15 phút ngay sau khi thức dậy để kích hoạt đồng hồ sinh học.
+- Tính thời lượng ngủ theo bội số của chu kỳ 90 phút (ngủ 6 tiếng hoặc 7.5 tiếng).
+- Vận động thể chất vào ban ngày để tích tụ áp lực buồn ngủ tự nhiên (Adenosine).
+- Tránh ngủ trưa sau 15h và không ngủ trưa quá 30 phút để không mất ngủ đêm.
+- Duy trì nhiệt độ phòng ngủ mát mẻ ở mức 18–22°C giúp thân nhiệt hạ chuẩn.
+- Giữ phòng ngủ tối hoàn toàn (Zero Lux), sử dụng rèm cản sáng hoặc đồ bịt mắt.
+- Sử dụng âm thanh ổn định (tiếng ồn trắng, tiếng mưa) để át tạp âm đột ngột.
+- Chọn đệm gối có độ nâng đỡ phù hợp, giữ trục cột sống và cổ thẳng hàng.
+- Đảm bảo phòng ngủ thông thoáng, lưu thông không khí sạch để không bị thiếu oxy.
+- Cắt hoàn toàn caffeine và trà đậm trước giờ ngủ ít nhất 8–10 tiếng.
+- Dừng ăn các bữa no giàu tinh bột và dầu mỡ trước giờ ngủ tối thiểu 3 tiếng.
+- Không sử dụng rượu bia để ép ngủ vì cồn phá hủy giai đoạn ngủ sâu (REM).
+- Uống đủ nước ban ngày, hạn chế uống nhiều nước sát giờ ngủ để tránh tiểu đêm.
+- Bổ sung thực phẩm giàu magie, hạt dinh dưỡng vào bữa tối hỗ trợ giãn cơ.
+- Tắt toàn bộ màn hình điện thoại, máy tính trước khi ngủ ít nhất 60 phút.
+- Tắm hoặc ngâm chân nước ấm trước giờ ngủ 90 phút kích thích thoát nhiệt cơ thể.
+- Viết ra giấy danh sách công việc ngày mai (Brain dump) giải tỏa lo âu tồn đọng.
+- Đọc vài trang sách giấy hoặc thực hành giãn cơ nhẹ nhàng dưới ánh đèn vàng mờ.
+- Hít thở chậm theo nhịp 4-7-8 giúp kích hoạt hệ thần kinh phó giao cảm.
+- Rời khỏi giường nếu trằn trọc quá 20 phút không ngủ được; chỉ quay lại khi buồn ngủ.
+- Tuyệt đối không làm việc, xem phim, ăn uống hoặc lướt mạng xã hội trên giường.
+- Giữ ga trải giường, gối ngủ luôn sạch sẽ, thơm tho tạo cảm giác thư giãn.
+- Cất đồng hồ xem giờ ra khỏi tầm mắt để tránh tâm lý lo âu đếm ngược thời gian.
+- Rèn phản xạ tắt đèn, đặt lưng là chuyển cơ thể vào trạng thái thả lỏng hoàn toàn.
