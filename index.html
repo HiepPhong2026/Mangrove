@@ -111,6 +111,8 @@ header p{color:var(--sub);font-size:.85rem;margin-top:4px}
 .card-body strong{color:var(--g6);font-style:italic}
 
 #nav{display:flex;justify-content:space-between;align-items:center;width:100%;max-width:480px;padding:8px 16px 4px}
+#camnangs-btn-wrap{display:flex;justify-content:center;width:100%;max-width:480px;padding:8px 16px 2px}
+#camnangs-btn-wrap .ses-btn{padding:7px 28px;font-size:.85rem}
 .nav-btn{background:var(--g2);border:1.5px solid var(--g4);color:var(--txt);padding:10px 22px;border-radius:12px;font-size:1rem;cursor:pointer;transition:.2s}
 .nav-btn:hover{background:var(--g3);border-color:var(--g5)}
 .nav-btn:disabled{opacity:.3;cursor:default}
@@ -369,7 +371,6 @@ details.cn-card[open] .cn-arrow{transform:rotate(180deg)}
 <div id="ses-bar">
   <button class="ses-btn active" data-ses="0">Câu Chuyện Rừng Đước</button>
   <button class="ses-btn" id="rand99-btn" data-mode="rand99">🎲 Ngẫu nhiên</button>
-  <button class="ses-btn" data-mode="camnangs">📋 Cẩm nang bỏ túi</button>
 </div>
 
 <div id="controls">
@@ -389,6 +390,10 @@ details.cn-card[open] .cn-arrow{transform:rotate(180deg)}
   <button class="nav-btn" id="prev-btn" onclick="go(-1)">&#8592; Trước</button>
   <button class="nav-btn" id="rand-btn" onclick="rand()">&#127922;</button>
   <button class="nav-btn" id="next-btn" onclick="go(1)">Sau &#8594;</button>
+</div>
+
+<div id="camnangs-btn-wrap">
+  <button class="ses-btn" id="camnangs-open-btn">📋 Cẩm nang bỏ túi</button>
 </div>
 
 <!-- Cẩm nang view -->
@@ -747,10 +752,12 @@ function showCamnangs(){
   document.getElementById('story-wrap').style.display='none';
   document.getElementById('nav').style.display='none';
   document.getElementById('controls').style.display='none';
+  document.getElementById('camnangs-btn-wrap').style.display='none';
   const cv=document.getElementById('camnangs-view');
   cv.style.display='flex';
   cv.style.flexDirection='column';
-  document.querySelectorAll('.ses-btn').forEach(b=>b.classList.toggle('active',b.dataset.mode==='camnangs'));
+  document.querySelectorAll('.ses-btn').forEach(b=>b.classList.remove('active'));
+  document.getElementById('camnangs-open-btn').classList.add('active');
   loadCamnangs();
 }
 
@@ -758,10 +765,12 @@ function showStories(){
   document.getElementById('story-wrap').style.display='';
   document.getElementById('nav').style.display='';
   document.getElementById('controls').style.display='';
+  document.getElementById('camnangs-btn-wrap').style.display='';
   document.getElementById('camnangs-view').style.display='none';
+  document.getElementById('camnangs-open-btn').classList.remove('active');
 }
 
-document.querySelector('.ses-btn[data-mode="camnangs"]').addEventListener('click', showCamnangs);
+document.getElementById('camnangs-open-btn').addEventListener('click', showCamnangs);
 
 // ===== NGẪU NHIÊN 99 =====
 let rand99Loading=false;
