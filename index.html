@@ -1311,7 +1311,11 @@ async function libOpenReader(i){
         marked.setOptions({breaks:true,gfm:true});
         const renderer=new marked.Renderer();
         renderer.table=(header,body)=>`<div class="table-wrap"><table><thead>${header}</thead><tbody>${body}</tbody></table></div>`;
-        body.innerHTML=marked.parse(text,{renderer});
+        // Clean LaTeX math: $$...$$ và $...$ → giữ nội dung, bỏ $
+        const clean=text
+          .replace(/\$\$([^$]+)\$\$/g,(_,m)=>m.trim())
+          .replace(/\$([^$\n]+)\$/g,(_,m)=>m.trim());
+        body.innerHTML=marked.parse(clean,{renderer});
       } else {
         body.innerHTML=`<pre style="white-space:pre-wrap;word-break:break-word;font-size:.82rem;line-height:1.65;font-family:inherit">${text.replace(/</g,'&lt;').replace(/>/g,'&gt;')}</pre>`;
       }
