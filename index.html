@@ -368,10 +368,9 @@ details.cn-card[open] .cn-arrow{transform:rotate(180deg)}
 
 <div id="ses-bar">
   <button class="ses-btn active" data-ses="0">Câu Chuyện Rừng Đước</button>
+  <button class="ses-btn" id="rand99-btn" data-mode="rand99">🎲 Ngẫu nhiên</button>
   <button class="ses-btn" data-mode="camnangs">📋 Cẩm nang bỏ túi</button>
 </div>
-
-<div id="vol-bar"></div>
 
 <div id="controls">
   <select id="story-sel"></select>
@@ -642,13 +641,11 @@ async function switchSes(s){
   sesData=SESSIONS[s];
   idx=0;
   document.querySelectorAll('.ses-btn').forEach((b,i)=>b.classList.toggle('active',!b.dataset.mode&&i===s));
-  buildVolBar();
   showLoading();
   stories=await loadVol(sesData.startVol);
   buildSelect();
   buildCard(document.getElementById('card'),stories[0],'left');
   updateCounter();
-  preloadVol(sesData.startVol+1);
 }
 
 document.getElementById('story-sel').addEventListener('change',function(){
@@ -749,7 +746,6 @@ async function loadCamnangs(){
 function showCamnangs(){
   document.getElementById('story-wrap').style.display='none';
   document.getElementById('nav').style.display='none';
-  document.getElementById('vol-bar').style.display='none';
   document.getElementById('controls').style.display='none';
   const cv=document.getElementById('camnangs-view');
   cv.style.display='flex';
@@ -761,12 +757,43 @@ function showCamnangs(){
 function showStories(){
   document.getElementById('story-wrap').style.display='';
   document.getElementById('nav').style.display='';
-  document.getElementById('vol-bar').style.display='';
   document.getElementById('controls').style.display='';
   document.getElementById('camnangs-view').style.display='none';
 }
 
 document.querySelector('.ses-btn[data-mode="camnangs"]').addEventListener('click', showCamnangs);
+
+// ===== NGẪU NHIÊN 99 =====
+let rand99Loading=false;
+async function loadRandom99(){
+  if(rand99Loading) return;
+  rand99Loading=true;
+  showStories();
+  document.querySelectorAll('.ses-btn').forEach(b=>b.classList.toggle('active',b.dataset.mode==='rand99'));
+  showLoading();
+  document.getElementById('c-title').textContent='Đang tải toàn bộ…';
+  try{
+    // Fetch tất cả 36 vol song song
+    const all=await Promise.all(
+      Array.from({length:NUM_VOLS},(_,i)=>loadVol(i+1))
+    );
+    const pool=all.flat();
+    // Fisher-Yates shuffle rồi lấy 99
+    for(let i=pool.length-1;i>0;i--){
+      const j=Math.floor(Math.random()*(i+1));
+      [pool[i],pool[j]]=[pool[j],pool[i]];
+    }
+    stories=pool.slice(0,99);
+    idx=0;
+    buildSelect();
+    buildCard(document.getElementById('card'),stories[0],'left');
+    updateCounter();
+  }catch(e){
+    document.getElementById('c-title').textContent='Không tải được dữ liệu.';
+  }
+  rand99Loading=false;
+}
+document.getElementById('rand99-btn').addEventListener('click', loadRandom99);
 
 // Touch swipe
 let tx=0;
@@ -779,14 +806,11 @@ wrap.addEventListener('touchend',e=>{
 
 // Init — load vol1 on startup
 (async()=>{
-  buildVolBar();
   showLoading();
   stories=await loadVol(1);
   buildCard(document.getElementById('card'),stories[0]);
   buildSelect();
   updateCounter();
-  // Preload vol2 in background
-  preloadVol(2);
 })();
 
 // ===== FAB (Floating Action Button) =====
