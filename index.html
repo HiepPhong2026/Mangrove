@@ -63,6 +63,9 @@
 }
 </script>
 
+<!-- ===== MARKED.JS (markdown renderer) ===== -->
+<script src="https://cdn.jsdelivr.net/npm/marked@9/marked.min.js"></script>
+
 <!-- ===== PERFORMANCE ===== -->
 <meta name="theme-color" content="#0a2e1a">
 <meta name="mobile-web-app-capable" content="yes">
@@ -158,12 +161,31 @@ header p{color:var(--sub);font-size:.85rem;margin-top:4px}
   padding:5px 10px;font-size:.75rem;cursor:pointer;transition:background .15s}
 .lib-btn:hover{background:rgba(255,255,255,0.2)}
 #lib-reader-body{
-  font-size:.88rem;line-height:1.75;color:var(--txt);
-  background:rgba(0,0,0,0.25);border-radius:12px;
-  padding:16px;white-space:pre-wrap;word-break:break-word;
-  max-height:60dvh;overflow-y:auto;
+  font-size:.9rem;line-height:1.8;color:var(--txt);
+  background:rgba(255,255,255,0.04);border-radius:14px;
+  padding:18px 16px;word-break:break-word;
+  max-height:62dvh;overflow-y:auto;
 }
 #lib-reader-body iframe{width:100%;border:none;border-radius:8px;min-height:55dvh}
+/* Markdown rendered styles */
+#lib-reader-body h1{font-size:1.15rem;font-weight:700;color:#a8e6c3;margin:0 0 12px;line-height:1.35;border-bottom:1px solid rgba(255,255,255,0.1);padding-bottom:8px}
+#lib-reader-body h2{font-size:1rem;font-weight:700;color:#7ecf9e;margin:18px 0 8px;line-height:1.35}
+#lib-reader-body h3{font-size:.92rem;font-weight:600;color:#5bbf8a;margin:14px 0 6px}
+#lib-reader-body h4{font-size:.88rem;font-weight:600;color:var(--sub);margin:10px 0 4px}
+#lib-reader-body p{margin:0 0 10px}
+#lib-reader-body ul,#lib-reader-body ol{padding-left:1.3em;margin:6px 0 10px}
+#lib-reader-body li{margin:3px 0}
+#lib-reader-body strong{color:#c8f0d8;font-weight:700}
+#lib-reader-body em{color:#9ed8b8;font-style:italic}
+#lib-reader-body blockquote{border-left:3px solid var(--leaf);margin:12px 0;padding:8px 14px;background:rgba(63,168,101,0.08);border-radius:0 8px 8px 0;color:var(--sub);font-style:italic}
+#lib-reader-body code{background:rgba(255,255,255,0.1);border-radius:4px;padding:1px 5px;font-size:.82rem;font-family:monospace}
+#lib-reader-body pre{background:rgba(0,0,0,0.3);border-radius:8px;padding:12px;overflow-x:auto;margin:10px 0;font-size:.8rem;line-height:1.5}
+#lib-reader-body pre code{background:none;padding:0}
+#lib-reader-body hr{border:none;border-top:1px solid rgba(255,255,255,0.1);margin:14px 0}
+#lib-reader-body table{border-collapse:collapse;width:100%;margin:10px 0;font-size:.82rem}
+#lib-reader-body th{background:rgba(63,168,101,0.2);color:#a8e6c3;font-weight:600;padding:7px 10px;border:1px solid rgba(255,255,255,0.1);text-align:left}
+#lib-reader-body td{padding:6px 10px;border:1px solid rgba(255,255,255,0.08);vertical-align:top}
+#lib-reader-body tr:nth-child(even) td{background:rgba(255,255,255,0.03)}
 
 /* ===== MUSIC MODAL ===== */
 #music-overlay{
@@ -1284,7 +1306,12 @@ async function libOpenReader(i){
   if(['txt','md','csv','json','xml','rtf'].includes(ext)){
     try{
       const text=await (await fetch(url)).text();
-      body.textContent=text;
+      if(ext==='md' && typeof marked!=='undefined'){
+        marked.setOptions({breaks:true,gfm:true});
+        body.innerHTML=marked.parse(text);
+      } else {
+        body.innerHTML=`<pre style="white-space:pre-wrap;word-break:break-word;font-size:.82rem;line-height:1.65;font-family:inherit">${text.replace(/</g,'&lt;').replace(/>/g,'&gt;')}</pre>`;
+      }
     }catch{body.innerHTML='<span style="color:var(--sub)">Không tải được file.</span>';}
   } else if(ext==='html'||ext==='htm'){
     body.innerHTML=`<iframe src="${url}" style="width:100%;min-height:58dvh;border:none;border-radius:8px"></iframe>`;
