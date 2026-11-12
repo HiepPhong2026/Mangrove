@@ -62,3 +62,24 @@ Nếu xem tâm trí con người là một khúc gỗ đước đang nặng trĩ
 | **Giai đoạn thanh lọc** | Nung nhiệt cao thiếu oxy cho bay hơi tạp chất. | Quan sát tĩnh tại, buông bỏ chuyện cũ và lo âu thừa. | **55 − 55 = 0** |
 | **Giai đoạn kích hoạt** | Phun luồng hơi nước nóng mở thông các mạch dẫn. | Chêm chuỗi **khe hở nhỏ (ε)** vào từng nhịp thở, lời nói. | **55 + ε = Khai Thông** |
 | **Thành tựu viên mãn** | Viên than có hàng triệu lỗ rỗng lọc sạch nước đục. | Tâm hồn xốp nhẹ, bình an, chuyển hóa mọi nghịch cảnh. | **55 + ○ = Đạo** |
+
+---
+
+## V. LỘ TRÌNH THỰC HÀNH 7 NGÀY KIẾN TẠO "TRIỆU LỖ RỖNG"
+
+Mỗi ngày chỉ cần dành ra vài khoảnh khắc ngắn để thực hành đúng một điểm nhấn, giúp tâm trí chuyển dần từ trạng thái đặc cứng sang xốp nhẹ tự nhiên:
+
+* **Ngày 1 — Dọn Rỗng Không Gian Vật Lý (Mở ε bên ngoài):**
+  Chọn một góc nhỏ (bàn làm việc, ngăn kéo hoặc màn hình chính điện thoại), bỏ bớt 3–5 món đồ hoặc ứng dụng không dùng tới. Cảm nhận sự thoáng đãng ngay trước mắt.
+* **Ngày 2 — Thực Hành "Khe Thở Giao Tiếp" (Dừng 2 giây):**
+  Trong mọi cuộc trò chuyện hôm nay, tập dừng đúng **2 giây** sau khi người khác nói xong rồi mới đáp lời. Khoảng dừng nhỏ này giúp ngắt bỏ phản ứng vội vàng.
+* **Ngày 3 — Thanh Lọc Nguồn Nhập Đầu Vào (Giảm 55 nhiễu loạn):**
+  Dành trọn 1 tiếng buổi tối tắt thông báo điện thoại, không đọc tin tức giật gân hay mạng xã hội. Để não bộ được nghỉ ngơi trong môi trường "thiếu tạp chất".
+* **Ngày 4 — Nghi Thức "Gạt Về 0" Giữa Các Đầu Việc:**
+  Mỗi khi làm xong một việc (họp xong, nấu ăn xong, lái xe tới nơi), ngồi yên **5 giây** nhắm mắt và nhẩm thầm: *"Việc cũ đã xong, gạt bàn tính về 0"* trước khi chuyển sang việc tiếp theo.
+* **Ngày 5 — Lắng Nghe Không Phán Xét (Mở rộng ○):**
+  Khi gặp một chuyện trái ý hoặc nghe một quan điểm khác mình, tập giữ tâm thế người quan sát: chỉ ghi nhận sự việc đang diễn ra như nó vốn là, không vội dán nhãn đúng – sai.
+* **Ngày 6 — Rải Hạt Bình An Vào Việc Nhỏ (Chuỗi ε liên hoàn):**
+  Chọn 3 hoạt động lặp lại trong ngày (uống nước, rửa tay, bước cầu thang) và thực hiện thật chậm rãi, trọn vẹn từng cảm giác mà không suy nghĩ chuyện khác.
+* **Ngày 7 — Ngày Của "Viên Than Hoạt Tính" (Hợp nhất 55 + ○ = Đạo):**
+  Tổng hợp cả 6 ngày trên một cách tự nhiên, nhẹ nhàng. Dù lịch trình bận rộn đến đâu, luôn giữ một góc tâm trí rỗng rang, mỉm cười đón nhận và lắng lọc mọi trải nghiệm trong ngày thành sự bình an.
