@@ -1344,10 +1344,42 @@ async function libOpenReader(i){
         marked.setOptions({breaks:true,gfm:true});
         const renderer=new marked.Renderer();
         renderer.table=(header,body)=>`<div class="table-wrap"><table><thead>${header}</thead><tbody>${body}</tbody></table></div>`;
-        // Clean LaTeX math: $$...$$ và $...$ → giữ nội dung, bỏ $
-        const clean=text
-          .replace(/\$\$([^$]+)\$\$/g,(_,m)=>m.trim())
-          .replace(/\$([^$\n]+)\$/g,(_,m)=>m.trim());
+        // Clean LaTeX math: $$...$$ và $...$ → chuyển thành ký hiệu Unicode
+        const latexMap={
+          '\\\\sim':'∼','\\\\approx':'≈','\\\\neq':'≠','\\\\leq':'≤','\\\\geq':'≥',
+          '\\\\times':'×','\\\\div':'÷','\\\\pm':'±','\\\\infty':'∞',
+          '\\\\bigcirc':'○','\\\\circ':'∘','\\\\bullet':'•','\\\\cdot':'·',
+          '\\\\alpha':'α','\\\\beta':'β','\\\\gamma':'γ','\\\\delta':'δ',
+          '\\\\epsilon':'ε','\\\\theta':'θ','\\\\lambda':'λ','\\\\mu':'μ',
+          '\\\\pi':'π','\\\\sigma':'σ','\\\\phi':'φ','\\\\omega':'ω',
+          '\\\\sum':'∑','\\\\prod':'∏','\\\\int':'∫',
+          '\\\\rightarrow':'→','\\\\leftarrow':'←','\\\\Rightarrow':'⇒',
+          '\\\\to':'→','\\\\sqrt':'√',
+        };
+        function cleanLatex(str){
+          // $$...$$ block
+          str=str.replace(/\$\$([^$]+)\$\$/g,(_,m)=>{
+            let s=m.trim();
+            for(const[k,v] of Object.entries(latexMap)) s=s.replace(new RegExp(k,'g'),v);
+            // log_{n} → log_n
+            s=s.replace(/log_\{([^}]+)\}/g,'log₍$1₎');
+            s=s.replace(/([a-zA-Z0-9])_\{([^}]+)\}/g,'$1₍$2₎');
+            s=s.replace(/([a-zA-Z0-9])\^+\{([^}]+)\}/g,'$1^($2)');
+            return s;
+          });
+          // $...$ inline
+          str=str.replace(/\$([^$\n]+)\$/g,(_,m)=>{
+            let s=m.trim();
+            for(const[k,v] of Object.entries(latexMap)) s=s.replace(new RegExp(k,'g'),v);
+            // log_{n} → log(n)
+            s=s.replace(/log_\{([^}]+)\}/g,'log($1)');
+            s=s.replace(/([a-zA-Z0-9])_\{([^}]+)\}/g,'$1_$2');
+            s=s.replace(/([a-zA-Z0-9])\^\{([^}]+)\}/g,'$1^$2');
+            return s;
+          });
+          return str;
+        }
+        const clean=cleanLatex(text);
         body.innerHTML=marked.parse(clean,{renderer});
       } else {
         body.innerHTML=`<pre style="white-space:pre-wrap;word-break:break-word;font-size:.82rem;line-height:1.65;font-family:inherit">${text.replace(/</g,'&lt;').replace(/>/g,'&gt;')}</pre>`;
