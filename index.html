@@ -2,520 +2,450 @@
 <html lang="vi">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sổ Tay Bỏ Túi — 10 Câu Thần Chú Của Kẻ Làm Biếng</title>
-<meta name="description" content="Cẩm nang sống thuận dòng, ngắt phản xạ thừa và gạt về rỗng. Tác giả: Anh 3. Kèm Bookmark Bàn Tính Gạt 5 Nấc.">
-<meta name="author" content="Anh 3">
-<meta property="og:title" content="Sổ Tay Bỏ Túi — 10 Câu Thần Chú Của Kẻ Làm Biếng">
-<meta property="og:description" content="Cẩm nang sống thuận dòng ∼, ngắt phản xạ thừa và gạt về rỗng ○. Tác giả: Anh 3.">
-<meta property="og:locale" content="vi_VN">
-<meta name="theme-color" content="#1a1208">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>10 Câu Thần Chú Của Kẻ Làm Biếng — Anh 3</title>
+<meta name="description" content="Cẩm nang sống thuận dòng, ngắt phản xạ thừa và gạt về rỗng. 10 câu thần chú + Bàn Tính Gạt 5 Nấc tương tác.">
+<meta name="theme-color" content="#1a0f04">
 <script src="https://cdn.jsdelivr.net/npm/marked@9/marked.min.js"></script>
 <style>
-/* ===== RESET & BASE ===== */
-*{box-sizing:border-box;margin:0;padding:0}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
 :root{
+  --bg:#1a0f04;
+  --bg2:#251508;
+  --gold:#c8922a;
+  --gold2:#e8b860;
+  --gold3:rgba(200,146,42,0.15);
+  --text:#f0ddb8;
+  --text2:rgba(240,221,184,0.7);
+  --text3:rgba(240,221,184,0.4);
+  --rule:rgba(200,146,42,0.2);
+  --green:#2d6b45;
+  --green2:#4aa870;
   --paper:#fdf6e3;
-  --paper2:#f5ead0;
   --ink:#2c1a06;
   --ink2:#5a3e1b;
   --ink3:#8a6840;
   --accent:#7a4b1a;
-  --accent2:#b8762a;
-  --green:#2d5a3d;
-  --green2:#4a8a60;
-  --rule:#d4b896;
-  --shadow:rgba(60,30,5,0.18);
-  --font-serif:'Georgia','Times New Roman',serif;
+  --radius:12px;
+  --font-serif:Georgia,'Times New Roman',serif;
   --font-sans:'Segoe UI',system-ui,sans-serif;
-  --radius:4px;
 }
-
-html{scroll-behavior:smooth}
+html,body{height:100%;overflow:hidden}
 body{
-  background:#2a1a08;
-  background-image:
-    radial-gradient(ellipse at 20% 50%, rgba(60,35,10,0.6) 0%, transparent 60%),
-    radial-gradient(ellipse at 80% 50%, rgba(40,25,8,0.4) 0%, transparent 60%);
-  min-height:100dvh;
+  background:var(--bg);
   font-family:var(--font-sans);
-  display:flex;flex-direction:column;align-items:center;
-}
-
-/* ===== BOOK CONTAINER ===== */
-#book-wrap{
-  width:100%;max-width:520px;
-  min-height:100dvh;
-  background:var(--paper);
-  position:relative;
-  box-shadow:
-    -6px 0 24px rgba(0,0,0,0.4),
-    6px 0 24px rgba(0,0,0,0.4),
-    0 0 60px rgba(0,0,0,0.5);
-}
-
-/* Paper texture overlay */
-#book-wrap::before{
-  content:'';
-  position:absolute;inset:0;
-  pointer-events:none;z-index:0;
-  background-image:
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
-  opacity:0.5;
-}
-
-/* ===== SPINE (left border) ===== */
-#book-wrap::after{
-  content:'';
-  position:absolute;top:0;left:0;bottom:0;width:6px;
-  background:linear-gradient(to right, #8a5a20, #c48a40, #8a5a20);
-  box-shadow:2px 0 8px rgba(0,0,0,0.3);
-}
-
-/* ===== COVER PAGE ===== */
-#cover{
-  min-height:100dvh;
+  color:var(--text);
   display:flex;flex-direction:column;
-  align-items:center;justify-content:center;
-  padding:48px 36px 36px 42px;
-  background:linear-gradient(160deg, #2d1a08 0%, #1a0f04 50%, #251508 100%);
-  color:var(--paper);
+  max-width:430px;margin:0 auto;
   position:relative;
-  overflow:hidden;
-  cursor:pointer;
 }
-#cover::before{
-  content:'';position:absolute;inset:0;
-  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Ccircle cx='100' cy='100' r='80' fill='none' stroke='rgba(200,160,80,0.08)' stroke-width='40'/%3E%3Ccircle cx='100' cy='100' r='50' fill='none' stroke='rgba(200,160,80,0.05)' stroke-width='20'/%3E%3C/svg%3E") center/300px;
-}
-.cover-ornament{
-  font-size:3.5rem;margin-bottom:24px;
-  animation:float 4s ease-in-out infinite;
-}
-@keyframes float{
-  0%,100%{transform:translateY(0)}
-  50%{transform:translateY(-8px)}
-}
-.cover-series{
-  font-size:.72rem;letter-spacing:3px;text-transform:uppercase;
-  color:rgba(200,160,80,0.7);margin-bottom:16px;font-family:var(--font-sans);
-}
-.cover-title{
-  font-family:var(--font-serif);
-  font-size:1.75rem;font-weight:700;line-height:1.3;
-  text-align:center;color:#fdf0d0;
-  margin-bottom:16px;
-  text-shadow:0 2px 8px rgba(0,0,0,0.5);
-}
-.cover-subtitle{
-  font-size:.88rem;font-style:italic;
-  color:rgba(220,185,120,0.85);text-align:center;line-height:1.6;
-  margin-bottom:32px;
-}
-.cover-rule{
-  width:60px;height:1.5px;
-  background:linear-gradient(to right, transparent, rgba(200,160,80,0.6), transparent);
-  margin:0 auto 24px;
-}
-.cover-author{
-  font-size:.82rem;letter-spacing:1.5px;
-  color:rgba(200,160,80,0.65);text-align:center;
-}
-.cover-cta{
-  position:absolute;bottom:28px;
-  display:flex;align-items:center;gap:8px;
-  font-size:.78rem;color:rgba(200,160,80,0.5);
-  animation:pulse 2s ease-in-out infinite;
-}
-@keyframes pulse{0%,100%{opacity:0.5}50%{opacity:1}}
 
-/* ===== TABLE OF CONTENTS ===== */
-#toc{
-  padding:36px 36px 36px 48px;
+/* ===== HEADER ===== */
+#hdr{
+  flex-shrink:0;
+  padding:env(safe-area-inset-top,12px) 16px 0;
+  background:linear-gradient(to bottom,rgba(26,15,4,0.98),rgba(26,15,4,0.92));
+  backdrop-filter:blur(16px);
   border-bottom:1px solid var(--rule);
-  display:none;
+  position:relative;z-index:10;
 }
-.toc-heading{
-  font-family:var(--font-serif);font-size:1.1rem;
-  color:var(--accent);letter-spacing:.5px;
-  margin-bottom:20px;text-align:center;
-  font-style:italic;
+#hdr-top{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:10px 0 8px;
 }
-.toc-item{
-  display:flex;align-items:baseline;gap:0;
-  padding:7px 0;border-bottom:1px dotted var(--rule);
-  cursor:pointer;transition:color .15s;
+.hdr-title{font-size:.72rem;letter-spacing:2px;color:var(--text3);text-transform:uppercase}
+#menu-btn{
+  background:none;border:none;color:var(--text3);
+  font-size:1.2rem;cursor:pointer;padding:4px 6px;
+  border-radius:8px;transition:.15s;line-height:1;
 }
-.toc-item:hover .toc-label{color:var(--accent)}
-.toc-item:hover .toc-pg{color:var(--accent)}
-.toc-num{
-  font-size:.72rem;color:var(--ink3);min-width:28px;
+#menu-btn:hover{background:var(--gold3);color:var(--gold)}
+
+/* ===== TABS ===== */
+#tabs{
+  display:flex;gap:0;
+  border-top:1px solid var(--rule);
+}
+.tab{
+  flex:1;padding:10px 4px 11px;
+  background:none;border:none;cursor:pointer;
+  font-size:.72rem;font-weight:600;letter-spacing:.5px;
+  color:var(--text3);transition:.15s;
+  border-bottom:2px solid transparent;
   font-family:var(--font-sans);
 }
-.toc-label{
-  flex:1;font-size:.9rem;color:var(--ink2);line-height:1.4;
-  font-family:var(--font-serif);
-}
-.toc-dots{
-  flex:1;border-bottom:1px dotted var(--rule);
-  margin:0 8px;min-width:20px;align-self:flex-end;
-  margin-bottom:4px;
-}
-.toc-pg{font-size:.78rem;color:var(--ink3);font-family:var(--font-sans)}
-.toc-sub{padding-left:28px}
-.toc-sub .toc-label{font-size:.82rem}
+.tab.active{color:var(--gold2);border-bottom-color:var(--gold2)}
+.tab:hover:not(.active){color:var(--text2)}
 
-/* ===== CHAPTER PAGES ===== */
-#chapters{display:none}
-.chapter{
-  padding:36px 36px 48px 48px;
+/* ===== MAIN SCROLL AREA ===== */
+#main{
+  flex:1;overflow-y:auto;overflow-x:hidden;
+  scroll-behavior:smooth;
+  -webkit-overflow-scrolling:touch;
+}
+#main::-webkit-scrollbar{width:0}
+
+/* ===== SCREENS ===== */
+.screen{display:none;min-height:100%}
+.screen.active{display:block}
+
+/* ===== SCREEN 1: THẦN CHÚ ===== */
+#screen-mantra{padding:0 0 100px}
+
+/* Hero strip */
+.mantra-hero{
+  padding:20px 18px 16px;
+  background:linear-gradient(135deg,rgba(200,146,42,0.08),rgba(200,146,42,0.03));
   border-bottom:1px solid var(--rule);
-  display:none;
+  display:flex;align-items:center;gap:14px;
 }
-.chapter.active{display:block}
-.chapter-label{
-  font-size:.7rem;letter-spacing:3px;text-transform:uppercase;
-  color:var(--ink3);margin-bottom:12px;font-family:var(--font-sans);
-}
-.chapter-title{
-  font-family:var(--font-serif);font-size:1.4rem;font-weight:700;
-  color:var(--accent);line-height:1.3;margin-bottom:8px;
-}
-.chapter-sub{
-  font-size:.88rem;font-style:italic;color:var(--ink3);
-  margin-bottom:28px;line-height:1.5;
-  padding-bottom:16px;border-bottom:1px solid var(--rule);
-}
-
-/* Chapter body content */
-.chapter-body{font-family:var(--font-serif);color:var(--ink);line-height:1.8;font-size:.97rem}
-.chapter-body p{margin:0 0 14px}
-.chapter-body strong{color:var(--accent);font-weight:700}
-.chapter-body em{color:var(--ink2);font-style:italic}
-.chapter-body h2{
-  font-size:1.1rem;color:var(--accent);margin:28px 0 12px;
-  font-family:var(--font-serif);border-bottom:1px solid var(--rule);
-  padding-bottom:6px;
-}
-.chapter-body h3{
-  font-size:.95rem;color:var(--accent2);margin:22px 0 10px;
-  font-family:var(--font-serif);
-}
-.chapter-body h4{font-size:.9rem;color:var(--ink2);margin:16px 0 8px}
-.chapter-body ul,.chapter-body ol{padding-left:1.4em;margin:8px 0 14px}
-.chapter-body li{margin:5px 0;line-height:1.7}
-.chapter-body blockquote{
-  border-left:3px solid var(--accent2);
-  margin:16px 0;padding:12px 16px;
-  background:rgba(180,120,40,0.06);border-radius:0 var(--radius) var(--radius) 0;
-  font-style:italic;color:var(--ink2);
-}
-.chapter-body hr{border:none;border-top:1px solid var(--rule);margin:24px 0}
-.chapter-body code{
-  background:rgba(120,80,30,0.1);border-radius:3px;
-  padding:1px 5px;font-size:.82rem;font-family:monospace;
-}
-.chapter-body pre{
-  background:rgba(120,80,30,0.08);border-radius:var(--radius);
-  padding:14px;overflow-x:auto;margin:14px 0;font-size:.78rem;
-  line-height:1.6;border:1px solid var(--rule);font-family:monospace;
-}
-.chapter-body pre code{background:none;padding:0}
-.chapter-body table{
-  border-collapse:collapse;width:100%;font-size:.82rem;margin:12px 0;
-}
-.chapter-body th{
-  background:rgba(120,80,30,0.12);color:var(--accent);
-  font-weight:700;padding:8px 10px;border:1px solid var(--rule);text-align:left;
-}
-.chapter-body td{
-  padding:7px 10px;border:1px solid var(--rule);vertical-align:top;
-}
-.chapter-body tr:nth-child(even) td{background:rgba(120,80,30,0.04)}
-
-/* ===== MANTRA CARDS ===== */
-.mantra-card{
-  background:linear-gradient(135deg, #fdf0d0, #f5e4b8);
-  border:1px solid var(--rule);border-radius:8px;
-  padding:18px 20px;margin:14px 0;
-  position:relative;
-  box-shadow:0 2px 8px rgba(120,70,20,0.1);
-}
-.mantra-num{
-  position:absolute;top:-10px;left:16px;
-  background:var(--accent);color:var(--paper);
-  font-size:.72rem;font-weight:700;
-  padding:2px 10px;border-radius:12px;
-  font-family:var(--font-sans);letter-spacing:.5px;
-}
-.mantra-text{
-  font-family:var(--font-serif);font-size:1rem;font-weight:700;
-  color:var(--accent);line-height:1.4;margin-bottom:8px;margin-top:4px;
-}
-.mantra-note{
-  font-size:.85rem;color:var(--ink2);font-style:italic;line-height:1.6;
-}
-
-/* ===== QA CARDS ===== */
-.qa-group-title{
-  font-family:var(--font-serif);font-size:.95rem;font-weight:700;
-  color:var(--green);margin:24px 0 12px;
-  padding:8px 14px;background:rgba(45,90,61,0.08);
-  border-left:3px solid var(--green);border-radius:0 var(--radius) var(--radius) 0;
-}
-.qa-item{
-  margin-bottom:14px;
-  border-bottom:1px dotted var(--rule);padding-bottom:14px;
-}
-.qa-item:last-child{border-bottom:none}
-.qa-q{
-  font-size:.9rem;font-weight:700;color:var(--ink);
-  line-height:1.5;margin-bottom:6px;font-family:var(--font-serif);
-  display:flex;gap:8px;
-}
-.qa-q::before{
-  content:'H';flex-shrink:0;
-  background:var(--accent2);color:#fff;
-  font-size:.68rem;font-weight:700;
-  width:18px;height:18px;border-radius:50%;
+.hero-circle{
+  width:52px;height:52px;border-radius:50%;
+  background:linear-gradient(135deg,rgba(200,146,42,0.2),rgba(200,146,42,0.05));
+  border:1.5px solid rgba(200,146,42,0.3);
   display:flex;align-items:center;justify-content:center;
-  margin-top:2px;font-family:var(--font-sans);
+  font-size:1.5rem;flex-shrink:0;
+  animation:spin-slow 12s linear infinite;
 }
-.qa-a{
-  font-size:.88rem;color:var(--ink2);line-height:1.7;
-  font-family:var(--font-serif);
-  padding-left:26px;
-}
-.qa-a-label{
-  display:inline;font-weight:700;color:var(--green);
-}
+@keyframes spin-slow{from{transform:rotate(0)}to{transform:rotate(360deg)}}
+.hero-text h1{font-family:var(--font-serif);font-size:1.1rem;font-weight:700;color:var(--gold2);line-height:1.3}
+.hero-text p{font-size:.75rem;color:var(--text3);margin-top:4px;line-height:1.5}
 
-/* ===== BOOKMARK GUIDE ===== */
-.bookmark-visual{
-  background:linear-gradient(160deg,#2d1a08,#1a0f04);
-  color:#fdf0d0;border-radius:8px;
-  padding:24px 20px;margin:20px 0;
-  font-family:var(--font-sans);
+/* Bàn tính gạt interactive */
+#abacus{
+  margin:14px 16px;
+  background:linear-gradient(135deg,rgba(200,146,42,0.06),rgba(200,146,42,0.02));
+  border:1px solid var(--rule);border-radius:var(--radius);
+  padding:14px 16px;
+  user-select:none;
 }
-.bookmark-track{
-  display:flex;flex-direction:column;gap:0;
-  margin:16px 0;
+.abacus-title{
+  font-size:.68rem;letter-spacing:2px;text-transform:uppercase;
+  color:var(--text3);margin-bottom:12px;text-align:center;
 }
-.bookmark-notch{
-  display:flex;align-items:center;gap:12px;
-  padding:8px 0;border-bottom:1px solid rgba(200,160,80,0.2);
+.abacus-row{
+  display:flex;align-items:center;gap:10px;
+  padding:7px 0;border-bottom:1px solid var(--rule);
+  cursor:pointer;transition:background .1s;
+  border-radius:6px;padding:7px 6px;margin:1px 0;
 }
-.notch-label{
-  min-width:68px;font-size:.78rem;font-weight:700;
-  color:rgba(200,160,80,0.9);
+.abacus-row:last-child{border-bottom:none}
+.abacus-row:hover{background:rgba(200,146,42,0.05)}
+.abacus-row.active-notch .ab-label{color:var(--gold2)}
+.abacus-row.active-notch .ab-track-fill{box-shadow:0 0 8px rgba(232,184,96,0.5)}
+.ab-label{
+  min-width:52px;font-size:.72rem;font-weight:700;
+  color:var(--text3);font-family:monospace;transition:.2s;
 }
-.notch-bar{
-  flex:1;height:6px;background:rgba(200,160,80,0.15);
+.ab-track{
+  flex:1;height:8px;background:rgba(255,255,255,0.05);
+  border-radius:4px;overflow:hidden;position:relative;
+}
+.ab-track-fill{
+  height:100%;border-radius:4px;
+  background:linear-gradient(to right,var(--gold),var(--gold2));
+  transition:width .35s cubic-bezier(.4,0,.2,1);
+}
+.ab-num{
+  min-width:52px;text-align:right;font-size:.7rem;
+  color:var(--text3);font-family:monospace;
+}
+.ab-clip{
+  width:16px;height:16px;border-radius:50%;
+  background:var(--gold);box-shadow:0 0 6px rgba(200,146,42,0.6);
+  position:absolute;top:50%;transform:translate(-50%,-50%);
+  transition:left .35s cubic-bezier(.4,0,.2,1);
+  pointer-events:none;
+}
+/* Breath indicator */
+#breath-bar{
+  margin:0 16px 14px;
+  display:flex;align-items:center;gap:10px;
+  padding:10px 14px;
+  background:rgba(45,107,69,0.12);
+  border:1px solid rgba(74,168,112,0.2);
+  border-radius:var(--radius);
+}
+.breath-label{font-size:.72rem;color:rgba(74,168,112,0.7);min-width:40px}
+.breath-track{
+  flex:1;height:5px;background:rgba(74,168,112,0.1);
   border-radius:3px;overflow:hidden;
 }
-.notch-fill{background:linear-gradient(to right,#c48a40,#e8b860);height:100%}
-.notch-num{
-  font-size:.75rem;color:rgba(200,160,80,0.65);
-  min-width:60px;text-align:right;font-family:monospace;
+.breath-fill{
+  height:100%;border-radius:3px;width:0%;
+  background:linear-gradient(to right,#2d6b45,#4aa870);
 }
-.notch-time{font-size:.72rem;color:rgba(200,160,80,0.5)}
+#breath-cta{
+  font-size:.7rem;color:rgba(74,168,112,0.6);min-width:36px;text-align:right;
+}
+#breath-btn{
+  background:rgba(45,107,69,0.3);border:1px solid rgba(74,168,112,0.3);
+  color:#4aa870;padding:5px 12px;border-radius:20px;
+  font-size:.72rem;cursor:pointer;font-family:var(--font-sans);
+  transition:.15s;white-space:nowrap;
+}
+#breath-btn:hover{background:rgba(45,107,69,0.5)}
+#breath-btn.running{background:rgba(74,168,112,0.2);color:rgba(74,168,112,0.5)}
 
-/* ===== STEP CARDS ===== */
-.step-card{
-  display:flex;gap:14px;margin:16px 0;
-  padding:14px 16px;
-  background:rgba(120,80,30,0.06);
-  border-radius:var(--radius);
-  border-left:3px solid var(--accent2);
-}
-.step-num{
-  flex-shrink:0;width:28px;height:28px;
-  background:var(--accent);color:var(--paper);
-  border-radius:50%;display:flex;align-items:center;justify-content:center;
-  font-size:.8rem;font-weight:700;font-family:var(--font-sans);
-}
-.step-text{font-size:.9rem;color:var(--ink);line-height:1.6;font-family:var(--font-serif)}
-.step-text strong{color:var(--accent)}
-
-/* ===== NAVIGATION ===== */
-#book-nav{
-  position:sticky;top:0;z-index:100;
-  background:rgba(253,246,227,0.95);
-  backdrop-filter:blur(12px);
-  -webkit-backdrop-filter:blur(12px);
-  border-bottom:1px solid var(--rule);
-  padding:10px 16px 10px 22px;
-  display:none;
-  align-items:center;gap:8px;
-}
-.nav-title{
-  flex:1;font-size:.82rem;color:var(--ink2);
-  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
-  font-family:var(--font-serif);font-style:italic;
-}
-.nav-btn{
-  background:none;border:1px solid var(--rule);
-  color:var(--ink2);padding:5px 12px;border-radius:14px;
-  font-size:.75rem;cursor:pointer;transition:.15s;white-space:nowrap;
-  font-family:var(--font-sans);
-}
-.nav-btn:hover{background:var(--rule);color:var(--ink)}
-.nav-btn.active{background:var(--accent);border-color:var(--accent);color:#fff}
-#toc-toggle{
-  background:none;border:none;cursor:pointer;
-  font-size:1rem;color:var(--ink3);padding:4px 6px;
-  border-radius:var(--radius);transition:.15s;
-}
-#toc-toggle:hover{background:rgba(120,80,30,0.1)}
-
-/* ===== PAGE FOOTER ===== */
-.page-footer{
-  display:flex;justify-content:space-between;align-items:center;
-  padding:16px 36px 16px 48px;
-  border-top:1px solid var(--rule);
-  margin-top:8px;
-}
-.pg-btn{
-  background:none;border:none;cursor:pointer;
-  color:var(--ink3);font-size:.85rem;padding:6px 0;
-  font-family:var(--font-serif);font-style:italic;
-  transition:.15s;display:flex;align-items:center;gap:6px;
-}
-.pg-btn:hover{color:var(--accent)}
-.pg-btn:disabled{opacity:.3;cursor:default}
-.pg-num{font-size:.75rem;color:var(--ink3);font-family:var(--font-sans)}
-
-/* ===== SECONDARY CONTENT (old features) ===== */
-#secondary-btn{
-  position:fixed;bottom:20px;right:20px;z-index:200;
-  width:46px;height:46px;border-radius:50%;
-  background:rgba(45,26,8,0.85);
-  backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
-  border:1.5px solid rgba(200,160,80,0.4);
-  color:rgba(200,160,80,0.8);font-size:1.2rem;
-  cursor:pointer;display:flex;align-items:center;justify-content:center;
-  box-shadow:0 4px 20px rgba(0,0,0,0.4);
-  transition:.2s;
-}
-#secondary-btn:hover{background:rgba(60,35,10,0.95)}
-
-/* ===== SECONDARY DRAWER ===== */
-#secondary-drawer{
-  position:fixed;inset:0;z-index:300;
-  background:rgba(0,0,0,0.6);
-  backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);
-  display:flex;align-items:flex-end;justify-content:center;
-  opacity:0;pointer-events:none;transition:opacity .25s;
-}
-#secondary-drawer.open{opacity:1;pointer-events:auto}
-#secondary-sheet{
-  width:100%;max-width:520px;
-  background:var(--paper);
-  border-radius:20px 20px 0 0;
-  padding:20px 24px 36px;
-  transform:translateY(100%);
-  transition:transform .3s cubic-bezier(.4,0,.2,1);
-  max-height:80dvh;overflow-y:auto;
-}
-#secondary-drawer.open #secondary-sheet{transform:translateY(0)}
-.drawer-handle{
-  width:36px;height:4px;background:var(--rule);
-  border-radius:2px;margin:0 auto 20px;
-}
-.drawer-title{
-  font-family:var(--font-serif);font-size:1rem;font-weight:700;
-  color:var(--accent);margin-bottom:16px;
-}
-.drawer-item{
-  display:flex;align-items:center;gap:14px;
-  padding:14px 0;border-bottom:1px solid var(--rule);
-  cursor:pointer;text-decoration:none;color:inherit;
-  transition:.15s;
-}
-.drawer-item:last-child{border-bottom:none}
-.drawer-item:hover .di-label{color:var(--accent)}
-.di-icon{font-size:1.4rem;width:36px;text-align:center;flex-shrink:0}
-.di-label{font-size:.9rem;color:var(--ink2);font-family:var(--font-serif)}
-.di-sub{font-size:.75rem;color:var(--ink3);display:block;margin-top:2px}
-
-/* Library modal reuse */
-#lib-overlay{
-  position:fixed;inset:0;z-index:1200;
-  background:rgba(0,0,0,0.55);
-  backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);
-  display:flex;align-items:flex-end;justify-content:center;
-  opacity:0;pointer-events:none;transition:opacity .25s;
-}
-#lib-overlay.open{opacity:1;pointer-events:auto;}
-#lib-sheet{
-  width:100%;max-width:520px;
-  background:var(--paper);
-  border-radius:24px 24px 0 0;
-  padding:20px 20px 36px;
-  transform:translateY(100%);transition:transform .3s cubic-bezier(.4,0,.2,1);
-  max-height:92dvh;overflow-y:auto;
-}
-#lib-overlay.open #lib-sheet{transform:translateY(0);}
-.lib-file-item{
-  display:flex;align-items:center;gap:10px;
-  padding:10px 12px;border-radius:10px;
-  background:rgba(120,80,30,0.06);
-  margin-bottom:8px;cursor:pointer;transition:background .15s;
+/* Mantra list */
+.mantra-list{padding:0 16px}
+.m-item{
+  display:flex;gap:12px;align-items:flex-start;
+  padding:13px 14px;
+  background:rgba(255,255,255,0.025);
   border:1px solid var(--rule);
+  border-radius:var(--radius);
+  margin-bottom:9px;
+  cursor:pointer;
+  transition:.15s;
+  position:relative;overflow:hidden;
 }
-.lib-file-item:hover{background:rgba(120,80,30,0.12)}
-.lib-file-icon{font-size:1.4rem;flex-shrink:0}
-.lib-file-info{flex:1;min-width:0}
-.lib-file-name{font-size:.88rem;font-weight:600;line-height:1.35;word-break:break-word;color:var(--ink)}
-.lib-file-meta{font-size:.74rem;color:var(--ink3);margin-top:2px}
-.lib-file-actions{display:flex;gap:6px;flex-shrink:0}
-.lib-btn{
-  background:var(--accent);border:none;color:#fff;border-radius:7px;
-  padding:5px 10px;font-size:.75rem;cursor:pointer;transition:background .15s;
+.m-item::before{
+  content:'';position:absolute;left:0;top:0;bottom:0;width:3px;
+  background:linear-gradient(to bottom,var(--gold),transparent);
+  opacity:0;transition:.2s;
+}
+.m-item:hover::before,.m-item.expanded::before{opacity:1}
+.m-item:hover{background:rgba(200,146,42,0.05);border-color:rgba(200,146,42,0.3)}
+.m-item.expanded{background:rgba(200,146,42,0.07);border-color:rgba(200,146,42,0.35)}
+.m-num{
+  flex-shrink:0;width:24px;height:24px;
+  background:linear-gradient(135deg,rgba(200,146,42,0.25),rgba(200,146,42,0.1));
+  border:1px solid rgba(200,146,42,0.3);
+  border-radius:50%;display:flex;align-items:center;justify-content:center;
+  font-size:.7rem;font-weight:700;color:var(--gold);font-family:monospace;
+  margin-top:1px;flex-shrink:0;
+}
+.m-body{flex:1;min-width:0}
+.m-text{
+  font-family:var(--font-serif);font-size:.92rem;font-weight:600;
+  color:var(--text);line-height:1.4;
+}
+.m-note{
+  font-size:.8rem;color:var(--text2);line-height:1.6;
+  margin-top:8px;display:none;
+  border-top:1px solid var(--rule);padding-top:8px;
+}
+.m-item.expanded .m-note{display:block}
+.m-arrow{
+  flex-shrink:0;font-size:.75rem;color:var(--text3);
+  transition:transform .2s;margin-top:3px;
+}
+.m-item.expanded .m-arrow{transform:rotate(90deg)}
+
+/* CTA button to 39 situations */
+#cta-39{
+  margin:18px 16px 0;
+  background:linear-gradient(135deg,var(--green),#1f4d31);
+  border:1px solid rgba(74,168,112,0.3);
+  border-radius:var(--radius);
+  padding:16px 20px;
+  display:flex;align-items:center;justify-content:space-between;
+  cursor:pointer;transition:.15s;
   text-decoration:none;
 }
-.lib-btn:hover{background:var(--accent2)}
-.lib-btn.sec{background:rgba(120,80,30,0.15);color:var(--ink2)}
-.lib-btn.sec:hover{background:rgba(120,80,30,0.25)}
+#cta-39:hover{background:linear-gradient(135deg,#366b4a,#1f4d31);border-color:rgba(74,168,112,0.5)}
+.cta-left h3{font-size:.95rem;font-weight:700;color:#c8f0d8}
+.cta-left p{font-size:.75rem;color:rgba(200,240,216,0.6);margin-top:3px}
+.cta-arr{font-size:1.5rem;color:rgba(74,168,112,0.5)}
+
+/* ===== SCREEN 2: 39 TÌNH HUỐNG ===== */
+#screen-qa{padding:0 0 80px}
+
+.qa-hero{
+  padding:16px 18px 14px;
+  background:linear-gradient(135deg,rgba(45,107,69,0.15),rgba(45,107,69,0.05));
+  border-bottom:1px solid var(--rule);
+}
+.qa-hero h2{font-family:var(--font-serif);font-size:1.05rem;color:#c8f0d8;font-weight:700}
+.qa-hero p{font-size:.75rem;color:rgba(200,240,216,0.5);margin-top:4px}
+
+.group-block{padding:0 16px;margin-top:14px}
+.group-hd{
+  font-size:.72rem;letter-spacing:1.5px;text-transform:uppercase;
+  color:var(--green2);padding:6px 12px;
+  background:rgba(45,107,69,0.12);
+  border-left:3px solid var(--green2);border-radius:0 6px 6px 0;
+  margin-bottom:10px;
+}
+.qa-card{
+  background:rgba(255,255,255,0.025);
+  border:1px solid var(--rule);border-radius:var(--radius);
+  margin-bottom:8px;overflow:hidden;
+}
+.qa-q-row{
+  display:flex;align-items:flex-start;gap:10px;
+  padding:12px 14px;cursor:pointer;transition:background .12s;
+}
+.qa-q-row:hover{background:rgba(200,146,42,0.04)}
+.qa-q-badge{
+  flex-shrink:0;background:rgba(200,146,42,0.15);color:var(--gold);
+  font-size:.65rem;font-weight:700;padding:2px 7px;border-radius:10px;
+  margin-top:2px;font-family:monospace;
+}
+.qa-q-text{flex:1;font-size:.87rem;color:var(--text);line-height:1.45;font-family:var(--font-serif)}
+.qa-toggle{color:var(--text3);font-size:.8rem;transition:.2s;flex-shrink:0;margin-top:3px}
+.qa-card.open .qa-toggle{transform:rotate(90deg)}
+.qa-a-row{
+  display:none;padding:0 14px 13px 14px;
+  border-top:1px solid var(--rule);
+  padding-top:11px;
+}
+.qa-card.open .qa-a-row{display:block}
+.qa-a-label{
+  font-size:.68rem;font-weight:700;color:var(--green2);
+  letter-spacing:.5px;margin-bottom:5px;
+}
+.qa-a-text{font-size:.85rem;color:var(--text2);line-height:1.7;font-family:var(--font-serif)}
+.qa-a-text strong{color:var(--gold2);font-weight:700}
+.qa-a-text em{color:var(--text2);font-style:italic}
+
+/* ===== SCREEN 3: Bàn Tính (full) ===== */
+#screen-bookmark{padding:16px 16px 80px}
+.bk-hero{text-align:center;margin-bottom:20px}
+.bk-hero h2{font-family:var(--font-serif);font-size:1.1rem;color:var(--gold2);margin-bottom:6px}
+.bk-hero p{font-size:.78rem;color:var(--text3);line-height:1.6}
+
+.bk-abacus{
+  background:linear-gradient(160deg,#2d1a08,#1a0f04);
+  border:1px solid rgba(200,146,42,0.25);
+  border-radius:var(--radius);padding:20px 18px;margin-bottom:16px;
+}
+.bk-notch{
+  display:flex;align-items:center;gap:12px;
+  padding:10px 0;border-bottom:1px solid rgba(200,146,42,0.12);
+}
+.bk-notch:last-child{border-bottom:none}
+.bk-label{
+  min-width:62px;font-size:.75rem;font-weight:700;
+  color:rgba(200,160,80,0.75);font-family:monospace;
+}
+.bk-track{
+  flex:1;height:8px;background:rgba(200,160,80,0.08);
+  border-radius:4px;overflow:hidden;
+}
+.bk-fill{height:100%;background:linear-gradient(to right,#c48a40,#e8b860);border-radius:4px}
+.bk-num{font-size:.7rem;color:rgba(200,160,80,0.5);min-width:58px;text-align:right;font-family:monospace}
+.bk-desc{font-size:.72rem;color:rgba(200,160,80,0.4);min-width:100px}
+
+.use-block{
+  background:rgba(255,255,255,0.025);border:1px solid var(--rule);
+  border-radius:var(--radius);padding:14px 16px;margin-bottom:12px;
+}
+.use-title{
+  font-size:.8rem;font-weight:700;color:var(--gold);margin-bottom:10px;
+  display:flex;align-items:center;gap:8px;
+}
+.use-step{
+  display:flex;gap:10px;margin-bottom:8px;align-items:flex-start;
+  font-size:.83rem;color:var(--text2);line-height:1.6;
+}
+.use-snum{
+  flex-shrink:0;width:20px;height:20px;border-radius:50%;
+  background:rgba(200,146,42,0.2);color:var(--gold);
+  font-size:.68rem;font-weight:700;
+  display:flex;align-items:center;justify-content:center;
+  margin-top:2px;
+}
+
+/* ===== MODALS ===== */
+.modal-overlay{
+  position:fixed;inset:0;z-index:300;
+  background:rgba(0,0,0,0.6);
+  backdrop-filter:blur(6px);
+  display:flex;align-items:flex-end;justify-content:center;
+  opacity:0;pointer-events:none;transition:opacity .25s;
+}
+.modal-overlay.open{opacity:1;pointer-events:auto}
+.modal-sheet{
+  width:100%;max-width:430px;
+  background:#1a0f04;border:1px solid var(--rule);
+  border-radius:20px 20px 0 0;
+  padding:16px 18px 32px;
+  transform:translateY(100%);transition:transform .3s cubic-bezier(.4,0,.2,1);
+  max-height:88dvh;overflow-y:auto;
+}
+.modal-overlay.open .modal-sheet{transform:translateY(0)}
+.modal-handle{
+  width:36px;height:4px;background:rgba(255,255,255,0.1);
+  border-radius:2px;margin:0 auto 16px;
+}
+.modal-title{font-family:var(--font-serif);font-size:1rem;color:var(--gold2);margin-bottom:14px;font-weight:700}
+
+/* Menu items */
+.menu-item{
+  display:flex;align-items:center;gap:14px;
+  padding:13px 0;border-bottom:1px solid var(--rule);
+  cursor:pointer;text-decoration:none;color:inherit;
+  transition:.12s;
+}
+.menu-item:last-child{border-bottom:none}
+.menu-item:hover .mi-label{color:var(--gold)}
+.mi-icon{font-size:1.4rem;width:36px;text-align:center;flex-shrink:0}
+.mi-label{font-size:.9rem;color:var(--text2)}
+.mi-sub{font-size:.74rem;color:var(--text3);display:block;margin-top:2px}
+
+/* Library */
+.lib-item{
+  display:flex;align-items:center;gap:10px;
+  padding:10px 12px;border-radius:10px;
+  background:rgba(255,255,255,0.03);
+  margin-bottom:7px;cursor:pointer;transition:.12s;
+  border:1px solid var(--rule);
+}
+.lib-item:hover{background:rgba(200,146,42,0.07)}
+.lib-name{font-size:.85rem;font-weight:600;color:var(--text);line-height:1.3}
+.lib-meta{font-size:.72rem;color:var(--text3);margin-top:2px}
+.lib-btn{
+  background:var(--accent);border:none;color:#fff;border-radius:7px;
+  padding:5px 10px;font-size:.73rem;cursor:pointer;white-space:nowrap;
+  font-family:var(--font-sans);
+}
+.lib-btn:hover{background:#9a5b1a}
+.lib-btn.sec{background:rgba(200,146,42,0.1);color:var(--text3)}
+
+/* Reader */
 #lib-reader-body{
-  font-size:.9rem;line-height:1.8;color:var(--ink);
-  background:rgba(120,80,30,0.04);border-radius:10px;
-  padding:18px 16px;word-break:break-word;
-  max-height:62dvh;overflow-y:auto;border:1px solid var(--rule);
+  font-size:.88rem;line-height:1.8;color:var(--text);
+  background:rgba(255,255,255,0.025);border-radius:10px;
+  padding:16px 14px;word-break:break-word;
+  max-height:60dvh;overflow-y:auto;border:1px solid var(--rule);
 }
 #lib-reader-body h1,#lib-reader-body h2,#lib-reader-body h3{
-  font-family:var(--font-serif);color:var(--accent);margin:16px 0 8px;
+  color:var(--gold2);font-family:var(--font-serif);margin:14px 0 7px;
 }
 #lib-reader-body p{margin:0 0 10px}
 #lib-reader-body ul,#lib-reader-body ol{padding-left:1.3em;margin:6px 0 10px}
-#lib-reader-body strong{color:var(--accent);font-weight:700}
+#lib-reader-body strong{color:var(--gold2);font-weight:700}
 #lib-reader-body blockquote{
-  border-left:3px solid var(--accent2);margin:12px 0;padding:8px 14px;
-  background:rgba(120,80,30,0.06);border-radius:0 8px 8px 0;font-style:italic;
+  border-left:3px solid var(--gold);margin:10px 0;
+  padding:8px 12px;background:rgba(200,146,42,0.06);border-radius:0 6px 6px 0;font-style:italic;
 }
-#lib-reader-body table{border-collapse:collapse;width:100%;font-size:.82rem;margin:10px 0}
-#lib-reader-body th{background:rgba(120,80,30,0.1);color:var(--accent);padding:8px 10px;border:1px solid var(--rule)}
-#lib-reader-body td{padding:7px 10px;border:1px solid var(--rule)}
-#lib-reader-body .table-wrap{overflow-x:auto;margin:10px 0;border-radius:6px}
-#lib-reader-body hr{border:none;border-top:1px solid var(--rule);margin:14px 0}
-#lib-reader-body code{background:rgba(120,80,30,0.1);border-radius:3px;padding:1px 5px;font-family:monospace;font-size:.82rem}
-#lib-reader-body pre{background:rgba(120,80,30,0.08);border-radius:8px;padding:12px;overflow-x:auto;margin:10px 0;border:1px solid var(--rule)}
+#lib-reader-body table{border-collapse:collapse;width:100%;font-size:.8rem;margin:8px 0}
+#lib-reader-body th{background:rgba(200,146,42,0.1);color:var(--gold2);padding:7px 10px;border:1px solid var(--rule)}
+#lib-reader-body td{padding:6px 10px;border:1px solid var(--rule)}
+#lib-reader-body hr{border:none;border-top:1px solid var(--rule);margin:12px 0}
+#lib-reader-body code{background:rgba(200,146,42,0.1);border-radius:3px;padding:1px 5px;font-family:monospace;font-size:.8rem}
+#lib-reader-body pre{background:rgba(200,146,42,0.06);border-radius:6px;padding:12px;overflow-x:auto;margin:8px 0;border:1px solid var(--rule)}
 #lib-reader-body pre code{background:none;padding:0}
 
-/* Stories modal */
+/* Stories */
 #stories-modal{
-  position:fixed;inset:0;z-index:1200;
-  background:rgba(0,0,0,0.6);
-  display:flex;align-items:center;justify-content:center;
+  position:fixed;inset:0;z-index:300;
+  background:rgba(0,0,0,0.65);
+  display:flex;align-items:flex-end;justify-content:center;
   opacity:0;pointer-events:none;transition:opacity .25s;
 }
 #stories-modal.open{opacity:1;pointer-events:auto}
 #stories-frame{
-  width:100%;max-width:520px;height:90dvh;
-  background:#0a2e1a;border-radius:16px;
-  overflow:hidden;border:1px solid rgba(255,255,255,0.1);
-  transform:translateY(20px);transition:transform .3s ease;
+  width:100%;max-width:430px;
+  height:92dvh;
+  background:#0a2e1a;
+  border-radius:16px 16px 0 0;
+  overflow:hidden;
   display:flex;flex-direction:column;
+  transform:translateY(100%);transition:transform .3s cubic-bezier(.4,0,.2,1);
+  border:1px solid rgba(100,200,130,0.15);border-bottom:none;
 }
 #stories-modal.open #stories-frame{transform:translateY(0)}
 #stories-bar{
@@ -524,503 +454,220 @@ body{
   flex-shrink:0;
 }
 #stories-close:hover{background:rgba(255,255,255,0.1)}
-#stories-content{
-  flex:1;overflow-y:auto;overflow-x:hidden;
-}
-#stories-content::-webkit-scrollbar{width:3px}
-#stories-content::-webkit-scrollbar-track{background:rgba(0,0,0,0.2)}
-#stories-content::-webkit-scrollbar-thumb{background:rgba(100,200,130,0.2);border-radius:2px}
+#stories-content{flex:1;overflow-y:auto;overflow-x:hidden}
+#stories-content::-webkit-scrollbar{width:0}
 
-/* ===== ORNAMENTAL ELEMENTS ===== */
-.drop-cap::first-letter{
-  float:left;font-size:3.5rem;line-height:.75;
-  font-family:var(--font-serif);font-weight:700;
-  color:var(--accent);margin:4px 8px 0 0;
-}
-.section-ornament{
-  text-align:center;color:var(--ink3);font-size:1.2rem;
-  margin:20px 0;letter-spacing:8px;opacity:.5;
-}
-.highlight-box{
-  background:linear-gradient(135deg,rgba(180,120,40,0.08),rgba(180,120,40,0.04));
-  border:1px solid rgba(180,120,40,0.25);
-  border-radius:var(--radius);padding:16px 18px;margin:16px 0;
-  font-style:italic;
-}
-.highlight-box strong{color:var(--accent)}
+/* ===== BOTTOM NAV ===== */
+/* tabs are in header */
 
-/* ===== ANIMATIONS ===== */
-@keyframes page-in{from{opacity:0;transform:translateX(20px)}to{opacity:1;transform:translateX(0)}}
-.chapter.active{animation:page-in .25s ease}
+/* ===== SCROLL POLISH ===== */
+#main::-webkit-scrollbar{width:0}
 
-/* ===== SCROLLBAR ===== */
-#book-wrap::-webkit-scrollbar{width:4px}
-#book-wrap::-webkit-scrollbar-track{background:var(--paper2)}
-#book-wrap::-webkit-scrollbar-thumb{background:var(--rule);border-radius:2px}
+/* ===== FADE-IN ===== */
+@keyframes fadein{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+.screen.active{animation:fadein .2s ease}
 </style>
 </head>
 <body>
 
-<div id="book-wrap">
+<!-- HEADER + TABS -->
+<header id="hdr">
+  <div id="hdr-top">
+    <span class="hdr-title">SỔ TAY BỎ TÚI · ANH 3</span>
+    <button id="menu-btn" onclick="openMenu()" title="Thêm">☰</button>
+  </div>
+  <div id="tabs">
+    <button class="tab active" onclick="switchTab('mantra',this)">🔮 10 Thần Chú</button>
+    <button class="tab" onclick="switchTab('qa',this)">💬 39 Tình Huống</button>
+    <button class="tab" onclick="switchTab('bookmark',this)">📐 Bàn Tính</button>
+  </div>
+</header>
 
-  <!-- STICKY NAV -->
-  <nav id="book-nav">
-    <button id="toc-toggle" onclick="showToc()" title="Mục lục">☰</button>
-    <span class="nav-title" id="nav-current">Mục lục</span>
-    <button class="nav-btn" id="nav-prev" onclick="prevChapter()" disabled>← Trước</button>
-    <button class="nav-btn" id="nav-next" onclick="nextChapter()">Sau →</button>
-  </nav>
+<!-- MAIN -->
+<div id="main">
 
-  <!-- COVER -->
-  <section id="cover" onclick="openBook()">
-    <div class="cover-ornament">○</div>
-    <div class="cover-series">SỔ TAY BỎ TÚI · ANH 3</div>
-    <div class="cover-title">10 Câu Thần Chú<br>Của Kẻ Làm Biếng</div>
-    <div class="cover-rule"></div>
-    <div class="cover-subtitle">
-      Cẩm nang sống thuận dòng (∼),<br>
-      ngắt phản xạ thừa và gạt về rỗng (○)<br>
-      <small style="font-size:.78rem;opacity:.7">Kèm phụ kiện: Bookmark — Bàn Tính Gạt 5 Nấc</small>
-    </div>
-    <div class="cover-rule"></div>
-    <div class="cover-author">TÁC GIẢ: ANH 3 &nbsp;·&nbsp; CC0 — TỰ DO LAN TỎA</div>
-    <div class="cover-cta">
-      <span>Nhấn để mở sách</span>
-      <span>↓</span>
-    </div>
-  </section>
+  <!-- ===== TAB 1: 10 THẦN CHÚ + BÀN TÍNH MINI ===== -->
+  <div id="screen-mantra" class="screen active">
 
-  <!-- TABLE OF CONTENTS -->
-  <section id="toc">
-    <div class="toc-heading">— Mục Lục —</div>
-
-    <div class="toc-item" onclick="gotoChapter(0)">
-      <span class="toc-num"></span>
-      <span class="toc-label">Lời Mở Đầu</span>
-      <span class="toc-dots"></span>
-      <span class="toc-pg">1</span>
-    </div>
-    <div class="toc-item" onclick="gotoChapter(1)">
-      <span class="toc-num">I.</span>
-      <span class="toc-label">10 Câu Thần Chú Ngắt Phản Xạ Nóng Vội</span>
-      <span class="toc-dots"></span>
-      <span class="toc-pg">2</span>
-    </div>
-    <div class="toc-item toc-sub" onclick="gotoChapter(2)">
-      <span class="toc-num">II.</span>
-      <span class="toc-label">39 Cặp Hỏi – Đáp Gỡ Rối Đời Thường</span>
-      <span class="toc-dots"></span>
-      <span class="toc-pg">3</span>
-    </div>
-    <div class="toc-item toc-sub" onclick="gotoChapter(3)">
-      <span class="toc-num">III.</span>
-      <span class="toc-label">Hướng Dẫn Dùng Bookmark</span>
-      <span class="toc-dots"></span>
-      <span class="toc-pg">9</span>
-    </div>
-    <div class="toc-item toc-sub" onclick="gotoChapter(4)">
-      <span class="toc-num">IV.</span>
-      <span class="toc-label">Lời Giới Thiệu & Quy Cách In Ấn (CC0)</span>
-      <span class="toc-dots"></span>
-      <span class="toc-pg">10</span>
-    </div>
-    <div class="toc-item toc-sub" onclick="gotoChapter(5)">
-      <span class="toc-num">V.</span>
-      <span class="toc-label">Phôi Thiết Kế Bookmark Bàn Tính Gạt 5 Nấc</span>
-      <span class="toc-dots"></span>
-      <span class="toc-pg">11</span>
-    </div>
-
-    <div style="margin-top:24px;text-align:center">
-      <button class="nav-btn active" onclick="gotoChapter(0)" style="font-size:.85rem;padding:8px 24px">Bắt đầu đọc →</button>
-    </div>
-  </section>
-
-  <!-- CHAPTERS -->
-  <div id="chapters">
-
-    <!-- CHƯƠNG 0: Lời Mở Đầu -->
-    <article class="chapter active" data-ch="0">
-      <div class="chapter-label">Mở đầu</div>
-      <div class="chapter-title">Nghệ Thuật Không Làm Gì Thừa</div>
-      <div class="chapter-sub">Lời mở đầu</div>
-      <div class="chapter-body">
-        <p class="drop-cap">Cuốn sổ tay này không dạy bạn cách dậy sớm lúc 5 giờ sáng, không dạy cách quản lý thời gian từng phút, cũng không bày cách chạy bở hơi tai để kiếm thật nhiều tiền. Thế giới ngoài kia đã có quá nhiều cuốn sách dạy người ta cách chạy nhanh hơn, gồng cứng hơn và ôm đồm nhiều hơn.</p>
-        <div class="highlight-box">
-          Cuốn sách nhỏ này chỉ dạy đúng một nghề duy nhất: <strong>nghề buông bớt việc thừa để giữ trọn sự bình yên.</strong>
-        </div>
-        <p>Một người không nhất thiết phải lên núi hay vào rừng mới tìm thấy sự tĩnh tại. Ngay giữa phố đông, ngay tại quán cà phê quen thuộc buổi sáng, hay giữa lúc công việc đang dồn dập nhất — chỉ cần bạn biết cách <strong>dừng lại 2 giây trước khi phản ứng</strong>, <strong>thở chậm 10 giây mỗi tiếng</strong>, và <strong>gạt mọi âu lo về điểm rỗng (○)</strong>, bạn đã tự tạo ra một vùng bình an bán kính 100 mét xung quanh chính mình.</p>
-        <p>Hãy kẹp chiếc <strong>Bookmark Bàn Tính Gạt 5 Nấc</strong> vào trang sách này, bỏ gọn vào túi áo hoặc cốp xe, và chỉ lật ra khi thấy đầu óc bắt đầu nóng lên.</p>
-        <div class="section-ornament">· · ○ · ·</div>
-      </div>
-      <div class="page-footer">
-        <button class="pg-btn" onclick="prevChapter()" disabled>← </button>
-        <span class="pg-num">1</span>
-        <button class="pg-btn" onclick="nextChapter()">Phần I →</button>
-      </div>
-    </article>
-
-    <!-- CHƯƠNG 1: 10 Câu Thần Chú -->
-    <article class="chapter" data-ch="1">
-      <div class="chapter-label">Phần I</div>
-      <div class="chapter-title">10 Câu Thần Chú<br>Ngắt Phản Xạ Nóng Vội</div>
-      <div class="chapter-sub">Mười câu thần chú đơn giản giúp bạn dừng lại đúng lúc</div>
-      <div class="chapter-body">
-
-        <div class="mantra-card">
-          <div class="mantra-num">1</div>
-          <div class="mantra-text">Chậm 2 giây cho mình, giữ yên 100 mét cho người.</div>
-          <div class="mantra-note">Mọi lời nói hay hành động vội vàng đều làm đục mặt nước. Cứ dừng đúng 2 giây trước khi mở miệng hay bấm nút gửi, 80% rắc rối sẽ tự động tan biến.</div>
-        </div>
-
-        <div class="mantra-card">
-          <div class="mantra-num">2</div>
-          <div class="mantra-text">Việc chưa tới tay thì chưa phải việc của mình.</div>
-          <div class="mantra-note">Đừng tiêu xài năng lượng hôm nay để lo chuyện ngày mai, cũng đừng gánh giùm phần việc của người khác khi họ chưa mở lời nhờ.</div>
-        </div>
-
-        <div class="mantra-card">
-          <div class="mantra-num">3</div>
-          <div class="mantra-text">Nóng giận là tự đốt tiền xăng của chính mình.</div>
-          <div class="mantra-note">Khi bạn nổi nóng với ai, người mệt đầu tiên và hao tổn khí huyết nhiều nhất chính là bạn, không phải người đối diện.</div>
-        </div>
-
-        <div class="mantra-card">
-          <div class="mantra-num">4</div>
-          <div class="mantra-text">Một ngày chỉ có 5 nấc — chạm đỉnh là khóa sổ.</div>
-          <div class="mantra-note">Đừng cố làm 20 việc một ngày. Chọn đúng 5 việc cốt lõi nhất, xong việc nào gạt kẹp lên 1 nấc; đụng Nấc 5 là đóng máy đi nghỉ.</div>
-        </div>
-
-        <div class="mantra-card">
-          <div class="mantra-num">5</div>
-          <div class="mantra-text">Thở ra dài hơn hít vào là công tắc tắt bão.</div>
-          <div class="mantra-note">Hít vào 4 giây, thở ra êm 6 giây. Chỉ cần 1 nhịp 10 giây như vậy mỗi tiếng đồng hồ, tim sẽ tự hạ nhịp và bụng dưới tự ấm lại.</div>
-        </div>
-
-        <div class="mantra-card">
-          <div class="mantra-num">6</div>
-          <div class="mantra-text">Cà phê làm tỉnh cái đầu, hơi thở chậm làm êm cái bụng.</div>
-          <div class="mantra-note">Đừng uống cà phê trong vội vàng. Nhấp từng ngụm nhỏ trong tĩnh tại, sự tỉnh táo không-vội-vàng của bạn sẽ làm dịu cả góc quán.</div>
-        </div>
-
-        <div class="mantra-card">
-          <div class="mantra-num">7</div>
-          <div class="mantra-text">Ai nói gì mặc ai, mặt nước phẳng thì bóng tự tan.</div>
-          <div class="mantra-note">Tiếng ồn bên ngoài chỉ làm bạn mệt khi lòng bạn còn gợn sóng. Giữ tâm phẳng như nét sóng ngang (∼), mọi lời trái tai sẽ tự trôi qua.</div>
-        </div>
-
-        <div class="mantra-card">
-          <div class="mantra-num">8</div>
-          <div class="mantra-text">Lười tranh cãi là cách tiết kiệm tuổi thọ rẻ nhất.</div>
-          <div class="mantra-note">Thắng một cuộc cãi vã thường mất một buổi chiều bực dọc và một đêm mất ngủ. Kẻ Làm Biếng chọn ngủ ngon thay vì chọn phần thắng.</div>
-        </div>
-
-        <div class="mantra-card">
-          <div class="mantra-num">9</div>
-          <div class="mantra-text">Gieo một hạt chuẩn ở Nấc 0, phần còn lại để thời gian làm.</div>
-          <div class="mantra-note">Đừng ép cây lớn nhanh bằng cách kéo ngọn. Làm gọn phần việc khởi đầu của mình rồi thả tự nhiên, quy luật cộng hưởng sẽ tự nhân lên.</div>
-        </div>
-
-        <div class="mantra-card">
-          <div class="mantra-num">10</div>
-          <div class="mantra-text">Hết một nhịp sóng lại gạt về số 0 (○).</div>
-          <div class="mantra-note">Chuyện hôm qua đã qua, cơn giận vừa rồi đã dứt. Kéo kẹp giấy về vòng tròn rỗng ở đáy thước để bắt đầu lại nhẹ tênh như chưa từng có gì xảy ra.</div>
-        </div>
-
-      </div>
-      <div class="page-footer">
-        <button class="pg-btn" onclick="prevChapter()">← Mở đầu</button>
-        <span class="pg-num">2</span>
-        <button class="pg-btn" onclick="nextChapter()">Phần II →</button>
-      </div>
-    </article>
-
-    <!-- CHƯƠNG 2: 39 Cặp Hỏi Đáp -->
-    <article class="chapter" data-ch="2">
-      <div class="chapter-label">Phần II</div>
-      <div class="chapter-title">39 Cặp Hỏi – Đáp<br>Gỡ Rối Đời Thường</div>
-      <div class="chapter-sub">Chín nhóm tình huống thực tế — từ nóng giận, quá tải đến tiền bạc, con cái</div>
-      <div class="chapter-body">
-
-        <div class="qa-group-title">Nhóm 1 · Khi sắp nổi nóng & Xung đột</div>
-        <div class="qa-item"><div class="qa-q">Người ta nói năng vô lý, xúc phạm mình ngay trước mặt thì làm sao nhịn được?</div><div class="qa-a"><span class="qa-a-label">Đáp: </span>Không cần nhịn cho tức ngực. Chỉ cần im lặng đúng 2 giây, thở ra một hơi dài 6 giây rồi hỏi lại một câu thật chậm — cơn nóng của họ tự khắc mất chỗ bám.</div></div>
-        <div class="qa-item"><div class="qa-q">Lỡ nổi nóng rồi, giờ thấy hối hận và mệt mỏi quá thì làm sao?</div><div class="qa-a"><span class="qa-a-label">Đáp: </span>Rút bookmark ra, đẩy kẹp đi qua 5 nhịp thở (10 giây) rồi gạt cái rẹt về ○. Chuyện đã lỡ giống như ly nước đã đổ, lau bàn xong thì thôi, không ngồi tiếc.</div></div>
-        <div class="qa-item"><div class="qa-q">Ra đường kẹt xe, còi bóp inh ỏi khiến đầu óc muốn nổ tung?</div><div class="qa-a"><span class="qa-a-label">Đáp: </span>Bạn không dẹp được kẹt xe, nhưng bạn dẹp được tiếng còi trong đầu mình. Thả lỏng hai vai, hạ cơ hoành xuống và đếm 5 nhịp thở — coi như đang được nghỉ miễn phí giữa đường.</div></div>
-        <div class="qa-item"><div class="qa-q">Làm sao để không bị cuốn vào chuyện thị phi nơi công sở?</div><div class="qa-a"><span class="qa-a-label">Đáp: </span>Giữ đúng nguyên tắc: nghe bằng một tai, cho trôi qua tai kia, không góp thêm củi vào bếp lửa của người khác.</div></div>
-        <div class="qa-item"><div class="qa-q">Có những người cố tình chọc giận mình thì xử lý thế nào?</div><div class="qa-a"><span class="qa-a-label">Đáp: </span>Nếu bạn nổi giận, họ đạt mục đích. Nếu bạn ngáp nhẹ một cái và gạt kẹp về 0, họ tự thấy mình vô duyên mà rút lui.</div></div>
-
-        <div class="qa-group-title">Nhóm 2 · Khi bị giao thêm việc & Quá tải</div>
-        <div class="qa-item"><div class="qa-q">Việc cũ chưa xong, sếp và đồng nghiệp lại đẩy thêm việc mới?</div><div class="qa-a"><span class="qa-a-label">Đáp: </span>Mở bàn tính 5 nấc ra xem kẹp đang ở đâu. Nếu đã chạm Nấc 5, hãy nhẹ nhàng hỏi: <em>"Hôm nay tôi đã kín 5 đầu việc chính, anh/chị muốn tôi gác việc nào lại để ưu tiên việc này?"</em></div></div>
-        <div class="qa-item"><div class="qa-q">Lúc nào cũng thấy mình thiếu thời gian, chạy từ sáng tới tối vẫn không hết việc?</div><div class="qa-a"><span class="qa-a-label">Đáp: </span>Vì bạn đang làm cả những việc không cần thiết. Bỏ bớt 50% việc lặt vặt đi, thế giới vẫn quay bình thường mà bạn lại có thời gian thở.</div></div>
-        <div class="qa-item"><div class="qa-q">Làm sao để tập trung khi xung quanh có quá nhiều tin nhắn và thông báo?</div><div class="qa-a"><span class="qa-a-label">Đáp: </span>Mỗi tiếng đồng hồ chỉ làm 50 phút, phút thứ 50 buông tay thở 10 giây. Khi đầu không nóng, bạn làm 1 tiếng bằng người khác gồng 3 tiếng.</div></div>
-        <div class="qa-item"><div class="qa-q">Tôi hay ôm đồm vì sợ người khác làm không vừa ý mình?</div><div class="qa-a"><span class="qa-a-label">Đáp: </span>Bạn ôm hết thì người khác đứng chơi, còn bạn thì kiệt sức. Hãy chấp nhận kết quả 80% của người khác để đổi lấy 100% sự thảnh thơi của mình.</div></div>
-        <div class="qa-item"><div class="qa-q">Cuối tuần rồi mà đầu óc vẫn cứ nghĩ tới công việc thứ Hai — làm biếng vậy có bị tụt hậu không?</div><div class="qa-a"><span class="qa-a-label">Đáp: </span>Kéo kẹp giấy về vòng tròn rỗng ○ vào tối thứ Sáu. Thứ Hai chưa tới, lo trước cũng không được tính lương thêm giờ. Kẻ Làm Biếng chỉ lười phản xạ thừa; nhờ giữ sức mà khi cơ hội thật sự tới, bạn là người duy nhất còn đủ tỉnh táo để nắm lấy.</div></div>
-
-        <div class="qa-group-title">Nhóm 3 · Tiền bạc & Kiếm tiền nhàn đầu</div>
-        <div class="qa-item"><div class="qa-q">Tiền bạc đang eo hẹp, bảo tôi bình thản ngồi uống cà phê sao nổi?</div><div class="qa-a"><span class="qa-a-label">Đáp: </span>Lo lắng không sinh ra thêm một đồng nào, nhưng nó đốt sạch sức khỏe khiến bạn tính toán sai lầm. Bình tĩnh lại mới nhìn thấy lối ra ít tốn kém nhất.</div></div>
-        <div class="qa-item"><div class="qa-q">Muốn kiếm thêm thu nhập nhưng đi làm cả ngày đã mệt, không còn sức cày thêm nghề tay trái?</div><div class="qa-a"><span class="qa-a-label">Đáp: </span>Đừng lấy thêm sức đi đổi tiền lẻ nữa, hãy <strong>làm lại đúng việc mình đang giỏi nhưng bớt động tác thừa đi</strong>. Biến thứ mình làm sẵn hằng ngày thành một gói gọn nhẹ bán lại nhiều lần — <strong>một lần làm ra, mười lần thu tiền</strong> mới đúng là kiếm tiền kiểu làm biếng.</div></div>
-        <div class="qa-item"><div class="qa-q">Thấy người ta rủ đầu tư lời nhanh, hùn hạp làm ăn lớn mà mình không rành, sợ bỏ lỡ cơ hội?</div><div class="qa-a"><span class="qa-a-label">Đáp: </span>Gạt bookmark lên 1 nấc rồi hỏi đúng một câu: <em>"Mất trắng số tiền này tối nay mình có ngủ ngon không?"</em>. Nếu câu trả lời là không thì cất tiền lại ngay. Tiền của Kẻ Làm Biếng là <strong>tiền ngủ ngon</strong>.</div></div>
-        <div class="qa-item"><div class="qa-q">Lương tháng nào cũng vừa nhận đã hết sạch, không biết tiền trôi đi đâu?</div><div class="qa-a"><span class="qa-a-label">Đáp: </span>Ngày vừa nhận lương, cắt ngay một phần cố định cất riêng vào chỗ <strong>khó rút ra nhất</strong>, phần còn lại chia đúng <strong>3 khoản lớn</strong>. Xài hết phần tiêu vặt thì tự động ở nhà uống nước lọc tới cuối tháng — không vay mượn, không quẹt thẻ trước.</div></div>
-        <div class="qa-item"><div class="qa-q">Thấy bạn bè xung quanh thành công, giàu có làm mình sốt ruột — thế nào mới là đủ đầy?</div><div class="qa-a"><span class="qa-a-label">Đáp: </span>Cây đước mọc chậm dưới bùn nhưng giữ được cả bờ biển; đừng so tốc độ của mình với cỏ dại. Đủ đầy là khi tối đặt lưng xuống ngủ ngay không vướng nợ, sáng thức dậy thấy bụng ấm, đầu nhẹ và còn thời gian nhấp một ly cà phê chậm rãi.</div></div>
-
-        <div class="qa-group-title">Nhóm 4 · Khi khó ngủ, rối trí & Mệt mỏi cơ thể</div>
-        <div class="qa-item"><div class="qa-q">Đêm nằm trằn trọc mãi không ngủ được vì suy nghĩ lung tung?</div><div class="qa-a"><span class="qa-a-label">Đáp: </span>Đừng cố ép mình ngủ. Đặt tay lên bụng dưới, thở chậm 5 nhịp (10 giây) cho cơ hoành hạ xuống; cứ mỗi lần ý nghĩ chạy đi lại gạt nhẹ nó về ○.</div></div>
-        <div class="qa-item"><div class="qa-q">Ban ngày làm việc ngồi nhiều khiến vai gáy cứng đờ, hay đau bao tử?</div><div class="qa-a"><span class="qa-a-label">Đáp: </span>Cứ đúng 1 tiếng đồng hồ, dừng lại 10 giây hít sâu đầy bụng rồi thở ra thật chậm. Cơ hoành hạ sâu sẽ tự mát-xa dạ dày và thả lỏng hai bờ vai cho bạn.</div></div>
-        <div class="qa-item"><div class="qa-q">Tôi đang muốn bỏ thuốc lá hoặc một thói quen xấu nhưng cứ vài ngày lại tái nghiện?</div><div class="qa-a"><span class="qa-a-label">Đáp: </span>Đừng thề bỏ cả đời cho nặng đầu. Chỉ cần gạt qua 5 nấc trong đúng <strong>1 ngày hôm nay</strong> (24 giờ). Hết hôm nay lại gạt về 0, ngày mai tính tiếp 1 ngày mới.</div></div>
-        <div class="qa-item"><div class="qa-q">Tại sao chỉ thở 10 giây mỗi tiếng lại có tác dụng mạnh như vậy?</div><div class="qa-a"><span class="qa-a-label">Đáp: </span>Vì nó ngắt đứt chuỗi tích tụ căng thẳng trước khi cơ thể kịp "nóng máy", giữ cho hệ thần kinh và vi sinh đường ruột luôn ở trạng thái êm ái.</div></div>
-        <div class="qa-item"><div class="qa-q">Khi mệt mỏi rã rời mà vẫn phải tiếp tục công việc thì duy trì thói quen thở đều cách nào?</div><div class="qa-a"><span class="qa-a-label">Đáp: </span>Đứng yên bên cửa sổ đúng 1 phút, thở sâu 6 nhịp (60 giây). Muốn không quên thì gắn nhịp thở 10 giây vào một việc làm hằng ngày: mỗi lần cầm ly nước hay ly cà phê lên là tự động thở chậm một nhịp.</div></div>
-
-        <div class="qa-group-title">Nhóm 5 · Khi ở cạnh người hay than phiền & Lan tỏa bình an</div>
-        <div class="qa-item"><div class="qa-q">Người thân hoặc bạn bè suốt ngày than thở chuyện tiêu cực khiến mình mệt lây?</div><div class="qa-a"><span class="qa-a-label">Đáp: </span>Ngồi nghe họ nói nhưng giữ hơi thở của mình thật chậm và đều. Khi trường năng lượng của bạn vững, bạn không bị hút theo họ mà chính họ sẽ dịu lại theo bạn.</div></div>
-        <div class="qa-item"><div class="qa-q">Tôi muốn giúp người thân bớt căng thẳng nhưng nói họ không nghe?</div><div class="qa-a"><span class="qa-a-label">Đáp: </span>Đừng khuyên nữa. Hãy tự mình sống chậm lại, bớt cằn nhằn, và đặt nhẹ cuốn sổ tay nhỏ này lên bàn uống nước của họ là đủ.</div></div>
-        <div class="qa-item"><div class="qa-q">Một người bình thường ngồi uống cà phê thì làm sao tạo ra bình yên cho xung quanh?</div><div class="qa-a"><span class="qa-a-label">Đáp: </span>Khi bạn ngồi uống cà phê với nhịp tim phẳng lặng và ánh mắt thong thả, sự không-vội-vàng đó tự tạo ra một vùng yên bán kính 100 mét khiến bàn bên cạnh cũng tự động hạ giọng.</div></div>
-        <div class="qa-item"><div class="qa-q">Tại sao cuốn sổ tay này lại mỏng và ít chữ như vậy?</div><div class="qa-a"><span class="qa-a-label">Đáp: </span>Vì Kẻ Làm Biếng không thích viết dài, mà người đang mệt cũng không có sức đọc sách dày. Viết vừa đủ để đọc xong trong một ly cà phê là tốt nhất.</div></div>
-        <div class="qa-item"><div class="qa-q">Đọc xong cuốn sổ tay này rồi thì cất đi đâu?</div><div class="qa-a"><span class="qa-a-label">Đáp: </span>Đừng cất lên kệ sách. Hãy truyền tay tặng lại cho người đang mệt mỏi hoặc nóng nảy nhất mà bạn gặp hôm nay.</div></div>
-        <div class="qa-item"><div class="qa-q">Đỉnh cao nhất của Kẻ Làm Biếng là trạng thái nào?</div><div class="qa-a"><span class="qa-a-label">Đáp: </span>Là khi bạn không còn phải nhớ bất kỳ câu thần chú nào trong cuốn sách này nữa, vì sự bình thản đã trở thành hơi thở tự nhiên của chính bạn (○).</div></div>
-
-        <div class="qa-group-title">Nhóm 6 · Cha mẹ ứng xử với con nhỏ & Giữ yên mái nhà</div>
-        <div class="qa-item"><div class="qa-q">Con cái lề mề, bày bừa hoặc không chịu học bài làm tôi muốn hét lên?</div><div class="qa-a"><span class="qa-a-label">Đáp: </span>Dừng đúng 2 giây trước khi mở miệng quát. Tiếng hét của cha mẹ chỉ làm con sợ hãi chứ không giúp con hiểu bài. Thở ra một hơi dài 6 giây cho dịu giọng xuống rồi nói một câu thật ngắn gọn, rõ ràng — con nghe lời ngay khi không cảm thấy bị đe dọa.</div></div>
-        <div class="qa-item"><div class="qa-q">Con ăn vạ, khóc lóc hoặc cãi lại làm tôi mất bình tĩnh?</div><div class="qa-a"><span class="qa-a-label">Đáp: </span>Đừng nhảy vào tranh thắng thua với một đứa trẻ. Cứ ngồi yên cạnh con, giữ hơi thở của chính mình thật chậm và đều; khi cơn sóng của người lớn phẳng lặng, cơn bão của đứa trẻ tự khắc tan theo.</div></div>
-        <div class="qa-item"><div class="qa-q">Tôi hay lo xa cho tương lai của con nên ép con học đủ thứ, cả hai mẹ con đều mệt?</div><div class="qa-a"><span class="qa-a-label">Đáp: </span>Đừng mang bảng tính 5 nấc của người lớn đè lên vai trẻ nhỏ. Bỏ bớt các lớp học thêm không cần thiết, dành buổi tối cùng con ăn bữa cơm thong thả — một đứa trẻ lớn lên trong ngôi nhà bình yên tự khắc biết cách tự lập.</div></div>
-
-        <div class="qa-group-title">Nhóm 7 · Chiều cha mẹ, ông bà</div>
-        <div class="qa-item"><div class="qa-q">Cha mẹ ở nhà hay nhắc đi nhắc lại một chuyện cũ, lo xa thái quá khiến mình bực bội?</div><div class="qa-a"><span class="qa-a-label">Đáp: </span>Gạt bookmark lên 1 nấc trước khi mở cửa bước vào nhà. Cha mẹ già lấy chuyện lo cho con cháu làm niềm vui sống; người ta nhắc không phải để trách mà vì sợ mình sơ sẩy. Chỉ cần gật đầu cười nhẹ: <em>"Dạ con nhớ rồi, để con tính từ từ, ba mẹ cứ nghỉ ngơi đi"</em>.</div></div>
-        <div class="qa-item"><div class="qa-q">Muốn khuyên cha mẹ bớt ôm đồm, đi khám bệnh nhưng nói tới là cha mẹ gạt đi?</div><div class="qa-a"><span class="qa-a-label">Đáp: </span>Đừng đóng vai "người lớn" đi dạy ngược lại cha mẹ. Thay vì nói <em>"Ba mẹ đừng làm nữa, hại sức khỏe"</em>, hãy đổi sang câu nhờ vả nhẹ tênh: <em>"Bác sĩ dặn con phải dắt ba mẹ đi kiểm tra định kỳ để con yên tâm đi làm"</em>.</div></div>
-        <div class="qa-item"><div class="qa-q">Ở xa quê hoặc bận rộn cả tuần, mỗi lần gọi điện về cho cha mẹ lại không biết nói gì?</div><div class="qa-a"><span class="qa-a-label">Đáp: </span>Mỗi tuần chọn đúng một buổi tối rảnh, gọi đúng <strong>2 phút</strong> kể một chuyện nhỏ xíu vô thưởng vô phạt. Với người già, <strong>nhịp gọi đều đặn 2 phút</strong> quý hơn cả một cuộc gọi dài cả tiếng đồng hồ nhưng nửa năm mới có một lần.</div></div>
-
-        <div class="qa-group-title">Nhóm 8 · Chuyện trai gái & Giữ nhịp yêu đương</div>
-        <div class="qa-item"><div class="qa-q">Nhắn tin mà người kia chưa trả lời ngay, trong bụng cứ nóng như lửa đốt?</div><div class="qa-a"><span class="qa-a-label">Đáp: </span>Gạt bookmark lên 1 nấc rồi úp điện thoại xuống bàn. Người ta không trả lời liền thường là vì đang kẹt xe, đang họp hoặc đang ngủ quên — chứ không phải đang hết thương mình.</div></div>
-        <div class="qa-item"><div class="qa-q">Hai đứa đang giận nhau, ai cũng muốn nói câu cho hả giận hoặc đòi chia tay?</div><div class="qa-a"><span class="qa-a-label">Đáp: </span>Lúc đang nóng, lời nói ra giống như hòn đá ném xuống giếng — ném thì dễ mà vớt lên không nổi. Ngồi im thở đủ 10 giây, uống ngụm nước lọc rồi nói đúng một câu: <em>"Chuyện này để tối nay nguội đầu rồi hai đứa nói tiếp"</em>.</div></div>
-        <div class="qa-item"><div class="qa-q">Yêu nhau lâu ngày thấy hết mới mẻ, dễ cáu gắt chuyện vặt vãnh?</div><div class="qa-a"><span class="qa-a-label">Đáp: </span>Đừng bắt người thương phải đọc được suy nghĩ của mình. Muốn ăn gì, mệt chỗ nào hay cần dỗ dành ra sao thì nói thẳng bằng một câu ngắn gọn. Thương nhau bền là ở chỗ <strong>ở cạnh nhau thấy nhẹ nhõm như được thở</strong>.</div></div>
-
-        <div class="qa-group-title">Nhóm 9 · Điện thoại & Cảm giác tội lỗi khi nghỉ ngơi</div>
-        <div class="qa-item"><div class="qa-q">Đang ngồi yên tự nhiên thấy sốt ruột, cảm giác mình đang lười biếng và tụt hậu?</div><div class="qa-a"><span class="qa-a-label">Đáp: </span>Đó không phải bạn đang tụt hậu, mà là cơ thể đang "cai nghiện" nhịp chạy hối hả quen thuộc. Cây đước muốn bám chắc xuống bùn thì phải đứng yên suốt mùa nước ròng. Cứ ngồi yên thêm 10 giây nữa, cảm giác tội lỗi sẽ tự tan như bọt nước.</div></div>
-        <div class="qa-item"><div class="qa-q">Lướt điện thoại thấy người ta khoe thành công, kiếm nhiều tiền, tự nhiên thấy lòng chộn rộn?</div><div class="qa-a"><span class="qa-a-label">Đáp: </span>Tắt màn hình, đặt úp điện thoại xuống bàn trong 2 giây. Bạn đang đem hậu trường mệt mỏi của mình đi so với sân khấu đã chỉnh đèn của người khác. Ly cà phê trên tay mới là việc của mình.</div></div>
-        <div class="qa-item"><div class="qa-q">Muốn làm một dự án hoặc việc tử tế cho cộng đồng mà trong tay có ít vốn thì bắt đầu sao cho nhàn?</div><div class="qa-a"><span class="qa-a-label">Đáp: </span>Đừng nhìn lên Nấc 5 cho ngợp. Hãy gói gọn nó thành một hạt mồi tí hon ở Nấc 0 (như photo 39 cuốn sổ nhỏ đặt ở quán cà phê quen) rồi thả cho nó tự lớn theo nhịp log(39).</div></div>
-        <div class="qa-item"><div class="qa-q">Đọc xong cuốn sách nhỏ này rồi, bước tiếp theo tôi phải làm gì?</div><div class="qa-a"><span class="qa-a-label">Đáp: </span>Chẳng phải làm gì cả. Rút chiếc bookmark kẹp vào trang bạn thích nhất, thở chậm một nhịp 10 giây, rồi đưa cuốn sách này cho người đang nhăn nhó nhất mà bạn gặp hôm nay — và gạt kẹp về vòng tròn rỗng (○).</div></div>
-
-      </div>
-      <div class="page-footer">
-        <button class="pg-btn" onclick="prevChapter()">← Phần I</button>
-        <span class="pg-num">3–8</span>
-        <button class="pg-btn" onclick="nextChapter()">Phần III →</button>
-      </div>
-    </article>
-
-    <!-- CHƯƠNG 3: Hướng dẫn Bookmark -->
-    <article class="chapter" data-ch="3">
-      <div class="chapter-label">Phần III</div>
-      <div class="chapter-title">Hướng Dẫn Dùng<br>Bookmark Bàn Tính Gạt 5 Nấc</div>
-      <div class="chapter-sub">Công cụ thực hành trực tiếp — không cần điện</div>
-      <div class="chapter-body">
-
-        <div class="bookmark-visual">
-          <div style="font-size:.8rem;color:rgba(200,160,80,0.6);margin-bottom:16px;letter-spacing:1px">MẶT TRƯỚC — BÀN TÍNH GẠT 5 NẤC</div>
-          <div class="bookmark-track">
-            <div class="bookmark-notch">
-              <div class="notch-label">[ NẤC 5 ]</div>
-              <div class="notch-bar"><div class="notch-fill" style="width:100%"></div></div>
-              <div class="notch-num">90.224.199</div>
-            </div>
-            <div style="padding:4px 0 4px 68px;font-size:.7rem;color:rgba(200,160,80,0.4)">Giây 9–10: Khóa sổ nghỉ ngơi</div>
-            <div class="bookmark-notch">
-              <div class="notch-label">[ NẤC 4 ]</div>
-              <div class="notch-bar"><div class="notch-fill" style="width:80%"></div></div>
-              <div class="notch-num">2.313.441</div>
-            </div>
-            <div style="padding:4px 0 4px 68px;font-size:.7rem;color:rgba(200,160,80,0.4)">Giây 7–8: Dịu nhịp tim</div>
-            <div class="bookmark-notch">
-              <div class="notch-label">[ NẤC 3 ]</div>
-              <div class="notch-bar"><div class="notch-fill" style="width:60%"></div></div>
-              <div class="notch-num">59.319</div>
-            </div>
-            <div style="padding:4px 0 4px 68px;font-size:.7rem;color:rgba(200,160,80,0.4)">Giây 5–6: Thở ra êm 6 giây</div>
-            <div class="bookmark-notch">
-              <div class="notch-label">[ NẤC 2 ]</div>
-              <div class="notch-bar"><div class="notch-fill" style="width:40%"></div></div>
-              <div class="notch-num">1.521</div>
-            </div>
-            <div style="padding:4px 0 4px 68px;font-size:.7rem;color:rgba(200,160,80,0.4)">Giây 3–4: Hạ cơ hoành</div>
-            <div class="bookmark-notch">
-              <div class="notch-label">[ NẤC 1 ]</div>
-              <div class="notch-bar"><div class="notch-fill" style="width:20%"></div></div>
-              <div class="notch-num">39</div>
-            </div>
-            <div style="padding:4px 0 4px 68px;font-size:.7rem;color:rgba(200,160,80,0.4)">Giây 1–2: Thả lỏng hai vai</div>
-            <div class="bookmark-notch">
-              <div class="notch-label">[ ○ NẤC 0 ]</div>
-              <div class="notch-bar"><div class="notch-fill" style="width:0%"></div></div>
-              <div class="notch-num">1</div>
-            </div>
-            <div style="padding:4px 0 4px 68px;font-size:.7rem;color:rgba(200,160,80,0.5)">Điểm rỗng — Kẹp giấy chờ tại đây</div>
-          </div>
-        </div>
-
-        <h2>1. Gạt xả stress & Hạ nhiệt tại chỗ (10 giây)</h2>
-        <div class="step-card"><div class="step-num">1</div><div class="step-text">Đặt kẹp giấy ở vòng tròn rỗng <strong>(○)</strong> dưới đáy thước.</div></div>
-        <div class="step-card"><div class="step-num">2</div><div class="step-text">Thở chậm <strong>5 nhịp</strong>, mỗi nhịp 2 giây đẩy kẹp nhích lên 1 khấc cho tới đỉnh <strong>Nấc 5</strong> (trọn vẹn 10 giây).</div></div>
-        <div class="step-card"><div class="step-num">3</div><div class="step-text">Dùng ngón trỏ gạt dứt khoát kẹp tụt thẳng về lại <strong>(○)</strong> — xóa sạch rác cảm xúc vừa tích tụ.</div></div>
-
-        <h2>2. Gạt đếm việc trong ngày (Chống quá tải)</h2>
-        <div class="step-card"><div class="step-num">1</div><div class="step-text">Mỗi sáng đặt kẹp ở <strong>(○)</strong>, chọn tối đa <strong>5 việc quan trọng nhất</strong> trong ngày.</div></div>
-        <div class="step-card"><div class="step-num">2</div><div class="step-text">Xong việc nào gạt kẹp lên 1 nấc. Chạm đỉnh <strong>Nấc 5</strong> là khóa sổ nghỉ ngơi.</div></div>
-
-        <h2>3. Gạt tính quy mô lan tỏa (log 39)</h2>
-        <p>Đặt số lượng hạt mồi ban đầu (N₀) ở <strong>Nấc 0</strong> — ví dụ: 1 cuốn sách, 39 bản photo tặng bạn bè, hoặc 10 giây thở mỗi tiếng. Trượt kẹp lên Nấc n bất kỳ và nhân N₀ với con số in ở mặt sau thước để thấy sức mạnh tích lũy của những điều nhỏ bé.</p>
-
-        <div class="section-ornament">· · ○ · ·</div>
-      </div>
-      <div class="page-footer">
-        <button class="pg-btn" onclick="prevChapter()">← Phần II</button>
-        <span class="pg-num">9</span>
-        <button class="pg-btn" onclick="nextChapter()">Phần IV →</button>
-      </div>
-    </article>
-
-    <!-- CHƯƠNG 4: Lời giới thiệu & In ấn -->
-    <article class="chapter" data-ch="4">
-      <div class="chapter-label">Phần IV</div>
-      <div class="chapter-title">Lời Giới Thiệu<br>& Quy Cách In Ấn</div>
-      <div class="chapter-sub">Creative Commons 0 — Tự do in ấn, lan tỏa, sáng tạo phái sinh</div>
-      <div class="chapter-body">
-
-        <div class="highlight-box" style="font-style:normal">
-          <strong>Cuốn sách này không dạy bạn làm giàu.</strong><br>
-          Không dạy dậy sớm 5 giờ sáng, càng không dạy cách nhét thêm 20 đầu việc vào một ngày vốn đã mệt nhoài.<br><br>
-          Nó chỉ dạy đúng một nghề duy nhất: <strong>bỏ bớt việc thừa để giữ trọn sự bình yên.</strong><br><br>
-          Kẹp sẵn bên trong là chiếc <strong>Bookmark Bàn Tính Gạt 5 Nấc</strong>. Mỗi tiếng đồng hồ, bạn chỉ cần dừng lại đúng <strong>10 giây</strong> để thở sâu, gạt chiếc kẹp giấy đi qua 5 nấc rồi thả trôi về vòng tròn rỗng (○).<br><br>
-          <em>"Chậm 2 giây cho mình, giữ yên 100 mét cho người."</em><br>
-          <small style="color:var(--ink3)">Đọc hết trong 15 phút. Đọc xong thấy nhẹ đầu thì đưa tiếp cho người đang mệt nhất mà bạn gặp hôm nay.</small>
-        </div>
-
-        <h2>Quy cách in ấn & Mở khóa bản quyền</h2>
-
-        <div class="step-card"><div class="step-num">📖</div><div class="step-text"><strong>Bản quyền mở (CC0):</strong> Sách miễn phí bản quyền. Bất kỳ ai cũng có thể tải về, in ấn, photocopy, đặt tại quán cà phê hoặc phát hành ở mức giá hòa vốn — không cần xin phép tác giả.</div></div>
-        <div class="step-card"><div class="step-num">📐</div><div class="step-text"><strong>Khổ sách chuẩn:</strong> Khổ bỏ túi A6 (10,5 × 14,8 cm), đóng ghim giữa tối giản.</div></div>
-        <div class="step-card"><div class="step-num">🗒</div><div class="step-text"><strong>Chất liệu đề xuất:</strong> Ruột giấy Kraft mỏng hoặc giấy bãi bằng ngà vàng chống lóa, 70gsm – 80gsm; bìa giấy Kraft 250gsm đồng bộ với chiếc Bookmark 4,8 × 14,8 cm.</div></div>
-
-        <blockquote>
-          "Cuốn sổ này không có bản quyền. Nếu bạn đọc xong và chế ra được một cách làm hay hơn cho quán của mình, xưởng của mình, lớp học của mình hay viết thành một ứng dụng nhỏ — cứ tự nhiên làm và đặt tên của bạn lên đó."
-        </blockquote>
-
-        <div class="highlight-box">
-          <em>"Nếu cuốn sổ nhỏ này giúp bạn nhẹ đầu hơn một chút, xin hãy đưa tiếp nó cho người đang mệt nhất mà bạn gặp hôm nay — hoặc photo thêm vài bản đặt ở quán cà phê quen thuộc."</em>
-        </div>
-
-        <div class="section-ornament">· · ○ · ·</div>
-      </div>
-      <div class="page-footer">
-        <button class="pg-btn" onclick="prevChapter()">← Phần III</button>
-        <span class="pg-num">10</span>
-        <button class="pg-btn" onclick="nextChapter()">Phần V →</button>
-      </div>
-    </article>
-
-    <!-- CHƯƠNG 5: Phôi Thiết Kế Bookmark -->
-    <article class="chapter" data-ch="5">
-      <div class="chapter-label">Phần V</div>
-      <div class="chapter-title">Phôi Thiết Kế<br>Bookmark Bàn Tính Gạt 5 Nấc</div>
-      <div class="chapter-sub">Chuẩn 3 thẻ / nửa tờ A4 — Nguyên tắc tận dụng giấy thừa 0 đồng</div>
-      <div class="chapter-body">
-
-        <p>Một tờ giấy bìa A4 (21 × 29,7 cm) cắt đôi theo chiều ngang sẽ được 1 bìa sách khổ trải phẳng A5 (21 × 14,8 cm) và dư ra đúng <strong>1 nửa tờ A5</strong>. Cắt dọc phần giấy dư này làm 3 dải bằng nhau sẽ được ngay <strong>3 chiếc Bookmark Bàn Tính Gạt 5 Nấc</strong> kích thước <strong>4,8 × 14,8 cm</strong>.</p>
-
-        <div style="background:#f0e8d4;border:1px solid var(--rule);border-radius:6px;padding:16px;margin:16px 0;overflow-x:auto">
-          <pre style="font-size:.7rem;line-height:1.5;font-family:monospace;color:var(--ink2);background:none;border:none;padding:0;margin:0;white-space:pre">+-----------------------------------+   +-----------------------------------+
-|  MẶT TRƯỚC: BÀN TÍNH GẠT 5 NẤC    |   |  MẶT SAU: TRA CỨU & LỢI ÍCH ĐỌC   |
-|  (Kích thước cắt: 4,8 x 14,8 cm)  |   |  SỔ TAY KẺ LÀM BIẾNG — ANH 3      |
-+-----------------------------------+   +-----------------------------------+
-|                                   |   | 10 CÂU THẦN CHÚ TÓM TẮT:          |
-| [ NẤC 5 ] ──────────── 90.224.199 |   | 1. Chậm 2s mình, yên 100m người.  |
-|   Giây 9-10: Khóa sổ nghỉ ngơi    |   | 2. Việc chưa tới tay chưa phải    |
-|                                   |   |    việc của mình.                 |
-| [ NẤC 4 ] ───────────── 2.313.441 |   | 3. Nóng giận là tự đốt tiền xăng. |
-|   Giây 7-8: Dịu nhịp tim          |   | 4. Ngày 5 nấc - chạm đỉnh khóa sổ.|
-|                                   |   | 5. Thở ra 6s dài hơn hít vào 4s.  |
-| [ NẤC 3 ] ──────────────── 59.319 |   | 6. Cà phê tỉnh đầu, thở êm bụng.  |
-|   Giây 5-6: Thở ra êm 6 giây      |   | 7. Mặt nước phẳng bóng tự tan.    |
-|                                   |   | 8. Lười cãi vã tiết kiệm tuổi thọ.|
-| [ NẤC 2 ] ───────────────── 1.521 |   | 9. Gieo 1 hạt chuẩn ở Nấc 0.      |
-|   Giây 3-4: Hạ cơ hoành           |   | 10. Hết nhịp sóng lại gạt về (○). |
-|                                   |   | --------------------------------- |
-| [ NẤC 1 ] ──────────────────── 39 |   | BẢNG TRA CỨU LỢI ÍCH NGƯỜI ĐỌC:  |
-|   Giây 1-2: Thả lỏng hai vai      |   | • Vốn sách: 0đ (PDF) - 10.000đ   |
-|                                   |   | • Phí duy trì: 0đ/năm (không điện)|
-| [  (○)  ] ─── ĐIỂM RỖNG (NẤC 0) 1|   | • Giữ lại: ~1.175.000đ/tháng     |
-|   Kẹp giấy chờ tại đây • Gạt về 0 |   | (~14,1 triệu/năm tiền & giờ)    |
-+-----------------------------------+   +-----------------------------------+</pre>
-        </div>
-
-        <h2>Quy cách cắt khuôn 3-trong-1</h2>
-        <div class="step-card"><div class="step-num">1</div><div class="step-text">Đặt 3 khuôn thẻ kích thước <strong>4,8 × 14,8 cm</strong> nằm đứng cạnh nhau theo chiều ngang 21 cm (chừa lề cắt 2 mm mỗi khe).</div></div>
-        <div class="step-card"><div class="step-num">2</div><div class="step-text">Dùng giấy Kraft nâu hoặc giấy Fort kem định lượng <strong>230gsm – 250gsm</strong> để kẹp giấy trượt êm qua 5 nấc mà không làm cong mép thẻ.</div></div>
-        <div class="step-card"><div class="step-num">3</div><div class="step-text">Đính 1 chiếc kẹp giấy kim loại nhỏ vào cạnh trái của thước; đẩy nhích lên từng vạch từ đáy lên đỉnh rồi gạt dứt khoát về lại vòng tròn rỗng (○).</div></div>
-
-        <div class="highlight-box" style="text-align:center;margin-top:28px">
-          <strong style="display:block;margin-bottom:8px;font-size:1rem">○</strong>
-          <em>Khóa nguồn mở (CC0) — Được phép sao chép, in lại và sáng tạo phái sinh không giới hạn.</em>
-        </div>
-
-      </div>
-      <div class="page-footer">
-        <button class="pg-btn" onclick="prevChapter()">← Phần IV</button>
-        <span class="pg-num">11</span>
-        <button class="pg-btn" onclick="nextChapter()" disabled>Hết sách</button>
-      </div>
-    </article>
-
-  </div><!-- /chapters -->
-
-</div><!-- /book-wrap -->
-
-<!-- Floating button for secondary features -->
-<button id="secondary-btn" onclick="openDrawer()" title="Khám phá thêm">🌿</button>
-
-<!-- Secondary Drawer -->
-<div id="secondary-drawer" onclick="if(event.target===this)closeDrawer()">
-  <div id="secondary-sheet">
-    <div class="drawer-handle"></div>
-    <div class="drawer-title">Khám Phá Thêm</div>
-
-    <div class="drawer-item" onclick="openLibrary();closeDrawer()">
-      <span class="di-icon">📚</span>
-      <div>
-        <span class="di-label">Thư viện tài liệu</span>
-        <span class="di-sub">20 cẩm nang — Thuyết Hạt 56, Soroban Đạo Than Đước</span>
+    <div class="mantra-hero">
+      <div class="hero-circle">○</div>
+      <div class="hero-text">
+        <h1>10 Câu Thần Chú<br>Của Kẻ Làm Biếng</h1>
+        <p>Nhấn từng câu để đọc giải nghĩa · Thở 10 giây mỗi tiếng</p>
       </div>
     </div>
 
-    <div class="drawer-item" onclick="openStoriesModal();closeDrawer()">
-      <span class="di-icon">🌿</span>
-      <div>
-        <span class="di-label">Câu chuyện rừng đước</span>
-        <span class="di-sub">3500 câu chuyện ngắn từ thiên nhiên</span>
+    <!-- Mini Abacus tương tác -->
+    <div id="abacus">
+      <div class="abacus-title">— BÀN TÍNH GẠT 5 NẤC — NHẤN ĐỂ THỰC HÀNH —</div>
+      <div id="ab-rows"></div>
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-top:12px">
+        <button onclick="abReset()" style="background:rgba(200,146,42,0.1);border:1px solid var(--rule);color:var(--text3);padding:5px 14px;border-radius:20px;font-size:.72rem;cursor:pointer;font-family:var(--font-sans)">↺ Gạt về ○</button>
+        <span id="ab-status" style="font-size:.72rem;color:var(--text3)">Nấc 0 · Điểm rỗng</span>
       </div>
+    </div>
+
+    <!-- Breath button -->
+    <div id="breath-bar">
+      <span class="breath-label" style="font-size:.8rem">🌬</span>
+      <div class="breath-track"><div class="breath-fill" id="breath-fill"></div></div>
+      <button id="breath-btn" onclick="startBreath()">Thở 10s</button>
+    </div>
+
+    <!-- CTA to 39 -->
+    <div class="mantra-list" style="margin-bottom:0;padding-bottom:0">
+      <div id="cta-39" onclick="switchTab('qa',document.querySelectorAll('.tab')[1])">
+        <div class="cta-left">
+          <h3>📖 Đọc trọn 39 tình huống</h3>
+          <p>Nóng giận · Tiền bạc · Khó ngủ · Cha mẹ · Trai gái…</p>
+        </div>
+        <div class="cta-arr">→</div>
+      </div>
+    </div>
+
+    <!-- 10 mantra cards -->
+    <div class="mantra-list" style="margin-top:14px">
+      <div id="mantra-list"></div>
+    </div>
+
+  </div>
+
+  <!-- ===== TAB 2: 39 TÌNH HUỐNG ===== -->
+  <div id="screen-qa" class="screen">
+    <div class="qa-hero">
+      <h2>39 Cặp Hỏi – Đáp Gỡ Rối Đời Thường</h2>
+      <p>9 nhóm tình huống · Nhấn câu hỏi để xem đáp án</p>
+    </div>
+    <div id="qa-content"></div>
+  </div>
+
+  <!-- ===== TAB 3: BÀN TÍNH ===== -->
+  <div id="screen-bookmark" class="screen">
+    <div class="bk-hero">
+      <div style="font-size:2.5rem;margin-bottom:10px">📐</div>
+      <h2>Bookmark Bàn Tính Gạt 5 Nấc</h2>
+      <p>Công cụ thực hành trực tiếp — không cần điện</p>
+    </div>
+
+    <div class="bk-abacus">
+      <div style="font-size:.68rem;color:rgba(200,160,80,0.4);margin-bottom:14px;letter-spacing:1.5px;text-transform:uppercase">MẶT TRƯỚC — THƯỚC ĐO & NHỊP THỞ</div>
+      <div class="bk-notch">
+        <div class="bk-label">[ NẤC 5 ]</div>
+        <div class="bk-track"><div class="bk-fill" style="width:100%"></div></div>
+        <div class="bk-num">90.224.199</div>
+        <div class="bk-desc" style="font-size:.68rem;color:rgba(200,160,80,0.35);min-width:80px">Giây 9–10: Khóa sổ</div>
+      </div>
+      <div class="bk-notch">
+        <div class="bk-label">[ NẤC 4 ]</div>
+        <div class="bk-track"><div class="bk-fill" style="width:80%"></div></div>
+        <div class="bk-num">2.313.441</div>
+        <div class="bk-desc" style="font-size:.68rem;color:rgba(200,160,80,0.35);min-width:80px">Giây 7–8: Dịu tim</div>
+      </div>
+      <div class="bk-notch">
+        <div class="bk-label">[ NẤC 3 ]</div>
+        <div class="bk-track"><div class="bk-fill" style="width:60%"></div></div>
+        <div class="bk-num">59.319</div>
+        <div class="bk-desc" style="font-size:.68rem;color:rgba(200,160,80,0.35);min-width:80px">Giây 5–6: Thở ra</div>
+      </div>
+      <div class="bk-notch">
+        <div class="bk-label">[ NẤC 2 ]</div>
+        <div class="bk-track"><div class="bk-fill" style="width:40%"></div></div>
+        <div class="bk-num">1.521</div>
+        <div class="bk-desc" style="font-size:.68rem;color:rgba(200,160,80,0.35);min-width:80px">Giây 3–4: Hạ cơ hoành</div>
+      </div>
+      <div class="bk-notch">
+        <div class="bk-label">[ NẤC 1 ]</div>
+        <div class="bk-track"><div class="bk-fill" style="width:20%"></div></div>
+        <div class="bk-num">39</div>
+        <div class="bk-desc" style="font-size:.68rem;color:rgba(200,160,80,0.35);min-width:80px">Giây 1–2: Thả vai</div>
+      </div>
+      <div class="bk-notch">
+        <div class="bk-label">[ ○ 0 ]</div>
+        <div class="bk-track"><div class="bk-fill" style="width:0%"></div></div>
+        <div class="bk-num">1</div>
+        <div class="bk-desc" style="font-size:.68rem;color:rgba(200,160,80,0.5);min-width:80px">Điểm rỗng · Chờ tại đây</div>
+      </div>
+    </div>
+
+    <div class="use-block">
+      <div class="use-title">⚡ Dùng 1: Hạ nhiệt tại chỗ (10 giây)</div>
+      <div class="use-step"><div class="use-snum">1</div><span>Đặt kẹp giấy ở vòng tròn rỗng <strong style="color:var(--gold)">○</strong></span></div>
+      <div class="use-step"><div class="use-snum">2</div><span>Thở chậm 5 nhịp, mỗi nhịp 2 giây đẩy kẹp nhích lên 1 nấc</span></div>
+      <div class="use-step"><div class="use-snum">3</div><span>Gạt dứt khoát kẹp về lại <strong style="color:var(--gold)">○</strong> — xóa sạch rác cảm xúc</span></div>
+    </div>
+
+    <div class="use-block">
+      <div class="use-title">📋 Dùng 2: Đếm việc trong ngày (Chống quá tải)</div>
+      <div class="use-step"><div class="use-snum">1</div><span>Mỗi sáng đặt kẹp ở <strong style="color:var(--gold)">○</strong>, chọn tối đa <strong style="color:var(--gold)">5 việc</strong> quan trọng nhất</span></div>
+      <div class="use-step"><div class="use-snum">2</div><span>Xong việc nào gạt kẹp lên 1 nấc</span></div>
+      <div class="use-step"><div class="use-snum">3</div><span>Chạm đỉnh <strong style="color:var(--gold)">Nấc 5</strong> → khóa sổ nghỉ ngơi</span></div>
+    </div>
+
+    <div class="use-block">
+      <div class="use-title">📐 Quy cách in ấn (CC0 — Miễn phí)</div>
+      <div style="font-size:.82rem;color:var(--text2);line-height:1.7">
+        Khổ <strong style="color:var(--gold)">4,8 × 14,8 cm</strong> · Giấy Kraft 230–250gsm · 3 thẻ / nửa tờ A4<br>
+        In 2 mặt · Kẹp 1 chiếc kẹp giấy kim loại nhỏ bên trái<br>
+        <span style="color:var(--text3)">Khóa nguồn mở CC0 — Được phép sao chép, in lại, tặng miễn phí</span>
+      </div>
+    </div>
+
+  </div>
+
+</div><!-- /main -->
+
+<!-- MENU BUTTON -->
+<button id="menu-fab" onclick="openMenu()" style="
+  position:fixed;bottom:24px;right:16px;z-index:200;
+  width:44px;height:44px;border-radius:50%;
+  background:rgba(26,15,4,0.9);border:1.5px solid var(--rule);
+  color:rgba(200,146,42,0.6);font-size:1.1rem;
+  cursor:pointer;display:flex;align-items:center;justify-content:center;
+  box-shadow:0 4px 20px rgba(0,0,0,0.5);
+  backdrop-filter:blur(12px);transition:.2s;
+">🌿</button>
+
+<!-- MENU DRAWER -->
+<div id="menu-overlay" class="modal-overlay" onclick="if(event.target===this)closeMenu()">
+  <div class="modal-sheet">
+    <div class="modal-handle"></div>
+    <div class="modal-title">Khám Phá Thêm</div>
+    <div class="menu-item" onclick="openLibrary();closeMenu()">
+      <span class="mi-icon">📚</span>
+      <div><span class="mi-label">Thư viện tài liệu</span><span class="mi-sub">20 cẩm nang — Thuyết Hạt 56, Soroban, Đạo Than Đước…</span></div>
+    </div>
+    <div class="menu-item" onclick="openStoriesModal();closeMenu()">
+      <span class="mi-icon">🌿</span>
+      <div><span class="mi-label">Câu Chuyện Rừng Đước</span><span class="mi-sub">3.600 câu chuyện · 36 Vol · 4 Session</span></div>
+    </div>
+    <div class="menu-item" onclick="switchTab('bookmark',document.querySelectorAll('.tab')[2]);closeMenu()">
+      <span class="mi-icon">📐</span>
+      <div><span class="mi-label">Hướng dẫn in Bookmark</span><span class="mi-sub">CC0 · Khổ bỏ túi 4,8×14,8 cm · Giấy Kraft</span></div>
     </div>
   </div>
 </div>
 
-<!-- Library Modal -->
-<div id="lib-overlay" onclick="if(event.target===this)closeLibrary()">
-  <div id="lib-sheet" onclick="event.stopPropagation()">
-    <div class="drawer-handle"></div>
-    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px">
-      <div class="drawer-title" style="margin:0">📚 Thư viện</div>
-      <button class="lib-btn sec" style="padding:5px 12px" onclick="closeLibrary()">✕</button>
+<!-- LIBRARY OVERLAY -->
+<div id="lib-overlay" class="modal-overlay" onclick="if(event.target===this)closeLibrary()">
+  <div class="modal-sheet">
+    <div class="modal-handle"></div>
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:14px">
+      <div class="modal-title" style="margin:0">📚 Thư viện</div>
+      <button class="lib-btn sec" onclick="closeLibrary()" style="padding:5px 11px">✕</button>
     </div>
-    <div id="lib-list"><div style="color:var(--ink3);font-size:.85rem;text-align:center;padding:24px">Đang tải danh sách…</div></div>
+    <div id="lib-list"><div style="color:var(--text3);text-align:center;padding:24px;font-size:.85rem">Đang tải…</div></div>
     <div id="lib-reader" style="display:none">
       <div style="display:flex;align-items:center;gap:8px;margin-bottom:12px">
-        <button class="lib-btn sec" onclick="libCloseReader()" style="padding:6px 12px;font-size:.82rem">← Quay lại</button>
-        <span id="lib-reader-title" style="font-size:.88rem;font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;flex:1;color:var(--ink)"></span>
-        <a id="lib-dl-btn" class="lib-btn" download style="padding:6px 14px;font-size:.82rem;text-decoration:none">⬇ Tải</a>
+        <button class="lib-btn sec" onclick="libCloseReader()" style="padding:5px 11px;font-size:.8rem">← Quay lại</button>
+        <span id="lib-reader-title" style="font-size:.85rem;font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;flex:1;color:var(--text)"></span>
+        <a id="lib-dl-btn" class="lib-btn" download style="padding:5px 11px;font-size:.8rem;text-decoration:none">⬇</a>
       </div>
       <div id="lib-reader-body"></div>
     </div>
   </div>
 </div>
 
-<!-- Stories Modal -->
+<!-- STORIES MODAL -->
 <div id="stories-modal" onclick="if(event.target===this)closeStoriesModal()">
   <div id="stories-frame">
     <div id="stories-bar">
@@ -1030,380 +677,419 @@ body{
       </div>
       <button id="stories-close" onclick="closeStoriesModal()" style="background:none;border:none;color:#7ecf9e;font-size:1.2rem;cursor:pointer;padding:4px 8px;border-radius:6px">✕</button>
     </div>
-    <div id="stories-content" style="flex:1;overflow-y:auto;overflow-x:hidden;padding:0"></div>
+    <div id="stories-content" style="flex:1;overflow-y:auto;overflow-x:hidden"></div>
   </div>
 </div>
 
 <script>
-/* ===== BOOK NAVIGATION ===== */
-let curChapter = -1; // -1 = cover, -2 = toc
-const TOTAL = 6;
+/* ===== DATA ===== */
+const MANTRAS = [
+  {text:'Chậm 2 giây cho mình, giữ yên 100 mét cho người.',note:'Mọi lời nói hay hành động vội vàng đều làm đục mặt nước. Cứ dừng đúng 2 giây trước khi mở miệng hay bấm nút gửi, 80% rắc rối sẽ tự động tan biến.'},
+  {text:'Việc chưa tới tay thì chưa phải việc của mình.',note:'Đừng tiêu xài năng lượng hôm nay để lo chuyện ngày mai, cũng đừng gánh giùm phần việc của người khác khi họ chưa mở lời nhờ.'},
+  {text:'Nóng giận là tự đốt tiền xăng của chính mình.',note:'Khi bạn nổi nóng với ai, người mệt đầu tiên và hao tổn khí huyết nhiều nhất chính là bạn, không phải người đối diện.'},
+  {text:'Một ngày chỉ có 5 nấc — chạm đỉnh là khóa sổ.',note:'Đừng cố làm 20 việc một ngày. Chọn đúng 5 việc cốt lõi nhất, xong việc nào gạt kẹp lên 1 nấc; đụng Nấc 5 là đóng máy đi nghỉ.'},
+  {text:'Thở ra dài hơn hít vào là công tắc tắt bão.',note:'Hít vào 4 giây, thở ra êm 6 giây. Chỉ cần 1 nhịp 10 giây như vậy mỗi tiếng đồng hồ, tim sẽ tự hạ nhịp và bụng dưới tự ấm lại.'},
+  {text:'Cà phê làm tỉnh cái đầu, hơi thở chậm làm êm cái bụng.',note:'Đừng uống cà phê trong vội vàng. Nhấp từng ngụm nhỏ trong tĩnh tại, sự tỉnh táo không-vội-vàng của bạn sẽ làm dịu cả góc quán.'},
+  {text:'Ai nói gì mặc ai, mặt nước phẳng thì bóng tự tan.',note:'Tiếng ồn bên ngoài chỉ làm bạn mệt khi lòng bạn còn gợn sóng. Giữ tâm phẳng như nét sóng ngang (∼), mọi lời trái tai sẽ tự trôi qua.'},
+  {text:'Lười tranh cãi là cách tiết kiệm tuổi thọ rẻ nhất.',note:'Thắng một cuộc cãi vã thường mất một buổi chiều bực dọc và một đêm mất ngủ. Kẻ Làm Biếng chọn ngủ ngon thay vì chọn phần thắng.'},
+  {text:'Gieo một hạt chuẩn ở Nấc 0, phần còn lại để thời gian làm.',note:'Đừng ép cây lớn nhanh bằng cách kéo ngọn. Làm gọn phần việc khởi đầu của mình rồi thả tự nhiên, quy luật cộng hưởng sẽ tự nhân lên.'},
+  {text:'Hết một nhịp sóng lại gạt về số 0 (○).',note:'Chuyện hôm qua đã qua, cơn giận vừa rồi đã dứt. Kéo kẹp giấy về vòng tròn rỗng ở đáy thước để bắt đầu lại nhẹ tênh như chưa từng có gì xảy ra.'},
+];
 
-function openBook() {
-  document.getElementById('cover').style.display = 'none';
-  document.getElementById('toc').style.display = 'block';
-  document.getElementById('book-nav').style.display = 'flex';
-  document.getElementById('nav-current').textContent = 'Mục lục';
-  curChapter = -2;
+const QA_GROUPS = [
+  {title:'Nhóm 1 · Khi sắp nổi nóng & Xung đột',items:[
+    {q:'Người ta nói năng vô lý, xúc phạm mình ngay trước mặt thì làm sao nhịn được?',a:'Không cần nhịn cho tức ngực. Chỉ cần im lặng đúng 2 giây, thở ra một hơi dài 6 giây rồi hỏi lại một câu thật chậm — cơn nóng của họ tự khắc mất chỗ bám.'},
+    {q:'Lỡ nổi nóng rồi, giờ thấy hối hận và mệt mỏi quá thì làm sao?',a:'Rút bookmark ra, đẩy kẹp đi qua 5 nhịp thở (10 giây) rồi gạt cái rẹt về ○. Chuyện đã lỡ giống như ly nước đã đổ, lau bàn xong thì thôi, không ngồi tiếc.'},
+    {q:'Ra đường kẹt xe, còi bóp inh ỏi khiến đầu óc muốn nổ tung?',a:'Bạn không dẹp được kẹt xe, nhưng bạn dẹp được tiếng còi trong đầu mình. Thả lỏng hai vai, hạ cơ hoành xuống và đếm 5 nhịp thở — coi như đang được nghỉ miễn phí giữa đường.'},
+    {q:'Làm sao để không bị cuốn vào chuyện thị phi nơi công sở?',a:'Giữ đúng nguyên tắc: nghe bằng một tai, cho trôi qua tai kia, không góp thêm củi vào bếp lửa của người khác.'},
+    {q:'Có những người cố tình chọc giận mình thì xử lý thế nào?',a:'Nếu bạn nổi giận, họ đạt mục đích. Nếu bạn ngáp nhẹ một cái và gạt kẹp về 0, họ tự thấy mình vô duyên mà rút lui.'},
+  ]},
+  {title:'Nhóm 2 · Khi bị giao thêm việc & Quá tải',items:[
+    {q:'Việc cũ chưa xong, sếp và đồng nghiệp lại đẩy thêm việc mới?',a:'Mở bàn tính 5 nấc ra xem kẹp đang ở đâu. Nếu đã chạm Nấc 5, hãy nhẹ nhàng hỏi: <em>"Hôm nay tôi đã kín 5 đầu việc chính, anh/chị muốn tôi gác việc nào lại để ưu tiên việc này?"</em>'},
+    {q:'Lúc nào cũng thấy mình thiếu thời gian, chạy từ sáng tới tối vẫn không hết việc?',a:'Vì bạn đang làm cả những việc không cần thiết. Bỏ bớt 50% việc lặt vặt đi, thế giới vẫn quay bình thường mà bạn lại có thời gian thở.'},
+    {q:'Làm sao để tập trung khi xung quanh có quá nhiều tin nhắn và thông báo?',a:'Mỗi tiếng đồng hồ chỉ làm 50 phút, phút thứ 50 buông tay thở 10 giây. Khi đầu không nóng, bạn làm 1 tiếng bằng người khác gồng 3 tiếng.'},
+    {q:'Tôi hay ôm đồm vì sợ người khác làm không vừa ý mình?',a:'Bạn ôm hết thì người khác đứng chơi, còn bạn thì kiệt sức. Hãy chấp nhận kết quả 80% của người khác để đổi lấy 100% sự thảnh thơi của mình.'},
+    {q:'Cuối tuần rồi mà đầu óc vẫn cứ nghĩ tới công việc — làm biếng vậy có bị tụt hậu không?',a:'Kéo kẹp giấy về vòng tròn rỗng ○ vào tối thứ Sáu. Thứ Hai chưa tới, lo trước cũng không được tính lương thêm giờ. Kẻ Làm Biếng chỉ lười phản xạ thừa; nhờ giữ sức mà khi cơ hội thật sự tới, bạn là người duy nhất còn đủ tỉnh táo để nắm lấy.'},
+  ]},
+  {title:'Nhóm 3 · Tiền bạc & Kiếm tiền nhàn đầu',items:[
+    {q:'Tiền bạc đang eo hẹp, bảo tôi bình thản ngồi uống cà phê sao nổi?',a:'Lo lắng không sinh ra thêm một đồng nào, nhưng nó đốt sạch sức khỏe khiến bạn tính toán sai lầm. Bình tĩnh lại mới nhìn thấy lối ra ít tốn kém nhất.'},
+    {q:'Muốn kiếm thêm thu nhập nhưng đi làm cả ngày đã mệt, không còn sức cày thêm nghề tay trái?',a:'Đừng lấy thêm sức đi đổi tiền lẻ nữa, hãy <strong>làm lại đúng việc mình đang giỏi nhưng bớt động tác thừa đi</strong>. Biến thứ mình làm sẵn hằng ngày thành một gói gọn nhẹ bán lại nhiều lần — <strong>một lần làm ra, mười lần thu tiền</strong>.'},
+    {q:'Thấy người ta rủ đầu tư lời nhanh, hùn hạp làm ăn lớn mà mình không rành, sợ bỏ lỡ cơ hội?',a:'Gạt bookmark lên 1 nấc rồi hỏi đúng một câu: <em>"Mất trắng số tiền này tối nay mình có ngủ ngon không?"</em> Nếu câu trả lời là không thì cất tiền lại ngay. Tiền của Kẻ Làm Biếng là <strong>tiền ngủ ngon</strong>.'},
+    {q:'Lương tháng nào cũng vừa nhận đã hết sạch, không biết tiền trôi đi đâu?',a:'Ngày vừa nhận lương, cắt ngay một phần cố định cất riêng vào chỗ <strong>khó rút ra nhất</strong>, phần còn lại chia đúng <strong>3 khoản lớn</strong>. Xài hết phần tiêu vặt thì tự động ở nhà uống nước lọc tới cuối tháng.'},
+    {q:'Thấy bạn bè xung quanh thành công, giàu có làm mình sốt ruột — thế nào mới là đủ đầy?',a:'Cây đước mọc chậm dưới bùn nhưng giữ được cả bờ biển; đừng so tốc độ của mình với cỏ dại. Đủ đầy là khi tối đặt lưng xuống ngủ ngay không vướng nợ, sáng thức dậy thấy bụng ấm, đầu nhẹ.'},
+  ]},
+  {title:'Nhóm 4 · Khi khó ngủ, rối trí & Mệt mỏi',items:[
+    {q:'Đêm nằm trằn trọc mãi không ngủ được vì suy nghĩ lung tung?',a:'Đừng cố ép mình ngủ. Đặt tay lên bụng dưới, thở chậm 5 nhịp (10 giây) cho cơ hoành hạ xuống; cứ mỗi lần ý nghĩ chạy đi lại gạt nhẹ nó về ○.'},
+    {q:'Ban ngày làm việc ngồi nhiều khiến vai gáy cứng đờ, hay đau bao tử?',a:'Cứ đúng 1 tiếng đồng hồ, dừng lại 10 giây hít sâu đầy bụng rồi thở ra thật chậm. Cơ hoành hạ sâu sẽ tự mát-xa dạ dày và thả lỏng hai bờ vai cho bạn.'},
+    {q:'Tôi đang muốn bỏ thuốc lá hoặc một thói quen xấu nhưng cứ vài ngày lại tái nghiện?',a:'Đừng thề bỏ cả đời cho nặng đầu. Chỉ cần gạt qua 5 nấc trong đúng <strong>1 ngày hôm nay</strong> (24 giờ). Hết hôm nay lại gạt về 0, ngày mai tính tiếp 1 ngày mới.'},
+    {q:'Tại sao chỉ thở 10 giây mỗi tiếng lại có tác dụng mạnh như vậy?',a:'Vì nó ngắt đứt chuỗi tích tụ căng thẳng trước khi cơ thể kịp "nóng máy", giữ cho hệ thần kinh và vi sinh đường ruột luôn ở trạng thái êm ái.'},
+    {q:'Khi mệt mỏi rã rời mà vẫn phải tiếp tục công việc thì duy trì thói quen thở đều cách nào?',a:'Đứng yên bên cửa sổ đúng 1 phút, thở sâu 6 nhịp. Muốn không quên thì gắn nhịp thở 10 giây vào một việc hằng ngày: mỗi lần cầm ly nước hay ly cà phê lên là tự động thở chậm một nhịp.'},
+  ]},
+  {title:'Nhóm 5 · Lan tỏa bình an & Tiêu cực xung quanh',items:[
+    {q:'Người thân hoặc bạn bè suốt ngày than thở chuyện tiêu cực khiến mình mệt lây?',a:'Ngồi nghe họ nói nhưng giữ hơi thở của mình thật chậm và đều. Khi trường năng lượng của bạn vững, bạn không bị hút theo họ mà chính họ sẽ dịu lại theo bạn.'},
+    {q:'Tôi muốn giúp người thân bớt căng thẳng nhưng nói họ không nghe?',a:'Đừng khuyên nữa. Hãy tự mình sống chậm lại, bớt cằn nhằn, và đặt nhẹ cuốn sổ tay nhỏ này lên bàn uống nước của họ là đủ.'},
+    {q:'Một người bình thường ngồi uống cà phê thì làm sao tạo ra bình yên cho xung quanh?',a:'Khi bạn ngồi uống cà phê với nhịp tim phẳng lặng và ánh mắt thong thả, sự không-vội-vàng đó tự tạo ra một vùng yên bán kính 100 mét khiến bàn bên cạnh cũng tự động hạ giọng.'},
+    {q:'Tại sao cuốn sổ tay này lại mỏng và ít chữ như vậy?',a:'Vì Kẻ Làm Biếng không thích viết dài, mà người đang mệt cũng không có sức đọc sách dày. Viết vừa đủ để đọc xong trong một ly cà phê là tốt nhất.'},
+    {q:'Đọc xong cuốn sổ tay này rồi thì cất đi đâu?',a:'Đừng cất lên kệ sách. Hãy truyền tay tặng lại cho người đang mệt mỏi hoặc nóng nảy nhất mà bạn gặp hôm nay.'},
+    {q:'Đỉnh cao nhất của Kẻ Làm Biếng là trạng thái nào?',a:'Là khi bạn không còn phải nhớ bất kỳ câu thần chú nào trong cuốn sách này nữa, vì sự bình thản đã trở thành hơi thở tự nhiên của chính bạn (○).'},
+  ]},
+  {title:'Nhóm 6 · Cha mẹ ứng xử với con nhỏ',items:[
+    {q:'Con cái lề mề, bày bừa hoặc không chịu học bài làm tôi muốn hét lên?',a:'Dừng đúng 2 giây trước khi mở miệng quát. Tiếng hét của cha mẹ chỉ làm con sợ hãi chứ không giúp con hiểu bài. Thở ra một hơi dài 6 giây cho dịu giọng xuống rồi nói một câu thật ngắn gọn, rõ ràng.'},
+    {q:'Con ăn vạ, khóc lóc hoặc cãi lại làm tôi mất bình tĩnh?',a:'Đừng nhảy vào tranh thắng thua với một đứa trẻ. Cứ ngồi yên cạnh con, giữ hơi thở của chính mình thật chậm và đều; khi cơn sóng của người lớn phẳng lặng, cơn bão của đứa trẻ tự khắc tan theo.'},
+    {q:'Tôi hay lo xa cho tương lai của con nên ép con học đủ thứ, cả hai mẹ con đều mệt?',a:'Đừng mang bảng tính 5 nấc của người lớn đè lên vai trẻ nhỏ. Bỏ bớt các lớp học thêm không cần thiết, dành buổi tối cùng con ăn bữa cơm thong thả.'},
+  ]},
+  {title:'Nhóm 7 · Chiều cha mẹ, ông bà',items:[
+    {q:'Cha mẹ ở nhà hay nhắc đi nhắc lại một chuyện cũ, lo xa thái quá khiến mình bực bội?',a:'Gạt bookmark lên 1 nấc trước khi mở cửa bước vào nhà. Cha mẹ già lấy chuyện lo cho con cháu làm niềm vui sống; người ta nhắc không phải để trách mà vì sợ mình sơ sẩy. Chỉ cần gật đầu cười nhẹ.'},
+    {q:'Muốn khuyên cha mẹ bớt ôm đồm, đi khám bệnh nhưng nói tới là cha mẹ gạt đi?',a:'Đừng đóng vai "người lớn" đi dạy ngược lại cha mẹ. Thay vì nói <em>"Ba mẹ đừng làm nữa, hại sức khỏe"</em>, hãy đổi sang câu nhờ vả nhẹ tênh: <em>"Bác sĩ dặn con phải dắt ba mẹ đi kiểm tra định kỳ để con yên tâm đi làm"</em>.'},
+    {q:'Ở xa quê hoặc bận rộn cả tuần, mỗi lần gọi điện về cho cha mẹ lại không biết nói gì?',a:'Mỗi tuần chọn đúng một buổi tối rảnh, gọi đúng <strong>2 phút</strong> kể một chuyện nhỏ xíu vô thưởng vô phạt. Với người già, nhịp gọi đều đặn 2 phút quý hơn cả một cuộc gọi dài cả tiếng nhưng nửa năm mới có một lần.'},
+  ]},
+  {title:'Nhóm 8 · Chuyện trai gái & Yêu đương',items:[
+    {q:'Nhắn tin mà người kia chưa trả lời ngay, trong bụng cứ nóng như lửa đốt?',a:'Gạt bookmark lên 1 nấc rồi úp điện thoại xuống bàn. Người ta không trả lời liền thường là vì đang kẹt xe, đang họp hoặc đang ngủ quên — chứ không phải đang hết thương mình.'},
+    {q:'Hai đứa đang giận nhau, ai cũng muốn nói câu cho hả giận hoặc đòi chia tay?',a:'Lúc đang nóng, lời nói ra giống như hòn đá ném xuống giếng — ném thì dễ mà vớt lên không nổi. Ngồi im thở đủ 10 giây, uống ngụm nước lọc rồi nói đúng một câu: <em>"Chuyện này để tối nay nguội đầu rồi hai đứa nói tiếp"</em>.'},
+    {q:'Yêu nhau lâu ngày thấy hết mới mẻ, dễ cáu gắt chuyện vặt vãnh?',a:'Đừng bắt người thương phải đọc được suy nghĩ của mình. Muốn ăn gì, mệt chỗ nào hay cần dỗ dành ra sao thì nói thẳng bằng một câu ngắn gọn. Thương nhau bền là ở chỗ <strong>ở cạnh nhau thấy nhẹ nhõm như được thở</strong>.'},
+  ]},
+  {title:'Nhóm 9 · Điện thoại & Nghỉ ngơi không tội lỗi',items:[
+    {q:'Đang ngồi yên tự nhiên thấy sốt ruột, cảm giác mình đang lười biếng và tụt hậu?',a:'Đó không phải bạn đang tụt hậu, mà là cơ thể đang "cai nghiện" nhịp chạy hối hả quen thuộc. Cây đước muốn bám chắc xuống bùn thì phải đứng yên suốt mùa nước ròng. Cứ ngồi yên thêm 10 giây nữa, cảm giác tội lỗi sẽ tự tan.'},
+    {q:'Lướt điện thoại thấy người ta khoe thành công, kiếm nhiều tiền, tự nhiên thấy lòng chộn rộn?',a:'Tắt màn hình, đặt úp điện thoại xuống bàn trong 2 giây. Bạn đang đem hậu trường mệt mỏi của mình đi so với sân khấu đã chỉnh đèn của người khác. Ly cà phê trên tay mới là việc của mình.'},
+    {q:'Muốn làm một dự án hoặc việc tử tế cho cộng đồng mà trong tay có ít vốn thì bắt đầu sao cho nhàn?',a:'Đừng nhìn lên Nấc 5 cho ngợp. Hãy gói gọn nó thành một hạt mồi tí hon ở Nấc 0 (như photo 39 cuốn sổ nhỏ đặt ở quán cà phê quen) rồi thả cho nó tự lớn theo nhịp log(39).'},
+    {q:'Đọc xong cuốn sách nhỏ này rồi, bước tiếp theo tôi phải làm gì?',a:'Chẳng phải làm gì cả. Rút chiếc bookmark kẹp vào trang bạn thích nhất, thở chậm một nhịp 10 giây, rồi đưa cuốn sách này cho người đang nhăn nhó nhất mà bạn gặp hôm nay — và gạt kẹp về vòng tròn rỗng (○).'},
+  ]},
+];
+
+const AB_NOTCHES = [
+  {label:'[ ○ 0 ]',pct:0,num:'1',desc:'Điểm rỗng'},
+  {label:'[ NẤC 1 ]',pct:20,num:'39',desc:'Thả lỏng vai'},
+  {label:'[ NẤC 2 ]',pct:40,num:'1.521',desc:'Hạ cơ hoành'},
+  {label:'[ NẤC 3 ]',pct:60,num:'59.319',desc:'Thở ra êm'},
+  {label:'[ NẤC 4 ]',pct:80,num:'2.313.441',desc:'Dịu nhịp tim'},
+  {label:'[ NẤC 5 ]',pct:100,num:'90.224.199',desc:'Khóa sổ nghỉ'},
+];
+
+let abLevel = 0; // 0–5
+
+/* ===== RENDER MANTRAS ===== */
+function renderMantras() {
+  document.getElementById('mantra-list').innerHTML = MANTRAS.map((m,i)=>`
+    <div class="m-item" id="mi${i}" onclick="toggleMantra(${i})">
+      <div class="m-num">${i+1}</div>
+      <div class="m-body">
+        <div class="m-text">${m.text}</div>
+        <div class="m-note">${m.note}</div>
+      </div>
+      <div class="m-arrow">▶</div>
+    </div>`).join('');
 }
 
-function showToc() {
-  document.getElementById('toc').style.display = 'block';
-  document.getElementById('chapters').style.display = 'none';
-  document.getElementById('nav-current').textContent = 'Mục lục';
-  curChapter = -2;
-  updateNavBtns();
-  window.scrollTo({top:0, behavior:'smooth'});
+function toggleMantra(i) {
+  const el = document.getElementById('mi'+i);
+  el.classList.toggle('expanded');
 }
 
-function gotoChapter(n) {
-  document.getElementById('toc').style.display = 'none';
-  document.getElementById('chapters').style.display = 'block';
-  document.querySelectorAll('.chapter').forEach(c => c.classList.remove('active'));
-  const ch = document.querySelector('.chapter[data-ch="'+n+'"]');
-  if (ch) ch.classList.add('active');
-  curChapter = n;
-  updateNavBtns();
-  window.scrollTo({top:0, behavior:'smooth'});
-  const titles = ['Lời Mở Đầu','Phần I: 10 Câu Thần Chú','Phần II: 39 Hỏi–Đáp','Phần III: Bookmark','Phần IV: In ấn CC0','Phần V: Phôi Bookmark'];
-  document.getElementById('nav-current').textContent = titles[n] || '';
+/* ===== RENDER ABACUS ===== */
+function renderAbacus() {
+  document.getElementById('ab-rows').innerHTML = AB_NOTCHES.slice().reverse().map((n,ri)=>{
+    const i = 5 - ri; // actual index
+    return `<div class="abacus-row${i===abLevel?' active-notch':''}" id="ab-row${i}" onclick="abSetLevel(${i})">
+      <div class="ab-label">${n.label}</div>
+      <div class="ab-track" style="position:relative">
+        <div class="ab-track-fill" id="ab-fill${i}" style="width:${i<=abLevel?n.pct:0}%"></div>
+      </div>
+      <div class="ab-num">${n.num}</div>
+    </div>`;
+  }).join('');
+  updateAbacus();
 }
 
-function prevChapter() {
-  if (curChapter <= 0) { showToc(); return; }
-  gotoChapter(curChapter - 1);
+function abSetLevel(n) {
+  abLevel = n;
+  updateAbacus();
 }
-function nextChapter() {
-  if (curChapter < 0) { gotoChapter(0); return; }
-  if (curChapter < TOTAL - 1) gotoChapter(curChapter + 1);
+function abReset() {
+  abLevel = 0;
+  updateAbacus();
+}
+function updateAbacus() {
+  AB_NOTCHES.forEach((n,i)=>{
+    const fill = document.getElementById('ab-fill'+i);
+    const row = document.getElementById('ab-row'+i);
+    if (!fill||!row) return;
+    fill.style.width = i<=abLevel ? n.pct+'%' : '0%';
+    row.classList.toggle('active-notch', i===abLevel);
+  });
+  const cur = AB_NOTCHES[abLevel];
+  document.getElementById('ab-status').textContent = `${cur.label} · ${cur.desc}`;
 }
 
-function updateNavBtns() {
-  document.getElementById('nav-prev').disabled = curChapter <= -2;
-  document.getElementById('nav-next').disabled = curChapter >= TOTAL - 1;
-}
-
-/* Touch swipe for chapters */
-let _tx = 0;
-document.addEventListener('touchstart', e => { _tx = e.touches[0].clientX; }, {passive:true});
-document.addEventListener('touchend', e => {
-  if (curChapter < -1) return;
-  const dx = e.changedTouches[0].clientX - _tx;
-  if (Math.abs(dx) > 60) {
-    if (dx < 0) nextChapter();
-    else prevChapter();
+/* ===== BREATH ===== */
+let breathTimer = null;
+function startBreath() {
+  if (breathTimer) {
+    clearInterval(breathTimer);
+    breathTimer = null;
+    const btn = document.getElementById('breath-btn');
+    btn.textContent = 'Thở 10s';
+    btn.classList.remove('running');
+    document.getElementById('breath-fill').style.width = '0%';
+    return;
   }
-}, {passive:true});
+  const btn = document.getElementById('breath-btn');
+  btn.classList.add('running');
+  btn.textContent = '…';
+  let elapsed = 0;
+  const TOTAL = 10000; // 10 seconds
+  const fill = document.getElementById('breath-fill');
+  const start = Date.now();
+  breathTimer = setInterval(()=>{
+    elapsed = Date.now()-start;
+    const pct = Math.min(100, (elapsed/TOTAL)*100);
+    fill.style.width = pct+'%';
+    // inhale 4s grow, exhale 6s shrink
+    if (elapsed < 4000) {
+      fill.style.background = 'linear-gradient(to right,#2d6b45,#4aa870)';
+      btn.textContent = `↑ ${(4-(elapsed/1000)).toFixed(1)}s`;
+    } else {
+      fill.style.background = 'linear-gradient(to right,#1a4d2e,#2d6b45)';
+      btn.textContent = `↓ ${(10-(elapsed/1000)).toFixed(1)}s`;
+    }
+    if (elapsed >= TOTAL) {
+      clearInterval(breathTimer);
+      breathTimer = null;
+      fill.style.width = '0%';
+      btn.textContent = 'Thở 10s';
+      btn.classList.remove('running');
+      // advance abacus
+      if (abLevel < 5) { abLevel++; updateAbacus(); }
+      else { setTimeout(()=>{abLevel=0;updateAbacus();},400); }
+    }
+  }, 50);
+}
 
-/* ===== SECONDARY DRAWER ===== */
-function openDrawer() {
-  document.getElementById('secondary-drawer').classList.add('open');
+/* ===== RENDER QA ===== */
+function renderQA() {
+  let html = '';
+  let qNum = 0;
+  QA_GROUPS.forEach((g,gi)=>{
+    html += `<div class="group-block"><div class="group-hd">${g.title}</div>`;
+    g.items.forEach((item,ii)=>{
+      qNum++;
+      html += `<div class="qa-card" id="qa${gi}-${ii}">
+        <div class="qa-q-row" onclick="toggleQA('qa${gi}-${ii}')">
+          <div class="qa-q-badge">H${qNum}</div>
+          <div class="qa-q-text">${item.q}</div>
+          <div class="qa-toggle">▶</div>
+        </div>
+        <div class="qa-a-row">
+          <div class="qa-a-label">ĐÁP</div>
+          <div class="qa-a-text">${item.a}</div>
+        </div>
+      </div>`;
+    });
+    html += '</div>';
+  });
+  document.getElementById('qa-content').innerHTML = html;
 }
-function closeDrawer() {
-  document.getElementById('secondary-drawer').classList.remove('open');
+
+function toggleQA(id) {
+  document.getElementById(id).classList.toggle('open');
 }
+
+/* ===== TAB SWITCHING ===== */
+function switchTab(name, btn) {
+  document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
+  document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));
+  if (btn) btn.classList.add('active');
+  document.getElementById('screen-'+name).classList.add('active');
+  document.getElementById('main').scrollTop = 0;
+}
+
+/* ===== MENU ===== */
+function openMenu(){document.getElementById('menu-overlay').classList.add('open')}
+function closeMenu(){document.getElementById('menu-overlay').classList.remove('open')}
 
 /* ===== LIBRARY ===== */
 let libIndex = null;
+function libFileSize(b){if(!b)return '';if(b<1024)return b+'B';if(b<1048576)return (b/1024).toFixed(1)+'KB';return (b/1048576).toFixed(1)+'MB';}
+function libFileIcon(n){const e=n.split('.').pop().toLowerCase();return {pdf:'📄',doc:'📝',docx:'📝',txt:'🗒',md:'📋'}[e]||'📁';}
 
-function libFileIcon(name) {
-  const ext = name.split('.').pop().toLowerCase();
-  return {pdf:'📄',doc:'📝',docx:'📝',txt:'🗒️',md:'📋'}[ext] || '📁';
-}
-function libFileSize(b) {
-  if (!b) return '';
-  if (b < 1024) return b+'B';
-  if (b < 1048576) return (b/1024).toFixed(1)+'KB';
-  return (b/1048576).toFixed(1)+'MB';
-}
-
-async function openLibrary() {
+async function openLibrary(){
   document.getElementById('lib-overlay').classList.add('open');
-  if (libIndex === null) await libLoadIndex();
-  else libRenderList();
+  if(!libIndex) await libLoad();
+  else libRender();
 }
-function closeLibrary() {
-  document.getElementById('lib-overlay').classList.remove('open');
-  libCloseReader();
-}
+function closeLibrary(){document.getElementById('lib-overlay').classList.remove('open');libCloseReader();}
 
-async function libLoadIndex() {
-  const el = document.getElementById('lib-list');
-  el.innerHTML = '<div style="color:var(--ink3);font-size:.85rem;text-align:center;padding:24px">Đang tải danh sách…</div>';
-  try {
-    const r = await fetch('library/index.json?v='+Date.now());
-    libIndex = await r.json();
-    libRenderList();
-  } catch(e) {
-    el.innerHTML = '<div style="color:var(--ink3);font-size:.85rem;text-align:center;padding:24px">Không tải được danh sách file.</div>';
-  }
+async function libLoad(){
+  try{
+    const r=await fetch('library/index.json?v='+Date.now());
+    libIndex=await r.json();
+    libRender();
+  }catch{document.getElementById('lib-list').innerHTML='<div style="color:var(--text3);text-align:center;padding:24px;font-size:.85rem">Không tải được danh sách.</div>';}
 }
-
-function libRenderList() {
-  const el = document.getElementById('lib-list');
-  if (!libIndex || !libIndex.length) {
-    el.innerHTML = '<div style="color:var(--ink3);font-size:.85rem;text-align:center;padding:32px">Thư viện chưa có file nào.</div>';
-    return;
-  }
-  el.innerHTML = libIndex.map((f,i) => `
-    <div class="lib-file-item">
-      <span class="lib-file-icon">${libFileIcon(f.name)}</span>
-      <div class="lib-file-info">
-        <div class="lib-file-name">${f.title||f.name}</div>
-        <div class="lib-file-meta">${f.desc?f.desc+' · ':''}${libFileSize(f.size)}</div>
+function libRender(){
+  const el=document.getElementById('lib-list');
+  if(!libIndex||!libIndex.length){el.innerHTML='<div style="color:var(--text3);text-align:center;padding:32px;font-size:.85rem">Thư viện chưa có file nào.</div>';return;}
+  el.innerHTML=libIndex.map((f,i)=>`
+    <div class="lib-item">
+      <span style="font-size:1.3rem">${libFileIcon(f.name)}</span>
+      <div style="flex:1;min-width:0">
+        <div class="lib-name">${f.title||f.name}</div>
+        <div class="lib-meta">${f.desc?f.desc+' · ':''}${libFileSize(f.size)}</div>
       </div>
-      <div class="lib-file-actions">
-        <button class="lib-btn" onclick="libOpenReader(${i})">👁 Đọc</button>
-        <a class="lib-btn sec" href="library/${encodeURIComponent(f.name)}" download="${f.name}" style="text-decoration:none">⬇</a>
+      <div style="display:flex;gap:5px">
+        <button class="lib-btn" onclick="libOpen(${i})">👁</button>
+        <a class="lib-btn sec" href="library/${encodeURIComponent(f.name)}" download="${f.name}" style="text-decoration:none;display:flex;align-items:center;justify-content:center">⬇</a>
       </div>
-    </div>
-  `).join('');
+    </div>`).join('');
 }
 
-function cleanLatex(str) {
-  const map = {
-    '\\\\sim':'∼','\\\\approx':'≈','\\\\neq':'≠','\\\\leq':'≤','\\\\geq':'≥',
-    '\\\\times':'×','\\\\div':'÷','\\\\pm':'±','\\\\infty':'∞',
-    '\\\\bigcirc':'○','\\\\circ':'∘','\\\\bullet':'•','\\\\cdot':'·',
-    '\\\\alpha':'α','\\\\beta':'β','\\\\gamma':'γ','\\\\delta':'δ',
-    '\\\\epsilon':'ε','\\\\theta':'θ','\\\\lambda':'λ','\\\\mu':'μ',
-    '\\\\pi':'π','\\\\sigma':'σ','\\\\phi':'φ','\\\\omega':'ω',
-    '\\\\sum':'∑','\\\\prod':'∏','\\\\int':'∫',
-    '\\\\rightarrow':'→','\\\\leftarrow':'←','\\\\Rightarrow':'⇒','\\\\to':'→','\\\\sqrt':'√',
-  };
-  function convert(s) {
-    for (const [k,v] of Object.entries(map)) s = s.replace(new RegExp(k,'g'), v);
-    s = s.replace(/log_\{([^}]+)\}/g,'log($1)');
-    s = s.replace(/([a-zA-Z0-9])_\{([^}]+)\}/g,'$1_$2');
-    s = s.replace(/([a-zA-Z0-9])\^\{([^}]+)\}/g,'$1^$2');
-    return s;
-  }
-  str = str.replace(/\$\$([^$]+)\$\$/g, (_,m) => convert(m.trim()));
-  str = str.replace(/\$([^$\n]+)\$/g, (_,m) => convert(m.trim()));
+function cleanLatex(str){
+  const map={'\\\\sim':'∼','\\\\approx':'≈','\\\\neq':'≠','\\\\leq':'≤','\\\\geq':'≥','\\\\times':'×','\\\\div':'÷','\\\\pm':'±','\\\\infty':'∞','\\\\bigcirc':'○','\\\\circ':'∘','\\\\bullet':'•','\\\\cdot':'·','\\\\alpha':'α','\\\\beta':'β','\\\\gamma':'γ','\\\\delta':'δ','\\\\epsilon':'ε','\\\\theta':'θ','\\\\lambda':'λ','\\\\mu':'μ','\\\\pi':'π','\\\\sigma':'σ','\\\\phi':'φ','\\\\omega':'ω','\\\\sum':'∑','\\\\prod':'∏','\\\\int':'∫','\\\\rightarrow':'→','\\\\leftarrow':'←','\\\\Rightarrow':'⇒','\\\\to':'→','\\\\sqrt':'√'};
+  function cv(s){for(const[k,v]of Object.entries(map))s=s.replace(new RegExp(k,'g'),v);s=s.replace(/log_\{([^}]+)\}/g,'log($1)');s=s.replace(/([a-zA-Z0-9])_\{([^}]+)\}/g,'$1_$2');s=s.replace(/([a-zA-Z0-9])\^\{([^}]+)\}/g,'$1^$2');return s;}
+  str=str.replace(/\$\$([^$]+)\$\$/g,(_,m)=>cv(m.trim()));
+  str=str.replace(/\$([^$\n]+)\$/g,(_,m)=>cv(m.trim()));
   return str;
 }
 
-async function libOpenReader(i) {
-  const f = libIndex[i];
-  const ext = f.name.split('.').pop().toLowerCase();
-  const url = 'library/' + encodeURIComponent(f.name);
-  document.getElementById('lib-list').style.display = 'none';
-  document.getElementById('lib-reader').style.display = 'block';
-  document.getElementById('lib-reader-title').textContent = f.title || f.name;
-  const dlBtn = document.getElementById('lib-dl-btn');
-  dlBtn.href = url; dlBtn.download = f.name;
-  const body = document.getElementById('lib-reader-body');
-  body.innerHTML = '<span style="color:var(--ink3)">Đang tải…</span>';
-  if (['txt','md','csv','json','xml'].includes(ext)) {
-    try {
-      const text = await (await fetch(url)).text();
-      if (ext === 'md' && typeof marked !== 'undefined') {
+async function libOpen(i){
+  const f=libIndex[i];
+  const ext=f.name.split('.').pop().toLowerCase();
+  const url='library/'+encodeURIComponent(f.name);
+  document.getElementById('lib-list').style.display='none';
+  document.getElementById('lib-reader').style.display='block';
+  document.getElementById('lib-reader-title').textContent=f.title||f.name;
+  const dlBtn=document.getElementById('lib-dl-btn');
+  dlBtn.href=url;dlBtn.download=f.name;
+  const body=document.getElementById('lib-reader-body');
+  body.innerHTML='<span style="color:var(--text3)">Đang tải…</span>';
+  if(['txt','md','csv','json','xml'].includes(ext)){
+    try{
+      const text=await(await fetch(url)).text();
+      if(ext==='md'&&typeof marked!=='undefined'){
         marked.setOptions({breaks:true,gfm:true});
-        const renderer = new marked.Renderer();
-        renderer.table = (h,b) => `<div class="table-wrap"><table><thead>${h}</thead><tbody>${b}</tbody></table></div>`;
-        body.innerHTML = marked.parse(cleanLatex(text), {renderer});
-      } else {
-        body.innerHTML = `<pre style="white-space:pre-wrap;word-break:break-word;font-size:.82rem;line-height:1.65;font-family:inherit">${text.replace(/</g,'&lt;').replace(/>/g,'&gt;')}</pre>`;
+        body.innerHTML=marked.parse(cleanLatex(text));
+      }else{
+        body.innerHTML=`<pre style="white-space:pre-wrap;word-break:break-word;font-size:.8rem;line-height:1.65">${text.replace(/</g,'&lt;').replace(/>/g,'&gt;')}</pre>`;
       }
-    } catch { body.innerHTML = '<span style="color:var(--ink3)">Không tải được file.</span>'; }
-  } else if (ext === 'pdf') {
-    body.innerHTML = `<iframe src="${url}" style="width:100%;min-height:62dvh;border:none;border-radius:8px"></iframe>`;
-  } else {
-    body.innerHTML = `<div style="text-align:center;padding:24px;color:var(--ink3)">Không thể đọc trực tiếp loại file này.<br>Vui lòng tải về.</div>`;
+    }catch{body.innerHTML='<span style="color:var(--text3)">Không tải được file.</span>';}
+  }else if(ext==='pdf'){
+    body.innerHTML=`<iframe src="${url}" style="width:100%;min-height:55dvh;border:none;border-radius:6px"></iframe>`;
+  }else{
+    body.innerHTML=`<div style="text-align:center;padding:24px;color:var(--text3)">Không thể đọc trực tiếp.<br>Vui lòng tải về.</div>`;
   }
 }
-
-function libCloseReader() {
-  document.getElementById('lib-reader').style.display = 'none';
-  document.getElementById('lib-list').style.display = '';
-  document.getElementById('lib-reader-body').innerHTML = '';
+function libCloseReader(){
+  document.getElementById('lib-reader').style.display='none';
+  document.getElementById('lib-list').style.display='';
+  document.getElementById('lib-reader-body').innerHTML='';
 }
 
-/* ===== STORIES MODAL ===== */
-// 36 vols, mỗi vol 100 tập → 4 sessions × 9 vols
-const STORY_SESSIONS = [
-  { label:'Session 1', vols:[1,2,3,4,5,6,7,8,9] },
-  { label:'Session 2', vols:[10,11,12,13,14,15,16,17,18] },
-  { label:'Session 3', vols:[19,20,21,22,23,24,25,26,27] },
-  { label:'Session 4', vols:[28,29,30,31,32,33,34,35,36] },
+/* ===== STORIES ===== */
+const STORY_SESSIONS=[
+  {label:'Session 1',vols:[1,2,3,4,5,6,7,8,9]},
+  {label:'Session 2',vols:[10,11,12,13,14,15,16,17,18]},
+  {label:'Session 3',vols:[19,20,21,22,23,24,25,26,27]},
+  {label:'Session 4',vols:[28,29,30,31,32,33,34,35,36]},
 ];
-// nav stack: [{view:'sessions'}|{view:'vols',si}|{view:'eps',si,vi}|{view:'story',si,vi,idx}]
-let _sStack = [];
-let _sCache = {}; // vol# -> array
+let _sStack=[],_sCache={};
 
-function openStoriesModal() {
+function openStoriesModal(){
   document.getElementById('stories-modal').classList.add('open');
-  _sStack = [];
+  _sStack=[];
   _storiesRender({view:'sessions'});
 }
-function closeStoriesModal() {
-  document.getElementById('stories-modal').classList.remove('open');
-}
-function storiesBack() {
+function closeStoriesModal(){document.getElementById('stories-modal').classList.remove('open');}
+function storiesBack(){
   _sStack.pop();
-  if (!_sStack.length) { _storiesRender({view:'sessions'}); return; }
-  _storiesRender(_sStack[_sStack.length-1], true);
+  if(!_sStack.length){_storiesRender({view:'sessions'});return;}
+  _storiesRender(_sStack[_sStack.length-1],true);
 }
 
-function _storiesRender(state, isBack) {
-  if (!isBack) {
-    if (_sStack.length && _sStack[_sStack.length-1].view !== state.view)
-      _sStack.push(state);
-    else if (!_sStack.length) _sStack.push(state);
-  }
-  const content = document.getElementById('stories-content');
-  const backBtn = document.getElementById('stories-back');
-  const barTitle = document.getElementById('stories-bar-title');
+function _storiesRender(state,isBack){
+  if(!isBack){if(!_sStack.length||_sStack[_sStack.length-1].view!==state.view)_sStack.push(state);}
+  const content=document.getElementById('stories-content');
+  const backBtn=document.getElementById('stories-back');
+  const barTitle=document.getElementById('stories-bar-title');
+  backBtn.style.display=_sStack.length>1?'':'none';
 
-  backBtn.style.display = _sStack.length > 1 ? '' : 'none';
-
-  if (state.view === 'sessions') {
-    barTitle.textContent = '🌿 Câu Chuyện Rừng Đước';
-    content.innerHTML = `
-      <div style="padding:16px 14px 8px;font-size:.75rem;color:#4a8a60;letter-spacing:1.5px;text-transform:uppercase">
-        ${STORY_SESSIONS.reduce((s,_,i)=>`${s} Vol ${i*9+1}–${Math.min(i*9+9,36)}`,'').trim().split(' Vol ').filter(Boolean).map((r,i)=>`Vol ${r}`).join(' · ')}
-      </div>
-      <div style="padding:0 10px 20px;display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:8px">
+  if(state.view==='sessions'){
+    barTitle.textContent='🌿 Câu Chuyện Rừng Đước';
+    content.innerHTML=`
+      <div style="padding:14px 12px 20px;display:grid;grid-template-columns:1fr 1fr;gap:10px">
         ${STORY_SESSIONS.map((s,i)=>`
-          <button onclick="_sPushVols(${i})" style="
-            background:linear-gradient(135deg,#0d3d20,#1a6b3c);
-            border:1px solid rgba(100,200,130,0.2);border-radius:12px;
-            padding:18px 14px;text-align:left;cursor:pointer;color:#b8e8c8;
-            font-family:sans-serif;transition:.15s;
-          " onmouseover="this.style.borderColor='rgba(100,200,130,0.5)'"
-             onmouseout="this.style.borderColor='rgba(100,200,130,0.2)'">
+          <button onclick="_sPushVols(${i})" style="background:linear-gradient(135deg,#0d3d20,#1a6b3c);border:1px solid rgba(100,200,130,0.2);border-radius:12px;padding:18px 14px;text-align:left;cursor:pointer;color:#b8e8c8;font-family:sans-serif">
             <div style="font-size:1.3rem;margin-bottom:6px">🌿</div>
             <div style="font-size:.95rem;font-weight:700;margin-bottom:4px">${s.label}</div>
             <div style="font-size:.75rem;color:#4a8a60">Vol ${s.vols[0]}–${s.vols[s.vols.length-1]}</div>
-            <div style="font-size:.72rem;color:#3a7050;margin-top:2px">${s.vols.length * 100} câu chuyện</div>
+            <div style="font-size:.72rem;color:#3a7050;margin-top:2px">${s.vols.length*100} câu</div>
           </button>`).join('')}
       </div>
-      <div style="padding:0 14px 24px;text-align:center;font-size:.75rem;color:#3a6040">
-        Tổng cộng ${36 * 100} câu chuyện từ rừng ngập mặn
-      </div>`;
+      <div style="padding:0 14px 24px;text-align:center;font-size:.75rem;color:#3a6040">Tổng: ${36*100} câu chuyện từ rừng ngập mặn</div>`;
   }
-
-  else if (state.view === 'vols') {
-    const s = STORY_SESSIONS[state.si];
-    barTitle.textContent = s.label;
-    content.innerHTML = `
-      <div style="padding:14px 14px 8px;font-size:.75rem;color:#4a8a60;letter-spacing:1px">${s.vols.length} tập sách · mỗi tập 100 câu</div>
-      <div style="padding:0 10px 20px;display:flex;flex-direction:column;gap:8px;margin-top:4px">
-        ${s.vols.map((v,vi)=>`
-          <button onclick="_sPushEps(${state.si},${vi})" style="
-            background:rgba(10,46,26,0.6);
-            border:1px solid rgba(100,200,130,0.15);border-radius:10px;
-            padding:14px 16px;text-align:left;cursor:pointer;color:#b8e8c8;
-            font-family:sans-serif;display:flex;align-items:center;gap:14px;
-            transition:.15s;
-          " onmouseover="this.style.background='rgba(20,80,45,0.7)'"
-             onmouseout="this.style.background='rgba(10,46,26,0.6)'">
-            <div style="width:36px;height:36px;border-radius:8px;background:linear-gradient(135deg,#1a6b3c,#0d3d20);display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0">📗</div>
-            <div>
-              <div style="font-size:.9rem;font-weight:600">Vol ${v}</div>
-              <div style="font-size:.75rem;color:#4a7a5a;margin-top:2px">Tập ${(v-1)*100+1}–${v*100}</div>
+  else if(state.view==='vols'){
+    const s=STORY_SESSIONS[state.si];
+    barTitle.textContent=s.label;
+    content.innerHTML=`<div style="padding:10px 12px 20px;display:flex;flex-direction:column;gap:7px">
+      ${s.vols.map((v,vi)=>`
+        <button onclick="_sPushEps(${state.si},${vi})" style="background:rgba(10,46,26,0.6);border:1px solid rgba(100,200,130,0.12);border-radius:10px;padding:12px 14px;text-align:left;cursor:pointer;color:#b8e8c8;font-family:sans-serif;display:flex;align-items:center;gap:12px">
+          <div style="width:34px;height:34px;border-radius:8px;background:linear-gradient(135deg,#1a6b3c,#0d3d20);display:flex;align-items:center;justify-content:center;font-size:.9rem;flex-shrink:0">📗</div>
+          <div><div style="font-size:.88rem;font-weight:600">Vol ${v}</div><div style="font-size:.73rem;color:#4a7a5a;margin-top:1px">Tập ${(v-1)*100+1}–${v*100}</div></div>
+          <div style="margin-left:auto;font-size:.8rem;color:#3a6040">→</div>
+        </button>`).join('')}
+    </div>`;
+  }
+  else if(state.view==='eps'){
+    const s=STORY_SESSIONS[state.si];
+    const volNum=s.vols[state.vi];
+    barTitle.textContent=`${s.label} · Vol ${volNum}`;
+    content.innerHTML=`<div style="text-align:center;color:#4a7a5a;padding:30px;font-family:sans-serif;font-size:.85rem">Đang tải…</div>`;
+    _sLoadVol(volNum).then(stories=>{
+      content.innerHTML=`<div style="padding:0 10px 20px">
+        ${stories.map((st,idx)=>`
+          <button onclick="_sPushStory(${state.si},${state.vi},${idx})" style="background:transparent;border:none;border-bottom:1px solid rgba(100,200,130,0.08);padding:11px 6px;width:100%;text-align:left;cursor:pointer;color:#b8e8c8;font-family:sans-serif;display:flex;align-items:center;gap:10px">
+            <span style="font-size:1.2rem;width:26px;text-align:center;flex-shrink:0">${st.e||'🌿'}</span>
+            <div style="flex:1;min-width:0">
+              <div style="font-size:.84rem;font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${st.t}</div>
+              <div style="font-size:.7rem;color:#3a7050;margin-top:1px">Tập ${(volNum-1)*100+idx+1}</div>
             </div>
-            <div style="margin-left:auto;font-size:.8rem;color:#3a6040">100 →</div>
           </button>`).join('')}
       </div>`;
+    }).catch(()=>{content.innerHTML='<div style="text-align:center;color:#4a7a5a;padding:30px;font-family:sans-serif">Không tải được nội dung.</div>';});
   }
-
-  else if (state.view === 'eps') {
-    const s = STORY_SESSIONS[state.si];
-    const volNum = s.vols[state.vi];
-    barTitle.textContent = `${s.label} · Vol ${volNum}`;
-    // Load vol data then render episodes
-    _sLoadVol(volNum).then(stories => {
-      content.innerHTML = `
-        <div style="padding:12px 14px 6px;font-size:.75rem;color:#4a8a60">${stories.length} câu chuyện</div>
-        <div style="padding:0 10px 20px">
-          ${stories.map((st,idx)=>`
-            <button onclick="_sPushStory(${state.si},${state.vi},${idx})" style="
-              background:transparent;border:none;border-bottom:1px solid rgba(100,200,130,0.1);
-              padding:12px 6px;width:100%;text-align:left;cursor:pointer;color:#b8e8c8;
-              font-family:sans-serif;display:flex;align-items:center;gap:10px;
-              transition:background .12s;
-            " onmouseover="this.style.background='rgba(20,80,45,0.4)'"
-               onmouseout="this.style.background='transparent'">
-              <span style="font-size:1.3rem;flex-shrink:0;width:28px;text-align:center">${st.e||'🌿'}</span>
-              <div style="flex:1;min-width:0">
-                <div style="font-size:.85rem;font-weight:600;line-height:1.35;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${st.t}</div>
-                <div style="font-size:.72rem;color:#3a7050;margin-top:1px">Tập ${(volNum-1)*100+idx+1}</div>
-              </div>
-            </button>`).join('')}
-        </div>`;
-    }).catch(()=>{
-      content.innerHTML = `<div style="text-align:center;color:#4a7a5a;padding:40px 20px;font-family:sans-serif">Không tải được nội dung.<br>Vui lòng thử lại.</div>`;
+  else if(state.view==='story'){
+    const s=STORY_SESSIONS[state.si];
+    const volNum=s.vols[state.vi];
+    content.innerHTML=`<div style="text-align:center;color:#4a7a5a;padding:30px;font-family:sans-serif;font-size:.85rem">Đang tải…</div>`;
+    _sLoadVol(volNum).then(stories=>{
+      const st=stories[state.idx];
+      if(!st)return;
+      const tapNum=(volNum-1)*100+state.idx+1;
+      barTitle.textContent=`Tập ${tapNum}`;
+      content.innerHTML=`<div style="padding:20px 18px 32px;font-family:Georgia,serif;color:#c8e8d8">
+        <div style="font-size:2.5rem;text-align:center;margin-bottom:12px">${st.e||'🌿'}</div>
+        <h2 style="font-size:1.05rem;font-weight:700;line-height:1.4;margin-bottom:6px;color:#e8f8ee;text-align:center">${st.t}</h2>
+        <div style="font-size:.7rem;color:#4a7a5a;text-align:center;margin-bottom:18px">Tập ${tapNum} · ${s.label} · Vol ${volNum}</div>
+        <hr style="border:none;border-top:1px solid rgba(100,200,130,0.12);margin:0 0 18px">
+        <div style="font-size:.9rem;line-height:1.85;color:#a8d8b8">${(st.b||'').replace(/\*\*([^*]+)\*\*/g,'<strong style="color:#e8f8ee">$1</strong>').replace(/\n/g,'<br>')}</div>
+        <div style="margin-top:24px;display:flex;justify-content:space-between">
+          <button onclick="_sPrevStory()" ${state.idx===0?'disabled style="opacity:.3"':''} style="background:rgba(20,80,45,0.5);border:1px solid rgba(100,200,130,0.2);color:#7ecf9e;padding:8px 16px;border-radius:8px;cursor:pointer;font-size:.82rem;font-family:sans-serif">← Trước</button>
+          <button onclick="_sNextStory()" style="background:rgba(20,80,45,0.5);border:1px solid rgba(100,200,130,0.2);color:#7ecf9e;padding:8px 16px;border-radius:8px;cursor:pointer;font-size:.82rem;font-family:sans-serif">Sau →</button>
+        </div>
+      </div>`;
     });
-    content.innerHTML = `<div style="text-align:center;color:#4a7a5a;padding:40px 20px;font-family:sans-serif;font-size:.85rem">Đang tải…</div>`;
-  }
-
-  else if (state.view === 'story') {
-    const s = STORY_SESSIONS[state.si];
-    const volNum = s.vols[state.vi];
-    _sLoadVol(volNum).then(stories => {
-      const st = stories[state.idx];
-      if (!st) return;
-      const tapNum = (volNum-1)*100 + state.idx + 1;
-      barTitle.textContent = `Tập ${tapNum}`;
-      content.innerHTML = `
-        <div style="padding:20px 18px 32px;font-family:Georgia,serif;color:#c8e8d8">
-          <div style="font-size:2.5rem;text-align:center;margin-bottom:12px">${st.e||'🌿'}</div>
-          <h2 style="font-size:1.1rem;font-weight:700;line-height:1.4;margin-bottom:8px;color:#e8f8ee;text-align:center">${st.t}</h2>
-          <div style="font-size:.72rem;color:#4a7a5a;text-align:center;margin-bottom:20px;letter-spacing:.5px">Tập ${tapNum} · ${s.label} · Vol ${volNum}</div>
-          <hr style="border:none;border-top:1px solid rgba(100,200,130,0.15);margin:0 0 20px">
-          <div style="font-size:.92rem;line-height:1.85;color:#a8d8b8">${(st.b||'').replace(/\*\*([^*]+)\*\*/g,'<strong style="color:#e8f8ee">$1</strong>').replace(/\n/g,'<br>')}</div>
-          <div style="margin-top:28px;display:flex;justify-content:space-between">
-            <button onclick="_sPrevStory()" ${state.idx===0?'disabled style="opacity:.3"':''} style="
-              background:rgba(20,80,45,0.5);border:1px solid rgba(100,200,130,0.2);
-              color:#7ecf9e;padding:8px 16px;border-radius:8px;cursor:pointer;font-size:.82rem;font-family:sans-serif
-            ">← Trước</button>
-            <button onclick="_sNextStory()" ${state.idx>=stories.length-1?'disabled style="opacity:.3"':''} style="
-              background:rgba(20,80,45,0.5);border:1px solid rgba(100,200,130,0.2);
-              color:#7ecf9e;padding:8px 16px;border-radius:8px;cursor:pointer;font-size:.82rem;font-family:sans-serif
-            ">Sau →</button>
-          </div>
-        </div>`;
-    });
-    content.innerHTML = `<div style="text-align:center;color:#4a7a5a;padding:40px 20px;font-family:sans-serif;font-size:.85rem">Đang tải…</div>`;
   }
 }
 
-function _sPushVols(si) {
-  _sStack.push({view:'vols',si});
-  _storiesRender({view:'vols',si}, true);
-}
-function _sPushEps(si, vi) {
-  _sStack.push({view:'eps',si,vi});
-  _storiesRender({view:'eps',si,vi}, true);
-}
-function _sPushStory(si, vi, idx) {
-  _sStack.push({view:'story',si,vi,idx});
-  _storiesRender({view:'story',si,vi,idx}, true);
-  document.getElementById('stories-content').scrollTop = 0;
-}
-function _sPrevStory() {
-  const cur = _sStack[_sStack.length-1];
-  if (cur.idx <= 0) return;
-  _sStack[_sStack.length-1] = {...cur, idx: cur.idx-1};
-  _storiesRender(_sStack[_sStack.length-1], true);
-  document.getElementById('stories-content').scrollTop = 0;
-}
-function _sNextStory() {
-  const cur = _sStack[_sStack.length-1];
-  _sStack[_sStack.length-1] = {...cur, idx: cur.idx+1};
-  _storiesRender(_sStack[_sStack.length-1], true);
-  document.getElementById('stories-content').scrollTop = 0;
-}
+function _sPushVols(si){_sStack.push({view:'vols',si});_storiesRender({view:'vols',si},true);}
+function _sPushEps(si,vi){_sStack.push({view:'eps',si,vi});_storiesRender({view:'eps',si,vi},true);}
+function _sPushStory(si,vi,idx){_sStack.push({view:'story',si,vi,idx});_storiesRender({view:'story',si,vi,idx},true);document.getElementById('stories-content').scrollTop=0;}
+function _sPrevStory(){const c=_sStack[_sStack.length-1];if(c.idx<=0)return;_sStack[_sStack.length-1]={...c,idx:c.idx-1};_storiesRender(_sStack[_sStack.length-1],true);document.getElementById('stories-content').scrollTop=0;}
+function _sNextStory(){const c=_sStack[_sStack.length-1];_sStack[_sStack.length-1]={...c,idx:c.idx+1};_storiesRender(_sStack[_sStack.length-1],true);document.getElementById('stories-content').scrollTop=0;}
+async function _sLoadVol(n){if(_sCache[n])return _sCache[n];const d=await(await fetch(`vols/vol${n}.json`)).json();_sCache[n]=Array.isArray(d)?d:(d.stories||d.data||[]);return _sCache[n];}
 
-async function _sLoadVol(volNum) {
-  if (_sCache[volNum]) return _sCache[volNum];
-  const r = await fetch(`vols/vol${volNum}.json`);
-  const data = await r.json();
-  _sCache[volNum] = Array.isArray(data) ? data : (data.stories || data.data || []);
-  return _sCache[volNum];
-}
+/* ===== INIT ===== */
+renderMantras();
+renderAbacus();
+renderQA();
 </script>
-
 </body>
 </html>
