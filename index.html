@@ -520,18 +520,16 @@ body{
 #stories-modal.open #stories-frame{transform:translateY(0)}
 #stories-bar{
   background:linear-gradient(135deg,#0f4a2a,#1a6b3c);
-  padding:12px 16px;display:flex;align-items:center;justify-content:space-between;
-}
-#stories-bar span{font-size:.9rem;color:#b8e8c8;font-weight:600}
-#stories-close{
-  background:none;border:none;color:#7ecf9e;font-size:1.2rem;cursor:pointer;
-  padding:4px 8px;border-radius:6px;
+  padding:10px 14px;display:flex;align-items:center;justify-content:space-between;
+  flex-shrink:0;
 }
 #stories-close:hover{background:rgba(255,255,255,0.1)}
 #stories-content{
-  flex:1;overflow-y:auto;
-  /* Stories content will be loaded here */
+  flex:1;overflow-y:auto;overflow-x:hidden;
 }
+#stories-content::-webkit-scrollbar{width:3px}
+#stories-content::-webkit-scrollbar-track{background:rgba(0,0,0,0.2)}
+#stories-content::-webkit-scrollbar-thumb{background:rgba(100,200,130,0.2);border-radius:2px}
 
 /* ===== ORNAMENTAL ELEMENTS ===== */
 .drop-cap::first-letter{
@@ -1022,14 +1020,17 @@ body{
   </div>
 </div>
 
-<!-- Stories Modal (iframe-based) -->
+<!-- Stories Modal -->
 <div id="stories-modal" onclick="if(event.target===this)closeStoriesModal()">
   <div id="stories-frame">
     <div id="stories-bar">
-      <span>🌿 Câu Chuyện Rừng Đước</span>
-      <button id="stories-close" onclick="closeStoriesModal()">✕</button>
+      <div style="display:flex;align-items:center;gap:8px;flex:1;min-width:0">
+        <button id="stories-back" onclick="storiesBack()" style="background:none;border:none;color:#7ecf9e;font-size:1.1rem;cursor:pointer;padding:4px 8px;border-radius:6px;display:none">←</button>
+        <span id="stories-bar-title" style="font-size:.88rem;color:#b8e8c8;font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">🌿 Câu Chuyện Rừng Đước</span>
+      </div>
+      <button id="stories-close" onclick="closeStoriesModal()" style="background:none;border:none;color:#7ecf9e;font-size:1.2rem;cursor:pointer;padding:4px 8px;border-radius:6px">✕</button>
     </div>
-    <div id="stories-content"></div>
+    <div id="stories-content" style="flex:1;overflow-y:auto;overflow-x:hidden;padding:0"></div>
   </div>
 </div>
 
@@ -1219,24 +1220,188 @@ function libCloseReader() {
 }
 
 /* ===== STORIES MODAL ===== */
-let storiesLoaded = false;
+// 36 vols, mỗi vol 100 tập → 4 sessions × 9 vols
+const STORY_SESSIONS = [
+  { label:'Session 1', vols:[1,2,3,4,5,6,7,8,9] },
+  { label:'Session 2', vols:[10,11,12,13,14,15,16,17,18] },
+  { label:'Session 3', vols:[19,20,21,22,23,24,25,26,27] },
+  { label:'Session 4', vols:[28,29,30,31,32,33,34,35,36] },
+];
+// nav stack: [{view:'sessions'}|{view:'vols',si}|{view:'eps',si,vi}|{view:'story',si,vi,idx}]
+let _sStack = [];
+let _sCache = {}; // vol# -> array
 
 function openStoriesModal() {
   document.getElementById('stories-modal').classList.add('open');
-  if (!storiesLoaded) {
-    storiesLoaded = true;
-    // Load old stories app inline
-    const content = document.getElementById('stories-content');
-    content.innerHTML = `<iframe
-      src="stories.html"
-      style="width:100%;height:100%;border:none;flex:1"
-      onerror="this.parentNode.innerHTML='<div style=\\'color:#7ecf9e;text-align:center;padding:40px 20px;font-family:sans-serif\\'>🌿 Nội dung đang được cập nhật.<br><br><small style=\\'color:#4a8a60\\'>Thêm stories.html vào thư mục</small></div>'"
-    ></iframe>`;
-    document.getElementById('stories-frame').style.height = '90dvh';
-  }
+  _sStack = [];
+  _storiesRender({view:'sessions'});
 }
 function closeStoriesModal() {
   document.getElementById('stories-modal').classList.remove('open');
+}
+function storiesBack() {
+  _sStack.pop();
+  if (!_sStack.length) { _storiesRender({view:'sessions'}); return; }
+  _storiesRender(_sStack[_sStack.length-1], true);
+}
+
+function _storiesRender(state, isBack) {
+  if (!isBack) {
+    if (_sStack.length && _sStack[_sStack.length-1].view !== state.view)
+      _sStack.push(state);
+    else if (!_sStack.length) _sStack.push(state);
+  }
+  const content = document.getElementById('stories-content');
+  const backBtn = document.getElementById('stories-back');
+  const barTitle = document.getElementById('stories-bar-title');
+
+  backBtn.style.display = _sStack.length > 1 ? '' : 'none';
+
+  if (state.view === 'sessions') {
+    barTitle.textContent = '🌿 Câu Chuyện Rừng Đước';
+    content.innerHTML = `
+      <div style="padding:16px 14px 8px;font-size:.75rem;color:#4a8a60;letter-spacing:1.5px;text-transform:uppercase">
+        ${STORY_SESSIONS.reduce((s,_,i)=>`${s} Vol ${i*9+1}–${Math.min(i*9+9,36)}`,'').trim().split(' Vol ').filter(Boolean).map((r,i)=>`Vol ${r}`).join(' · ')}
+      </div>
+      <div style="padding:0 10px 20px;display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:8px">
+        ${STORY_SESSIONS.map((s,i)=>`
+          <button onclick="_sPushVols(${i})" style="
+            background:linear-gradient(135deg,#0d3d20,#1a6b3c);
+            border:1px solid rgba(100,200,130,0.2);border-radius:12px;
+            padding:18px 14px;text-align:left;cursor:pointer;color:#b8e8c8;
+            font-family:sans-serif;transition:.15s;
+          " onmouseover="this.style.borderColor='rgba(100,200,130,0.5)'"
+             onmouseout="this.style.borderColor='rgba(100,200,130,0.2)'">
+            <div style="font-size:1.3rem;margin-bottom:6px">🌿</div>
+            <div style="font-size:.95rem;font-weight:700;margin-bottom:4px">${s.label}</div>
+            <div style="font-size:.75rem;color:#4a8a60">Vol ${s.vols[0]}–${s.vols[s.vols.length-1]}</div>
+            <div style="font-size:.72rem;color:#3a7050;margin-top:2px">${s.vols.length * 100} câu chuyện</div>
+          </button>`).join('')}
+      </div>
+      <div style="padding:0 14px 24px;text-align:center;font-size:.75rem;color:#3a6040">
+        Tổng cộng ${36 * 100} câu chuyện từ rừng ngập mặn
+      </div>`;
+  }
+
+  else if (state.view === 'vols') {
+    const s = STORY_SESSIONS[state.si];
+    barTitle.textContent = s.label;
+    content.innerHTML = `
+      <div style="padding:14px 14px 8px;font-size:.75rem;color:#4a8a60;letter-spacing:1px">${s.vols.length} tập sách · mỗi tập 100 câu</div>
+      <div style="padding:0 10px 20px;display:flex;flex-direction:column;gap:8px;margin-top:4px">
+        ${s.vols.map((v,vi)=>`
+          <button onclick="_sPushEps(${state.si},${vi})" style="
+            background:rgba(10,46,26,0.6);
+            border:1px solid rgba(100,200,130,0.15);border-radius:10px;
+            padding:14px 16px;text-align:left;cursor:pointer;color:#b8e8c8;
+            font-family:sans-serif;display:flex;align-items:center;gap:14px;
+            transition:.15s;
+          " onmouseover="this.style.background='rgba(20,80,45,0.7)'"
+             onmouseout="this.style.background='rgba(10,46,26,0.6)'">
+            <div style="width:36px;height:36px;border-radius:8px;background:linear-gradient(135deg,#1a6b3c,#0d3d20);display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0">📗</div>
+            <div>
+              <div style="font-size:.9rem;font-weight:600">Vol ${v}</div>
+              <div style="font-size:.75rem;color:#4a7a5a;margin-top:2px">Tập ${(v-1)*100+1}–${v*100}</div>
+            </div>
+            <div style="margin-left:auto;font-size:.8rem;color:#3a6040">100 →</div>
+          </button>`).join('')}
+      </div>`;
+  }
+
+  else if (state.view === 'eps') {
+    const s = STORY_SESSIONS[state.si];
+    const volNum = s.vols[state.vi];
+    barTitle.textContent = `${s.label} · Vol ${volNum}`;
+    // Load vol data then render episodes
+    _sLoadVol(volNum).then(stories => {
+      content.innerHTML = `
+        <div style="padding:12px 14px 6px;font-size:.75rem;color:#4a8a60">${stories.length} câu chuyện</div>
+        <div style="padding:0 10px 20px">
+          ${stories.map((st,idx)=>`
+            <button onclick="_sPushStory(${state.si},${state.vi},${idx})" style="
+              background:transparent;border:none;border-bottom:1px solid rgba(100,200,130,0.1);
+              padding:12px 6px;width:100%;text-align:left;cursor:pointer;color:#b8e8c8;
+              font-family:sans-serif;display:flex;align-items:center;gap:10px;
+              transition:background .12s;
+            " onmouseover="this.style.background='rgba(20,80,45,0.4)'"
+               onmouseout="this.style.background='transparent'">
+              <span style="font-size:1.3rem;flex-shrink:0;width:28px;text-align:center">${st.e||'🌿'}</span>
+              <div style="flex:1;min-width:0">
+                <div style="font-size:.85rem;font-weight:600;line-height:1.35;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${st.t}</div>
+                <div style="font-size:.72rem;color:#3a7050;margin-top:1px">Tập ${(volNum-1)*100+idx+1}</div>
+              </div>
+            </button>`).join('')}
+        </div>`;
+    }).catch(()=>{
+      content.innerHTML = `<div style="text-align:center;color:#4a7a5a;padding:40px 20px;font-family:sans-serif">Không tải được nội dung.<br>Vui lòng thử lại.</div>`;
+    });
+    content.innerHTML = `<div style="text-align:center;color:#4a7a5a;padding:40px 20px;font-family:sans-serif;font-size:.85rem">Đang tải…</div>`;
+  }
+
+  else if (state.view === 'story') {
+    const s = STORY_SESSIONS[state.si];
+    const volNum = s.vols[state.vi];
+    _sLoadVol(volNum).then(stories => {
+      const st = stories[state.idx];
+      if (!st) return;
+      const tapNum = (volNum-1)*100 + state.idx + 1;
+      barTitle.textContent = `Tập ${tapNum}`;
+      content.innerHTML = `
+        <div style="padding:20px 18px 32px;font-family:Georgia,serif;color:#c8e8d8">
+          <div style="font-size:2.5rem;text-align:center;margin-bottom:12px">${st.e||'🌿'}</div>
+          <h2 style="font-size:1.1rem;font-weight:700;line-height:1.4;margin-bottom:8px;color:#e8f8ee;text-align:center">${st.t}</h2>
+          <div style="font-size:.72rem;color:#4a7a5a;text-align:center;margin-bottom:20px;letter-spacing:.5px">Tập ${tapNum} · ${s.label} · Vol ${volNum}</div>
+          <hr style="border:none;border-top:1px solid rgba(100,200,130,0.15);margin:0 0 20px">
+          <div style="font-size:.92rem;line-height:1.85;color:#a8d8b8">${(st.b||'').replace(/\*\*([^*]+)\*\*/g,'<strong style="color:#e8f8ee">$1</strong>').replace(/\n/g,'<br>')}</div>
+          <div style="margin-top:28px;display:flex;justify-content:space-between">
+            <button onclick="_sPrevStory()" ${state.idx===0?'disabled style="opacity:.3"':''} style="
+              background:rgba(20,80,45,0.5);border:1px solid rgba(100,200,130,0.2);
+              color:#7ecf9e;padding:8px 16px;border-radius:8px;cursor:pointer;font-size:.82rem;font-family:sans-serif
+            ">← Trước</button>
+            <button onclick="_sNextStory()" ${state.idx>=stories.length-1?'disabled style="opacity:.3"':''} style="
+              background:rgba(20,80,45,0.5);border:1px solid rgba(100,200,130,0.2);
+              color:#7ecf9e;padding:8px 16px;border-radius:8px;cursor:pointer;font-size:.82rem;font-family:sans-serif
+            ">Sau →</button>
+          </div>
+        </div>`;
+    });
+    content.innerHTML = `<div style="text-align:center;color:#4a7a5a;padding:40px 20px;font-family:sans-serif;font-size:.85rem">Đang tải…</div>`;
+  }
+}
+
+function _sPushVols(si) {
+  _sStack.push({view:'vols',si});
+  _storiesRender({view:'vols',si}, true);
+}
+function _sPushEps(si, vi) {
+  _sStack.push({view:'eps',si,vi});
+  _storiesRender({view:'eps',si,vi}, true);
+}
+function _sPushStory(si, vi, idx) {
+  _sStack.push({view:'story',si,vi,idx});
+  _storiesRender({view:'story',si,vi,idx}, true);
+  document.getElementById('stories-content').scrollTop = 0;
+}
+function _sPrevStory() {
+  const cur = _sStack[_sStack.length-1];
+  if (cur.idx <= 0) return;
+  _sStack[_sStack.length-1] = {...cur, idx: cur.idx-1};
+  _storiesRender(_sStack[_sStack.length-1], true);
+  document.getElementById('stories-content').scrollTop = 0;
+}
+function _sNextStory() {
+  const cur = _sStack[_sStack.length-1];
+  _sStack[_sStack.length-1] = {...cur, idx: cur.idx+1};
+  _storiesRender(_sStack[_sStack.length-1], true);
+  document.getElementById('stories-content').scrollTop = 0;
+}
+
+async function _sLoadVol(volNum) {
+  if (_sCache[volNum]) return _sCache[volNum];
+  const r = await fetch(`vols/vol${volNum}.json`);
+  const data = await r.json();
+  _sCache[volNum] = Array.isArray(data) ? data : (data.stories || data.data || []);
+  return _sCache[volNum];
 }
 </script>
 
