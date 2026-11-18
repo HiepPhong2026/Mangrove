@@ -1,0 +1,998 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[~. Đồng hồ Giọt Nước Ngọt — Rừng Ngập Mặn</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        /* Bảng màu giấy gió ấm (Warm Parchment) và than đước (Matte Charcoal) */
+        :root {
+            --bg-parchment: #f5f0e6;
+            --bg-parchment-deep: #ebe3d3;
+            --charcoal: #222523;
+            --charcoal-soft: #434945;
+            --mangrove-teal: #1b5e58;
+            --mangrove-glow: #3b8c84;
+            --silt-brown: #6e523f;
+        }
+
+        body {
+            background-color: var(--bg-parchment);
+            color: var(--charcoal);
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-image: 
+                radial-gradient(circle at 20% 15%, rgba(255, 255, 255, 0.55) 0%, transparent 45%),
+                radial-gradient(circle at 80% 85%, rgba(110, 82, 63, 0.08) 0%, transparent 50%);
+            transition: background-color 0.6s ease, color 0.6s ease;
+            overflow-x: hidden;
+            user-select: none;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        /* Chế độ đêm Than Đước (Matte Charcoal Theme) */
+        body.charcoal-theme {
+            --bg-parchment: #1b1e1c;
+            --bg-parchment-deep: #252927;
+            --charcoal: #ece6da;
+            --charcoal-soft: #a6a095;
+            --mangrove-teal: #5eb5ac;
+            --mangrove-glow: #8ad8d0;
+            --silt-brown: #bfa08a;
+            background-image: 
+                radial-gradient(circle at 50% 35%, rgba(94, 181, 172, 0.08) 0%, transparent 55%),
+                radial-gradient(circle at 80% 85%, rgba(0, 0, 0, 0.4) 0%, transparent 60%);
+        }
+
+        .font-serif-title {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+        }
+
+        .glass-card {
+            background-color: rgba(255, 255, 255, 0.35);
+            border: 1px solid rgba(34, 37, 35, 0.1);
+            backdrop-filter: blur(8px);
+            transition: all 0.3s ease;
+        }
+
+        body.charcoal-theme .glass-card {
+            background-color: rgba(37, 41, 39, 0.55);
+            border: 1px solid rgba(236, 230, 218, 0.1);
+        }
+
+        .btn-pill {
+            border: 1px solid rgba(34, 37, 35, 0.18);
+            transition: all 0.25s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        body.charcoal-theme .btn-pill {
+            border-color: rgba(236, 230, 218, 0.18);
+        }
+
+        .btn-pill:hover {
+            transform: translateY(-1px);
+            border-color: var(--mangrove-teal);
+        }
+
+        .btn-pill:active {
+            transform: translateY(0px) scale(0.98);
+        }
+
+        .btn-pill.active {
+            background-color: var(--charcoal);
+            color: var(--bg-parchment);
+            border-color: var(--charcoal);
+        }
+
+        /* Hiệu ứng nhịp thở nhẹ cho thông báo hướng dẫn */
+        @keyframes softFade {
+            0%, 100% { opacity: 0.72; }
+            50% { opacity: 1; }
+        }
+        .breath-prompt {
+            animation: softFade 4s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between items-center px-4 py-6 sm:py-8">
+
+    <!-- Phần đầu: Tiêu đề tối giản & Nút chuyển tông màu / Âm thanh -->
+    <header class="w-full max-w-2xl flex items-center justify-between gap-2">
+        <div class="flex items-center gap-2.5">
+            <span class="font-mono text-lg sm:text-xl font-bold tracking-wider px-2.5 py-0.5 rounded-lg" style="color: var(--mangrove-teal); background: rgba(27, 94, 88, 0.08);">[~.</span>
+            <div>
+                <h1 class="font-serif-title text-xl sm:text-2xl font-semibold tracking-tight leading-none">Đồng hồ Giọt Nước Ngọt</h1>
+                <p class="text-[11px] sm:text-xs opacity-65 mt-0.5 tracking-wide">W(T) = ∫ σ*(t) dt &nbsp;·&nbsp; 1 giọt / giây</p>
+            </div>
+        </div>
+
+        <div class="flex items-center gap-2">
+            <!-- Nút bật/tắt âm thanh Web Audio API -->
+            <button id="audioToggleBtn" type="button" class="btn-pill px-3 py-2 rounded-full text-xs sm:text-sm flex items-center gap-1.5 cursor-pointer" title="Bật/tắt âm thanh giọt nước & nhịp thở">
+                <span id="audioIcon" aria-hidden="true">🔇</span>
+                <span id="audioLabel" class="hidden sm:inline">Tĩnh lặng</span>
+            </button>
+
+            <!-- Nút chuyển đổi giao diện Giấy Gió / Than Đước -->
+            <button id="themeToggleBtn" type="button" class="btn-pill px-3 py-2 rounded-full text-xs sm:text-sm flex items-center gap-1.5 cursor-pointer" title="Đổi tông Giấy gió ấm / Than đước">
+                <span id="themeIcon" aria-hidden="true">🌑</span>
+                <span id="themeLabel" class="hidden sm:inline">Than đước</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Phần trung tâm: Mặt đồng hồ nghệ thuật [~. -->
+    <main class="w-full max-w-2xl flex flex-col items-center justify-center my-auto py-4">
+        
+        <!-- Vùng chứa Canvas đáp ứng linh hoạt mọi màn hình -->
+        <div id="canvasContainer" class="relative w-full max-w-[360px] sm:max-w-[410px] aspect-square flex items-center justify-center">
+            <canvas id="mangroveClockCanvas" class="w-full h-full block"></canvas>
+        </div>
+
+        <!-- Dòng dẫn nhịp thở & trạng thái tức thời (không số đếm gây áp lực) -->
+        <div class="text-center mt-2 min-h-[54px] flex flex-col items-center justify-center px-4">
+            <p id="phaseGuidance" class="font-serif-title italic text-xl sm:text-2xl tracking-wide breath-prompt" style="color: var(--mangrove-teal);">
+                Mở khung trống — đón từng giọt hiện tại
+            </p>
+            <p id="subGuidance" class="text-xs sm:text-sm opacity-70 mt-1">
+                Hít vào 4s · Giữ nhẹ 2s · Thở ra 6s
+            </p>
+        </div>
+
+        <!-- Bộ điều khiển chế độ -->
+        <div class="flex flex-wrap items-center justify-center gap-2.5 mt-5">
+            <button id="modeDropBtn" type="button" class="btn-pill active px-4 py-2.5 rounded-full text-xs sm:text-sm font-medium cursor-pointer">
+                💧 Chế độ Giọt Nước (1 giây/giọt)
+            </button>
+            <button id="modeBreathBtn" type="button" class="btn-pill px-4 py-2.5 rounded-full text-xs sm:text-sm font-medium cursor-pointer">
+                🌬️ Chế độ Thở Lọc Than (4–2–6)
+            </button>
+            <button id="resetBtn" type="button" class="btn-pill px-3.5 py-2.5 rounded-full text-xs sm:text-sm opacity-75 hover:opacity-100 cursor-pointer" title="Lắng bùn và bắt đầu lại">
+                ↻ Lắng bùn
+            </button>
+        </div>
+
+        <!-- Bảng tích phân lượng nước ngọt & chỉ số tương đương -->
+        <section class="glass-card w-full rounded-2xl p-4 sm:p-5 mt-6 grid grid-cols-3 gap-3 text-center">
+            <div class="flex flex-col justify-center border-r border-current/10 pr-2">
+                <span class="text-[11px] uppercase tracking-wider opacity-60">Tích phân giọt</span>
+                <span id="dropCountDisplay" class="font-serif-title text-2xl sm:text-3xl font-semibold mt-0.5">0</span>
+                <span class="text-[11px] opacity-65">giọt tinh khiết</span>
+            </div>
+
+            <div class="flex flex-col justify-center border-r border-current/10 px-2">
+                <span class="text-[11px] uppercase tracking-wider opacity-60">Thể tích lọc</span>
+                <span id="volumeMlDisplay" class="font-serif-title text-2xl sm:text-3xl font-semibold mt-0.5">0.00</span>
+                <span class="text-[11px] opacity-65">ml nước ngọt</span>
+            </div>
+
+            <div class="flex flex-col justify-center pl-2">
+                <span class="text-[11px] uppercase tracking-wider opacity-60">Tương đương</span>
+                <span id="equivalentDisplay" class="font-serif-title text-lg sm:text-xl font-semibold mt-1 leading-tight" style="color: var(--mangrove-teal);">
+                    Khởi đầu mạch ngầm
+                </span>
+                <span id="equivalentSubDisplay" class="text-[11px] opacity-65 mt-0.5">0.05 ml / giọt</span>
+            </div>
+        </section>
+    </main>
+
+    <!-- Chân trang triết lý -->
+    <footer class="w-full max-w-2xl text-center text-[11px] sm:text-xs opacity-60 pt-2">
+        <p>“Đốt cháy định kiến để giữ lấy cái Rỗng; âm thầm lọc bùn biến cố thành nước ngọt.”</p>
+    </footer>
+
+    <!-- Hộp thông báo nhẹ nhàng (thay thế alert) -->
+    <div id="toastMessage" class="fixed bottom-6 left-1/2 -translate-x-1/2 px-4 py-2 rounded-full text-xs sm:text-sm shadow-sm opacity-0 pointer-events-none transition-opacity duration-300" style="background-color: var(--charcoal); color: var(--bg-parchment);">
+        Đã lắng bùn — mặt nước trở lại trong lành.
+    </div>
+
+    <script>
+        /**
+         * ĐỒNG HỒ GIỌT NƯỚC NGỌT [~.
+         * Triết lý Rừng Ngập Mặn & Than Đước
+         * - 1 giây = 1 giọt nước ngọt = 0.05 ml
+         * - Chu kỳ thở 4-2-6 (tổng 12 giây) điều khiển nhịp sóng '~' và trường âm thanh
+         */
+
+        // --- 1. TRẠNG THÁI ỨNG DỤNG ---
+        const state = {
+            mode: 'drop', // 'drop' (1s/giọt) hoặc 'breath' (Thở lọc than 4-2-6)
+            isCharcoalTheme: false,
+            audioEnabled: false,
+            startTime: performance.now(),
+            lastSecondIndex: 0,
+            totalDrops: 0,
+            fallingDrops: [], // Các giọt nước đang rơi từ đầu kim xuống mặt sóng
+            ripples: [],      // Các vòng gợn sóng khi giọt nước chạm mặt nước lợ
+            lastBreathPhase: ''
+        };
+
+        // Tham số vật lý & tỷ lệ quy đổi
+        const ML_PER_DROP = 0.05;
+        const BREATH_CYCLE_SEC = 12; // 4s hít vào + 2s giữ nhẹ + 6s thở ra
+
+        // --- 2. HỆ THỐNG ÂM THANH NÂNG CẤP — RỪNG NGẬP MẶN ---
+        /**
+         * 4 lớp âm thanh:
+         *  L1 — Giọt nước FM: noise burst + sine resonance = tiếng "tóc" thực hơn
+         *  L2 — Chuông bowl Tibetan: sine + harmonics tắt dần mỗi 12s chu kỳ
+         *  L3 — Nhịp thở: pad reverb 3-oscillator (sub + mid + air) + stereo width
+         *  L4 — Ambient rừng: filtered noise 2 lớp (gió tán lá + sóng xa mờ)
+         */
+        class MangroveAudioEngine {
+            constructor() {
+                this.ctx = null;
+                this.reverb = null;         // ConvolverNode — hang đá
+                this.masterGain = null;     // Master volume
+
+                // L3 — Nhịp thở (3 oscillator layers)
+                this.breathNodes = null;    // { sub, mid, air, gain }
+
+                // L4 — Ambient rừng
+                this.ambientNodes = null;   // { windGain, waveGain }
+
+                this._ready = false;
+            }
+
+            // ── Khởi tạo AudioContext & build graph ──────────────────────────
+            init() {
+                if (this._ready) {
+                    if (this.ctx.state === 'suspended') this.ctx.resume();
+                    return;
+                }
+                const AC = window.AudioContext || window.webkitAudioContext;
+                this.ctx = new AC();
+
+                // Master gain → destination
+                this.masterGain = this.ctx.createGain();
+                this.masterGain.gain.setValueAtTime(0.82, this.ctx.currentTime);
+                this.masterGain.connect(this.ctx.destination);
+
+                // Reverb (synthetic impulse response — không cần file)
+                this._buildReverb();
+
+                // Ambient rừng (luôn chạy, volume=0 khi tắt)
+                this._buildAmbient();
+
+                // Breath pad (luôn chạy, volume=0 khi tắt)
+                this._buildBreathPad();
+
+                if (this.ctx.state === 'suspended') this.ctx.resume();
+                this._ready = true;
+            }
+
+            // ── L0: Tạo reverb từ impulse response tự sinh ──────────────────
+            _buildReverb() {
+                const sampleRate = this.ctx.sampleRate;
+                const duration = 2.4;  // giây — hang sình ngập mặn
+                const len = Math.floor(sampleRate * duration);
+                const impulse = this.ctx.createBuffer(2, len, sampleRate);
+
+                for (let ch = 0; ch < 2; ch++) {
+                    const data = impulse.getChannelData(ch);
+                    for (let i = 0; i < len; i++) {
+                        // Exponential decay noise — phản âm tường bùn hút âm
+                        const decay = Math.pow(1 - i / len, 2.8);
+                        data[i] = (Math.random() * 2 - 1) * decay * (ch === 0 ? 1 : 0.88);
+                    }
+                }
+                this.reverb = this.ctx.createConvolver();
+                this.reverb.buffer = impulse;
+                this.reverb.connect(this.masterGain);
+            }
+
+            // ── L4: Ambient rừng — gió tán lá + sóng xa mờ ──────────────────
+            _buildAmbient() {
+                const ctx = this.ctx;
+                const now = ctx.currentTime;
+
+                // --- Lớp 1: Gió qua tán lá (filtered white noise, slow LFO)
+                const windBuf = ctx.createBuffer(1, ctx.sampleRate * 3, ctx.sampleRate);
+                const windData = windBuf.getChannelData(0);
+                for (let i = 0; i < windData.length; i++) windData[i] = Math.random() * 2 - 1;
+
+                const windSrc = ctx.createBufferSource();
+                windSrc.buffer = windBuf;
+                windSrc.loop = true;
+
+                const windBP = ctx.createBiquadFilter();
+                windBP.type = 'bandpass';
+                windBP.frequency.setValueAtTime(1200, now);
+                windBP.Q.setValueAtTime(0.6, now);
+
+                // LFO làm gió thổi nhẹ theo nhịp
+                const windLFO = ctx.createOscillator();
+                const windLFOGain = ctx.createGain();
+                windLFO.frequency.setValueAtTime(0.07, now);
+                windLFOGain.gain.setValueAtTime(320, now);
+                windLFO.connect(windLFOGain);
+                windLFOGain.connect(windBP.frequency);
+                windLFO.start();
+
+                const windGain = ctx.createGain();
+                windGain.gain.setValueAtTime(0.0001, now);
+
+                windSrc.connect(windBP);
+                windBP.connect(windGain);
+                windGain.connect(this.reverb);
+                windGain.connect(this.masterGain);  // dry path nhẹ
+                windSrc.start();
+
+                // --- Lớp 2: Sóng nước xa mờ (very low noise, lowpass)
+                const waveBuf = ctx.createBuffer(1, ctx.sampleRate * 5, ctx.sampleRate);
+                const waveData = waveBuf.getChannelData(0);
+                for (let i = 0; i < waveData.length; i++) waveData[i] = Math.random() * 2 - 1;
+
+                const waveSrc = ctx.createBufferSource();
+                waveSrc.buffer = waveBuf;
+                waveSrc.loop = true;
+
+                const waveLP = ctx.createBiquadFilter();
+                waveLP.type = 'lowpass';
+                waveLP.frequency.setValueAtTime(180, now);
+
+                // LFO sóng vỗ nhẹ 0.03 Hz
+                const waveLFO = ctx.createOscillator();
+                const waveLFOGain = ctx.createGain();
+                waveLFO.frequency.setValueAtTime(0.03, now);
+                waveLFOGain.gain.setValueAtTime(0.028, now);
+                waveLFO.type = 'sine';
+                waveLFO.connect(waveLFOGain);
+
+                const waveGain = ctx.createGain();
+                waveGain.gain.setValueAtTime(0.0001, now);
+                waveLFOGain.connect(waveGain.gain);
+                waveLFO.start();
+
+                waveSrc.connect(waveLP);
+                waveLP.connect(waveGain);
+                waveGain.connect(this.reverb);
+                waveSrc.start();
+
+                this.ambientNodes = { windGain, waveGain };
+            }
+
+            // ── L3: Breath pad — 3 oscillator layers + stereo ───────────────
+            _buildBreathPad() {
+                const ctx = this.ctx;
+                const now = ctx.currentTime;
+
+                // Sub: 68 Hz (cơ hoành, feel)
+                const sub = ctx.createOscillator();
+                sub.type = 'sine';
+                sub.frequency.setValueAtTime(68.05, now);
+
+                // Mid: 136.1 Hz (Om / D#3 — tần số tĩnh tại)
+                const mid = ctx.createOscillator();
+                mid.type = 'sine';
+                mid.frequency.setValueAtTime(136.1, now);
+
+                // Air: 272.2 Hz (overtone 2× — tần số khai sáng)
+                const air = ctx.createOscillator();
+                air.type = 'triangle';
+                air.frequency.setValueAtTime(272.2, now);
+
+                // Filter chung — warmth
+                const filter = ctx.createBiquadFilter();
+                filter.type = 'lowpass';
+                filter.frequency.setValueAtTime(480, now);
+                filter.Q.setValueAtTime(0.5, now);
+
+                // Gain tổng cho breath pad
+                const gain = ctx.createGain();
+                gain.gain.setValueAtTime(0.0001, now);
+
+                // Sub mix nhẹ hơn
+                const subGain = ctx.createGain();
+                subGain.gain.setValueAtTime(0.3, now);
+
+                sub.connect(subGain); subGain.connect(filter);
+                mid.connect(filter);
+                air.connect(filter);
+                filter.connect(gain);
+                gain.connect(this.reverb);     // wet — không gian
+                gain.connect(this.masterGain); // dry — cơ thể
+
+                sub.start(); mid.start(); air.start();
+
+                this.breathNodes = { sub, mid, air, filter, gain };
+            }
+
+            // ── L1: Giọt nước FM + noise burst ───────────────────────────────
+            playWaterDrop(isAccent = false) {
+                if (!state.audioEnabled || !this.ctx) return;
+                try {
+                    const ctx = this.ctx;
+                    const now = ctx.currentTime;
+
+                    // ① Noise burst ngắn — tiếng "tóc" khi giọt chạm mặt nước
+                    const noiseBuf = ctx.createBuffer(1, Math.floor(ctx.sampleRate * 0.04), ctx.sampleRate);
+                    const nd = noiseBuf.getChannelData(0);
+                    for (let i = 0; i < nd.length; i++) nd[i] = Math.random() * 2 - 1;
+
+                    const noiseSrc = ctx.createBufferSource();
+                    noiseSrc.buffer = noiseBuf;
+
+                    const noiseBP = ctx.createBiquadFilter();
+                    noiseBP.type = 'bandpass';
+                    noiseBP.frequency.setValueAtTime(isAccent ? 3200 : 2400 + Math.random() * 800, now);
+                    noiseBP.Q.setValueAtTime(2.8, now);
+
+                    const noiseGain = ctx.createGain();
+                    noiseGain.gain.setValueAtTime(isAccent ? 0.22 : 0.14, now);
+                    noiseGain.gain.exponentialRampToValueAtTime(0.0001, now + 0.038);
+
+                    noiseSrc.connect(noiseBP);
+                    noiseBP.connect(noiseGain);
+                    noiseGain.connect(this.reverb);
+                    noiseGain.connect(this.masterGain);
+                    noiseSrc.start(now);
+
+                    // ② FM resonance — cộng hưởng khoang nước
+                    const carrier = ctx.createOscillator();
+                    const modulator = ctx.createOscillator();
+                    const modGain = ctx.createGain();
+                    const carrierGain = ctx.createGain();
+
+                    // Tần số carrier thay đổi theo vị trí ngẫu nhiên (mô phỏng kích thước giọt)
+                    const baseFreq = isAccent ? 580 : 420 + Math.random() * 160;
+                    carrier.type = 'sine';
+                    carrier.frequency.setValueAtTime(baseFreq, now);
+                    carrier.frequency.exponentialRampToValueAtTime(baseFreq * 2.2, now + 0.06);
+                    carrier.frequency.exponentialRampToValueAtTime(baseFreq * 0.85, now + 0.28);
+
+                    // Modulator tạo metallic resonance nhẹ
+                    modulator.type = 'sine';
+                    modulator.frequency.setValueAtTime(baseFreq * 3.1, now);
+                    modGain.gain.setValueAtTime(baseFreq * 1.4, now);
+                    modGain.gain.exponentialRampToValueAtTime(0.0001, now + 0.12);
+
+                    modulator.connect(modGain);
+                    modGain.connect(carrier.frequency);
+
+                    // Envelope: attack cực nhanh 5ms, decay dài hơn 320ms
+                    const peakGain = state.mode === 'drop'
+                        ? (isAccent ? 0.18 : 0.10 + Math.random() * 0.04)
+                        : 0.055;
+                    carrierGain.gain.setValueAtTime(0.0001, now);
+                    carrierGain.gain.linearRampToValueAtTime(peakGain, now + 0.005);
+                    carrierGain.gain.exponentialRampToValueAtTime(peakGain * 0.3, now + 0.08);
+                    carrierGain.gain.exponentialRampToValueAtTime(0.0001, now + 0.32);
+
+                    carrier.connect(carrierGain);
+                    carrierGain.connect(this.reverb);  // wet
+                    carrierGain.connect(this.masterGain); // dry
+
+                    carrier.start(now); modulator.start(now);
+                    carrier.stop(now + 0.34); modulator.stop(now + 0.14);
+
+                } catch (e) { /* bỏ qua lỗi autoplay */ }
+            }
+
+            // ── L2: Chuông bowl Tibetan — mỗi đầu chu kỳ 12s ───────────────
+            playBowlBell() {
+                if (!state.audioEnabled || !this.ctx) return;
+                try {
+                    const ctx = this.ctx;
+                    const now = ctx.currentTime;
+                    // Chuông bowl: 3 partial (cơ bản + 2 overtone)
+                    const partials = [
+                        { freq: 220.0, gain: 0.12, decay: 3.2 },  // fundamental
+                        { freq: 476.2, gain: 0.07, decay: 2.1 },  // minor 3rd overtone
+                        { freq: 880.0, gain: 0.035, decay: 1.4 }, // octave shimmer
+                    ];
+
+                    partials.forEach(({ freq, gain: g, decay }) => {
+                        const osc = ctx.createOscillator();
+                        const env = ctx.createGain();
+
+                        osc.type = 'sine';
+                        osc.frequency.setValueAtTime(freq, now);
+
+                        env.gain.setValueAtTime(0.0001, now);
+                        env.gain.linearRampToValueAtTime(g, now + 0.018); // attack
+                        env.gain.exponentialRampToValueAtTime(0.0001, now + decay);
+
+                        osc.connect(env);
+                        env.connect(this.reverb);       // chủ yếu wet — ngân vang
+                        env.connect(this.masterGain);   // dry nhẹ
+                        osc.start(now);
+                        osc.stop(now + decay + 0.1);
+                    });
+                } catch (e) {}
+            }
+
+            // ── L3 update: điều biến breath pad theo pha 4-2-6 ──────────────
+            updateBreathSound(phase, progressInPhase) {
+                if (!this.ctx || !this.breathNodes) return;
+                const ctx = this.ctx;
+                const now = ctx.currentTime;
+                const { sub, mid, air, filter, gain } = this.breathNodes;
+
+                // Ambient rừng: luôn chạy nhẹ khi audio bật
+                if (this.ambientNodes) {
+                    const ambTarget = state.audioEnabled ? 0.055 : 0.0001;
+                    const waveTarget = state.audioEnabled ? 0.038 : 0.0001;
+                    this.ambientNodes.windGain.gain.setTargetAtTime(ambTarget, now, 1.5);
+                    this.ambientNodes.waveGain.gain.setTargetAtTime(waveTarget, now, 2.0);
+                }
+
+                if (!state.audioEnabled || state.mode !== 'breath') {
+                    gain.gain.setTargetAtTime(0.0001, now, 0.4);
+                    return;
+                }
+
+                let targetGain, subFreq, midFreq, airFreq, filterFreq;
+
+                if (phase === 'inhale') {
+                    // Hít vào 4s — âm dâng từ đất lên
+                    const e = 0.5 - 0.5 * Math.cos(Math.PI * progressInPhase); // ease
+                    targetGain = 0.025 + e * 0.085;
+                    subFreq   = 68.05 + e * 4;
+                    midFreq   = 136.1 + e * 18;
+                    airFreq   = 272.2 + e * 36;
+                    filterFreq = 320 + e * 320;
+                } else if (phase === 'hold') {
+                    // Giữ nhẹ 2s — tĩnh tại ở đỉnh, rung hài hòa nhất
+                    targetGain = 0.11;
+                    subFreq   = 72.05;
+                    midFreq   = 154.1;
+                    airFreq   = 308.2;
+                    filterFreq = 640;
+                } else {
+                    // Thở ra 6s — âm hạ dần êm như sóng rút
+                    const e = 0.5 + 0.5 * Math.cos(Math.PI * progressInPhase);
+                    targetGain = 0.11 * e * 0.9 + 0.008;
+                    subFreq   = 68.05 + e * 4;
+                    midFreq   = 136.1 + e * 18;
+                    airFreq   = 272.2 + e * 36;
+                    filterFreq = 320 + e * 320;
+                }
+
+                const TC = 0.12; // time constant smooth
+                gain.gain.setTargetAtTime(targetGain, now, TC);
+                sub.frequency.setTargetAtTime(subFreq, now, TC);
+                mid.frequency.setTargetAtTime(midFreq, now, TC);
+                air.frequency.setTargetAtTime(airFreq, now, TC);
+                filter.frequency.setTargetAtTime(filterFreq, now, TC);
+            }
+
+            stopAll() {
+                if (!this.ctx) return;
+                const now = this.ctx.currentTime;
+                if (this.breathNodes) this.breathNodes.gain.gain.setTargetAtTime(0.0001, now, 0.3);
+                if (this.ambientNodes) {
+                    this.ambientNodes.windGain.gain.setTargetAtTime(0.0001, now, 0.6);
+                    this.ambientNodes.waveGain.gain.setTargetAtTime(0.0001, now, 0.6);
+                }
+            }
+        }
+
+        const audioEngine = new MangroveAudioEngine();
+
+        // --- 3. QUẢN LÝ CANVAS & TỶ LỆ HIỂN THỊ RETINA ---
+        const canvas = document.getElementById('mangroveClockCanvas');
+        const ctx = canvas.getContext('2d');
+        const container = document.getElementById('canvasContainer');
+
+        function resizeCanvas() {
+            const rect = container.getBoundingClientRect();
+            const dpr = Math.min(window.devicePixelRatio || 1, 2);
+            canvas.width = rect.width * dpr;
+            canvas.height = rect.height * dpr;
+            ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+        }
+
+        window.addEventListener('resize', resizeCanvas);
+
+        // --- 4. TÍNH TOÁN CHỈ SỐ TƯƠNG ĐƯƠNG SINH THÁI ---
+        function updateMetricsUI(drops) {
+            const ml = drops * ML_PER_DROP;
+            document.getElementById('dropCountDisplay').textContent = drops.toLocaleString('vi-VN');
+            document.getElementById('volumeMlDisplay').textContent = ml.toFixed(2);
+
+            const eqEl = document.getElementById('equivalentDisplay');
+            const eqSubEl = document.getElementById('equivalentSubDisplay');
+
+            if (drops === 0) {
+                eqEl.textContent = 'Khởi đầu mạch ngầm';
+                eqSubEl.textContent = '0.05 ml / giọt';
+            } else if (drops < 12) {
+                eqEl.textContent = `${drops} nhịp hiện diện`;
+                eqSubEl.textContent = 'Đang kết tinh giọt đầu';
+            } else if (drops < 60) {
+                const sips = (drops / 12).toFixed(1);
+                eqEl.textContent = `${sips} ngụm nhỏ`;
+                eqSubEl.textContent = 'Dịu cơn khát vội vã';
+            } else if (drops < 3600) {
+                const spoons = (ml / 3).toFixed(1);
+                eqEl.textContent = `${spoons} thìa nước trong`;
+                eqSubEl.textContent = 'Tưới mát mầm cây mới';
+            } else {
+                const cups = (ml / 180).toFixed(2);
+                eqEl.textContent = `${cups} ly nước đầy`;
+                eqSubEl.textContent = 'Nuôi dưỡng cả ngày dài';
+            }
+        }
+
+        // --- 5. TÍNH TOÁN CHU KỲ THỞ 4–2–6 ---
+        function getBreathState(elapsedSec) {
+            const cyclePos = elapsedSec % BREATH_CYCLE_SEC; // 0 -> 12s
+            if (cyclePos < 4) {
+                const p = cyclePos / 4;
+                // Hàm làm mượt sin cho chuyển động sóng tự nhiên
+                const eased = 0.5 - 0.5 * Math.cos(Math.PI * p);
+                return {
+                    phase: 'inhale',
+                    progress: p,
+                    level: eased, // 0 -> 1 (sóng dâng lên)
+                    title: 'Hít vào — Mở khung trống [',
+                    sub: 'Đón nhận thực tại vào lòng than rỗng (4 giây)'
+                };
+            } else if (cyclePos < 6) {
+                const p = (cyclePos - 4) / 2;
+                return {
+                    phase: 'hold',
+                    progress: p,
+                    level: 1, // Giữ ở đỉnh sóng
+                    title: 'Giữ nhẹ — Lắng bùn đục .',
+                    sub: 'Dừng phản xạ, để tạp chất tự lắng xuống đáy (2 giây)'
+                };
+            } else {
+                const p = (cyclePos - 6) / 6;
+                const eased = 0.5 + 0.5 * Math.cos(Math.PI * p);
+                return {
+                    phase: 'exhale',
+                    progress: p,
+                    level: eased, // 1 -> 0 (sóng hạ xuống êm ái)
+                    title: 'Thở ra — Chảy qua sóng lợ ~',
+                    sub: 'Buông định kiến, chắt lại giọt nước ngọt trong lành (6 giây)'
+                };
+            }
+        }
+
+        // --- 6. VẼ MẶT ĐỒNG HỒ NGHỆ THUẬT [~. ---
+        function drawClock(now) {
+            const rect = container.getBoundingClientRect();
+            const w = rect.width;
+            const h = rect.height;
+            const cx = w / 2;
+            const cy = h / 2;
+            const radius = Math.min(w, h) * 0.40;
+
+            ctx.clearRect(0, 0, w, h);
+
+            const elapsedSec = (now - state.startTime) / 1000;
+            const breath = getBreathState(elapsedSec);
+
+            // Màu sắc động theo theme
+            const strokePrimary = state.isCharcoalTheme ? '#ece6da' : '#222523';
+            const strokeSoft = state.isCharcoalTheme ? 'rgba(236, 230, 218, 0.16)' : 'rgba(34, 37, 35, 0.14)';
+            const tealColor = state.isCharcoalTheme ? '#5eb5ac' : '#1b5e58';
+            const glowColor = state.isCharcoalTheme ? 'rgba(138, 216, 208, 0.35)' : 'rgba(27, 94, 88, 0.25)';
+
+            // Cập nhật chữ hướng dẫn khi đổi pha
+            if (breath.phase !== state.lastBreathPhase) {
+                state.lastBreathPhase = breath.phase;
+                const titleEl = document.getElementById('phaseGuidance');
+                const subEl = document.getElementById('subGuidance');
+                if (state.mode === 'breath') {
+                    titleEl.textContent = breath.title;
+                    subEl.textContent = breath.sub;
+                } else {
+                    titleEl.textContent = 'Mỗi giây hiện diện — một giọt nước ngọt';
+                    subEl.textContent = 'Nhịp tim & hơi thở đang lọc phù sa thành sự sống';
+                }
+            }
+            audioEngine.updateBreathSound(breath.phase, breath.progress);
+
+            // Kiểm tra tích phân mỗi giây (1 giọt / giây)
+            const currentSecIndex = Math.floor(elapsedSec);
+            if (currentSecIndex > state.lastSecondIndex) {
+                const missed = currentSecIndex - state.lastSecondIndex;
+                state.lastSecondIndex = currentSecIndex;
+                state.totalDrops += missed;
+                updateMetricsUI(state.totalDrops);
+
+                // Tính vị trí đầu kim giây hiện tại để thả giọt nước từ đó
+                const secAngle = ((currentSecIndex % 60) / 60) * Math.PI * 2 - Math.PI / 2;
+                const tipX = cx + Math.cos(secAngle) * (radius * 0.84);
+                const tipY = cy + Math.sin(secAngle) * (radius * 0.84);
+
+                // Mực nước sóng '~' hiện tại
+                const waveBaseY = cy + radius * 0.28 - breath.level * (radius * 0.22);
+
+                state.fallingDrops.push({
+                    x: tipX,
+                    y: tipY,
+                    targetY: Math.max(tipY + 18, waveBaseY),
+                    vy: 1.2,
+                    alpha: 1,
+                    size: 4.2
+                });
+
+                // Phát tiếng giọt nước + chuông bowl mỗi đầu chu kỳ 12s
+                const isCycleMark = (currentSecIndex % 12 === 0);
+                audioEngine.playWaterDrop(isCycleMark);
+                if (isCycleMark && currentSecIndex > 0) {
+                    audioEngine.playBowlBell();
+                }
+            }
+
+            // A. Vẽ 60 vạch chia vi mô mờ quanh chu vi (tượng trưng 60 hạt phù sa / phút)
+            for (let i = 0; i < 60; i++) {
+                const angle = (i / 60) * Math.PI * 2 - Math.PI / 2;
+                // Chừa khoảng hở lớn bên phải để giữ tinh thần tập mở '['
+                if (angle > -0.42 && angle < 0.42) continue;
+
+                const isMajor = i % 5 === 0;
+                const innerR = radius * (isMajor ? 0.91 : 0.94);
+                const outerR = radius * 0.97;
+
+                ctx.beginPath();
+                ctx.moveTo(cx + Math.cos(angle) * innerR, cy + Math.sin(angle) * innerR);
+                ctx.lineTo(cx + Math.cos(angle) * outerR, cy + Math.sin(angle) * outerR);
+                ctx.strokeStyle = isMajor ? tealColor : strokeSoft;
+                ctx.lineWidth = isMajor ? 1.8 : 1;
+                ctx.lineCap = 'round';
+                ctx.stroke();
+            }
+
+            // B. VẼ KHUNG VÒNG CUNG HỞ BÊN TRÁI '[' (Tính Không / Tập mở U)
+            // Cung tròn mở từ -55 độ đến +55 độ (hở hoàn toàn ở phía Đông / bên phải)
+            const openAngle = 0.52; // radian (~30 độ mỗi phía tạo khe hở rộng)
+            ctx.save();
+            ctx.beginPath();
+            ctx.arc(cx, cy, radius, openAngle, Math.PI * 2 - openAngle, false);
+            ctx.strokeStyle = strokePrimary;
+            ctx.lineWidth = 3.2;
+            ctx.lineCap = 'round';
+            ctx.stroke();
+
+            // Hai móc vuông góc nhẹ gợi ký hiệu '[' ở đầu mở của vòng cung
+            const topEndX = cx + Math.cos(-openAngle) * radius;
+            const topEndY = cy + Math.sin(-openAngle) * radius;
+            const botEndX = cx + Math.cos(openAngle) * radius;
+            const botEndY = cy + Math.sin(openAngle) * radius;
+
+            ctx.beginPath();
+            ctx.moveTo(topEndX, topEndY);
+            ctx.lineTo(topEndX + 10, topEndY + 5);
+            ctx.moveTo(botEndX, botEndY);
+            ctx.lineTo(botEndX + 10, botEndY - 5);
+            ctx.strokeStyle = tealColor;
+            ctx.lineWidth = 2.6;
+            ctx.stroke();
+            ctx.restore();
+
+            // C. VẼ DẢI SÓNG NƯỚC LỢ '~' CHUYỂN ĐỘNG THEO CHU KỲ THỞ 4–2–6
+            const waveBaseY = cy + radius * 0.28 - breath.level * (radius * 0.22);
+            const waveAmplitude = 7 + breath.level * 7; // Sóng dâng biên độ khi hít vào
+            const waveWidth = radius * 1.48;
+
+            ctx.save();
+            // Giới hạn vùng vẽ sóng bên trong lòng khung mở
+            ctx.beginPath();
+            ctx.arc(cx, cy, radius * 0.88, 0, Math.PI * 2);
+            ctx.clip();
+
+            // Lớp sóng phụ phía sau (mờ, tạo chiều sâu nước lợ)
+            ctx.beginPath();
+            for (let x = cx - waveWidth / 2; x <= cx + waveWidth / 2; x += 3) {
+                const normX = (x - cx) / (waveWidth / 2);
+                const envelope = Math.cos(normX * Math.PI * 0.5); // Thu nhỏ 2 đầu sóng
+                const y = waveBaseY + 5 + Math.sin(normX * Math.PI * 2.2 - elapsedSec * 1.6) * (waveAmplitude * 0.7) * envelope;
+                if (x === cx - waveWidth / 2) ctx.moveTo(x, y);
+                else ctx.lineTo(x, y);
+            }
+            ctx.strokeStyle = strokeSoft;
+            ctx.lineWidth = 1.6;
+            ctx.stroke();
+
+            // Lớp sóng chính '~' màu xanh phù sa
+            ctx.beginPath();
+            for (let x = cx - waveWidth / 2; x <= cx + waveWidth / 2; x += 2) {
+                const normX = (x - cx) / (waveWidth / 2);
+                const envelope = Math.cos(normX * Math.PI * 0.5);
+                const y = waveBaseY + Math.sin(normX * Math.PI * 2 + elapsedSec * 2.1) * waveAmplitude * envelope;
+                if (x === cx - waveWidth / 2) ctx.moveTo(x, y);
+                else ctx.lineTo(x, y);
+            }
+            ctx.strokeStyle = tealColor;
+            ctx.lineWidth = 2.8;
+            ctx.lineCap = 'round';
+            ctx.stroke();
+            ctx.restore();
+
+            // D. VẼ KIM ĐỒNG HỒ MẢNH & GIỌT NƯỚC PHÁT SÁNG '.' Ở ĐẦU KIM
+            const smoothSec = elapsedSec % 60;
+            const subSecondFrac = elapsedSec - Math.floor(elapsedSec); // 0 -> 1 trong mỗi giây
+            const pointerAngle = (smoothSec / 60) * Math.PI * 2 - Math.PI / 2;
+            const pointerLen = radius * 0.84;
+            const tipX = cx + Math.cos(pointerAngle) * pointerLen;
+            const tipY = cy + Math.sin(pointerAngle) * pointerLen;
+
+            // Tâm trục (hạt than nhỏ)
+            ctx.beginPath();
+            ctx.arc(cx, cy, 3.5, 0, Math.PI * 2);
+            ctx.fillStyle = strokePrimary;
+            ctx.fill();
+
+            // Thân kim mảnh thanh thoát
+            ctx.beginPath();
+            ctx.moveTo(cx, cy);
+            ctx.lineTo(tipX, tipY);
+            ctx.strokeStyle = strokeSoft;
+            ctx.lineWidth = 1.3;
+            ctx.stroke();
+
+            // Giọt nước đang tích tụ dần ở đầu kim trong suốt 1 giây trước khi rơi
+            const growingRadius = 1.5 + subSecondFrac * 3.2;
+            ctx.save();
+            ctx.beginPath();
+            ctx.arc(tipX, tipY, growingRadius + 4, 0, Math.PI * 2);
+            ctx.fillStyle = glowColor;
+            ctx.fill();
+
+            ctx.beginPath();
+            ctx.arc(tipX, tipY, growingRadius, 0, Math.PI * 2);
+            ctx.fillStyle = tealColor;
+            ctx.fill();
+            ctx.restore();
+
+            // E. CẬP NHẬT & VẼ CÁC GIỌT NƯỚC ĐANG RƠI XUỐNG MẶT SÓNG '.'
+            for (let i = state.fallingDrops.length - 1; i >= 0; i--) {
+                const d = state.fallingDrops[i];
+                d.vy += 0.28; // Gia tốc rơi nhẹ tự nhiên
+                d.y += d.vy;
+
+                // Vẽ hình giọt nước thuôn nhẹ
+                ctx.save();
+                ctx.beginPath();
+                ctx.moveTo(d.x, d.y - d.size * 1.4);
+                ctx.bezierCurveTo(
+                    d.x + d.size, d.y - d.size * 0.2,
+                    d.x + d.size, d.y + d.size,
+                    d.x, d.y + d.size
+                );
+                ctx.bezierCurveTo(
+                    d.x - d.size, d.y + d.size,
+                    d.x - d.size, d.y - d.size * 0.2,
+                    d.x, d.y - d.size * 1.4
+                );
+                ctx.fillStyle = tealColor;
+                ctx.fill();
+                ctx.restore();
+
+                // Khi giọt nước chạm mặt sóng '~' -> tạo gợn sóng lan tỏa
+                if (d.y >= waveBaseY) {
+                    state.ripples.push({
+                        x: d.x,
+                        y: waveBaseY,
+                        r: 2,
+                        maxR: 28 + breath.level * 12,
+                        alpha: 0.75
+                    });
+                    state.fallingDrops.splice(i, 1);
+                }
+            }
+
+            // F. VẼ CÁC VÒNG GỢN SÓNG LAN TỎA TRÊN MẶT NƯỚC
+            for (let i = state.ripples.length - 1; i >= 0; i--) {
+                const rp = state.ripples[i];
+                rp.r += 0.65;
+                rp.alpha -= 0.016;
+
+                if (rp.alpha <= 0) {
+                    state.ripples.splice(i, 1);
+                    continue;
+                }
+
+                ctx.save();
+                ctx.beginPath();
+                // Hình elip dẹt theo phối cảnh mặt nước
+                ctx.ellipse(rp.x, rp.y, rp.r, rp.r * 0.32, 0, 0, Math.PI * 2);
+                ctx.strokeStyle = tealColor;
+                ctx.globalAlpha = rp.alpha;
+                ctx.lineWidth = 1.4;
+                ctx.stroke();
+                ctx.restore();
+            }
+
+            requestAnimationFrame(drawClock);
+        }
+
+        // --- 7. SỰ KIỆN TƯƠNG TÁC NÚT BẤM ---
+        const modeDropBtn = document.getElementById('modeDropBtn');
+        const modeBreathBtn = document.getElementById('modeBreathBtn');
+        const resetBtn = document.getElementById('resetBtn');
+        const audioToggleBtn = document.getElementById('audioToggleBtn');
+        const themeToggleBtn = document.getElementById('themeToggleBtn');
+        const toastEl = document.getElementById('toastMessage');
+
+        function showToast(msg) {
+            toastEl.textContent = msg;
+            toastEl.style.opacity = '1';
+            clearTimeout(toastEl._timer);
+            toastEl._timer = setTimeout(() => {
+                toastEl.style.opacity = '0';
+            }, 2400);
+        }
+
+        modeDropBtn.addEventListener('click', () => {
+            state.mode = 'drop';
+            modeDropBtn.classList.add('active');
+            modeBreathBtn.classList.remove('active');
+            state.lastBreathPhase = '';
+            showToast('Chế độ Giọt Nước: Chắt lọc 1 giọt tinh khiết mỗi giây.');
+        });
+
+        modeBreathBtn.addEventListener('click', () => {
+            state.mode = 'breath';
+            modeBreathBtn.classList.add('active');
+            modeDropBtn.classList.remove('active');
+            state.lastBreathPhase = '';
+            if (!state.audioEnabled) {
+                showToast('Chế độ Thở Lọc Than 4–2–6 (Bật âm thanh để nghe nhịp dẫn).');
+            } else {
+                showToast('Chế độ Thở Lọc Than: Hít 4s · Giữ 2s · Thở ra 6s.');
+            }
+        });
+
+        resetBtn.addEventListener('click', () => {
+            state.startTime = performance.now();
+            state.lastSecondIndex = 0;
+            state.totalDrops = 0;
+            state.fallingDrops = [];
+            state.ripples = [];
+            updateMetricsUI(0);
+            showToast('Đã lắng bùn — mặt nước trở lại trong lành.');
+        });
+
+        audioToggleBtn.addEventListener('click', () => {
+            state.audioEnabled = !state.audioEnabled;
+            const icon = document.getElementById('audioIcon');
+            const label = document.getElementById('audioLabel');
+
+            if (state.audioEnabled) {
+                audioEngine.init();
+                icon.textContent = '💧';
+                label.textContent = 'Âm giọt nước';
+                audioToggleBtn.classList.add('active');
+                showToast('Đã bật âm thanh giọt nước & chuông thở tĩnh tại.');
+            } else {
+                audioEngine.stopAll();
+                icon.textContent = '🔇';
+                label.textContent = 'Tĩnh lặng';
+                audioToggleBtn.classList.remove('active');
+                showToast('Đã chuyển về chế độ tĩnh lặng.');
+            }
+        });
+
+        themeToggleBtn.addEventListener('click', () => {
+            state.isCharcoalTheme = !state.isCharcoalTheme;
+            document.body.classList.toggle('charcoal-theme', state.isCharcoalTheme);
+            const icon = document.getElementById('themeIcon');
+            const label = document.getElementById('themeLabel');
+
+            if (state.isCharcoalTheme) {
+                icon.textContent = '📜';
+                label.textContent = 'Giấy gió';
+            } else {
+                icon.textContent = '🌑';
+                label.textContent = 'Than đước';
+            }
+        });
+
+        // --- 8. KHỞI CHẠY KHI TẢI XONG TRANG ---
+        window.onload = function () {
+            resizeCanvas();
+            updateMetricsUI(0);
+            requestAnimationFrame(drawClock);
+        };
+    </script>
+</body>
+</html>
