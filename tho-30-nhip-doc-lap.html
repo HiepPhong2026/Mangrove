@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <title>Thở 4-6-8 &amp; 4-7-8 (30 Nhịp) — Chạy Độc Lập Ngoại Tuyến</title>
+  <style>
+    :root {
+      --bg-color: #000000;
+      --surface-color: #141414;
+      --text-color: #FFFFFF;
+      --muted-text: #E2E8F0;
+      --border-color: #FFFFFF;
+      --btn-primary-bg: #FACC15;
+      --btn-primary-text: #000000;
+      --btn-secondary-bg: #262626;
+      --btn-secondary-text: #FFFFFF;
+      --accent-inhale: #38BDF8;
+      --accent-hold: #FACC15;
+      --accent-exhale: #4ADE80;
+      --accent-done: #4ADE80;
+    }
+
+    body.light-theme {
+      --bg-color: #FFFFFF;
+      --surface-color: #F1F5F9;
+      --text-color: #000000;
+      --muted-text: #1E293B;
+      --border-color: #000000;
+      --btn-primary-bg: #000000;
+      --btn-primary-text: #FFFFFF;
+      --btn-secondary-bg: #E2E8F0;
+      --btn-secondary-text: #000000;
+      --accent-inhale: #0369A1;
+      --accent-hold: #B45309;
+      --accent-exhale: #15803D;
+      --accent-done: #15803D;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      min-height: 100%;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.3;
+      -webkit-tap-highlight-color: transparent;
+      user-select: none;
+    }
+
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 18px 16px 32px;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    header {
+      text-align: center;
+      border-bottom: 3px solid var(--border-color);
+      padding-bottom: 12px;
+    }
+
+    h1 {
+      font-size: clamp(1.5rem, 5vw, 2.2rem);
+      font-weight: 900;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+    }
+
+    .mode-switch {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .btn-mode {
+      background-color: var(--btn-secondary-bg);
+      color: var(--btn-secondary-text);
+      font-size: clamp(1.2rem, 3.8vw, 1.5rem);
+      padding: 14px 10px;
+      min-height: 64px;
+      border-radius: 16px;
+      border: 4px solid var(--border-color);
+      font-weight: 900;
+      cursor: pointer;
+    }
+
+    .btn-mode.active {
+      background-color: var(--btn-primary-bg);
+      color: var(--btn-primary-text);
+    }
+
+    .cycle-banner {
+      background-color: var(--surface-color);
+      border: 4px solid var(--border-color);
+      border-radius: 20px;
+      padding: 14px 20px;
+      text-align: center;
+    }
+
+    .cycle-label {
+      font-size: clamp(1.15rem, 3.5vw, 1.45rem);
+      font-weight: 800;
+      color: var(--muted-text);
+      text-transform: uppercase;
+    }
+
+    .cycle-count {
+      font-size: clamp(2.6rem, 8vw, 4rem);
+      font-weight: 900;
+      margin-top: 4px;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .main-display {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-color: var(--surface-color);
+      border: 5px solid var(--border-color);
+      border-radius: 28px;
+      padding: 24px 16px;
+      text-align: center;
+      min-height: 270px;
+    }
+
+    .phase-title {
+      font-size: clamp(2.6rem, 9.5vw, 4.6rem);
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      margin-bottom: 6px;
+    }
+
+    .phase-inhale { color: var(--accent-inhale); }
+    .phase-hold { color: var(--accent-hold); }
+    .phase-exhale { color: var(--accent-exhale); }
+    .phase-done { color: var(--accent-done); }
+
+    .countdown-number {
+      font-size: clamp(6rem, 23vw, 11rem);
+      font-weight: 900;
+      line-height: 1;
+      font-variant-numeric: tabular-nums;
+      margin: 8px 0;
+    }
+
+    .phase-subtext {
+      font-size: clamp(1.25rem, 4vw, 1.75rem);
+      font-weight: 700;
+      color: var(--muted-text);
+      margin-top: 8px;
+    }
+
+    .controls-primary {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+    }
+
+    button {
+      font-family: inherit;
+      cursor: pointer;
+      border-radius: 20px;
+      border: 4px solid var(--border-color);
+      font-weight: 900;
+      transition: transform 0.08s ease;
+    }
+
+    button:active {
+      transform: scale(0.98);
+    }
+
+    button:focus-visible {
+      outline: 6px solid #FACC15;
+      outline-offset: 4px;
+    }
+
+    .btn-main {
+      background-color: var(--btn-primary-bg);
+      color: var(--btn-primary-text);
+      font-size: clamp(2rem, 6vw, 2.8rem);
+      padding: 24px 20px;
+      min-height: 92px;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    }
+
+    .controls-secondary {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+    }
+
+    @media (max-width: 600px) {
+      .controls-secondary {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .btn-sub {
+      background-color: var(--btn-secondary-bg);
+      color: var(--btn-secondary-text);
+      font-size: clamp(1.2rem, 3.8vw, 1.5rem);
+      padding: 16px 14px;
+      min-height: 72px;
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+  </style>
+</head>
+<body>
+  <main class="container" aria-label="Ứng dụng hướng dẫn thở 30 nhịp chạy độc lập">
+    <header>
+      <h1 id="appTitle">THỞ 4 - 6 - 8 • 30 NHỊP</h1>
+    </header>
+
+    <section class="mode-switch" aria-label="Chọn kiểu thở">
+      <button type="button" class="btn-mode active" id="mode468Btn" aria-pressed="true">KIỂU 4 - 6 - 8</button>
+      <button type="button" class="btn-mode" id="mode478Btn" aria-pressed="false">KIỂU 4 - 7 - 8</button>
+    </section>
+
+    <section class="cycle-banner" aria-label="Tiến độ nhịp thở">
+      <div class="cycle-label">TIẾN ĐỘ HIỆN TẠI</div>
+      <div class="cycle-count" id="cycleDisplay">NHỊP 1 / 30</div>
+    </section>
+
+    <section class="main-display" aria-label="Trạng thái nhịp thở hiện tại">
+      <div class="phase-title" id="phaseTitle">SẴN SÀNG</div>
+      <div class="countdown-number" id="countdownDisplay" aria-hidden="true">4</div>
+      <div class="phase-subtext" id="subtextDisplay">Chạm nút BẮT ĐẦU bên dưới</div>
+    </section>
+
+    <div id="liveAnnouncer" class="sr-only" aria-live="assertive" aria-atomic="true"></div>
+
+    <section class="controls-primary" aria-label="Điều khiển chính">
+      <button type="button" class="btn-main" id="startPauseBtn" aria-label="Bắt đầu bài tập thở 30 nhịp">
+        BẮT ĐẦU
+      </button>
+    </section>
+
+    <section class="controls-secondary" aria-label="Tùy chọn hỗ trợ">
+      <button type="button" class="btn-sub" id="resetBtn" aria-label="Làm lại từ nhịp đầu tiên">
+        LÀM LẠI
+      </button>
+      <button type="button" class="btn-sub" id="countVoiceBtn" aria-pressed="true" aria-label="Bật hoặc tắt đọc đếm từng giây">
+        ĐẾM GIÂY: BẬT
+      </button>
+      <button type="button" class="btn-sub" id="themeBtn" aria-pressed="false" aria-label="Đổi màu nền tương phản cao">
+        NỀN ĐEN
+      </button>
+    </section>
+  </main>
+
+  <script>
+    (function () {
+      var TOTAL_CYCLES = 30;
+      var MODES = {
+        "468": {
+          title: "THỞ 4 - 6 - 8 • 30 NHỊP",
+          spokenName: "4 6 8",
+          phases: [
+            { key: "inhale", label: "HÍT VÀO", duration: 4, className: "phase-inhale", hint: "Hít vào chậm qua mũi (4 giây)" },
+            { key: "hold", label: "GIỮ HƠI", duration: 6, className: "phase-hold", hint: "Giữ hơi nhẹ nhàng (6 giây)" },
+            { key: "exhale", label: "THỞ RA", duration: 8, className: "phase-exhale", hint: "Thở ra chậm qua miệng (8 giây)" }
+          ]
+        },
+        "478": {
+          title: "THỞ 4 - 7 - 8 • 30 NHỊP",
+          spokenName: "4 7 8",
+          phases: [
+            { key: "inhale", label: "HÍT VÀO", duration: 4, className: "phase-inhale", hint: "Hít vào chậm qua mũi (4 giây)" },
+            { key: "hold", label: "GIỮ HƠI", duration: 7, className: "phase-hold", hint: "Giữ hơi nhẹ nhàng (7 giây)" },
+            { key: "exhale", label: "THỞ RA", duration: 8, className: "phase-exhale", hint: "Thở ra chậm qua miệng (8 giây)" }
+          ]
+        }
+      };
+
+      var currentModeKey = "468";
+      var PHASES = MODES[currentModeKey].phases;
+      var currentCycle = 1;
+      var phaseIndex = 0;
+      var secondsLeft = PHASES[0].duration;
+      var isRunning = false;
+      var isCompleted = false;
+      var countEverySecond = true;
+      var timerId = null;
+      var audioCtx = null;
+
+      var appTitle = document.getElementById("appTitle");
+      var mode468Btn = document.getElementById("mode468Btn");
+      var mode478Btn = document.getElementById("mode478Btn");
+      var cycleDisplay = document.getElementById("cycleDisplay");
+      var phaseTitle = document.getElementById("phaseTitle");
+      var countdownDisplay = document.getElementById("countdownDisplay");
+      var subtextDisplay = document.getElementById("subtextDisplay");
+      var startPauseBtn = document.getElementById("startPauseBtn");
+      var resetBtn = document.getElementById("resetBtn");
+      var countVoiceBtn = document.getElementById("countVoiceBtn");
+      var themeBtn = document.getElementById("themeBtn");
+      var liveAnnouncer = document.getElementById("liveAnnouncer");
+
+      function initAudio() {
+        if (!audioCtx) {
+          var AudioContextClass = window.AudioContext || window.webkitAudioContext;
+          if (AudioContextClass) {
+            audioCtx = new AudioContextClass();
+          }
+        }
+        if (audioCtx && audioCtx.state === "suspended") {
+          audioCtx.resume();
+        }
+      }
+
+      function playPhaseSound(phaseKey) {
+        initAudio();
+        if (!audioCtx) return;
+        var now = audioCtx.currentTime;
+
+        if (phaseKey === "inhale") {
+          var osc = audioCtx.createOscillator();
+          var gain = audioCtx.createGain();
+          osc.type = "sine";
+          osc.frequency.setValueAtTime(261.63, now);
+          osc.frequency.exponentialRampToValueAtTime(392.00, now + 0.65);
+          gain.gain.setValueAtTime(0.001, now);
+          gain.gain.exponentialRampToValueAtTime(0.35, now + 0.08);
+          gain.gain.exponentialRampToValueAtTime(0.001, now + 0.75);
+          osc.connect(gain);
+          gain.connect(audioCtx.destination);
+          osc.start(now);
+          osc.stop(now + 0.8);
+        } else if (phaseKey === "hold") {
+          [0, 0.22].forEach(function (offset) {
+            var osc = audioCtx.createOscillator();
+            var gain = audioCtx.createGain();
+            osc.type = "triangle";
+            osc.frequency.setValueAtTime(440, now + offset);
+            gain.gain.setValueAtTime(0.001, now + offset);
+            gain.gain.exponentialRampToValueAtTime(0.28, now + offset + 0.03);
+            gain.gain.exponentialRampToValueAtTime(0.001, now + offset + 0.18);
+            osc.connect(gain);
+            gain.connect(audioCtx.destination);
+            osc.start(now + offset);
+            osc.stop(now + offset + 0.2);
+          });
+        } else if (phaseKey === "exhale") {
+          var osc2 = audioCtx.createOscillator();
+          var gain2 = audioCtx.createGain();
+          osc2.type = "sine";
+          osc2.frequency.setValueAtTime(392.00, now);
+          osc2.frequency.exponentialRampToValueAtTime(261.63, now + 0.85);
+          gain2.gain.setValueAtTime(0.001, now);
+          gain2.gain.exponentialRampToValueAtTime(0.35, now + 0.08);
+          gain2.gain.exponentialRampToValueAtTime(0.001, now + 0.95);
+          osc2.connect(gain2);
+          gain2.connect(audioCtx.destination);
+          osc2.start(now);
+          osc2.stop(now + 1.0);
+        } else if (phaseKey === "done") {
+          [261.63, 329.63, 392.00, 523.25].forEach(function (freq, idx) {
+            var osc3 = audioCtx.createOscillator();
+            var gain3 = audioCtx.createGain();
+            var start = now + idx * 0.18;
+            osc3.type = "sine";
+            osc3.frequency.setValueAtTime(freq, start);
+            gain3.gain.setValueAtTime(0.001, start);
+            gain3.gain.exponentialRampToValueAtTime(0.3, start + 0.05);
+            gain3.gain.exponentialRampToValueAtTime(0.001, start + 1.1);
+            osc3.connect(gain3);
+            gain3.connect(audioCtx.destination);
+            osc3.start(start);
+            osc3.stop(start + 1.15);
+          });
+        }
+      }
+
+      function playHoldTick() {
+        initAudio();
+        if (!audioCtx) return;
+        var now = audioCtx.currentTime;
+        var osc = audioCtx.createOscillator();
+        var gain = audioCtx.createGain();
+        osc.type = "sine";
+        osc.frequency.setValueAtTime(520, now);
+        gain.gain.setValueAtTime(0.001, now);
+        gain.gain.exponentialRampToValueAtTime(0.12, now + 0.015);
+        gain.gain.exponentialRampToValueAtTime(0.001, now + 0.08);
+        osc.connect(gain);
+        gain.connect(audioCtx.destination);
+        osc.start(now);
+        osc.stop(now + 0.09);
+      }
+
+      function triggerVibration(pattern) {
+        if (navigator.vibrate) {
+          try {
+            navigator.vibrate(pattern);
+          } catch (e) {}
+        }
+      }
+
+      function speak(text, priority) {
+        if (priority === undefined) priority = true;
+        liveAnnouncer.textContent = "";
+        setTimeout(function () {
+          liveAnnouncer.textContent = text;
+        }, 20);
+
+        if ("speechSynthesis" in window) {
+          try {
+            if (priority) {
+              window.speechSynthesis.cancel();
+            }
+            var utterance = new SpeechSynthesisUtterance(text);
+            utterance.lang = "vi-VN";
+            utterance.rate = 0.95;
+            utterance.pitch = 1.0;
+            utterance.volume = 1.0;
+
+            var voices = window.speechSynthesis.getVoices();
+            var viVoice = null;
+            for (var i = 0; i < voices.length; i++) {
+              if (voices[i].lang && voices[i].lang.toLowerCase().indexOf("vi") !== -1) {
+                viVoice = voices[i];
+                break;
+              }
+            }
+            if (viVoice) {
+              utterance.voice = viVoice;
+            }
+            window.speechSynthesis.speak(utterance);
+          } catch (e) {}
+        }
+      }
+
+      function updateUI() {
+        if (isCompleted) {
+          cycleDisplay.textContent = "HOÀN THÀNH " + TOTAL_CYCLES + " / " + TOTAL_CYCLES + " NHỊP";
+          phaseTitle.textContent = "HOÀN TẤT";
+          phaseTitle.className = "phase-title phase-done";
+          countdownDisplay.textContent = "✓";
+          subtextDisplay.textContent = "Chúc mừng bạn đã hoàn thành 30 nhịp thở";
+          startPauseBtn.textContent = "TẬP LẠI TỪ ĐẦU";
+          startPauseBtn.setAttribute("aria-label", "Tập lại bài thở 30 nhịp từ đầu");
+          return;
+        }
+
+        cycleDisplay.textContent = "NHỊP " + currentCycle + " / " + TOTAL_CYCLES;
+
+        if (!isRunning && currentCycle === 1 && phaseIndex === 0 && secondsLeft === PHASES[0].duration) {
+          phaseTitle.textContent = "SẴN SÀNG";
+          phaseTitle.className = "phase-title";
+          countdownDisplay.textContent = PHASES[0].duration;
+          subtextDisplay.textContent = "Chạm nút BẮT ĐẦU bên dưới";
+          startPauseBtn.textContent = "BẮT ĐẦU";
+          startPauseBtn.setAttribute("aria-label", "Bắt đầu bài tập thở 30 nhịp");
+          return;
+        }
+
+        var currentPhase = PHASES[phaseIndex];
+        phaseTitle.textContent = currentPhase.label;
+        phaseTitle.className = "phase-title " + currentPhase.className;
+        countdownDisplay.textContent = secondsLeft;
+        subtextDisplay.textContent = currentPhase.hint;
+
+        if (isRunning) {
+          startPauseBtn.textContent = "TẠM DỪNG";
+          startPauseBtn.setAttribute("aria-label", "Tạm dừng bài tập thở");
+        } else {
+          startPauseBtn.textContent = "TIẾP TỤC";
+          startPauseBtn.setAttribute("aria-label", "Tiếp tục bài tập thở");
+        }
+      }
+
+      function announcePhaseStart(isFirstStart) {
+        var currentPhase = PHASES[phaseIndex];
+        playPhaseSound(currentPhase.key);
+
+        if (currentPhase.key === "inhale") {
+          triggerVibration(180);
+          var cycleNotice = "Nhịp " + currentCycle + ". ";
+          if (currentCycle === 15) {
+            cycleNotice = "Nhịp 15, đã đi được một nửa chặng đường. ";
+          } else if (currentCycle === TOTAL_CYCLES) {
+            cycleNotice = "Nhịp cuối cùng, nhịp 30. ";
+          }
+          var prefix = isFirstStart ? ("Bắt đầu bài tập thở " + MODES[currentModeKey].spokenName + " trong 30 nhịp. ") : "";
+          speak(prefix + cycleNotice + "Hít vào.", true);
+        } else if (currentPhase.key === "hold") {
+          triggerVibration([120, 100, 120]);
+          speak("Giữ hơi.", true);
+        } else if (currentPhase.key === "exhale") {
+          triggerVibration(450);
+          speak("Thở ra chậm.", true);
+        }
+      }
+
+      function tick() {
+        secondsLeft -= 1;
+
+        if (secondsLeft > 0) {
+          var currentPhase = PHASES[phaseIndex];
+          var elapsedInPhase = currentPhase.duration - secondsLeft + 1;
+
+          if (currentPhase.key === "hold") {
+            playHoldTick();
+          }
+
+          if (countEverySecond && elapsedInPhase >= 2) {
+            speak(String(elapsedInPhase), false);
+          }
+
+          updateUI();
+          return;
+        }
+
+        phaseIndex += 1;
+        if (phaseIndex < PHASES.length) {
+          secondsLeft = PHASES[phaseIndex].duration;
+          updateUI();
+          announcePhaseStart(false);
+          return;
+        }
+
+        if (currentCycle < TOTAL_CYCLES) {
+          currentCycle += 1;
+          phaseIndex = 0;
+          secondsLeft = PHASES[0].duration;
+          updateUI();
+          announcePhaseStart(false);
+        } else {
+          clearInterval(timerId);
+          timerId = null;
+          isRunning = false;
+          isCompleted = true;
+          updateUI();
+          playPhaseSound("done");
+          triggerVibration([200, 100, 200, 100, 400]);
+          speak("Chúc mừng bạn đã hoàn thành xong 30 nhịp thở. Hãy thả lỏng và nghỉ ngơi.", true);
+        }
+      }
+
+      function startBreathing() {
+        initAudio();
+        if (isCompleted) {
+          resetBreathing(false);
+        }
+        var isBrandNew = (currentCycle === 1 && phaseIndex === 0 && secondsLeft === PHASES[0].duration);
+        isRunning = true;
+        updateUI();
+        if (isBrandNew) {
+          announcePhaseStart(true);
+        } else {
+          var currentPhase = PHASES[phaseIndex];
+          speak("Tiếp tục nhịp " + currentCycle + ". " + currentPhase.label + ".", true);
+        }
+        timerId = setInterval(tick, 1000);
+      }
+
+      function pauseBreathing() {
+        isRunning = false;
+        if (timerId) {
+          clearInterval(timerId);
+          timerId = null;
+        }
+        updateUI();
+        speak("Đã tạm dừng.", true);
+      }
+
+      function resetBreathing(announce) {
+        if (announce === undefined) announce = true;
+        if (timerId) {
+          clearInterval(timerId);
+          timerId = null;
+        }
+        isRunning = false;
+        isCompleted = false;
+        currentCycle = 1;
+        phaseIndex = 0;
+        secondsLeft = PHASES[0].duration;
+        updateUI();
+        if (announce) {
+          speak("Đã đặt lại về nhịp 1. Chạm bắt đầu khi bạn sẵn sàng.", true);
+        }
+      }
+
+      function switchMode(modeKey) {
+        if (currentModeKey === modeKey) return;
+        currentModeKey = modeKey;
+        PHASES = MODES[currentModeKey].phases;
+        appTitle.textContent = MODES[currentModeKey].title;
+
+        mode468Btn.classList.toggle("active", modeKey === "468");
+        mode468Btn.setAttribute("aria-pressed", String(modeKey === "468"));
+        mode478Btn.classList.toggle("active", modeKey === "478");
+        mode478Btn.setAttribute("aria-pressed", String(modeKey === "478"));
+
+        resetBreathing(false);
+        speak("Đã chuyển sang kiểu thở " + MODES[currentModeKey].spokenName + ". Chạm bắt đầu khi sẵn sàng.", true);
+      }
+
+      mode468Btn.addEventListener("click", function () { switchMode("468"); });
+      mode478Btn.addEventListener("click", function () { switchMode("478"); });
+
+      startPauseBtn.addEventListener("click", function () {
+        if (isRunning) {
+          pauseBreathing();
+        } else {
+          startBreathing();
+        }
+      });
+
+      resetBtn.addEventListener("click", function () {
+        resetBreathing(true);
+      });
+
+      countVoiceBtn.addEventListener("click", function () {
+        countEverySecond = !countEverySecond;
+        countVoiceBtn.textContent = countEverySecond ? "ĐẾM GIÂY: BẬT" : "ĐẾM GIÂY: TẮT";
+        countVoiceBtn.setAttribute("aria-pressed", String(countEverySecond));
+        speak(countEverySecond ? "Đã bật đọc đếm từng giây." : "Đã tắt đọc đếm từng giây.", true);
+      });
+
+      themeBtn.addEventListener("click", function () {
+        var isLight = document.body.classList.toggle("light-theme");
+        themeBtn.textContent = isLight ? "NỀN TRẮNG" : "NỀN ĐEN";
+        themeBtn.setAttribute("aria-pressed", String(isLight));
+        speak(isLight ? "Đã chuyển sang nền trắng chữ đen." : "Đã chuyển sang nền đen chữ trắng.", true);
+      });
+
+      document.addEventListener("keydown", function (e) {
+        if (e.code === "Space" && document.activeElement.tagName !== "BUTTON") {
+          e.preventDefault();
+          startPauseBtn.click();
+        } else if (e.key === "r" || e.key === "R") {
+          resetBtn.click();
+        }
+      });
+
+      if ("speechSynthesis" in window) {
+        window.speechSynthesis.getVoices();
+        window.speechSynthesis.onvoiceschanged = function () {
+          window.speechSynthesis.getVoices();
+        };
+      }
+
+      updateUI();
+    })();
+  </script>
+</body>
+</html>
