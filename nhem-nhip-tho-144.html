@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <title>144 · Nhịp Thở 4–2–6 (5 Phút · 25 Chu Kỳ)</title>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ==========================================================================
+       BẢNG MÀU GIẤY MỘC & THAN ĐƯỚC (TƯƠNG PHẢN CAO · CHỮ LỚN DỄ NHÌN)
+       ========================================================================== */
+    :root {
+      --bg-paper: #F6F3EB;
+      --bg-card: #EFECE2;
+      --bg-card-hover: #E5E0D3;
+      --ink-main: #181818;
+      --ink-muted: #4A4740;
+      --border-strong: #181818;
+      --border-soft: rgba(24, 24, 24, 0.22);
+      --accent-fill: #181818;
+      --accent-text: #F6F3EB;
+      --ring-track: rgba(24, 24, 24, 0.12);
+      --ring-glow: rgba(24, 24, 24, 0.06);
+    }
+
+    html.dark-mode {
+      --bg-paper: #141414;
+      --bg-card: #1F1F1D;
+      --bg-card-hover: #2A2A27;
+      --ink-main: #F4F1EA;
+      --ink-muted: #B8B3A8;
+      --border-strong: #F4F1EA;
+      --border-soft: rgba(244, 241, 234, 0.24);
+      --accent-fill: #F4F1EA;
+      --accent-text: #141414;
+      --ring-track: rgba(244, 241, 234, 0.14);
+      --ring-glow: rgba(244, 241, 234, 0.05);
+    }
+
+    * {
+      box-sizing: border-box;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      min-height: 100dvh;
+      background-color: var(--bg-paper);
+      color: var(--ink-main);
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      transition: background-color 0.35s ease, color 0.35s ease;
+      overflow-x: hidden;
+    }
+
+    /* Chữ số cố định chiều rộng để không nhảy khung khi đếm ngược */
+    .tabular-nums {
+      font-variant-numeric: tabular-nums;
+    }
+
+    /* Khung vòng dẫn nhịp thở */
+    .breath-stage {
+      position: relative;
+      width: min(74vw, 310px);
+      height: min(74vw, 310px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto;
+    }
+
+    /* Vòng tròn ngoài cố định làm mốc giới hạn */
+    .breath-outer-boundary {
+      position: absolute;
+      inset: 0;
+      border-radius: 9999px;
+      border: 2.5px dashed var(--border-soft);
+      pointer-events: none;
+    }
+
+    /* Vòng tròn co giãn mượt theo nhịp thở */
+    .breath-orb {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 9999px;
+      background-color: var(--ring-glow);
+      border: 3.5px solid var(--border-strong);
+      transform: scale(0.62);
+      will-change: transform;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Trạng thái co giãn của vòng thở */
+    .breath-orb.phase-idle {
+      transform: scale(0.66);
+      transition: transform 0.6s ease-out;
+    }
+    .breath-orb.phase-inhale {
+      transform: scale(1);
+      transition: transform 4s cubic-bezier(0.25, 0.1, 0.25, 1);
+    }
+    .breath-orb.phase-hold {
+      transform: scale(1);
+      transition: transform 0.2s linear;
+    }
+    .breath-orb.phase-exhale {
+      transform: scale(0.62);
+      transition: transform 6s cubic-bezier(0.22, 0.1, 0.3, 1);
+    }
+
+    /* Nút bấm xúc giác rõ nét */
+    .btn-tactile {
+      border: 2.5px solid var(--border-strong);
+      border-radius: 16px;
+      font-weight: 700;
+      transition: transform 0.12s ease, background-color 0.2s ease, opacity 0.2s ease;
+      cursor: pointer;
+      user-select: none;
+    }
+    .btn-tactile:active {
+      transform: scale(0.97);
+    }
+
+    .btn-primary {
+      background-color: var(--accent-fill);
+      color: var(--accent-text);
+    }
+
+    .btn-secondary {
+      background-color: var(--bg-card);
+      color: var(--ink-main);
+    }
+    .btn-secondary:hover {
+      background-color: var(--bg-card-hover);
+    }
+
+    .pill-toggle {
+      border: 2px solid var(--border-soft);
+      background-color: var(--bg-card);
+      color: var(--ink-main);
+      border-radius: 14px;
+      transition: all 0.2s ease;
+      cursor: pointer;
+    }
+    .pill-toggle.is-active {
+      border-color: var(--border-strong);
+      background-color: var(--accent-fill);
+      color: var(--accent-text);
+    }
+  </style>
+</head>
+<body class="flex flex-col justify-between">
+
+  <!-- ========================================================================
+       PHẦN ĐẦU TRANG: NHẬN DIỆN 144 & CÁC CÔNG TẮC ĐIỀU KHIỂN NHANH
+       ======================================================================== -->
+  <header class="w-full max-w-xl mx-auto px-4 pt-4 pb-2 flex flex-wrap items-center justify-between gap-2">
+    <!-- Thương hiệu tối giản -->
+    <div class="flex items-center gap-2.5">
+      <span class="inline-flex items-center justify-center px-3 py-1 rounded-xl border-2 font-extrabold text-lg sm:text-xl tracking-wider"
+            style="border-color: var(--border-strong);">
+        144
+      </span>
+      <span class="font-bold text-lg sm:text-xl tracking-widest opacity-85" aria-label="Tứ Đại">
+        [~._
+      </span>
+    </div>
+
+    <!-- Nhóm nút bật/tắt Chuông, Giọng đọc & Chế độ tối -->
+    <div class="flex items-center gap-2">
+      <!-- Nút Chuông Bát -->
+      <button id="btnToggleBell" type="button"
+              class="pill-toggle is-active px-3 py-2.5 text-sm sm:text-base font-bold flex items-center gap-1.5"
+              aria-pressed="true" title="Bật hoặc tắt tiếng chuông chuyển nhịp">
+        <svg class="w-5 h-5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+          <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+        </svg>
+        <span id="labelBell">Chuông: Bật</span>
+      </button>
+
+      <!-- Nút Giọng Đọc Việt -->
+      <button id="btnToggleVoice" type="button"
+              class="pill-toggle px-3 py-2.5 text-sm sm:text-base font-bold flex items-center gap-1.5"
+              aria-pressed="false" title="Bật hoặc tắt giọng đọc hướng dẫn tiếng Việt">
+        <svg class="w-5 h-5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+          <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+          <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+          <path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path>
+        </svg>
+        <span id="labelVoice">Giọng: Tắt</span>
+      </button>
+
+      <!-- Nút Sáng / Tối -->
+      <button id="btnToggleTheme" type="button"
+              class="pill-toggle px-3 py-2.5 text-sm sm:text-base font-bold flex items-center justify-center"
+              aria-label="Chuyển đổi nền sáng và nền tối" title="Chuyển đổi nền giấy mộc / nền tối dịu mắt">
+        <span id="iconTheme" class="text-base sm:text-lg leading-none">☾</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ========================================================================
+       PHẦN THÂN CHÍNH: ĐỒNG HỒ NHỊP THỞ 4-2-6 (25 CHU KỲ = 5 PHÚT)
+       ======================================================================== -->
+  <main class="w-full max-w-xl mx-auto px-4 py-2 flex-1 flex flex-col justify-center">
+
+    <!-- Thanh chỉ số lớn: Chu kỳ & Thời gian còn lại -->
+    <section aria-label="Tiến độ phiên thở"
+             class="grid grid-cols-2 gap-3 mb-4 sm:mb-6">
+      <div class="rounded-2xl p-3 sm:p-4 border-2 text-center"
+           style="background-color: var(--bg-card); border-color: var(--border-soft);">
+        <div class="text-sm sm:text-base font-semibold uppercase tracking-wide" style="color: var(--ink-muted);">
+          Chu kỳ
+        </div>
+        <div id="cycleDisplay" class="text-2xl sm:text-3xl font-extrabold tabular-nums mt-0.5">
+          0 / 25
+        </div>
+      </div>
+
+      <div class="rounded-2xl p-3 sm:p-4 border-2 text-center"
+           style="background-color: var(--bg-card); border-color: var(--border-soft);">
+        <div class="text-sm sm:text-base font-semibold uppercase tracking-wide" style="color: var(--ink-muted);">
+          Còn lại
+        </div>
+        <div id="timeDisplay" class="text-2xl sm:text-3xl font-extrabold tabular-nums mt-0.5">
+          05:00
+        </div>
+      </div>
+    </section>
+
+    <!-- Màn hình Đang Tập / Sẵn Sàng -->
+    <section id="activeSessionView" class="flex flex-col items-center text-center">
+      <!-- Nhãn pha thở cực lớn -->
+      <div class="mb-3 sm:mb-4 min-h-[4.2rem] sm:min-h-[5rem] flex flex-col items-center justify-center">
+        <h1 id="phaseLabel" class="text-4xl sm:text-5xl font-extrabold tracking-tight uppercase leading-none">
+          SẴN SÀNG
+        </h1>
+        <p id="phaseHint" class="text-base sm:text-lg font-medium mt-1.5" style="color: var(--ink-muted);">
+          Nhịp 4–2–6 · 25 chu kỳ trong 5 phút
+        </p>
+      </div>
+
+      <!-- Vòng dẫn nhịp thở trực quan -->
+      <div class="breath-stage my-2 sm:my-3" role="img" aria-label="Vòng tròn dẫn nhịp thở 4-2-6">
+        <div class="breath-outer-boundary"></div>
+        <div id="breathOrb" class="breath-orb phase-idle"></div>
+
+        <!-- Số đếm ngược khổng lồ nằm giữa vòng -->
+        <div class="relative z-10 flex flex-col items-center justify-center pointer-events-none select-none">
+          <span id="countdownDisplay"
+                class="text-7xl sm:text-8xl font-extrabold tabular-nums leading-none tracking-tight">
+            4-2-6
+          </span>
+          <span id="emblemSub"
+                class="mt-2 text-base sm:text-lg font-bold tracking-[0.25em] opacity-75">
+            [~._
+          </span>
+        </div>
+      </div>
+
+      <!-- Thanh tiến trình 25 ô nhỏ đại diện 25 chu kỳ -->
+      <div id="cycleDots" class="w-full max-w-md grid grid-cols-25 gap-1 mt-5 mb-2 px-1"
+           style="grid-template-columns: repeat(25, minmax(0, 1fr));"
+           aria-hidden="true">
+      </div>
+    </section>
+
+    <!-- Màn hình Hoàn Thành 25 Chu Kỳ (Ẩn mặc định) -->
+    <section id="completeView" class="hidden rounded-3xl p-6 sm:p-8 border-2 text-center my-2"
+             style="background-color: var(--bg-card); border-color: var(--border-strong);">
+      <div class="text-3xl sm:text-4xl font-extrabold tracking-widest mb-2">
+        144 · [~._
+      </div>
+      <h2 class="text-2xl sm:text-3xl font-extrabold mb-3">
+        Hoàn Thành 5 Phút (25 Chu Kỳ)
+      </h2>
+      <p class="text-lg sm:text-xl leading-relaxed mb-4">
+        Nhịp tim và hơi thở đã về ngưỡng tĩnh tại. Hãy giữ nguyên trạng thái thả lỏng này và chuyển sang <strong>“thở ngầm”</strong> — để hơi thở tự trôi chậm, êm bên dưới mọi công việc tiếp theo.
+      </p>
+      <div class="p-3.5 rounded-2xl border-2 text-base sm:text-lg font-semibold mb-6"
+           style="border-color: var(--border-soft); background-color: var(--bg-paper);">
+        “Chậm 2 giây cho mình — Giữ yên 100 mét cho người.”
+      </div>
+      <button id="btnRestartFromComplete" type="button"
+              class="btn-tactile btn-primary w-full py-4 px-6 text-xl sm:text-2xl">
+        THỞ THÊM 5 PHÚT NỮA
+      </button>
+    </section>
+
+    <!-- Nhóm nút điều khiển lớn bên dưới -->
+    <section id="controlsSection" class="mt-5 sm:mt-6 grid grid-cols-2 gap-3">
+      <button id="btnStartPause" type="button"
+              class="btn-tactile btn-primary col-span-2 py-4 sm:py-5 px-6 text-xl sm:text-2xl tracking-wide">
+        BẮT ĐẦU
+      </button>
+      <button id="btnReset" type="button"
+              class="btn-tactile btn-secondary col-span-2 py-3.5 px-5 text-lg sm:text-xl">
+        LÀM LẠI
+      </button>
+    </section>
+
+  </main>
+
+  <!-- ========================================================================
+       CHÂN TRANG: GHI CHÚ TRẠNG THÁI GIỮ SÁNG MÀN HÌNH & NHẬN DIỆN 144
+       ======================================================================== -->
+  <footer class="w-full max-w-xl mx-auto px-4 pt-2 pb-4 text-center">
+    <div id="wakeLockStatus" class="text-xs sm:text-sm font-medium mb-1" style="color: var(--ink-muted);">
+      Màn hình sẽ tự giữ sáng trong suốt 5 phút thực hành
+    </div>
+    <div class="text-sm sm:text-base font-bold tracking-wider opacity-85">
+      144 · [~._ · Thở Nhẹ · Lắng Sâu · Chạm Đất
+    </div>
+  </footer>
+
+  <!-- ========================================================================
+       LOGIC ĐIỀU KHIỂN NHỊP THỞ 4-2-6, ÂM THANH CHUÔNG BÁT & GIỌNG ĐỌC VIỆT
+       ======================================================================== -->
+  <script>
+    (function () {
+      'use strict';
+
+      // --- 1. CẤU HÌNH CHUẨN 144: 4-2-6 (12 GIÂY/CHU KỲ × 25 CHU KỲ = 300 GIÂY) ---
+      const TOTAL_CYCLES = 25;
+      const PHASES = [
+        {
+          id: 'inhale',
+          duration: 4,
+          label: 'HÍT VÀO',
+          hint: 'Hít nhẹ qua mũi · 75% dung tích phổi',
+          voiceCue: 'Hít vào',
+          orbClass: 'phase-inhale',
+          toneFreq: 396 // Sol trầm ấm (mở khí)
+        },
+        {
+          id: 'hold',
+          duration: 2,
+          label: 'GIỮ NHỊP',
+          hint: 'Thả lỏng vai & hàm · Không gồng bụng',
+          voiceCue: 'Giữ',
+          orbClass: 'phase-hold',
+          toneFreq: 432 // Tần số tĩnh tại (lắng đọng)
+        },
+        {
+          id: 'exhale',
+          duration: 6,
+          label: 'THỞ RA',
+          hint: 'Thở chậm dài êm ái · Buông mọi căng thẳng',
+          voiceCue: 'Thở ra',
+          orbClass: 'phase-exhale',
+          toneFreq: 288 // Đúng gấp đôi 144Hz (chạm đất & xả sâu)
+        }
+      ];
+      const CYCLE_SECONDS = PHASES.reduce((sum, p) => sum + p.duration, 0); // 12s
+      const TOTAL_SECONDS = TOTAL_CYCLES * CYCLE_SECONDS; // 300s (5 phút)
+
+      // --- 2. TRẠNG THÁI ỨNG DỤNG ---
+      let state = {
+        status: 'idle', // 'idle' | 'running' | 'paused' | 'completed'
+        cycleIndex: 0,  // 0 .. 24
+        phaseIndex: 0,  // 0: Hít, 1: Giữ, 2: Thở
+        phaseRemaining: PHASES[0].duration,
+        totalRemaining: TOTAL_SECONDS,
+        bellEnabled: true,
+        voiceEnabled: false,
+        darkMode: false
+      };
+
+      let timerInterval = null;
+      let audioCtx = null;
+      let wakeLockSentinel = null;
+      let preferredViVoice = null;
+
+      // --- 3. THAM CHIẾU DOM ---
+      const elCycleDisplay = document.getElementById('cycleDisplay');
+      const elTimeDisplay = document.getElementById('timeDisplay');
+      const elPhaseLabel = document.getElementById('phaseLabel');
+      const elPhaseHint = document.getElementById('phaseHint');
+      const elCountdownDisplay = document.getElementById('countdownDisplay');
+      const elBreathOrb = document.getElementById('breathOrb');
+      const elCycleDots = document.getElementById('cycleDots');
+      const elActiveView = document.getElementById('activeSessionView');
+      const elCompleteView = document.getElementById('completeView');
+      const elControlsSection = document.getElementById('controlsSection');
+      const btnStartPause = document.getElementById('btnStartPause');
+      const btnReset = document.getElementById('btnReset');
+      const btnRestartFromComplete = document.getElementById('btnRestartFromComplete');
+      const btnToggleBell = document.getElementById('btnToggleBell');
+      const labelBell = document.getElementById('labelBell');
+      const btnToggleVoice = document.getElementById('btnToggleVoice');
+      const labelVoice = document.getElementById('labelVoice');
+      const btnToggleTheme = document.getElementById('btnToggleTheme');
+      const iconTheme = document.getElementById('iconTheme');
+      const elWakeLockStatus = document.getElementById('wakeLockStatus');
+
+      // --- 4. KHỞI TẠO 25 Ô TIẾN TRÌNH CHU KỲ ---
+      function buildCycleDots() {
+        elCycleDots.innerHTML = '';
+        for (let i = 0; i < TOTAL_CYCLES; i++) {
+          const dot = document.createElement('div');
+          dot.className = 'h-2.5 rounded-sm transition-colors duration-300';
+          dot.style.backgroundColor = 'var(--ring-track)';
+          dot.dataset.index = String(i);
+          elCycleDots.appendChild(dot);
+        }
+      }
+
+      function updateCycleDots() {
+        const dots = elCycleDots.children;
+        for (let i = 0; i < dots.length; i++) {
+          if (state.status === 'idle') {
+            dots[i].style.backgroundColor = 'var(--ring-track)';
+            dots[i].style.opacity = '1';
+          } else if (i < state.cycleIndex) {
+            dots[i].style.backgroundColor = 'var(--border-strong)';
+            dots[i].style.opacity = '1';
+          } else if (i === state.cycleIndex && state.status !== 'completed') {
+            dots[i].style.backgroundColor = 'var(--border-strong)';
+            dots[i].style.opacity = '0.45';
+          } else {
+            dots[i].style.backgroundColor = 'var(--ring-track)';
+            dots[i].style.opacity = '1';
+          }
+        }
+      }
+
+      // --- 5. ÂM THANH CHUÔNG BÁT (WEB AUDIO API - KHÔNG CẦN FILE NGOÀI) ---
+      function ensureAudioContext() {
+        if (!audioCtx) {
+          const AudioContextClass = window.AudioContext || window.webkitAudioContext;
+          if (AudioContextClass) {
+            audioCtx = new AudioContextClass();
+          }
+        }
+        if (audioCtx && audioCtx.state === 'suspended') {
+          audioCtx.resume().catch(() => {});
+        }
+      }
+
+      function playSingingBowl(baseFreq, durationSec = 1.6, gainLevel = 0.14) {
+        if (!state.bellEnabled) return;
+        try {
+          ensureAudioContext();
+          if (!audioCtx) return;
+
+          const now = audioCtx.currentTime;
+
+          // Âm gốc (fundamental)
+          const osc1 = audioCtx.createOscillator();
+          const gain1 = audioCtx.createGain();
+          osc1.type = 'sine';
+          osc1.frequency.setValueAtTime(baseFreq, now);
+
+          gain1.gain.setValueAtTime(0.0001, now);
+          gain1.gain.exponentialRampToValueAtTime(gainLevel, now + 0.04);
+          gain1.gain.exponentialRampToValueAtTime(0.0001, now + durationSec);
+
+          osc1.connect(gain1);
+          gain1.connect(audioCtx.destination);
+          osc1.start(now);
+          osc1.stop(now + durationSec + 0.05);
+
+          // Bội âm nhẹ (harmonic overtone) tạo độ ngân ấm như chuông đồng
+          const osc2 = audioCtx.createOscillator();
+          const gain2 = audioCtx.createGain();
+          osc2.type = 'sine';
+          osc2.frequency.setValueAtTime(baseFreq * 2, now);
+
+          gain2.gain.setValueAtTime(0.0001, now);
+          gain2.gain.exponentialRampToValueAtTime(gainLevel * 0.28, now + 0.03);
+          gain2.gain.exponentialRampToValueAtTime(0.0001, now + durationSec * 0.65);
+
+          osc2.connect(gain2);
+          gain2.connect(audioCtx.destination);
+          osc2.start(now);
+          osc2.stop(now + durationSec * 0.7);
+        } catch (err) {
+          // Bỏ qua nếu trình duyệt chặn âm thanh
+        }
+      }
+
+      function playCompletionChime() {
+        if (!state.bellEnabled) return;
+        playSingingBowl(288, 2.2, 0.15);
+        setTimeout(() => playSingingBowl(432, 2.4, 0.13), 450);
+        setTimeout(() => playSingingBowl(576, 2.8, 0.12), 950);
+      }
+
+      // --- 6. GIỌNG ĐỌC TIẾNG VIỆT (WEB SPEECH API - ƯU TIÊN GIỌNG NỮ MIỀN NAM) ---
+      function loadVietnameseVoice() {
+        if (!('speechSynthesis' in window)) return;
+        const voices = window.speechSynthesis.getVoices();
+        if (!voices || !voices.length) return;
+
+        const viVoices = voices.filter(v =>
+          (v.lang && v.lang.toLowerCase().includes('vi')) ||
+          (v.name && v.name.toLowerCase().includes('vietnam'))
+        );
+
+        if (viVoices.length > 0) {
+          // Ưu tiên giọng nữ miền Nam / tự nhiên như HoaiMy, Linh, Mai...
+          preferredViVoice =
+            viVoices.find(v => /hoaimy|linh|mai|lan|female|nữ/i.test(v.name)) ||
+            viVoices[0];
+        }
+      }
+
+      if ('speechSynthesis' in window) {
+        loadVietnameseVoice();
+        window.speechSynthesis.onvoiceschanged = loadVietnameseVoice;
+      }
+
+      function speakVietnamese(text) {
+        if (!state.voiceEnabled || !('speechSynthesis' in window)) return;
+        try {
+          window.speechSynthesis.cancel();
+          const utterance = new SpeechSynthesisUtterance(text);
+          utterance.lang = 'vi-VN';
+          if (preferredViVoice) {
+            utterance.voice = preferredViVoice;
+          }
+          utterance.rate = 0.88;  // Nhịp đọc chậm rãi, điềm tĩnh
+          utterance.pitch = 0.96; // Tông trầm ấm dịu nhẹ
+          utterance.volume = 0.95;
+          window.speechSynthesis.speak(utterance);
+        } catch (err) {
+          // Bỏ qua nếu thiết bị không hỗ trợ đọc
+        }
+      }
+
+      // --- 7. GIỮ SÁNG MÀN HÌNH (SCREEN WAKE LOCK API) ---
+      async function requestWakeLock() {
+        try {
+          if ('wakeLock' in navigator && !wakeLockSentinel) {
+            wakeLockSentinel = await navigator.wakeLock.request('screen');
+            elWakeLockStatus.textContent = 'Đang giữ sáng màn hình tự động';
+            wakeLockSentinel.addEventListener('release', () => {
+              wakeLockSentinel = null;
+            });
+          }
+        } catch (err) {
+          elWakeLockStatus.textContent = 'Màn hình theo cài đặt thiết bị';
+        }
+      }
+
+      async function releaseWakeLock() {
+        try {
+          if (wakeLockSentinel) {
+            await wakeLockSentinel.release();
+            wakeLockSentinel = null;
+          }
+          elWakeLockStatus.textContent = 'Màn hình sẽ tự giữ sáng trong suốt 5 phút thực hành';
+        } catch (err) {
+          // Bỏ qua lỗi giải phóng
+        }
+      }
+
+      document.addEventListener('visibilitychange', () => {
+        if (document.visibilityState === 'visible' && state.status === 'running') {
+          requestWakeLock();
+        }
+      });
+
+      // --- 8. ĐỊNH DẠNG THỜI GIAN & CẬP NHẬT GIAO DIỆN ---
+      function formatMMSS(seconds) {
+        const s = Math.max(0, Math.floor(seconds));
+        const mins = Math.floor(s / 60);
+        const secs = s % 60;
+        return String(mins).padStart(2, '0') + ':' + String(secs).padStart(2, '0');
+      }
+
+      function setOrbPhaseClass(className) {
+        elBreathOrb.classList.remove('phase-idle', 'phase-inhale', 'phase-hold', 'phase-exhale');
+        // Kích hoạt reflow nhẹ để chuyển pha mượt mà khi lặp lại chu kỳ mới
+        void elBreathOrb.offsetWidth;
+        elBreathOrb.classList.add(className);
+      }
+
+      function renderUI() {
+        elTimeDisplay.textContent = formatMMSS(state.totalRemaining);
+
+        if (state.status === 'idle') {
+          elActiveView.classList.remove('hidden');
+          elCompleteView.classList.add('hidden');
+          elControlsSection.classList.remove('hidden');
+
+          elCycleDisplay.textContent = '0 / ' + TOTAL_CYCLES;
+          elPhaseLabel.textContent = 'SẴN SÀNG';
+          elPhaseHint.textContent = 'Nhịp 4–2–6 · 25 chu kỳ trong 5 phút';
+          elCountdownDisplay.textContent = '4-2-6';
+          elCountdownDisplay.classList.remove('text-8xl', 'sm:text-9xl');
+          elCountdownDisplay.classList.add('text-6xl', 'sm:text-7xl');
+          setOrbPhaseClass('phase-idle');
+          btnStartPause.textContent = 'BẮT ĐẦU';
+        } else if (state.status === 'completed') {
+          elActiveView.classList.add('hidden');
+          elCompleteView.classList.remove('hidden');
+          elControlsSection.classList.add('hidden');
+          elCycleDisplay.textContent = TOTAL_CYCLES + ' / ' + TOTAL_CYCLES;
+        } else {
+          elActiveView.classList.remove('hidden');
+          elCompleteView.classList.add('hidden');
+          elControlsSection.classList.remove('hidden');
+
+          const currentPhase = PHASES[state.phaseIndex];
+          elCycleDisplay.textContent = (state.cycleIndex + 1) + ' / ' + TOTAL_CYCLES;
+          elPhaseLabel.textContent = currentPhase.label;
+          elPhaseHint.textContent = currentPhase.hint;
+          elCountdownDisplay.textContent = String(state.phaseRemaining);
+          elCountdownDisplay.classList.remove('text-6xl', 'sm:text-7xl');
+          elCountdownDisplay.classList.add('text-8xl', 'sm:text-9xl');
+
+          btnStartPause.textContent = state.status === 'running' ? 'TẠM DỪNG' : 'TIẾP TỤC';
+        }
+
+        updateCycleDots();
+      }
+
+      // --- 9. BỘ ĐẾM NHỊP THỞ CHÍNH ---
+      function triggerPhaseCues(phase) {
+        setOrbPhaseClass(phase.orbClass);
+        playSingingBowl(phase.toneFreq, phase.id === 'exhale' ? 1.9 : 1.4, 0.14);
+        speakVietnamese(phase.voiceCue);
+      }
+
+      function startSession() {
+        ensureAudioContext();
+        requestWakeLock();
+
+        if (state.status === 'idle' || state.status === 'completed') {
+          state.cycleIndex = 0;
+          state.phaseIndex = 0;
+          state.phaseRemaining = PHASES[0].duration;
+          state.totalRemaining = TOTAL_SECONDS;
+          state.status = 'running';
+          renderUI();
+          triggerPhaseCues(PHASES[0]);
+        } else if (state.status === 'paused') {
+          state.status = 'running';
+          const currentPhase = PHASES[state.phaseIndex];
+          setOrbPhaseClass(currentPhase.orbClass);
+          renderUI();
+        }
+
+        clearInterval(timerInterval);
+        timerInterval = setInterval(onTick, 1000);
+      }
+
+      function pauseSession() {
+        if (state.status !== 'running') return;
+        state.status = 'paused';
+        clearInterval(timerInterval);
+        timerInterval = null;
+        if ('speechSynthesis' in window) {
+          window.speechSynthesis.cancel();
+        }
+        releaseWakeLock();
+        renderUI();
+      }
+
+      function resetSession() {
+        clearInterval(timerInterval);
+        timerInterval = null;
+        if ('speechSynthesis' in window) {
+          window.speechSynthesis.cancel();
+        }
+        releaseWakeLock();
+
+        state.status = 'idle';
+        state.cycleIndex = 0;
+        state.phaseIndex = 0;
+        state.phaseRemaining = PHASES[0].duration;
+        state.totalRemaining = TOTAL_SECONDS;
+        renderUI();
+      }
+
+      function completeSession() {
+        clearInterval(timerInterval);
+        timerInterval = null;
+        state.status = 'completed';
+        state.totalRemaining = 0;
+        releaseWakeLock();
+        renderUI();
+        playCompletionChime();
+        speakVietnamese('Hoàn thành năm phút. Hãy chuyển sang thở ngầm nhẹ nhàng.');
+      }
+
+      function onTick() {
+        if (state.status !== 'running') return;
+
+        state.totalRemaining = Math.max(0, state.totalRemaining - 1);
+        state.phaseRemaining -= 1;
+
+        if (state.phaseRemaining <= 0) {
+          // Chuyển sang pha tiếp theo trong chu kỳ
+          state.phaseIndex += 1;
+
+          if (state.phaseIndex >= PHASES.length) {
+            // Hết 1 chu kỳ 12 giây
+            state.phaseIndex = 0;
+            state.cycleIndex += 1;
+
+            if (state.cycleIndex >= TOTAL_CYCLES) {
+              completeSession();
+              return;
+            }
+          }
+
+          const nextPhase = PHASES[state.phaseIndex];
+          state.phaseRemaining = nextPhase.duration;
+          renderUI();
+          triggerPhaseCues(nextPhase);
+        } else {
+          renderUI();
+        }
+      }
+
+      // --- 10. GẮN SỰ KIỆN NÚT BẤM ---
+      btnStartPause.addEventListener('click', () => {
+        if (state.status === 'running') {
+          pauseSession();
+        } else {
+          startSession();
+        }
+      });
+
+      btnReset.addEventListener('click', resetSession);
+      btnRestartFromComplete.addEventListener('click', startSession);
+
+      // Bật / Tắt Chuông bát
+      btnToggleBell.addEventListener('click', () => {
+        state.bellEnabled = !state.bellEnabled;
+        btnToggleBell.classList.toggle('is-active', state.bellEnabled);
+        btnToggleBell.setAttribute('aria-pressed', String(state.bellEnabled));
+        labelBell.textContent = state.bellEnabled ? 'Chuông: Bật' : 'Chuông: Tắt';
+        if (state.bellEnabled) {
+          playSingingBowl(432, 1.1, 0.12);
+        }
+      });
+
+      // Bật / Tắt Giọng đọc Việt
+      btnToggleVoice.addEventListener('click', () => {
+        state.voiceEnabled = !state.voiceEnabled;
+        btnToggleVoice.classList.toggle('is-active', state.voiceEnabled);
+        btnToggleVoice.setAttribute('aria-pressed', String(state.voiceEnabled));
+        labelVoice.textContent = state.voiceEnabled ? 'Giọng: Bật' : 'Giọng: Tắt';
+        if (state.voiceEnabled) {
+          loadVietnameseVoice();
+          speakVietnamese('Bật giọng đọc hướng dẫn');
+        } else if ('speechSynthesis' in window) {
+          window.speechSynthesis.cancel();
+        }
+      });
+
+      // Chuyển đổi Chế độ Sáng (Giấy mộc) / Tối (Than đước dịu mắt)
+      btnToggleTheme.addEventListener('click', () => {
+        state.darkMode = !state.darkMode;
+        document.documentElement.classList.toggle('dark-mode', state.darkMode);
+        iconTheme.textContent = state.darkMode ? '☀' : '☾';
+      });
+
+      // Hỗ trợ phím Space để Bắt đầu / Tạm dừng nhanh trên máy tính
+      document.addEventListener('keydown', (e) => {
+        if (e.code === 'Space' && document.activeElement.tagName !== 'BUTTON') {
+          e.preventDefault();
+          if (state.status === 'running') {
+            pauseSession();
+          } else if (state.status !== 'completed') {
+            startSession();
+          }
+        }
+      });
+
+      // Khởi tạo giao diện ban đầu
+      buildCycleDots();
+      renderUI();
+    })();
+  </script>
+</body>
+</html>
