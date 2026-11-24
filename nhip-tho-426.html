@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Nhịp Thở 4-2-6 | [~._</title>
+  <style>
+    :root {
+      --bg-color: #121413;
+      --surface-color: #1b1e1c;
+      --accent-color: #d4af37;
+      --text-primary: #f5f2eb;
+      --text-secondary: #a8a49c;
+      --border-color: rgba(212, 175, 55, 0.25);
+      --pulse-scale: 1;
+      --transition-speed: 4s;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-primary);
+      min-height: 100dvh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 20px;
+      transition: background-color 0.8s ease, color 0.8s ease;
+      overflow-x: hidden;
+    }
+
+    /* ── Header ── */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      max-width: 540px;
+      margin: 0 auto;
+    }
+
+    .theme-badge {
+      font-size: 0.88rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--accent-color);
+      font-weight: 700;
+    }
+
+    .btn-switch-theme {
+      background: var(--surface-color);
+      color: var(--accent-color);
+      border: 1px solid var(--border-color);
+      padding: 7px 13px;
+      border-radius: 999px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      transition: transform 0.2s ease, background-color 0.3s ease;
+      white-space: nowrap;
+    }
+
+    .btn-switch-theme:active { transform: scale(0.95); }
+
+    /* ── Main ── */
+    main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      max-width: 540px;
+      width: 100%;
+      margin: 0 auto;
+      gap: 20px;
+    }
+
+    .intro-quote {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: var(--text-secondary);
+      font-style: italic;
+      min-height: 3.5em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 8px;
+      transition: color 0.6s ease;
+    }
+
+    /* ── Orb ── */
+    .orb-container {
+      position: relative;
+      width: 240px;
+      height: 240px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 4px 0;
+    }
+
+    .orb-glow {
+      position: absolute;
+      width: 110%;
+      height: 110%;
+      border-radius: 50%;
+      background: radial-gradient(circle, var(--accent-color) 0%, transparent 70%);
+      opacity: 0;
+      transition: opacity var(--transition-speed) ease-in-out;
+      pointer-events: none;
+    }
+
+    .orb-ring {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      border: 2px solid var(--border-color);
+      background: radial-gradient(circle, var(--surface-color) 40%, transparent 100%);
+      transform: scale(var(--pulse-scale));
+      transition: transform var(--transition-speed) ease-in-out,
+                  border-color 0.8s ease;
+    }
+
+    .orb-core {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .phase-label {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--accent-color);
+      margin-bottom: 4px;
+      letter-spacing: 0.03em;
+      transition: color 0.5s ease;
+    }
+
+    .timer-display {
+      font-size: 4rem;
+      font-weight: 800;
+      font-variant-numeric: tabular-nums;
+      line-height: 1;
+      color: var(--text-primary);
+    }
+
+    .phase-sub {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      margin-top: 8px;
+      font-weight: 500;
+    }
+
+    /* ── Progress bar ── */
+    .progress-wrap {
+      width: 100%;
+      max-width: 300px;
+      height: 3px;
+      background: var(--surface-color);
+      border-radius: 999px;
+      overflow: hidden;
+    }
+
+    .progress-bar {
+      height: 100%;
+      background: var(--accent-color);
+      border-radius: 999px;
+      width: 0%;
+      transition: width 1s linear, background-color 0.8s ease;
+    }
+
+    /* ── Status row ── */
+    .status-row {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      width: 100%;
+    }
+
+    .cycle-counter {
+      font-size: 1.0rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      background: var(--surface-color);
+      padding: 6px 18px;
+      border-radius: 20px;
+      border: 1px solid var(--border-color);
+      transition: background-color 0.4s ease, border-color 0.4s ease;
+    }
+
+    .target-selector {
+      display: flex;
+      gap: 8px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .target-chip {
+      background: var(--surface-color);
+      color: var(--text-secondary);
+      border: 1px solid var(--border-color);
+      padding: 5px 12px;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .target-chip.active {
+      background: var(--accent-color);
+      color: var(--bg-color);
+      border-color: var(--accent-color);
+    }
+
+    /* ── Controls ── */
+    .controls {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      width: 100%;
+      max-width: 360px;
+    }
+
+    .btn-primary {
+      background-color: var(--accent-color);
+      color: var(--bg-color);
+      border: none;
+      padding: 15px 24px;
+      border-radius: 14px;
+      font-size: 1.15rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: opacity 0.2s ease, transform 0.15s ease;
+    }
+
+    .btn-primary:active { transform: scale(0.98); }
+
+    .secondary-controls {
+      display: flex;
+      gap: 8px;
+    }
+
+    .btn-secondary {
+      flex: 1;
+      background-color: var(--surface-color);
+      color: var(--text-primary);
+      border: 1px solid var(--border-color);
+      padding: 11px;
+      border-radius: 12px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.3s ease, border-color 0.3s ease;
+    }
+
+    /* ── Done overlay ── */
+    .done-overlay {
+      position: fixed;
+      inset: 0;
+      background: var(--bg-color);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      z-index: 100;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.6s ease;
+    }
+
+    .done-overlay.show {
+      opacity: 1;
+      pointer-events: all;
+    }
+
+    .done-emblem {
+      font-size: 3.5rem;
+      line-height: 1;
+    }
+
+    .done-title {
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--accent-color);
+    }
+
+    .done-sub {
+      font-size: 1rem;
+      color: var(--text-secondary);
+      text-align: center;
+      padding: 0 32px;
+      line-height: 1.6;
+    }
+
+    .done-btn {
+      background: var(--accent-color);
+      color: var(--bg-color);
+      border: none;
+      padding: 14px 32px;
+      border-radius: 14px;
+      font-size: 1.1rem;
+      font-weight: 700;
+      cursor: pointer;
+      margin-top: 8px;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.82rem;
+      color: var(--text-secondary);
+      opacity: 0.8;
+      padding-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="theme-badge" id="themeName">Rừng Đước Đêm</div>
+    <button class="btn-switch-theme" id="switchThemeBtn" title="Đổi không gian khác">
+      <span>[~._</span> Đổi cảnh
+    </button>
+  </header>
+
+  <main>
+    <p class="intro-quote" id="introQuote">
+      "Đứng yên như rễ đước cắm sâu vào bùn. Gió trên ngọn mặc gió."
+    </p>
+
+    <div class="orb-container">
+      <div class="orb-glow" id="orbGlow"></div>
+      <div class="orb-ring" id="orbRing"></div>
+      <div class="orb-core">
+        <div class="phase-label" id="phaseLabel">Sẵn sàng</div>
+        <div class="timer-display" id="timerDisplay">4-2-6</div>
+        <div class="phase-sub" id="phaseSub">12 giây mỗi nhịp</div>
+      </div>
+    </div>
+
+    <div class="progress-wrap">
+      <div class="progress-bar" id="progressBar"></div>
+    </div>
+
+    <div class="status-row">
+      <div class="cycle-counter" id="cycleCounter">Vòng thở: 0</div>
+      <div class="target-selector" id="targetSelector">
+        <button class="target-chip active" data-target="0">Tự do</button>
+        <button class="target-chip" data-target="12">12 vòng · 2 phút</button>
+        <button class="target-chip" data-target="30">30 vòng · 6 phút</button>
+        <button class="target-chip" data-target="60">60 vòng · 12 phút</button>
+      </div>
+    </div>
+
+    <div class="controls">
+      <button class="btn-primary" id="startStopBtn">Bắt đầu thở</button>
+      <div class="secondary-controls">
+        <button class="btn-secondary" id="soundToggleBtn">🔔 Chuông</button>
+        <button class="btn-secondary" id="voiceToggleBtn">🗣 Giọng đọc</button>
+        <button class="btn-secondary" id="vibToggleBtn">📳 Rung</button>
+      </div>
+    </div>
+  </main>
+
+  <footer id="footerEl">Nhịp 4-2-6 · Không vội, không gồng</footer>
+
+  <!-- Màn hình kết thúc -->
+  <div class="done-overlay" id="doneOverlay">
+    <div class="done-emblem" id="doneEmblem">🌿</div>
+    <div class="done-title">Hoàn thành</div>
+    <div class="done-sub" id="doneSub">Bạn đã thở xong. Giữ cảm giác này thêm một chút trước khi trở lại.</div>
+    <button class="done-btn" id="doneBtn">Thở lại</button>
+  </div>
+
+  <script>
+  // ============================================================
+  // 1. DỮ LIỆU 6 THEME
+  // ============================================================
+  const THEMES = [
+    {
+      id: "rung-duoc-dem",
+      name: "Rừng Đước Đêm",
+      bg: "#121413", surface: "#1b1f1d", accent: "#d4af37",
+      textPrimary: "#f5f2eb", textSecondary: "#a6a298",
+      border: "rgba(212,175,55,0.3)",
+      quote: "“Đứng yên như rễ đước cắm sâu vào bùn. Gió trên ngọn mặc gió.”",
+      inhale: "Kéo phù sa về", hold: "Lắng đọng", exhale: "Thả bùn trôi",
+      doneEmblem: "🌿",
+      doneSub: "Rễ đã ngậm đủ nước. Thân cây lặng yên.",
+      bellFreqs: [220, 330, 440]
+    },
+    {
+      id: "giay-kraft",
+      name: "Trang Giấy Kraft",
+      bg: "#efe6d5", surface: "#e4d8c1", accent: "#232320",
+      textPrimary: "#181816", textSecondary: "#57534a",
+      border: "rgba(35,35,32,0.25)",
+      quote: "“Mặt giấy mộc không cần tô vẽ. Chỉ cần một nét mực rõ ràng.”",
+      inhale: "Nạp khí vào", hold: "Giữ tĩnh tại", exhale: "Buông nhẹ ra",
+      doneEmblem: "✒️",
+      doneSub: "Nét mực đã nằm xuống. Trang giấy trở về lặng im.",
+      bellFreqs: [264, 396, 528]
+    },
+    {
+      id: "lo-than",
+      name: "Lò Than Âm Ỉ",
+      bg: "#1b1918", surface: "#262220", accent: "#e07a5f",
+      textPrimary: "#faf8f5", textSecondary: "#b5aca6",
+      border: "rgba(224,122,95,0.3)",
+      quote: "“Lửa không cần bùng to, chỉ cần giữ hồng bên trong lõi than.”",
+      inhale: "Nuôi đốm hồng", hold: "Ủ ấm lõi", exhale: "Nhả khói mỏng",
+      doneEmblem: "🔥",
+      doneSub: "Lõi than vẫn còn hồng. Không cần thêm gì nữa.",
+      bellFreqs: [432, 324, 216]
+    },
+    {
+      id: "bai-boi",
+      name: "Bãi Bồi Bình Minh",
+      bg: "#f4f1ea", surface: "#e6e2d6", accent: "#2d5a43",
+      textPrimary: "#1a241e", textSecondary: "#526359",
+      border: "rgba(45,90,67,0.25)",
+      quote: "“Mặt nước phẳng lặng trước khi con nước ròng. Chỉ cần 12 giây này thôi.”",
+      inhale: "Nước triều lên", hold: "Đứng nước", exhale: "Nước rút êm",
+      doneEmblem: "🌅",
+      doneSub: "Con nước đã ròng. Bãi bồi lộ ra yên tĩnh dưới nắng.",
+      bellFreqs: [285, 396, 528]
+    },
+    {
+      id: "gio-bac",
+      name: "Gió Bấc Qua Sông",
+      bg: "#0f1c2e", surface: "#172840", accent: "#8ecae6",
+      textPrimary: "#f1f6f9", textSecondary: "#9bb1c4",
+      border: "rgba(142,202,230,0.3)",
+      quote: "“Không giữ gió lại, chỉ mở cửa cho gió đi xuyên qua rồi đi tiếp.”",
+      inhale: "Đón luồng gió", hold: "Lặng giữa dòng", exhale: "Tiễn gió đi",
+      doneEmblem: "🌊",
+      doneSub: "Gió đã qua. Mặt sông phẳng lại như chưa có gì.",
+      bellFreqs: [396, 528, 639]
+    },
+    {
+      id: "phu-sa",
+      name: "Đất Phù Sa Sau Mưa",
+      bg: "#231f1d", surface: "#302a27", accent: "#c9a66b",
+      textPrimary: "#f2ece4", textSecondary: "#afa395",
+      border: "rgba(201,166,107,0.3)",
+      quote: "“Mưa rơi xuống đất là chuyện của trời; đất ngậm nước lặng thinh.”",
+      inhale: "Thấm hơi sương", hold: "Ngậm đất", exhale: "Trả hơi nhẹ",
+      doneEmblem: "🌱",
+      doneSub: "Đất đã no hơi nước. Hạt mầm nằm yên chờ sáng.",
+      bellFreqs: [174, 285, 396]
+    }
+  ];
+
+  // ============================================================
+  // 2. THEME ENGINE — random, chống trùng lần trước
+  // ============================================================
+  let currentTheme = THEMES[0];
+
+  function applyTheme(theme) {
+    currentTheme = theme;
+    const r = document.documentElement;
+    r.style.setProperty("--bg-color",        theme.bg);
+    r.style.setProperty("--surface-color",   theme.surface);
+    r.style.setProperty("--accent-color",     theme.accent);
+    r.style.setProperty("--text-primary",     theme.textPrimary);
+    r.style.setProperty("--text-secondary",   theme.textSecondary);
+    r.style.setProperty("--border-color",     theme.border);
+
+    document.getElementById("themeName").textContent   = theme.name;
+    document.getElementById("introQuote").textContent  = theme.quote;
+    document.getElementById("doneEmblem").textContent  = theme.doneEmblem;
+    document.getElementById("doneSub").textContent     = theme.doneSub;
+
+    if (isRunning) updatePhaseText(PHASES[phaseIndex]);
+
+    try { localStorage.setItem("last_426_theme", theme.id); } catch(e) {}
+  }
+
+  function pickTheme(excludeId) {
+    const pool = THEMES.filter(t => t.id !== excludeId);
+    return (pool.length ? pool : THEMES)[Math.floor(Math.random() * (pool.length || THEMES.length))];
+  }
+
+  (function init() {
+    let last = null;
+    try { last = localStorage.getItem("last_426_theme"); } catch(e) {}
+    applyTheme(pickTheme(last));
+  })();
+
+  document.getElementById("switchThemeBtn").addEventListener("click", () => {
+    applyTheme(pickTheme(currentTheme.id));
+  });
+
+  // ============================================================
+  // 3. WAKE LOCK
+  // ============================================================
+  let wakeLock = null;
+  const footerEl = document.getElementById("footerEl");
+
+  async function acquireWakeLock() {
+    if (!("wakeLock" in navigator)) return;
+    try {
+      wakeLock = await navigator.wakeLock.request("screen");
+      footerEl.textContent = "Nhịp 4-2-6 · Đang giữ sáng màn hình";
+      wakeLock.addEventListener("release", () => {
+        if (!isRunning) footerEl.textContent = "Nhịp 4-2-6 · Không vội, không gồng";
+      });
+    } catch(e) {
+      footerEl.textContent = "Nhịp 4-2-6 · Mở bằng Safari/Chrome (HTTPS) để giữ sáng";
+    }
+  }
+
+  async function releaseWakeLock() {
+    if (wakeLock) { try { await wakeLock.release(); } catch(e) {} wakeLock = null; }
+    footerEl.textContent = "Nhịp 4-2-6 · Không vội, không gồng";
+  }
+
+  document.addEventListener("visibilitychange", async () => {
+    if (isRunning && document.visibilityState === "visible") await acquireWakeLock();
+  });
+
+  // ============================================================
+  // 4. ÂM THANH — FM Synthesis (chuông bát ấm hơn sine đơn)
+  // ============================================================
+  let soundEnabled = true;
+  let audioCtx = null;
+
+  function getCtx() {
+    if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+    if (audioCtx.state === "suspended") audioCtx.resume();
+    return audioCtx;
+  }
+
+  function playBell(freqArr, volume = 0.22) {
+    if (!soundEnabled) return;
+    try {
+      const ctx = getCtx();
+      const now = ctx.currentTime;
+      freqArr.forEach((freq, i) => {
+        const osc  = ctx.createOscillator();
+        const gain = ctx.createGain();
+        const mod  = ctx.createOscillator();
+        const modG = ctx.createGain();
+
+        // FM: modulator → modGain → osc.frequency
+        mod.frequency.value  = freq * 2.756;
+        modG.gain.value      = freq * 1.4;
+        mod.connect(modG);
+        modG.connect(osc.frequency);
+
+        osc.type = "sine";
+        osc.frequency.setValueAtTime(freq, now);
+
+        const vol = volume / (i + 1);
+        gain.gain.setValueAtTime(0.001, now + i * 0.015);
+        gain.gain.exponentialRampToValueAtTime(vol, now + i * 0.015 + 0.04);
+        gain.gain.exponentialRampToValueAtTime(0.0001, now + i * 0.015 + 2.6);
+
+        osc.connect(gain);
+        gain.connect(ctx.destination);
+        mod.start(now + i * 0.015);
+        osc.start(now + i * 0.015);
+        mod.stop(now + i * 0.015 + 2.7);
+        osc.stop(now + i * 0.015 + 2.7);
+      });
+    } catch(e) {}
+  }
+
+  // ============================================================
+  // 5. GIỌNG ĐỌC TIẾNG VIỆT
+  // ============================================================
+  let voiceEnabled = true;
+  let preferredVoice = null;
+
+  function loadVoice() {
+    if (!("speechSynthesis" in window)) return;
+    const vs = window.speechSynthesis.getVoices();
+    const vi = vs.filter(v => v.lang.toLowerCase().includes("vi"));
+    if (vi.length) {
+      preferredVoice = vi.find(v => /hoaimy|linh|nu|female|south/i.test(v.name)) || vi[0];
+    }
+  }
+  if ("speechSynthesis" in window) {
+    loadVoice();
+    window.speechSynthesis.onvoiceschanged = loadVoice;
+  }
+
+  function speak(text) {
+    if (!voiceEnabled || !("speechSynthesis" in window)) return;
+    window.speechSynthesis.cancel();
+    const u = new SpeechSynthesisUtterance(text);
+    u.lang = "vi-VN";
+    if (preferredVoice) u.voice = preferredVoice;
+    u.rate = 0.82;
+    u.pitch = 1.0;
+    window.speechSynthesis.speak(u);
+  }
+
+  // ============================================================
+  // 6. RUNG
+  // ============================================================
+  let vibEnabled = true;
+  function vibrate(pattern) {
+    if (!vibEnabled || !navigator.vibrate) return;
+    navigator.vibrate(pattern);
+  }
+
+  // ============================================================
+  // 7. CỐT LÕI NHỊP 4-2-6
+  // ============================================================
+  const PHASES = [
+    { key: "inhale", dur: 4,  scale: 1.26, glowOpacity: 0.07, sub: "Hít vào · 4 giây" },
+    { key: "hold",   dur: 2,  scale: 1.26, glowOpacity: 0.12, sub: "Giữ nhẹ · 2 giây" },
+    { key: "exhale", dur: 6,  scale: 0.82, glowOpacity: 0,    sub: "Thở ra · 6 giây"  }
+  ];
+
+  let isRunning   = false;
+  let phaseIndex  = 0;
+  let secLeft     = 0;
+  let cycleCount  = 0;
+  let targetCycles= 0;
+  let totalSecs   = 0;
+  let timerInterval = null;
+
+  const phaseLabel   = document.getElementById("phaseLabel");
+  const timerDisplay = document.getElementById("timerDisplay");
+  const phaseSub     = document.getElementById("phaseSub");
+  const cycleCounter = document.getElementById("cycleCounter");
+  const orbRing      = document.getElementById("orbRing");
+  const orbGlow      = document.getElementById("orbGlow");
+  const progressBar  = document.getElementById("progressBar");
+  const startStopBtn = document.getElementById("startStopBtn");
+
+  function updatePhaseText(ph) {
+    phaseLabel.textContent = currentTheme[ph.key];
+    phaseSub.textContent   = ph.sub;
+  }
+
+  function updateProgress() {
+    if (targetCycles === 0) { progressBar.style.width = "0%"; return; }
+    const pct = Math.min(100, (cycleCount / targetCycles) * 100);
+    progressBar.style.width = pct + "%";
+  }
+
+  function enterPhase(idx) {
+    phaseIndex = idx;
+    const ph = PHASES[idx];
+    secLeft = ph.dur;
+
+    updatePhaseText(ph);
+    timerDisplay.textContent = secLeft;
+
+    orbRing.style.transition = `transform ${ph.dur}s ease-in-out, border-color 0.8s ease`;
+    orbRing.style.transform  = `scale(${ph.scale})`;
+    orbGlow.style.transition = `opacity ${ph.dur}s ease-in-out`;
+    orbGlow.style.opacity    = ph.glowOpacity;
+
+    playBell(currentTheme.bellFreqs);
+    speak(currentTheme[ph.key]);
+
+    if (ph.key === "inhale")      vibrate([60]);
+    else if (ph.key === "hold")   vibrate([30, 30, 30]);
+    else                          vibrate([80]);
+  }
+
+  function tick() {
+    totalSecs++;
+    secLeft--;
+    if (secLeft > 0) {
+      timerDisplay.textContent = secLeft;
+      return;
+    }
+    const next = (phaseIndex + 1) % PHASES.length;
+    if (next === 0) {
+      cycleCount++;
+      cycleCounter.textContent = targetCycles
+        ? `Vòng thở: ${cycleCount} / ${targetCycles}`
+        : `Vòng thở: ${cycleCount}`;
+      updateProgress();
+
+      if (targetCycles > 0 && cycleCount >= targetCycles) {
+        finishSession();
+        return;
+      }
+    }
+    enterPhase(next);
+  }
+
+  function startBreathing() {
+    isRunning = true;
+    cycleCount = 0;
+    totalSecs  = 0;
+    cycleCounter.textContent = targetCycles ? `Vòng thở: 0 / ${targetCycles}` : `Vòng thở: 0`;
+    startStopBtn.textContent = "Tạm dừng";
+    updateProgress();
+    enterPhase(0);
+    acquireWakeLock();
+    timerInterval = setInterval(tick, 1000);
+  }
+
+  function stopBreathing(keepCount = false) {
+    isRunning = false;
+    clearInterval(timerInterval);
+    if ("speechSynthesis" in window) window.speechSynthesis.cancel();
+    releaseWakeLock();
+    orbRing.style.transition = "transform 0.6s ease";
+    orbRing.style.transform  = "scale(1)";
+    orbGlow.style.opacity    = 0;
+    phaseLabel.textContent   = "Tạm nghỉ";
+    timerDisplay.textContent = "4-2-6";
+    phaseSub.textContent     = "Bấm để tiếp tục nhịp";
+    if (!keepCount) {
+      cycleCounter.textContent = "Vòng thở: 0";
+      progressBar.style.width  = "0%";
+    }
+    startStopBtn.textContent = "Tiếp tục thở";
+  }
+
+  function finishSession() {
+    stopBreathing(true);
+    const mins = Math.round(totalSecs / 60);
+    document.getElementById("doneSub").textContent =
+      currentTheme.doneSub + ` (${cycleCount} vòng · ${mins} phút)`;
+    document.getElementById("doneOverlay").classList.add("show");
+    speak("Hoàn thành. " + currentTheme.doneSub);
+    vibrate([100, 50, 100, 50, 200]);
+  }
+
+  startStopBtn.addEventListener("click", () => {
+    isRunning ? stopBreathing() : startBreathing();
+  });
+
+  document.getElementById("doneBtn").addEventListener("click", () => {
+    document.getElementById("doneOverlay").classList.remove("show");
+    cycleCounter.textContent = "Vòng thở: 0";
+    progressBar.style.width  = "0%";
+    startStopBtn.textContent = "Bắt đầu thở";
+  });
+
+  // Target chips
+  document.getElementById("targetSelector").addEventListener("click", e => {
+    const chip = e.target.closest(".target-chip");
+    if (!chip) return;
+    document.querySelectorAll(".target-chip").forEach(c => c.classList.remove("active"));
+    chip.classList.add("active");
+    targetCycles = parseInt(chip.dataset.target, 10);
+    updateProgress();
+  });
+
+  // Sound / Voice / Vib toggles
+  const soundBtn = document.getElementById("soundToggleBtn");
+  const voiceBtn = document.getElementById("voiceToggleBtn");
+  const vibBtn   = document.getElementById("vibToggleBtn");
+
+  soundBtn.addEventListener("click", () => {
+    soundEnabled = !soundEnabled;
+    soundBtn.textContent = soundEnabled ? "🔔 Chuông" : "🔕 Chuông";
+  });
+
+  voiceBtn.addEventListener("click", () => {
+    voiceEnabled = !voiceEnabled;
+    if (!voiceEnabled && "speechSynthesis" in window) window.speechSynthesis.cancel();
+    voiceBtn.textContent = voiceEnabled ? "🗣 Giọng đọc" : "🔇 Giọng đọc";
+  });
+
+  vibBtn.addEventListener("click", () => {
+    vibEnabled = !vibEnabled;
+    vibBtn.textContent = vibEnabled ? "📳 Rung" : "📴 Rung";
+  });
+  </script>
+</body>
+</html>
