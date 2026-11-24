@@ -483,10 +483,11 @@
     r.style.setProperty("--text-secondary",   theme.textSecondary);
     r.style.setProperty("--border-color",     theme.border);
 
-    document.getElementById("themeName").textContent   = theme.name;
-    document.getElementById("introQuote").textContent  = theme.quote;
-    document.getElementById("doneEmblem").textContent  = theme.doneEmblem;
-    document.getElementById("doneSub").textContent     = theme.doneSub;
+    const el = id => document.getElementById(id);
+    if (el("themeName"))   el("themeName").textContent   = theme.name;
+    if (el("introQuote"))  el("introQuote").textContent  = theme.quote;
+    if (el("doneEmblem"))  el("doneEmblem").textContent  = theme.doneEmblem;
+    if (el("doneSub"))     el("doneSub").textContent     = theme.doneSub;
 
     if (isRunning) updatePhaseText(PHASES[phaseIndex]);
 
@@ -498,11 +499,11 @@
     return (pool.length ? pool : THEMES)[Math.floor(Math.random() * (pool.length || THEMES.length))];
   }
 
-  (function init() {
+  document.addEventListener("DOMContentLoaded", function() {
     let last = null;
     try { last = localStorage.getItem("last_426_theme"); } catch(e) {}
     applyTheme(pickTheme(last));
-  })();
+  });
 
   document.getElementById("switchThemeBtn").addEventListener("click", () => {
     applyTheme(pickTheme(currentTheme.id));
