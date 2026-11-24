@@ -2,712 +2,798 @@
 <html lang="vi">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
-  <title>144 · Nhém Nhịp Thở 4–2–6</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Nhịp Thở 4-2-6 | [~._</title>
   <style>
     :root {
-      --bg:        #F6F3EB;
-      --card:      #EFECE2;
-      --card-h:    #E5E0D3;
-      --ink:       #181818;
-      --muted:     #4A4740;
-      --border:    #181818;
-      --border-s:  rgba(24,24,24,0.20);
-      --fill:      #181818;
-      --fill-text: #F6F3EB;
-      --track:     rgba(24,24,24,0.11);
-      --glow:      rgba(24,24,24,0.05);
-      --accent:    #181818;
-      /* session tint — overridden per session */
-      --tint:      #181818;
-      --tint-bg:   rgba(24,24,24,0.06);
+      --bg-color: #121413;
+      --surface-color: #1b1e1c;
+      --accent-color: #d4af37;
+      --text-primary: #f5f2eb;
+      --text-secondary: #a8a49c;
+      --border-color: rgba(212, 175, 55, 0.25);
+      --pulse-scale: 1;
+      --transition-speed: 4s;
     }
-    html.dark {
-      --bg:        #111110;
-      --card:      #1C1C1A;
-      --card-h:    #262622;
-      --ink:       #F2EFE8;
-      --muted:     #A8A39A;
-      --border:    #F2EFE8;
-      --border-s:  rgba(242,239,232,0.22);
-      --fill:      #F2EFE8;
-      --fill-text: #111110;
-      --track:     rgba(242,239,232,0.13);
-      --glow:      rgba(242,239,232,0.05);
-      --accent:    #F2EFE8;
-    }
-    *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
-    html,body{margin:0;padding:0;min-height:100dvh;background:var(--bg);color:var(--ink);
-      font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;
-      transition:background .35s,color .35s;overflow-x:hidden}
 
-    /* ── SESSION INTRO SCREEN ── */
-    #introScreen{
-      position:fixed;inset:0;z-index:50;
-      display:flex;flex-direction:column;align-items:center;justify-content:center;
-      padding:28px 24px;text-align:center;
-      background:var(--bg);
-      transition:opacity .5s,transform .5s;
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-tap-highlight-color: transparent;
     }
-    #introScreen.out{opacity:0;transform:scale(1.04);pointer-events:none}
 
-    .session-emblem{
-      font-size:clamp(3.6rem,14vw,5.5rem);
-      line-height:1;margin-bottom:16px;
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-primary);
+      min-height: 100dvh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 20px;
+      transition: background-color 0.8s ease, color 0.8s ease;
+      overflow-x: hidden;
     }
-    .session-name{
-      font-size:clamp(1.5rem,5.5vw,2.2rem);
-      font-weight:900;letter-spacing:.04em;
-      color:var(--tint);margin-bottom:10px;
-    }
-    .session-quote{
-      font-size:clamp(1rem,3.5vw,1.3rem);
-      font-weight:600;line-height:1.5;
-      color:var(--muted);max-width:380px;margin-bottom:32px;
-    }
-    .session-tag{
-      font-size:.8rem;font-weight:700;letter-spacing:.12em;
-      text-transform:uppercase;color:var(--muted);margin-bottom:28px;
-    }
-    #btnEnter{
-      background:var(--tint);color:var(--fill-text);
-      border:none;border-radius:20px;
-      font-size:clamp(1.1rem,4vw,1.4rem);font-weight:900;
-      padding:16px 48px;cursor:pointer;
-      letter-spacing:.05em;
-      transition:transform .1s,opacity .2s;
-    }
-    html.dark #btnEnter{color:var(--bg)}
-    #btnEnter:active{transform:scale(.97)}
 
-    /* ── BREATH RING ── */
-    .breath-stage{
-      position:relative;
-      width:min(74vw,300px);height:min(74vw,300px);
-      display:flex;align-items:center;justify-content:center;margin:0 auto;
+    /* ── Header ── */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      max-width: 540px;
+      margin: 0 auto;
     }
-    .breath-boundary{
-      position:absolute;inset:0;border-radius:9999px;
-      border:2px dashed var(--border-s);pointer-events:none;
-    }
-    .breath-orb{
-      position:absolute;width:100%;height:100%;border-radius:9999px;
-      background:var(--tint-bg);
-      border:3px solid var(--tint);
-      transform:scale(.62);will-change:transform;
-      display:flex;align-items:center;justify-content:center;
-      transition:border-color .4s,background .4s;
-    }
-    .breath-orb.phase-idle  {transform:scale(.66);transition:transform .6s ease-out}
-    .breath-orb.phase-inhale{transform:scale(1);  transition:transform 4s cubic-bezier(.25,.1,.25,1)}
-    .breath-orb.phase-hold  {transform:scale(1);  transition:transform .2s linear}
-    .breath-orb.phase-exhale{transform:scale(.62);transition:transform 6s cubic-bezier(.22,.1,.3,1)}
 
-    /* ── BUTTONS ── */
-    .btn{border-radius:16px;font-weight:800;cursor:pointer;
-         transition:transform .1s,background .2s;border:2.5px solid var(--border);}
-    .btn:active{transform:scale(.97)}
-    .btn-primary{background:var(--fill);color:var(--fill-text)}
-    .btn-secondary{background:var(--card);color:var(--ink)}
-    .btn-secondary:hover{background:var(--card-h)}
-    .pill{border:2px solid var(--border-s);background:var(--card);color:var(--ink);
-          border-radius:14px;transition:all .2s;cursor:pointer;font-weight:700}
-    .pill.on{border-color:var(--tint);background:var(--tint);color:var(--fill-text)}
-    html.dark .pill.on{color:var(--bg)}
+    .theme-badge {
+      font-size: 1rem;
+      letter-spacing: 0.03em;
+      color: var(--accent-color);
+      font-weight: 700;
+    }
 
-    .tabular{font-variant-numeric:tabular-nums}
+    .btn-switch-theme {
+      background: var(--surface-color);
+      color: var(--accent-color);
+      border: 1px solid var(--border-color);
+      padding: 10px 16px;
+      border-radius: 999px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: transform 0.2s ease, background-color 0.3s ease;
+      white-space: nowrap;
+      min-height: 44px;
+    }
+
+    .btn-switch-theme:active { transform: scale(0.95); }
+
+    /* ── Main ── */
+    main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      max-width: 540px;
+      width: 100%;
+      margin: 0 auto;
+      gap: 20px;
+    }
+
+    .intro-quote {
+      font-size: 1.15rem;
+      line-height: 1.65;
+      color: var(--text-primary);
+      opacity: 0.75;
+      font-style: italic;
+      min-height: 3.5em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 12px;
+      transition: color 0.6s ease, opacity 0.6s ease;
+    }
+
+    /* ── Orb ── */
+    .orb-container {
+      position: relative;
+      width: 240px;
+      height: 240px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 4px 0;
+    }
+
+    .orb-glow {
+      position: absolute;
+      width: 110%;
+      height: 110%;
+      border-radius: 50%;
+      background: radial-gradient(circle, var(--accent-color) 0%, transparent 70%);
+      opacity: 0;
+      transition: opacity var(--transition-speed) ease-in-out;
+      pointer-events: none;
+    }
+
+    .orb-ring {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      border: 2px solid var(--border-color);
+      background: radial-gradient(circle, var(--surface-color) 40%, transparent 100%);
+      transform: scale(var(--pulse-scale));
+      transition: transform var(--transition-speed) ease-in-out,
+                  border-color 0.8s ease;
+    }
+
+    .orb-core {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .phase-label {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--accent-color);
+      margin-bottom: 4px;
+      letter-spacing: 0.02em;
+      transition: color 0.5s ease;
+    }
+
+    .timer-display {
+      font-size: 5rem;
+      font-weight: 800;
+      font-variant-numeric: tabular-nums;
+      line-height: 1;
+      color: var(--text-primary);
+    }
+
+    .phase-sub {
+      font-size: 1rem;
+      color: var(--text-primary);
+      opacity: 0.65;
+      margin-top: 8px;
+      font-weight: 500;
+    }
+
+    /* ── Progress bar ── */
+    .progress-wrap {
+      width: 100%;
+      max-width: 300px;
+      height: 5px;
+      background: var(--surface-color);
+      border-radius: 999px;
+      overflow: hidden;
+    }
+
+    .progress-bar {
+      height: 100%;
+      background: var(--accent-color);
+      border-radius: 999px;
+      width: 0%;
+      transition: width 1s linear, background-color 0.8s ease;
+    }
+
+    /* ── Status row ── */
+    .status-row {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      width: 100%;
+    }
+
+    .cycle-counter {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      background: var(--surface-color);
+      padding: 8px 20px;
+      border-radius: 20px;
+      border: 1px solid var(--border-color);
+      transition: background-color 0.4s ease, border-color 0.4s ease;
+    }
+
+    .target-selector {
+      display: flex;
+      gap: 8px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .target-chip {
+      background: var(--surface-color);
+      color: var(--text-primary);
+      opacity: 0.65;
+      border: 1px solid var(--border-color);
+      padding: 8px 14px;
+      border-radius: 999px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      min-height: 40px;
+      transition: all 0.2s ease;
+    }
+
+    .target-chip.active {
+      background: var(--accent-color);
+      color: var(--bg-color);
+      opacity: 1;
+      border-color: var(--accent-color);
+    }
+
+    /* ── Controls ── */
+    .controls {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      width: 100%;
+      max-width: 360px;
+    }
+
+    .btn-primary {
+      background-color: var(--accent-color);
+      color: var(--bg-color);
+      border: none;
+      padding: 18px 24px;
+      border-radius: 16px;
+      font-size: 1.25rem;
+      font-weight: 700;
+      cursor: pointer;
+      min-height: 56px;
+      transition: opacity 0.2s ease, transform 0.15s ease;
+    }
+
+    .btn-primary:active { transform: scale(0.98); }
+
+    .secondary-controls {
+      display: flex;
+      gap: 8px;
+    }
+
+    .btn-secondary {
+      flex: 1;
+      background-color: var(--surface-color);
+      color: var(--text-primary);
+      border: 1px solid var(--border-color);
+      padding: 13px 8px;
+      border-radius: 12px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      min-height: 48px;
+      transition: background-color 0.3s ease, border-color 0.3s ease;
+    }
+
+    /* ── Done overlay ── */
+    .done-overlay {
+      position: fixed;
+      inset: 0;
+      background: var(--bg-color);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      z-index: 100;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.6s ease;
+    }
+
+    .done-overlay.show {
+      opacity: 1;
+      pointer-events: all;
+    }
+
+    .done-emblem {
+      font-size: 3.5rem;
+      line-height: 1;
+    }
+
+    .done-title {
+      font-size: 1.9rem;
+      font-weight: 700;
+      color: var(--accent-color);
+    }
+
+    .done-sub {
+      font-size: 1.1rem;
+      color: var(--text-primary);
+      opacity: 0.75;
+      text-align: center;
+      padding: 0 32px;
+      line-height: 1.7;
+    }
+
+    .done-btn {
+      background: var(--accent-color);
+      color: var(--bg-color);
+      border: none;
+      padding: 16px 40px;
+      border-radius: 16px;
+      font-size: 1.2rem;
+      font-weight: 700;
+      cursor: pointer;
+      min-height: 54px;
+      margin-top: 8px;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      color: var(--text-primary);
+      opacity: 0.5;
+      padding-top: 10px;
+    }
   </style>
 </head>
-<body class="flex flex-col justify-between">
+<body>
 
-<!-- ══════════════════════════════════════════════
-     INTRO / SESSION SCREEN
-══════════════════════════════════════════════ -->
-<div id="introScreen">
-  <div class="session-emblem" id="iEmblem"></div>
-  <div class="session-name"  id="iName"></div>
-  <div class="session-quote" id="iQuote"></div>
-  <div class="session-tag"   id="iTag"></div>
-  <button id="btnEnter">BẮT ĐẦU PHIÊN NÀY</button>
-</div>
-
-<!-- ══════════════════════════════════════════════
-     HEADER
-══════════════════════════════════════════════ -->
-<header class="w-full max-w-xl mx-auto px-4 pt-4 pb-2 flex flex-wrap items-center justify-between gap-2">
-  <div class="flex items-center gap-2.5">
-    <span id="hEmblem" class="text-xl leading-none"></span>
-    <span id="hName" class="font-extrabold text-base sm:text-lg tracking-wide" style="color:var(--tint)"></span>
-  </div>
-  <div class="flex items-center gap-2">
-    <button id="btnBell" class="pill on px-3 py-2 text-sm font-bold flex items-center gap-1.5" aria-pressed="true">
-      <svg class="w-4 h-4 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/>
-      </svg>
-      <span id="lBell">Chuông</span>
+  <header>
+    <div class="theme-badge" id="themeName">Rừng Đước Đêm</div>
+    <button class="btn-switch-theme" id="switchThemeBtn" title="Đổi không gian khác">
+      <span>[~._</span> Đổi cảnh
     </button>
-    <button id="btnVoice" class="pill px-3 py-2 text-sm font-bold flex items-center gap-1.5" aria-pressed="false">
-      <svg class="w-4 h-4 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
-        <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/>
-        <path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/>
-      </svg>
-      <span id="lVoice">Giọng</span>
-    </button>
-    <button id="btnTheme" class="pill px-3 py-2 text-sm font-bold">☾</button>
-    <button id="btnSession" class="pill px-3 py-2 text-sm font-bold" title="Đổi phiên">↺</button>
-  </div>
-</header>
+  </header>
 
-<!-- ══════════════════════════════════════════════
-     MAIN
-══════════════════════════════════════════════ -->
-<main class="w-full max-w-xl mx-auto px-4 py-2 flex-1 flex flex-col justify-center">
+  <main>
+    <p class="intro-quote" id="introQuote">
+      "Đứng yên như rễ đước cắm sâu vào bùn. Gió trên ngọn mặc gió."
+    </p>
 
-  <section class="grid grid-cols-2 gap-3 mb-4">
-    <div class="rounded-2xl p-3 border-2 text-center" style="background:var(--card);border-color:var(--border-s)">
-      <div class="text-xs font-bold uppercase tracking-wide mb-0.5" style="color:var(--muted)">Chu kỳ</div>
-      <div id="elCycle" class="text-2xl font-extrabold tabular">0 / 25</div>
-    </div>
-    <div class="rounded-2xl p-3 border-2 text-center" style="background:var(--card);border-color:var(--border-s)">
-      <div class="text-xs font-bold uppercase tracking-wide mb-0.5" style="color:var(--muted)">Còn lại</div>
-      <div id="elTime" class="text-2xl font-extrabold tabular">05:00</div>
-    </div>
-  </section>
-
-  <!-- Active view -->
-  <section id="activeView" class="flex flex-col items-center text-center">
-    <div class="mb-3 min-h-[4rem] flex flex-col items-center justify-center">
-      <h1 id="elPhase" class="text-4xl sm:text-5xl font-black tracking-tight uppercase leading-none">SẴN SÀNG</h1>
-      <p  id="elHint"  class="text-sm sm:text-base font-medium mt-1.5" style="color:var(--muted)">Nhịp 4–2–6 · 25 chu kỳ trong 5 phút</p>
-    </div>
-
-    <div class="breath-stage my-2">
-      <div class="breath-boundary"></div>
-      <div id="breathOrb" class="breath-orb phase-idle"></div>
-      <div class="relative z-10 flex flex-col items-center pointer-events-none select-none">
-        <span id="elCount" class="text-7xl sm:text-8xl font-black tabular leading-none">4-2-6</span>
-        <span id="elSub"   class="mt-2 text-sm font-bold tracking-[.22em] opacity-70"></span>
+    <div class="orb-container">
+      <div class="orb-glow" id="orbGlow"></div>
+      <div class="orb-ring" id="orbRing"></div>
+      <div class="orb-core">
+        <div class="phase-label" id="phaseLabel">Sẵn sàng</div>
+        <div class="timer-display" id="timerDisplay">4-2-6</div>
+        <div class="phase-sub" id="phaseSub">12 giây mỗi nhịp</div>
       </div>
     </div>
 
-    <div id="elDots" class="w-full max-w-sm mt-4 mb-1" style="display:grid;grid-template-columns:repeat(25,minmax(0,1fr));gap:4px" aria-hidden="true"></div>
-  </section>
-
-  <!-- Complete view -->
-  <section id="completeView" class="hidden rounded-3xl p-6 border-2 text-center my-2"
-           style="background:var(--card);border-color:var(--border)">
-    <div id="cEmblem" class="text-4xl mb-2"></div>
-    <h2 class="text-2xl font-black mb-3">Hoàn Thành 5 Phút</h2>
-    <p id="cQuote" class="text-base leading-relaxed mb-4" style="color:var(--muted)"></p>
-    <div class="p-3 rounded-2xl border mb-5 text-sm font-semibold"
-         style="border-color:var(--border-s);background:var(--bg)">
-      "Chậm 2 giây cho mình — Giữ yên 100 mét cho người."
+    <div class="progress-wrap">
+      <div class="progress-bar" id="progressBar"></div>
     </div>
-    <button id="btnRestart" class="btn btn-primary w-full py-4 text-xl">THỞ THÊM 5 PHÚT NỮA</button>
-  </section>
 
-  <section id="controls" class="mt-5 grid grid-cols-2 gap-3">
-    <button id="btnStart" class="btn btn-primary col-span-2 py-4 text-xl sm:text-2xl tracking-wide">BẮT ĐẦU</button>
-    <button id="btnReset" class="btn btn-secondary col-span-2 py-3 text-lg">LÀM LẠI</button>
-  </section>
-</main>
+    <div class="status-row">
+      <div class="cycle-counter" id="cycleCounter">Vòng thở: 0</div>
+      <div class="target-selector" id="targetSelector">
+        <button class="target-chip active" data-target="0">Tự do</button>
+        <button class="target-chip" data-target="12">12 vòng · 2 phút</button>
+        <button class="target-chip" data-target="30">30 vòng · 6 phút</button>
+        <button class="target-chip" data-target="60">60 vòng · 12 phút</button>
+      </div>
+    </div>
 
-<!-- FOOTER -->
-<footer class="w-full max-w-xl mx-auto px-4 pt-1 pb-4 text-center">
-  <div id="elWake" class="text-xs font-medium mb-1" style="color:var(--muted)">Màn hình sẽ tự giữ sáng trong 5 phút</div>
-  <div id="fTag" class="text-xs font-bold tracking-widest opacity-70">144 · 4-2-6 · Thở Nhẹ · Lắng Sâu</div>
-</footer>
+    <div class="controls">
+      <button class="btn-primary" id="startStopBtn">Bắt đầu thở</button>
+      <div class="secondary-controls">
+        <button class="btn-secondary" id="soundToggleBtn">🔔 Chuông</button>
+        <button class="btn-secondary" id="voiceToggleBtn">🗣 Giọng đọc</button>
+        <button class="btn-secondary" id="vibToggleBtn">📳 Rung</button>
+      </div>
+    </div>
+  </main>
 
-<script>
-(function(){
-'use strict';
+  <footer id="footerEl">Nhịp 4-2-6 · Không vội, không gồng</footer>
 
-// ══════════════════════════════════════════════════════════════
-// 1. 10 PHIÊN — mỗi ngày một áo, nhịp 4-2-6 không đổi
-// ══════════════════════════════════════════════════════════════
-const SESSIONS = [
-  {
-    id: 'rung-duoc',
-    name: 'Rễ Đước',
-    emblem: '🌿',
-    quote: 'Rễ cắm sâu bùn mặn — cây đứng vững trăm bão.',
-    tag: '144 · Rừng Ngập Mặn · Chạm Đất',
-    tint: '#1a5c3a',
-    tintBg: 'rgba(26,92,58,.08)',
-    bellFreqs: [370, 432, 266],
-    voiceCues: ['Hít như rễ hút nước', 'Giữ yên', 'Thở ra theo dòng chảy'],
-  },
-  {
-    id: 'mat-nuoc',
-    name: 'Mặt Nước',
-    emblem: '🌊',
-    quote: 'Sóng nổi lên rồi lặng — tâm là mặt hồ phẳng lặng bên dưới.',
-    tag: '144 · Sóng & Tĩnh Lặng · Lắng Sâu',
-    tint: '#0e5fa3',
-    tintBg: 'rgba(14,95,163,.08)',
-    bellFreqs: [396, 528, 264],
-    voiceCues: ['Hít — sóng dâng', 'Giữ — đỉnh sóng', 'Thở — sóng tan'],
-  },
-  {
-    id: 'than-hong',
-    name: 'Than Hồng',
-    emblem: '🔥',
-    quote: 'Lửa không hét — than hồng âm thầm giữ nhiệt cả đêm.',
-    tag: '144 · Nội Lực · Âm Thầm',
-    tint: '#b84a1a',
-    tintBg: 'rgba(184,74,26,.08)',
-    bellFreqs: [432, 324, 288],
-    voiceCues: ['Hít — nhóm lửa', 'Giữ — ủ than', 'Thở — tỏa nhiệt'],
-  },
-  {
-    id: 'trang-ram',
-    name: 'Trăng Rằm',
-    emblem: '🌕',
-    quote: 'Trăng không cố sáng — ánh sáng là bản chất của nó.',
-    tag: '144 · Bản Chất · Không Cố Gắng',
-    tint: '#7a6830',
-    tintBg: 'rgba(122,104,48,.08)',
-    bellFreqs: [528, 396, 264],
-    voiceCues: ['Hít — trăng mọc', 'Giữ — trăng đứng', 'Thở — ánh trăng lan'],
-  },
-  {
-    id: 'suong-mai',
-    name: 'Sương Mai',
-    emblem: '🌫',
-    quote: 'Sương không cần giải thích — chỉ cần có mặt là đủ ướt mát.',
-    tag: '144 · Hiện Diện · Không Giải Thích',
-    tint: '#4a7a8c',
-    tintBg: 'rgba(74,122,140,.08)',
-    bellFreqs: [417, 285, 528],
-    voiceCues: ['Hít — sương vào', 'Giữ — ướt mát', 'Thở — sương tan'],
-  },
-  {
-    id: 'hat-cat',
-    name: 'Hạt Cát',
-    emblem: '⬡',
-    quote: 'Hạt cát không kháng cự — sóng đến thì nằm xuống, sóng lui thì đứng lên.',
-    tag: '144 · Mềm Mại · Thích Nghi',
-    tint: '#8c6e3a',
-    tintBg: 'rgba(140,110,58,.08)',
-    bellFreqs: [285, 432, 639],
-    voiceCues: ['Hít vào nhẹ', 'Giữ nhẹ', 'Thả ra hết'],
-  },
-  {
-    id: 'trong-rong',
-    name: 'Trống Rỗng',
-    emblem: '○',
-    quote: 'Cái chén hữu dụng nhờ khoảng trống bên trong — bạn cũng vậy.',
-    tag: '144 · Thuyết Hạt 56 · 55 + ○ = Đạo',
-    tint: '#3d3d3d',
-    tintBg: 'rgba(61,61,61,.07)',
-    bellFreqs: [396, 528, 741],
-    voiceCues: ['Hít — đổ đầy', 'Giữ — ở đầy', 'Thở — trống ra'],
-  },
-  {
-    id: 'canh-chim',
-    name: 'Cánh Chim',
-    emblem: '🕊',
-    quote: 'Chim không nghĩ về lực cản không khí — nó chỉ bay.',
-    tag: '144 · Tự Nhiên · Không Phân Tích',
-    tint: '#5a3e8c',
-    tintBg: 'rgba(90,62,140,.08)',
-    bellFreqs: [639, 417, 285],
-    voiceCues: ['Hít — cánh vươn', 'Giữ — lượn', 'Thở — hạ cánh'],
-  },
-  {
-    id: 'bun-mat-man',
-    name: 'Bùn Mặt Mặn',
-    emblem: '🌱',
-    quote: 'Bùn không chọn hạt giống — nhưng nuôi tất cả như nhau.',
-    tag: '144 · Bao Dung · Không Phân Biệt',
-    tint: '#4a6e3a',
-    tintBg: 'rgba(74,110,58,.08)',
-    bellFreqs: [174, 285, 396],
-    voiceCues: ['Hít — cắm rễ', 'Giữ — bám đất', 'Thở — nảy mầm'],
-  },
-  {
-    id: 'khe-sang',
-    name: 'Khe Sáng',
-    emblem: '✦',
-    quote: 'Ánh sáng không xuyên qua tảng đá — nó tìm khe hở.',
-    tag: '144 · Khe Hở ε · Thuyết Hạt 56',
-    tint: '#c8922a',
-    tintBg: 'rgba(200,146,42,.09)',
-    bellFreqs: [528, 741, 417],
-    voiceCues: ['Hít — mở khe', 'Giữ — ánh vào', 'Thở — sáng lan'],
-  },
-];
+  <!-- Màn hình kết thúc -->
+  <div class="done-overlay" id="doneOverlay">
+    <div class="done-emblem" id="doneEmblem">🌿</div>
+    <div class="done-title">Hoàn thành</div>
+    <div class="done-sub" id="doneSub">Bạn đã thở xong. Giữ cảm giác này thêm một chút trước khi trở lại.</div>
+    <button class="done-btn" id="doneBtn">Thở lại</button>
+  </div>
 
-// ══════════════════════════════════════════════════════════════
-// 2. CHỌN PHIÊN THEO NGÀY
-// ══════════════════════════════════════════════════════════════
-function todaySessionIndex(){
-  const d = new Date();
-  // seed = số ngày kể từ epoch → luôn ổn định trong 1 ngày
-  const dayNum = Math.floor(d.getTime() / 86400000);
-  return dayNum % SESSIONS.length;
-}
-
-let sessionIdx = todaySessionIndex();
-let session = SESSIONS[sessionIdx];
-
-// ══════════════════════════════════════════════════════════════
-// 3. CẤU HÌNH NHỊP THỞ (KHÔNG ĐỔI)
-// ══════════════════════════════════════════════════════════════
-const TOTAL_CYCLES = 25;
-const PHASES = [
-  { id:'inhale', dur:4, label:'HÍT VÀO',  orbClass:'phase-inhale' },
-  { id:'hold',   dur:2, label:'GIỮ NHỊP', orbClass:'phase-hold'   },
-  { id:'exhale', dur:6, label:'THỞ RA',   orbClass:'phase-exhale' },
-];
-const TOTAL_SEC = TOTAL_CYCLES * 12; // 300s
-
-// ══════════════════════════════════════════════════════════════
-// 4. STATE
-// ══════════════════════════════════════════════════════════════
-let st = {
-  status: 'idle', // idle | running | paused | completed
-  cycle: 0, phase: 0, phaseLeft: PHASES[0].dur, totalLeft: TOTAL_SEC,
-  bell: true, voice: false, dark: false,
-};
-let timer = null, audioCtx = null, wakeLock = null, viVoice = null;
-
-// ══════════════════════════════════════════════════════════════
-// 5. DOM REFS
-// ══════════════════════════════════════════════════════════════
-const $ = id => document.getElementById(id);
-const introScreen  = $('introScreen');
-const iEmblem=$('iEmblem'), iName=$('iName'), iQuote=$('iQuote'), iTag=$('iTag');
-const hEmblem=$('hEmblem'), hName=$('hName');
-const elCycle=$('elCycle'), elTime=$('elTime');
-const elPhase=$('elPhase'), elHint=$('elHint');
-const elCount=$('elCount'), elSub=$('elSub');
-const breathOrb=$('breathOrb');
-const elDots=$('elDots');
-const activeView=$('activeView'), completeView=$('completeView'), controls=$('controls');
-const cEmblem=$('cEmblem'), cQuote=$('cQuote');
-const fTag=$('fTag'), elWake=$('elWake');
-const btnEnter=$('btnEnter'), btnStart=$('btnStart'), btnReset=$('btnReset');
-const btnRestart=$('btnRestart'), btnBell=$('btnBell'), btnVoice=$('btnVoice');
-const btnTheme=$('btnTheme'), btnSession=$('btnSession');
-const lBell=$('lBell'), lVoice=$('lVoice');
-
-// ══════════════════════════════════════════════════════════════
-// 6. ÁP DỤNG SESSION VÀO CSS & INTRO
-// ══════════════════════════════════════════════════════════════
-function applySession(s){
-  document.documentElement.style.setProperty('--tint', s.tint);
-  document.documentElement.style.setProperty('--tint-bg', s.tintBg);
-  // intro
-  iEmblem.textContent = s.emblem;
-  iName.textContent   = s.name;
-  iQuote.textContent  = s.quote;
-  iTag.textContent    = s.tag;
-  // header
-  hEmblem.textContent = s.emblem;
-  hName.textContent   = s.name + ' · 144';
-  // footer
-  fTag.textContent    = '144 · ' + s.tag;
-  // complete screen
-  cEmblem.textContent = s.emblem;
-  cQuote.textContent  = s.quote;
-  // sub text in orb
-  elSub.textContent = s.id;
-  // pill color follows --tint via CSS
-  [btnBell, btnVoice].forEach(b=>{
-    if(b.classList.contains('on')){
-      b.style.background = s.tint;
-      b.style.borderColor = s.tint;
+  <script>
+  // ============================================================
+  // 1. DỮ LIỆU 6 THEME
+  // ============================================================
+  const THEMES = [
+    {
+      id: "rung-duoc-dem",
+      name: "Rừng Đước Đêm",
+      bg: "#121413", surface: "#1b1f1d", accent: "#d4af37",
+      textPrimary: "#f5f2eb", textSecondary: "#a6a298",
+      border: "rgba(212,175,55,0.3)",
+      quote: "“Đứng yên như rễ đước cắm sâu vào bùn. Gió trên ngọn mặc gió.”",
+      inhale: "Kéo phù sa về", hold: "Lắng đọng", exhale: "Thả bùn trôi",
+      doneEmblem: "🌿",
+      doneSub: "Rễ đã ngậm đủ nước. Thân cây lặng yên.",
+      bellFreqs: [220, 330, 440]
+    },
+    {
+      id: "giay-kraft",
+      name: "Trang Giấy Kraft",
+      bg: "#efe6d5", surface: "#e4d8c1", accent: "#232320",
+      textPrimary: "#181816", textSecondary: "#57534a",
+      border: "rgba(35,35,32,0.25)",
+      quote: "“Mặt giấy mộc không cần tô vẽ. Chỉ cần một nét mực rõ ràng.”",
+      inhale: "Nạp khí vào", hold: "Giữ tĩnh tại", exhale: "Buông nhẹ ra",
+      doneEmblem: "✒️",
+      doneSub: "Nét mực đã nằm xuống. Trang giấy trở về lặng im.",
+      bellFreqs: [264, 396, 528]
+    },
+    {
+      id: "lo-than",
+      name: "Lò Than Âm Ỉ",
+      bg: "#1b1918", surface: "#262220", accent: "#e07a5f",
+      textPrimary: "#faf8f5", textSecondary: "#b5aca6",
+      border: "rgba(224,122,95,0.3)",
+      quote: "“Lửa không cần bùng to, chỉ cần giữ hồng bên trong lõi than.”",
+      inhale: "Nuôi đốm hồng", hold: "Ủ ấm lõi", exhale: "Nhả khói mỏng",
+      doneEmblem: "🔥",
+      doneSub: "Lõi than vẫn còn hồng. Không cần thêm gì nữa.",
+      bellFreqs: [432, 324, 216]
+    },
+    {
+      id: "bai-boi",
+      name: "Bãi Bồi Bình Minh",
+      bg: "#f4f1ea", surface: "#e6e2d6", accent: "#2d5a43",
+      textPrimary: "#1a241e", textSecondary: "#526359",
+      border: "rgba(45,90,67,0.25)",
+      quote: "“Mặt nước phẳng lặng trước khi con nước ròng. Chỉ cần 12 giây này thôi.”",
+      inhale: "Nước triều lên", hold: "Đứng nước", exhale: "Nước rút êm",
+      doneEmblem: "🌅",
+      doneSub: "Con nước đã ròng. Bãi bồi lộ ra yên tĩnh dưới nắng.",
+      bellFreqs: [285, 396, 528]
+    },
+    {
+      id: "gio-bac",
+      name: "Gió Bấc Qua Sông",
+      bg: "#0f1c2e", surface: "#172840", accent: "#8ecae6",
+      textPrimary: "#f1f6f9", textSecondary: "#9bb1c4",
+      border: "rgba(142,202,230,0.3)",
+      quote: "“Không giữ gió lại, chỉ mở cửa cho gió đi xuyên qua rồi đi tiếp.”",
+      inhale: "Đón luồng gió", hold: "Lặng giữa dòng", exhale: "Tiễn gió đi",
+      doneEmblem: "🌊",
+      doneSub: "Gió đã qua. Mặt sông phẳng lại như chưa có gì.",
+      bellFreqs: [396, 528, 639]
+    },
+    {
+      id: "phu-sa",
+      name: "Đất Phù Sa Sau Mưa",
+      bg: "#231f1d", surface: "#302a27", accent: "#c9a66b",
+      textPrimary: "#f2ece4", textSecondary: "#afa395",
+      border: "rgba(201,166,107,0.3)",
+      quote: "“Mưa rơi xuống đất là chuyện của trời; đất ngậm nước lặng thinh.”",
+      inhale: "Thấm hơi sương", hold: "Ngậm đất", exhale: "Trả hơi nhẹ",
+      doneEmblem: "🌱",
+      doneSub: "Đất đã no hơi nước. Hạt mầm nằm yên chờ sáng.",
+      bellFreqs: [174, 285, 396]
     }
+  ];
+
+  // ============================================================
+  // 2. THEME ENGINE — random, chống trùng lần trước
+  // ============================================================
+  let currentTheme = THEMES[0];
+
+  function applyTheme(theme) {
+    currentTheme = theme;
+    const r = document.documentElement;
+    r.style.setProperty("--bg-color",        theme.bg);
+    r.style.setProperty("--surface-color",   theme.surface);
+    r.style.setProperty("--accent-color",     theme.accent);
+    r.style.setProperty("--text-primary",     theme.textPrimary);
+    r.style.setProperty("--text-secondary",   theme.textSecondary);
+    r.style.setProperty("--border-color",     theme.border);
+
+    const el = id => document.getElementById(id);
+    if (el("themeName"))   el("themeName").textContent   = theme.name;
+    if (el("introQuote"))  el("introQuote").textContent  = theme.quote;
+    if (el("doneEmblem"))  el("doneEmblem").textContent  = theme.doneEmblem;
+    if (el("doneSub"))     el("doneSub").textContent     = theme.doneSub;
+
+    if (isRunning) updatePhaseText(PHASES[phaseIndex]);
+
+    try { localStorage.setItem("last_426_theme", theme.id); } catch(e) {}
+  }
+
+  function pickTheme(excludeId) {
+    const pool = THEMES.filter(t => t.id !== excludeId);
+    return (pool.length ? pool : THEMES)[Math.floor(Math.random() * (pool.length || THEMES.length))];
+  }
+
+  document.addEventListener("DOMContentLoaded", function() {
+    let last = null;
+    try { last = localStorage.getItem("last_426_theme"); } catch(e) {}
+    applyTheme(pickTheme(last));
   });
-}
 
-// ══════════════════════════════════════════════════════════════
-// 7. INTRO SCREEN
-// ══════════════════════════════════════════════════════════════
-applySession(session);
+  document.getElementById("switchThemeBtn").addEventListener("click", () => {
+    applyTheme(pickTheme(currentTheme.id));
+  });
 
-btnEnter.addEventListener('click', ()=>{
-  introScreen.classList.add('out');
-  setTimeout(()=>{ introScreen.style.display='none'; }, 520);
-});
+  // ============================================================
+  // 3. WAKE LOCK
+  // ============================================================
+  let wakeLock = null;
+  const footerEl = document.getElementById("footerEl");
 
-// ↺ nút đổi phiên — xoay vòng
-btnSession.addEventListener('click', ()=>{
-  sessionIdx = (sessionIdx + 1) % SESSIONS.length;
-  session = SESSIONS[sessionIdx];
-  applySession(session);
-  // hiện lại intro
-  introScreen.style.display = 'flex';
-  introScreen.classList.remove('out');
-  resetSession();
-});
-
-// ══════════════════════════════════════════════════════════════
-// 8. DOTS
-// ══════════════════════════════════════════════════════════════
-(function buildDots(){
-  elDots.innerHTML='';
-  for(let i=0;i<TOTAL_CYCLES;i++){
-    const d=document.createElement('div');
-    d.style.cssText='height:10px;border-radius:3px;transition:background .3s';
-    d.style.background='var(--track)';
-    d.dataset.i=i;
-    elDots.appendChild(d);
-  }
-})();
-
-function updateDots(){
-  const dots=elDots.children;
-  for(let i=0;i<dots.length;i++){
-    if(st.status==='idle'){
-      dots[i].style.background='var(--track)';dots[i].style.opacity='1';
-    } else if(i<st.cycle){
-      dots[i].style.background=session.tint;dots[i].style.opacity='1';
-    } else if(i===st.cycle && st.status!=='completed'){
-      dots[i].style.background=session.tint;dots[i].style.opacity='.38';
-    } else {
-      dots[i].style.background='var(--track)';dots[i].style.opacity='1';
+  async function acquireWakeLock() {
+    if (!("wakeLock" in navigator)) return;
+    try {
+      wakeLock = await navigator.wakeLock.request("screen");
+      footerEl.textContent = "Nhịp 4-2-6 · Đang giữ sáng màn hình";
+      wakeLock.addEventListener("release", () => {
+        if (!isRunning) footerEl.textContent = "Nhịp 4-2-6 · Không vội, không gồng";
+      });
+    } catch(e) {
+      footerEl.textContent = "Nhịp 4-2-6 · Mở bằng Safari/Chrome (HTTPS) để giữ sáng";
     }
   }
-}
 
-// ══════════════════════════════════════════════════════════════
-// 9. ÂM THANH
-// ══════════════════════════════════════════════════════════════
-function ensureAudio(){
-  if(!audioCtx){
-    const AC=window.AudioContext||window.webkitAudioContext;
-    if(AC) audioCtx=new AC();
+  async function releaseWakeLock() {
+    if (wakeLock) { try { await wakeLock.release(); } catch(e) {} wakeLock = null; }
+    footerEl.textContent = "Nhịp 4-2-6 · Không vội, không gồng";
   }
-  if(audioCtx&&audioCtx.state==='suspended') audioCtx.resume().catch(()=>{});
-}
 
-function playBowl(freq, dur=1.6, vol=0.13){
-  if(!st.bell) return;
-  try{
-    ensureAudio(); if(!audioCtx) return;
-    const now=audioCtx.currentTime;
-    [[freq,vol],[freq*2,vol*.28]].forEach(([f,g],i)=>{
-      const o=audioCtx.createOscillator(), gn=audioCtx.createGain();
-      o.type='sine'; o.frequency.setValueAtTime(f,now);
-      gn.gain.setValueAtTime(.0001,now);
-      gn.gain.exponentialRampToValueAtTime(g,now+.04);
-      gn.gain.exponentialRampToValueAtTime(.0001,now+(i===0?dur:dur*.6));
-      o.connect(gn); gn.connect(audioCtx.destination);
-      o.start(now); o.stop(now+dur+.1);
-    });
-  }catch(e){}
-}
+  document.addEventListener("visibilitychange", async () => {
+    if (isRunning && document.visibilityState === "visible") await acquireWakeLock();
+  });
 
-function playComplete(){
-  if(!st.bell) return;
-  const f=session.bellFreqs;
-  playBowl(f[2],2.2,.15);
-  setTimeout(()=>playBowl(f[1],2.4,.13),450);
-  setTimeout(()=>playBowl(f[0],2.8,.12),950);
-}
+  // ============================================================
+  // 4. ÂM THANH — FM Synthesis (chuông bát ấm hơn sine đơn)
+  // ============================================================
+  let soundEnabled = true;
+  let audioCtx = null;
 
-// ══════════════════════════════════════════════════════════════
-// 10. GIỌNG ĐỌC
-// ══════════════════════════════════════════════════════════════
-function loadVoice(){
-  if(!('speechSynthesis' in window)) return;
-  const vs=window.speechSynthesis.getVoices();
-  if(!vs||!vs.length) return;
-  const vi=vs.filter(v=>(v.lang&&v.lang.toLowerCase().includes('vi'))||(v.name&&v.name.toLowerCase().includes('vietnam')));
-  if(vi.length) viVoice=vi.find(v=>/hoaimy|linh|mai|lan|female|nữ/i.test(v.name))||vi[0];
-}
-if('speechSynthesis' in window){ loadVoice(); window.speechSynthesis.onvoiceschanged=loadVoice; }
+  function getCtx() {
+    if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+    if (audioCtx.state === "suspended") audioCtx.resume();
+    return audioCtx;
+  }
 
-function speak(text){
-  if(!st.voice||!('speechSynthesis' in window)) return;
-  try{
+  function playBell(freqArr, volume = 0.22) {
+    if (!soundEnabled) return;
+    try {
+      const ctx = getCtx();
+      const now = ctx.currentTime;
+      freqArr.forEach((freq, i) => {
+        const osc  = ctx.createOscillator();
+        const gain = ctx.createGain();
+        const mod  = ctx.createOscillator();
+        const modG = ctx.createGain();
+
+        // FM: modulator → modGain → osc.frequency
+        mod.frequency.value  = freq * 2.756;
+        modG.gain.value      = freq * 1.4;
+        mod.connect(modG);
+        modG.connect(osc.frequency);
+
+        osc.type = "sine";
+        osc.frequency.setValueAtTime(freq, now);
+
+        const vol = volume / (i + 1);
+        gain.gain.setValueAtTime(0.001, now + i * 0.015);
+        gain.gain.exponentialRampToValueAtTime(vol, now + i * 0.015 + 0.04);
+        gain.gain.exponentialRampToValueAtTime(0.0001, now + i * 0.015 + 2.6);
+
+        osc.connect(gain);
+        gain.connect(ctx.destination);
+        mod.start(now + i * 0.015);
+        osc.start(now + i * 0.015);
+        mod.stop(now + i * 0.015 + 2.7);
+        osc.stop(now + i * 0.015 + 2.7);
+      });
+    } catch(e) {}
+  }
+
+  // ============================================================
+  // 5. GIỌNG ĐỌC TIẾNG VIỆT
+  // ============================================================
+  let voiceEnabled = true;
+  let preferredVoice = null;
+
+  function loadVoice() {
+    if (!("speechSynthesis" in window)) return;
+    const vs = window.speechSynthesis.getVoices();
+    const vi = vs.filter(v => v.lang.toLowerCase().includes("vi"));
+    if (vi.length) {
+      preferredVoice = vi.find(v => /hoaimy|linh|nu|female|south/i.test(v.name)) || vi[0];
+    }
+  }
+  if ("speechSynthesis" in window) {
+    loadVoice();
+    window.speechSynthesis.onvoiceschanged = loadVoice;
+  }
+
+  function speak(text) {
+    if (!voiceEnabled || !("speechSynthesis" in window)) return;
     window.speechSynthesis.cancel();
-    const u=new SpeechSynthesisUtterance(text);
-    u.lang='vi-VN'; u.rate=.88; u.pitch=.96; u.volume=.95;
-    if(viVoice) u.voice=viVoice;
+    const u = new SpeechSynthesisUtterance(text);
+    u.lang = "vi-VN";
+    if (preferredVoice) u.voice = preferredVoice;
+    u.rate = 0.82;
+    u.pitch = 1.0;
     window.speechSynthesis.speak(u);
-  }catch(e){}
-}
+  }
 
-// ══════════════════════════════════════════════════════════════
-// 11. WAKE LOCK
-// ══════════════════════════════════════════════════════════════
-async function requestWake(){
-  try{
-    if('wakeLock' in navigator&&!wakeLock){
-      wakeLock=await navigator.wakeLock.request('screen');
-      elWake.textContent='Đang giữ sáng màn hình tự động';
-      wakeLock.addEventListener('release',()=>{ wakeLock=null; });
+  // ============================================================
+  // 6. RUNG
+  // ============================================================
+  let vibEnabled = true;
+  function vibrate(pattern) {
+    if (!vibEnabled || !navigator.vibrate) return;
+    navigator.vibrate(pattern);
+  }
+
+  // ============================================================
+  // 7. CỐT LÕI NHỊP 4-2-6
+  // ============================================================
+  const PHASES = [
+    { key: "inhale", dur: 4,  scale: 1.26, glowOpacity: 0.07, sub: "Hít vào · 4 giây" },
+    { key: "hold",   dur: 2,  scale: 1.26, glowOpacity: 0.12, sub: "Giữ nhẹ · 2 giây" },
+    { key: "exhale", dur: 6,  scale: 0.82, glowOpacity: 0,    sub: "Thở ra · 6 giây"  }
+  ];
+
+  let isRunning   = false;
+  let phaseIndex  = 0;
+  let secLeft     = 0;
+  let cycleCount  = 0;
+  let targetCycles= 0;
+  let totalSecs   = 0;
+  let timerInterval = null;
+
+  const phaseLabel   = document.getElementById("phaseLabel");
+  const timerDisplay = document.getElementById("timerDisplay");
+  const phaseSub     = document.getElementById("phaseSub");
+  const cycleCounter = document.getElementById("cycleCounter");
+  const orbRing      = document.getElementById("orbRing");
+  const orbGlow      = document.getElementById("orbGlow");
+  const progressBar  = document.getElementById("progressBar");
+  const startStopBtn = document.getElementById("startStopBtn");
+
+  function updatePhaseText(ph) {
+    phaseLabel.textContent = currentTheme[ph.key];
+    phaseSub.textContent   = ph.sub;
+  }
+
+  function updateProgress() {
+    if (targetCycles === 0) { progressBar.style.width = "0%"; return; }
+    const pct = Math.min(100, (cycleCount / targetCycles) * 100);
+    progressBar.style.width = pct + "%";
+  }
+
+  function enterPhase(idx) {
+    phaseIndex = idx;
+    const ph = PHASES[idx];
+    secLeft = ph.dur;
+
+    updatePhaseText(ph);
+    timerDisplay.textContent = secLeft;
+
+    orbRing.style.transition = `transform ${ph.dur}s ease-in-out, border-color 0.8s ease`;
+    orbRing.style.transform  = `scale(${ph.scale})`;
+    orbGlow.style.transition = `opacity ${ph.dur}s ease-in-out`;
+    orbGlow.style.opacity    = ph.glowOpacity;
+
+    playBell(currentTheme.bellFreqs);
+    speak(currentTheme[ph.key]);
+
+    if (ph.key === "inhale")      vibrate([60]);
+    else if (ph.key === "hold")   vibrate([30, 30, 30]);
+    else                          vibrate([80]);
+  }
+
+  function tick() {
+    totalSecs++;
+    secLeft--;
+    if (secLeft > 0) {
+      timerDisplay.textContent = secLeft;
+      return;
     }
-  }catch(e){ elWake.textContent='Màn hình theo cài đặt thiết bị'; }
-}
-async function releaseWake(){
-  try{ if(wakeLock){ await wakeLock.release(); wakeLock=null; } }catch(e){}
-  elWake.textContent='Màn hình sẽ tự giữ sáng trong 5 phút';
-}
-document.addEventListener('visibilitychange',()=>{
-  if(document.visibilityState==='visible'&&st.status==='running') requestWake();
-});
+    const next = (phaseIndex + 1) % PHASES.length;
+    if (next === 0) {
+      cycleCount++;
+      cycleCounter.textContent = targetCycles
+        ? `Vòng thở: ${cycleCount} / ${targetCycles}`
+        : `Vòng thở: ${cycleCount}`;
+      updateProgress();
 
-// ══════════════════════════════════════════════════════════════
-// 12. RENDER UI
-// ══════════════════════════════════════════════════════════════
-function mm(s){ const v=Math.max(0,Math.floor(s)); return String(Math.floor(v/60)).padStart(2,'0')+':'+String(v%60).padStart(2,'0'); }
-
-function setOrb(cls){
-  breathOrb.classList.remove('phase-idle','phase-inhale','phase-hold','phase-exhale');
-  void breathOrb.offsetWidth; // force reflow for smooth re-trigger
-  breathOrb.classList.add(cls);
-  breathOrb.style.borderColor=session.tint;
-  breathOrb.style.background=session.tintBg;
-}
-
-function render(){
-  elTime.textContent=mm(st.totalLeft);
-
-  if(st.status==='idle'){
-    activeView.classList.remove('hidden');
-    completeView.classList.add('hidden');
-    controls.classList.remove('hidden');
-    elCycle.textContent='0 / '+TOTAL_CYCLES;
-    elPhase.textContent='SẴN SÀNG';
-    elHint.textContent='Nhịp 4–2–6 · 25 chu kỳ trong 5 phút';
-    elCount.textContent='4-2-6';
-    elCount.style.fontSize='clamp(2.6rem,10vw,4rem)';
-    setOrb('phase-idle');
-    btnStart.textContent='BẮT ĐẦU';
-  } else if(st.status==='completed'){
-    activeView.classList.add('hidden');
-    completeView.classList.remove('hidden');
-    controls.classList.add('hidden');
-    elCycle.textContent=TOTAL_CYCLES+' / '+TOTAL_CYCLES;
-  } else {
-    activeView.classList.remove('hidden');
-    completeView.classList.add('hidden');
-    controls.classList.remove('hidden');
-    const p=PHASES[st.phase];
-    elCycle.textContent=(st.cycle+1)+' / '+TOTAL_CYCLES;
-    elPhase.textContent=p.label;
-    elHint.textContent=session.voiceCues[st.phase];
-    elCount.textContent=String(st.phaseLeft);
-    elCount.style.fontSize='clamp(5rem,20vw,9rem)';
-    btnStart.textContent=st.status==='running'?'TẠM DỪNG':'TIẾP TỤC';
-  }
-  updateDots();
-}
-
-// ══════════════════════════════════════════════════════════════
-// 13. TIMER LOGIC
-// ══════════════════════════════════════════════════════════════
-function triggerPhase(p){
-  setOrb(p.orbClass);
-  playBowl(session.bellFreqs[st.phase], p.id==='exhale'?1.9:1.4, .14);
-  speak(session.voiceCues[st.phase]);
-}
-
-function startSession(){
-  ensureAudio(); requestWake();
-  if(st.status==='idle'||st.status==='completed'){
-    st.cycle=0; st.phase=0; st.phaseLeft=PHASES[0].dur; st.totalLeft=TOTAL_SEC;
-    st.status='running'; render(); triggerPhase(PHASES[0]);
-  } else if(st.status==='paused'){
-    st.status='running'; setOrb(PHASES[st.phase].orbClass); render();
-  }
-  clearInterval(timer);
-  timer=setInterval(tick, 1000);
-}
-
-function pauseSession(){
-  if(st.status!=='running') return;
-  st.status='paused'; clearInterval(timer); timer=null;
-  if('speechSynthesis' in window) window.speechSynthesis.cancel();
-  releaseWake(); render();
-}
-
-function resetSession(){
-  clearInterval(timer); timer=null;
-  if('speechSynthesis' in window) window.speechSynthesis.cancel();
-  releaseWake();
-  st.status='idle'; st.cycle=0; st.phase=0;
-  st.phaseLeft=PHASES[0].dur; st.totalLeft=TOTAL_SEC;
-  render();
-}
-
-function completeSession(){
-  clearInterval(timer); timer=null;
-  st.status='completed'; st.totalLeft=0;
-  releaseWake(); render(); playComplete();
-  speak('Hoàn thành năm phút. Hãy chuyển sang thở ngầm nhẹ nhàng.');
-}
-
-function tick(){
-  if(st.status!=='running') return;
-  st.totalLeft=Math.max(0,st.totalLeft-1);
-  st.phaseLeft-=1;
-  if(st.phaseLeft<=0){
-    st.phase+=1;
-    if(st.phase>=PHASES.length){
-      st.phase=0; st.cycle+=1;
-      if(st.cycle>=TOTAL_CYCLES){ completeSession(); return; }
+      if (targetCycles > 0 && cycleCount >= targetCycles) {
+        finishSession();
+        return;
+      }
     }
-    st.phaseLeft=PHASES[st.phase].dur;
-    render(); triggerPhase(PHASES[st.phase]);
-  } else { render(); }
-}
-
-// ══════════════════════════════════════════════════════════════
-// 14. EVENTS
-// ══════════════════════════════════════════════════════════════
-btnStart.addEventListener('click',()=>{ st.status==='running'?pauseSession():startSession(); });
-btnReset.addEventListener('click', resetSession);
-btnRestart.addEventListener('click', startSession);
-
-btnBell.addEventListener('click',()=>{
-  st.bell=!st.bell;
-  btnBell.classList.toggle('on',st.bell);
-  btnBell.style.background=st.bell?session.tint:'';
-  btnBell.style.borderColor=st.bell?session.tint:'';
-  btnBell.style.color=st.bell?'var(--fill-text)':'';
-  lBell.textContent=st.bell?'Chuông':'Chuông';
-  if(st.bell) playBowl(session.bellFreqs[1],1.1,.12);
-});
-
-btnVoice.addEventListener('click',()=>{
-  st.voice=!st.voice;
-  btnVoice.classList.toggle('on',st.voice);
-  btnVoice.style.background=st.voice?session.tint:'';
-  btnVoice.style.borderColor=st.voice?session.tint:'';
-  btnVoice.style.color=st.voice?'var(--fill-text)':'';
-  lVoice.textContent=st.voice?'Giọng':'Giọng';
-  if(st.voice){ loadVoice(); speak('Bật giọng đọc'); }
-  else if('speechSynthesis' in window) window.speechSynthesis.cancel();
-});
-
-btnTheme.addEventListener('click',()=>{
-  st.dark=!st.dark;
-  document.documentElement.classList.toggle('dark',st.dark);
-  btnTheme.textContent=st.dark?'☀':'☾';
-});
-
-document.addEventListener('keydown',e=>{
-  if(e.code==='Space'&&document.activeElement.tagName!=='BUTTON'){
-    e.preventDefault();
-    st.status==='running'?pauseSession():(st.status!=='completed'&&startSession());
+    enterPhase(next);
   }
-});
 
-// INIT
-buildDots && null; // already built above
-render();
+  function startBreathing() {
+    isRunning = true;
+    cycleCount = 0;
+    totalSecs  = 0;
+    cycleCounter.textContent = targetCycles ? `Vòng thở: 0 / ${targetCycles}` : `Vòng thở: 0`;
+    startStopBtn.textContent = "Tạm dừng";
+    updateProgress();
+    enterPhase(0);
+    acquireWakeLock();
+    timerInterval = setInterval(tick, 1000);
+  }
 
-})();
-</script>
+  function stopBreathing(keepCount = false) {
+    isRunning = false;
+    clearInterval(timerInterval);
+    if ("speechSynthesis" in window) window.speechSynthesis.cancel();
+    releaseWakeLock();
+    orbRing.style.transition = "transform 0.6s ease";
+    orbRing.style.transform  = "scale(1)";
+    orbGlow.style.opacity    = 0;
+    phaseLabel.textContent   = "Tạm nghỉ";
+    timerDisplay.textContent = "4-2-6";
+    phaseSub.textContent     = "Bấm để tiếp tục nhịp";
+    if (!keepCount) {
+      cycleCounter.textContent = "Vòng thở: 0";
+      progressBar.style.width  = "0%";
+    }
+    startStopBtn.textContent = "Tiếp tục thở";
+  }
+
+  function finishSession() {
+    stopBreathing(true);
+    const mins = Math.round(totalSecs / 60);
+    document.getElementById("doneSub").textContent =
+      currentTheme.doneSub + ` (${cycleCount} vòng · ${mins} phút)`;
+    document.getElementById("doneOverlay").classList.add("show");
+    speak("Hoàn thành. " + currentTheme.doneSub);
+    vibrate([100, 50, 100, 50, 200]);
+  }
+
+  startStopBtn.addEventListener("click", () => {
+    isRunning ? stopBreathing() : startBreathing();
+  });
+
+  document.getElementById("doneBtn").addEventListener("click", () => {
+    document.getElementById("doneOverlay").classList.remove("show");
+    cycleCounter.textContent = "Vòng thở: 0";
+    progressBar.style.width  = "0%";
+    startStopBtn.textContent = "Bắt đầu thở";
+  });
+
+  // Target chips
+  document.getElementById("targetSelector").addEventListener("click", e => {
+    const chip = e.target.closest(".target-chip");
+    if (!chip) return;
+    document.querySelectorAll(".target-chip").forEach(c => c.classList.remove("active"));
+    chip.classList.add("active");
+    targetCycles = parseInt(chip.dataset.target, 10);
+    updateProgress();
+  });
+
+  // Sound / Voice / Vib toggles
+  const soundBtn = document.getElementById("soundToggleBtn");
+  const voiceBtn = document.getElementById("voiceToggleBtn");
+  const vibBtn   = document.getElementById("vibToggleBtn");
+
+  soundBtn.addEventListener("click", () => {
+    soundEnabled = !soundEnabled;
+    soundBtn.textContent = soundEnabled ? "🔔 Chuông" : "🔕 Chuông";
+  });
+
+  voiceBtn.addEventListener("click", () => {
+    voiceEnabled = !voiceEnabled;
+    if (!voiceEnabled && "speechSynthesis" in window) window.speechSynthesis.cancel();
+    voiceBtn.textContent = voiceEnabled ? "🗣 Giọng đọc" : "🔇 Giọng đọc";
+  });
+
+  vibBtn.addEventListener("click", () => {
+    vibEnabled = !vibEnabled;
+    vibBtn.textContent = vibEnabled ? "📳 Rung" : "📴 Rung";
+  });
+  </script>
 </body>
 </html>
