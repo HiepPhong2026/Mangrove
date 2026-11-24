@@ -47,9 +47,8 @@
     }
 
     .theme-badge {
-      font-size: 0.88rem;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
+      font-size: 1rem;
+      letter-spacing: 0.03em;
       color: var(--accent-color);
       font-weight: 700;
     }
@@ -58,16 +57,17 @@
       background: var(--surface-color);
       color: var(--accent-color);
       border: 1px solid var(--border-color);
-      padding: 7px 13px;
+      padding: 10px 16px;
       border-radius: 999px;
-      font-size: 0.9rem;
+      font-size: 1rem;
       font-weight: 600;
       cursor: pointer;
       display: flex;
       align-items: center;
-      gap: 5px;
+      gap: 6px;
       transition: transform 0.2s ease, background-color 0.3s ease;
       white-space: nowrap;
+      min-height: 44px;
     }
 
     .btn-switch-theme:active { transform: scale(0.95); }
@@ -87,16 +87,17 @@
     }
 
     .intro-quote {
-      font-size: 1.1rem;
-      line-height: 1.6;
-      color: var(--text-secondary);
+      font-size: 1.15rem;
+      line-height: 1.65;
+      color: var(--text-primary);
+      opacity: 0.75;
       font-style: italic;
       min-height: 3.5em;
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 0 8px;
-      transition: color 0.6s ease;
+      padding: 0 12px;
+      transition: color 0.6s ease, opacity 0.6s ease;
     }
 
     /* ── Orb ── */
@@ -143,16 +144,16 @@
     }
 
     .phase-label {
-      font-size: 1.3rem;
+      font-size: 1.5rem;
       font-weight: 700;
       color: var(--accent-color);
       margin-bottom: 4px;
-      letter-spacing: 0.03em;
+      letter-spacing: 0.02em;
       transition: color 0.5s ease;
     }
 
     .timer-display {
-      font-size: 4rem;
+      font-size: 5rem;
       font-weight: 800;
       font-variant-numeric: tabular-nums;
       line-height: 1;
@@ -160,8 +161,9 @@
     }
 
     .phase-sub {
-      font-size: 0.9rem;
-      color: var(--text-secondary);
+      font-size: 1rem;
+      color: var(--text-primary);
+      opacity: 0.65;
       margin-top: 8px;
       font-weight: 500;
     }
@@ -170,7 +172,7 @@
     .progress-wrap {
       width: 100%;
       max-width: 300px;
-      height: 3px;
+      height: 5px;
       background: var(--surface-color);
       border-radius: 999px;
       overflow: hidden;
@@ -194,11 +196,11 @@
     }
 
     .cycle-counter {
-      font-size: 1.0rem;
-      font-weight: 600;
+      font-size: 1.1rem;
+      font-weight: 700;
       color: var(--text-primary);
       background: var(--surface-color);
-      padding: 6px 18px;
+      padding: 8px 20px;
       border-radius: 20px;
       border: 1px solid var(--border-color);
       transition: background-color 0.4s ease, border-color 0.4s ease;
@@ -213,19 +215,22 @@
 
     .target-chip {
       background: var(--surface-color);
-      color: var(--text-secondary);
+      color: var(--text-primary);
+      opacity: 0.65;
       border: 1px solid var(--border-color);
-      padding: 5px 12px;
+      padding: 8px 14px;
       border-radius: 999px;
-      font-size: 0.85rem;
+      font-size: 0.95rem;
       font-weight: 600;
       cursor: pointer;
+      min-height: 40px;
       transition: all 0.2s ease;
     }
 
     .target-chip.active {
       background: var(--accent-color);
       color: var(--bg-color);
+      opacity: 1;
       border-color: var(--accent-color);
     }
 
@@ -242,11 +247,12 @@
       background-color: var(--accent-color);
       color: var(--bg-color);
       border: none;
-      padding: 15px 24px;
-      border-radius: 14px;
-      font-size: 1.15rem;
+      padding: 18px 24px;
+      border-radius: 16px;
+      font-size: 1.25rem;
       font-weight: 700;
       cursor: pointer;
+      min-height: 56px;
       transition: opacity 0.2s ease, transform 0.15s ease;
     }
 
@@ -262,11 +268,12 @@
       background-color: var(--surface-color);
       color: var(--text-primary);
       border: 1px solid var(--border-color);
-      padding: 11px;
+      padding: 13px 8px;
       border-radius: 12px;
-      font-size: 0.9rem;
+      font-size: 0.95rem;
       font-weight: 600;
       cursor: pointer;
+      min-height: 48px;
       transition: background-color 0.3s ease, border-color 0.3s ease;
     }
 
@@ -297,36 +304,38 @@
     }
 
     .done-title {
-      font-size: 1.6rem;
+      font-size: 1.9rem;
       font-weight: 700;
       color: var(--accent-color);
     }
 
     .done-sub {
-      font-size: 1rem;
-      color: var(--text-secondary);
+      font-size: 1.1rem;
+      color: var(--text-primary);
+      opacity: 0.75;
       text-align: center;
       padding: 0 32px;
-      line-height: 1.6;
+      line-height: 1.7;
     }
 
     .done-btn {
       background: var(--accent-color);
       color: var(--bg-color);
       border: none;
-      padding: 14px 32px;
-      border-radius: 14px;
-      font-size: 1.1rem;
+      padding: 16px 40px;
+      border-radius: 16px;
+      font-size: 1.2rem;
       font-weight: 700;
       cursor: pointer;
+      min-height: 54px;
       margin-top: 8px;
     }
 
     footer {
       text-align: center;
-      font-size: 0.82rem;
-      color: var(--text-secondary);
-      opacity: 0.8;
+      font-size: 0.9rem;
+      color: var(--text-primary);
+      opacity: 0.5;
       padding-top: 10px;
     }
   </style>
