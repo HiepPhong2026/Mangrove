@@ -873,7 +873,7 @@
     // Hiển thị mệnh đề đối trọng trong done overlay
     const counterpart = THEMES.find(t => t.id === theme.counterpartId);
     if (counterpart && el("donePropText")) {
-      const label = theme.num <= 24 ? "Đối trọng " + counterpart.num + " · " + counterpart.name : "Trụ cột " + counterpart.num + " · " + counterpart.name;
+      const label = parseInt(theme.num, 10) <= 24 ? "Đối trọng " + counterpart.num + " · " + counterpart.name : "Trụ cột " + counterpart.num + " · " + counterpart.name;
       el("donePropText").textContent = label + ": " + counterpart.quote;
     }
 
@@ -887,38 +887,28 @@
     return pool[Math.floor(Math.random() * pool.length)];
   }
 
-  document.addEventListener("DOMContentLoaded", function() {
-    let last = null;
-    try { last = localStorage.getItem(STORAGE_KEY); } catch(e) {}
-    applyTheme(pickTheme(last));
-  });
-
-  document.getElementById("switchThemeBtn").addEventListener("click", () => {
-    applyTheme(pickTheme(currentTheme.id));
-  });
-
   // ============================================================
   // 3. WAKE LOCK
   // ============================================================
   let wakeLock = null;
-  const footerEl = document.getElementById("footerEl");
+  let footerEl = null;
 
   async function acquireWakeLock() {
     if (!("wakeLock" in navigator)) return;
     try {
       wakeLock = await navigator.wakeLock.request("screen");
-      footerEl.textContent = "Nhịp 4-2-6 · Đang giữ sáng màn hình";
+      if (footerEl) footerEl.textContent = "Nhịp 4-2-6 · Đang giữ sáng màn hình";
       wakeLock.addEventListener("release", () => {
-        if (!isRunning) footerEl.textContent = "Nhịp 4-2-6 · Không vội, không gồng";
+        if (!isRunning && footerEl) footerEl.textContent = "Nhịp 4-2-6 · Không vội, không gồng";
       });
     } catch(e) {
-      footerEl.textContent = "Nhịp 4-2-6 · Mở bằng Safari/Chrome (HTTPS) để giữ sáng";
+      if (footerEl) footerEl.textContent = "Nhịp 4-2-6 · Mở bằng Safari/Chrome (HTTPS) để giữ sáng";
     }
   }
 
   async function releaseWakeLock() {
     if (wakeLock) { try { await wakeLock.release(); } catch(e) {} wakeLock = null; }
-    footerEl.textContent = "Nhịp 4-2-6 · Không vội, không gồng";
+    if (footerEl) footerEl.textContent = "Nhịp 4-2-6 · Không vội, không gồng";
   }
 
   document.addEventListener("visibilitychange", async () => {
@@ -1015,22 +1005,17 @@
     { key: "exhale", dur: 6,  scale: 0.82, glowOpacity: 0,    sub: "Thở ra · 6 giây"  }
   ];
 
-  let isRunning   = false;
-  let phaseIndex  = 0;
-  let secLeft     = 0;
-  let cycleCount  = 0;
-  let targetCycles= 0;
-  let totalSecs   = 0;
+  let isRunning    = false;
+  let phaseIndex   = 0;
+  let secLeft      = 0;
+  let cycleCount   = 0;
+  let targetCycles = 0;
+  let totalSecs    = 0;
   let timerInterval = null;
 
-  const phaseLabel   = document.getElementById("phaseLabel");
-  const timerDisplay = document.getElementById("timerDisplay");
-  const phaseSub     = document.getElementById("phaseSub");
-  const cycleCounter = document.getElementById("cycleCounter");
-  const orbRing      = document.getElementById("orbRing");
-  const orbGlow      = document.getElementById("orbGlow");
-  const progressBar  = document.getElementById("progressBar");
-  const startStopBtn = document.getElementById("startStopBtn");
+  // DOM refs — set inside init() after DOMContentLoaded
+  let phaseLabel, timerDisplay, phaseSub, cycleCounter,
+      orbRing, orbGlow, progressBar, startStopBtn;
 
   function updatePhaseText(ph) {
     if (phaseLabel) phaseLabel.textContent = currentTheme[ph.key];
@@ -1038,9 +1023,9 @@
   }
 
   function updateProgress() {
+    if (!progressBar) return;
     if (targetCycles === 0) { progressBar.style.width = "0%"; return; }
-    const pct = Math.min(100, (cycleCount / targetCycles) * 100);
-    progressBar.style.width = pct + "%";
+    progressBar.style.width = Math.min(100, (cycleCount / targetCycles) * 100) + "%";
   }
 
   function enterPhase(idx) {
@@ -1062,10 +1047,9 @@
 
     playBell(pal.bellFreqs);
     speak(currentTheme[ph.key]);
-
-    if (ph.key === "inhale")      vibrate([60]);
-    else if (ph.key === "hold")   vibrate([30, 30, 30]);
-    else                          vibrate([80]);
+    if (ph.key === "inhale")    vibrate([60]);
+    else if (ph.key === "hold") vibrate([30, 30, 30]);
+    else                        vibrate([80]);
   }
 
   function tick() {
@@ -1082,10 +1066,7 @@
         ? `Vòng thở: ${cycleCount} / ${targetCycles}`
         : `Vòng thở: ${cycleCount}`;
       updateProgress();
-      if (targetCycles > 0 && cycleCount >= targetCycles) {
-        finishSession();
-        return;
-      }
+      if (targetCycles > 0 && cycleCount >= targetCycles) { finishSession(); return; }
     }
     enterPhase(next);
   }
@@ -1109,12 +1090,12 @@
     releaseWakeLock();
     if (orbRing) { orbRing.style.transition = "transform 0.6s ease"; orbRing.style.transform = "scale(1)"; }
     if (orbGlow) orbGlow.style.opacity = 0;
-    if (phaseLabel) phaseLabel.textContent   = "Tạm nghỉ";
+    if (phaseLabel)   phaseLabel.textContent   = "Tạm nghỉ";
     if (timerDisplay) timerDisplay.textContent = "4-2-6";
-    if (phaseSub) phaseSub.textContent       = "Bấm để tiếp tục nhịp";
+    if (phaseSub)     phaseSub.textContent     = "Bấm để tiếp tục nhịp";
     if (!keepCount) {
       if (cycleCounter) cycleCounter.textContent = "Vòng thở: 0";
-      progressBar.style.width  = "0%";
+      if (progressBar)  progressBar.style.width  = "0%";
     }
     if (startStopBtn) startStopBtn.textContent = "Tiếp tục thở";
   }
@@ -1122,57 +1103,80 @@
   function finishSession() {
     stopBreathing(true);
     const mins = Math.round(totalSecs / 60);
-    const doneSub = document.getElementById("doneSub");
-    if (doneSub) doneSub.textContent = currentTheme.doneSub + ` (${cycleCount} vòng · ${mins} phút)`;
+    const doneSubEl = document.getElementById("doneSub");
+    if (doneSubEl) doneSubEl.textContent = currentTheme.doneSub + ` (${cycleCount} vòng · ${mins} phút)`;
     const overlay = document.getElementById("doneOverlay");
     if (overlay) overlay.classList.add("show");
     speak("Hoàn thành. " + currentTheme.doneSub);
     vibrate([100, 50, 100, 50, 200]);
   }
 
-  if (startStopBtn) startStopBtn.addEventListener("click", () => {
-    isRunning ? stopBreathing() : startBreathing();
-  });
+  // ============================================================
+  // 8. KHỞI TẠO — chạy sau khi DOM sẵn sàng
+  // ============================================================
+  document.addEventListener("DOMContentLoaded", function() {
+    // Lấy DOM refs
+    phaseLabel   = document.getElementById("phaseLabel");
+    timerDisplay = document.getElementById("timerDisplay");
+    phaseSub     = document.getElementById("phaseSub");
+    cycleCounter = document.getElementById("cycleCounter");
+    orbRing      = document.getElementById("orbRing");
+    orbGlow      = document.getElementById("orbGlow");
+    progressBar  = document.getElementById("progressBar");
+    startStopBtn = document.getElementById("startStopBtn");
+    footerEl     = document.getElementById("footerEl");
 
-  const doneBtn = document.getElementById("doneBtn");
-  if (doneBtn) doneBtn.addEventListener("click", () => {
-    const overlay = document.getElementById("doneOverlay");
-    if (overlay) overlay.classList.remove("show");
-    if (cycleCounter) cycleCounter.textContent = "Vòng thở: 0";
-    progressBar.style.width  = "0%";
-    if (startStopBtn) startStopBtn.textContent = "Bắt đầu thở";
-  });
+    // Áp dụng theme ban đầu (tránh lặp theme cũ)
+    let last = null;
+    try { last = localStorage.getItem(STORAGE_KEY); } catch(e) {}
+    applyTheme(pickTheme(last));
 
-  // Target chips
-  const targetSelector = document.getElementById("targetSelector");
-  if (targetSelector) targetSelector.addEventListener("click", e => {
-    const chip = e.target.closest(".target-chip");
-    if (!chip) return;
-    document.querySelectorAll(".target-chip").forEach(c => c.classList.remove("active"));
-    chip.classList.add("active");
-    targetCycles = parseInt(chip.dataset.target, 10);
-    updateProgress();
-  });
+    // Nút đổi mệnh đề
+    document.getElementById("switchThemeBtn").addEventListener("click", () => {
+      applyTheme(pickTheme(currentTheme.id));
+    });
 
-  // Sound / Voice / Vib toggles
-  const soundBtn = document.getElementById("soundToggleBtn");
-  const voiceBtn = document.getElementById("voiceToggleBtn");
-  const vibBtn   = document.getElementById("vibToggleBtn");
+    // Nút bắt đầu / tạm dừng
+    startStopBtn.addEventListener("click", () => {
+      isRunning ? stopBreathing() : startBreathing();
+    });
 
-  if (soundBtn) soundBtn.addEventListener("click", () => {
-    soundEnabled = !soundEnabled;
-    soundBtn.textContent = soundEnabled ? "🔔 Chuông" : "🔕 Chuông";
-  });
+    // Nút "Thở lại" trên done overlay
+    document.getElementById("doneBtn").addEventListener("click", () => {
+      document.getElementById("doneOverlay").classList.remove("show");
+      if (cycleCounter) cycleCounter.textContent = "Vòng thở: 0";
+      if (progressBar)  progressBar.style.width  = "0%";
+      startStopBtn.textContent = "Bắt đầu thở";
+    });
 
-  if (voiceBtn) voiceBtn.addEventListener("click", () => {
-    voiceEnabled = !voiceEnabled;
-    if (!voiceEnabled && "speechSynthesis" in window) window.speechSynthesis.cancel();
-    voiceBtn.textContent = voiceEnabled ? "🗣 Giọng đọc" : "🔇 Giọng đọc";
-  });
+    // Target chips
+    document.getElementById("targetSelector").addEventListener("click", e => {
+      const chip = e.target.closest(".target-chip");
+      if (!chip) return;
+      document.querySelectorAll(".target-chip").forEach(c => c.classList.remove("active"));
+      chip.classList.add("active");
+      targetCycles = parseInt(chip.dataset.target, 10);
+      updateProgress();
+    });
 
-  if (vibBtn) vibBtn.addEventListener("click", () => {
-    vibEnabled = !vibEnabled;
-    vibBtn.textContent = vibEnabled ? "📳 Rung" : "📴 Rung";
+    // Sound / Voice / Vib toggles
+    const soundBtn = document.getElementById("soundToggleBtn");
+    const voiceBtn = document.getElementById("voiceToggleBtn");
+    const vibBtn   = document.getElementById("vibToggleBtn");
+
+    soundBtn.addEventListener("click", () => {
+      soundEnabled = !soundEnabled;
+      soundBtn.textContent = soundEnabled ? "🔔 Chuông" : "🔕 Chuông";
+    });
+    voiceBtn.addEventListener("click", () => {
+      voiceEnabled = !voiceEnabled;
+      if (!voiceEnabled && "speechSynthesis" in window) window.speechSynthesis.cancel();
+      voiceBtn.textContent = voiceEnabled ? "🗣 Giọng đọc" : "🔇 Giọng đọc";
+    });
+    vibBtn.addEventListener("click", () => {
+      vibEnabled = !vibEnabled;
+      vibBtn.textContent = vibEnabled ? "📳 Rung" : "📴 Rung";
+    });
   });
   </script>
 </body>
