@@ -47,10 +47,12 @@
     }
 
     .theme-badge {
-      font-size: 1rem;
+      font-size: 0.85rem;
       letter-spacing: 0.03em;
       color: var(--accent-color);
       font-weight: 700;
+      max-width: 180px;
+      line-height: 1.3;
     }
 
     .btn-switch-theme {
@@ -87,7 +89,7 @@
     }
 
     .intro-quote {
-      font-size: 1.15rem;
+      font-size: 1.05rem;
       line-height: 1.65;
       color: var(--text-primary);
       opacity: 0.75;
@@ -291,6 +293,7 @@
       opacity: 0;
       pointer-events: none;
       transition: opacity 0.6s ease;
+      padding: 32px;
     }
 
     .done-overlay.show {
@@ -310,12 +313,35 @@
     }
 
     .done-sub {
-      font-size: 1.1rem;
+      font-size: 1.05rem;
       color: var(--text-primary);
       opacity: 0.75;
       text-align: center;
-      padding: 0 32px;
       line-height: 1.7;
+    }
+
+    .done-prop {
+      font-size: 1rem;
+      color: var(--accent-color);
+      opacity: 0.9;
+      text-align: center;
+      line-height: 1.65;
+      font-style: italic;
+      border: 1px solid var(--border-color);
+      border-radius: 14px;
+      padding: 16px 20px;
+      background: var(--surface-color);
+      max-width: 420px;
+    }
+
+    .done-prop-label {
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-secondary);
+      margin-bottom: 8px;
+      display: block;
     }
 
     .done-btn {
@@ -343,15 +369,15 @@
 <body>
 
   <header>
-    <div class="theme-badge" id="themeName">Rừng Đước Đêm</div>
-    <button class="btn-switch-theme" id="switchThemeBtn" title="Đổi không gian khác">
-      <span>[~._</span> Đổi cảnh
+    <div class="theme-badge" id="themeName">Euclid</div>
+    <button class="btn-switch-theme" id="switchThemeBtn" title="Đổi mệnh đề khác">
+      <span>[~._</span> Đổi mệnh đề
     </button>
   </header>
 
   <main>
     <p class="intro-quote" id="introQuote">
-      "Đứng yên như rễ đước cắm sâu vào bùn. Gió trên ngọn mặc gió."
+      "Dựng mọi cấu trúc từ những tiên đề phẳng, sáng rõ và hiển nhiên nhất."
     </p>
 
     <div class="orb-container">
@@ -392,125 +418,478 @@
 
   <!-- Màn hình kết thúc -->
   <div class="done-overlay" id="doneOverlay">
-    <div class="done-emblem" id="doneEmblem">🌿</div>
+    <div class="done-emblem" id="doneEmblem">◎</div>
     <div class="done-title">Hoàn thành</div>
-    <div class="done-sub" id="doneSub">Bạn đã thở xong. Giữ cảm giác này thêm một chút trước khi trở lại.</div>
+    <div class="done-sub" id="doneSub">Bạn đã thở xong. Giữ cảm giác này thêm một chút.</div>
+    <div class="done-prop" id="doneProp">
+      <span class="done-prop-label">Điểm đối trọng</span>
+      <span id="donePropText"></span>
+    </div>
     <button class="done-btn" id="doneBtn">Thở lại</button>
   </div>
 
   <script>
   // ============================================================
-  // 1. DỮ LIỆU 6 THEME
+  // 1. DỮ LIỆU 48 THEME — 48 Mệnh Đề Đối Trọng
   // ============================================================
+  // Mỗi theme: nhóm A (trụ cột) + counterpart B (đối trọng)
+  // Màu sắc: 8 bảng màu xoay vòng để các mệnh đề liên quan có cùng "không khí"
+  const PALETTES = [
+    // 0 · Tối - vàng (nền tảng, gốc rễ: Euclid, Pythagoras, Archimedes…)
+    { bg:"#121413", surface:"#1b1f1d", accent:"#d4af37", textPrimary:"#f5f2eb", textSecondary:"#a6a298", border:"rgba(212,175,55,0.3)", bellFreqs:[220,330,440] },
+    // 1 · Trắng ngà - mực xanh (trang giấy, lý trí: Descartes, Hilbert…)
+    { bg:"#f0ede6", surface:"#e6e0d4", accent:"#2c5f8a", textPrimary:"#191918", textSecondary:"#5a5651", border:"rgba(44,95,138,0.25)", bellFreqs:[264,396,528] },
+    // 2 · Đỏ sậm - cam đất (nhiệt huyết, đòn bẩy: Noether, Newton…)
+    { bg:"#1b1312", surface:"#271a19", accent:"#e07a5f", textPrimary:"#faf8f5", textSecondary:"#b5a9a3", border:"rgba(224,122,95,0.3)", bellFreqs:[432,324,216] },
+    // 3 · Xanh rừng sáng (bình minh, dòng chảy: Leibniz, Euler…)
+    { bg:"#f3f1ea", surface:"#e5e1d6", accent:"#2d5a43", textPrimary:"#1a221e", textSecondary:"#536158", border:"rgba(45,90,67,0.25)", bellFreqs:[285,396,528] },
+    // 4 · Đêm biển (sâu thẳm, cấu trúc: Fourier, Riemann…)
+    { bg:"#0f1c2e", surface:"#172840", accent:"#8ecae6", textPrimary:"#f1f6f9", textSecondary:"#9bb1c4", border:"rgba(142,202,230,0.3)", bellFreqs:[396,528,639] },
+    // 5 · Phù sa - vàng đất (trực giác, bí ẩn: Poincaré, Al-Khwarizmi…)
+    { bg:"#231f1d", surface:"#302a27", accent:"#c9a66b", textPrimary:"#f2ece4", textSecondary:"#afa395", border:"rgba(201,166,107,0.3)", bellFreqs:[174,285,396] },
+    // 6 · Tím nhạt (vô hạn, trừu tượng: Galois, Cantor, Gödel…)
+    { bg:"#15111f", surface:"#1f1930", accent:"#b39ddb", textPrimary:"#f3f0f8", textSecondary:"#9e95b4", border:"rgba(179,157,219,0.3)", bellFreqs:[256,384,512] },
+    // 7 · Xanh mint sáng (sáng tạo, thuật toán: Gauss, Ramanujan, Turing…)
+    { bg:"#f0f7f4", surface:"#dff0e8", accent:"#1b6b4a", textPrimary:"#122218", textSecondary:"#4a6b59", border:"rgba(27,107,74,0.25)", bellFreqs:[320,480,640] },
+  ];
+
   const THEMES = [
+    // ── NHÓM A: 24 MỆNH ĐỀ TRỤ CỘT ──
     {
-      id: "rung-duoc-dem",
-      name: "Rừng Đước Đêm",
-      bg: "#121413", surface: "#1b1f1d", accent: "#d4af37",
-      textPrimary: "#f5f2eb", textSecondary: "#a6a298",
-      border: "rgba(212,175,55,0.3)",
-      quote: "“Đứng yên như rễ đước cắm sâu vào bùn. Gió trên ngọn mặc gió.”",
-      inhale: "Kéo phù sa về", hold: "Lắng đọng", exhale: "Thả bùn trôi",
-      doneEmblem: "🌿",
-      doneSub: "Rễ đã ngậm đủ nước. Thân cây lặng yên.",
-      bellFreqs: [220, 330, 440]
+      id:"01-euclid", num:"01", name:"Euclid",
+      quote:""Dựng mọi cấu trúc từ những tiên đề phẳng, sáng rõ và hiển nhiên nhất."",
+      inhale:"Dựng gốc", hold:"Giữ vững", exhale:"Trải ra",
+      doneEmblem:"◻", doneSub:"Tiên đề đã nằm xuống. Nền móng vững chắc rồi.",
+      counterpartId:"25-lobachevsky",
+      p:0
     },
     {
-      id: "giay-kraft",
-      name: "Trang Giấy Kraft",
-      bg: "#efe6d5", surface: "#e4d8c1", accent: "#232320",
-      textPrimary: "#181816", textSecondary: "#57534a",
-      border: "rgba(35,35,32,0.25)",
-      quote: "“Mặt giấy mộc không cần tô vẽ. Chỉ cần một nét mực rõ ràng.”",
-      inhale: "Nạp khí vào", hold: "Giữ tĩnh tại", exhale: "Buông nhẹ ra",
-      doneEmblem: "✒️",
-      doneSub: "Nét mực đã nằm xuống. Trang giấy trở về lặng im.",
-      bellFreqs: [264, 396, 528]
+      id:"02-pythagoras", num:"02", name:"Pythagoras",
+      quote:""Giữ tỷ lệ hài hòa giữa các phần hợp thành để toàn hệ thống cân đối."",
+      inhale:"Hút vào đều", hold:"Giữ cân", exhale:"Thở ra đều",
+      doneEmblem:"△", doneSub:"Tỷ lệ đã cân. Ba cạnh ôm nhau lặng im.",
+      counterpartId:"26-hippasus",
+      p:0
     },
     {
-      id: "lo-than",
-      name: "Lò Than Âm Ỉ",
-      bg: "#1b1918", surface: "#262220", accent: "#e07a5f",
-      textPrimary: "#faf8f5", textSecondary: "#b5aca6",
-      border: "rgba(224,122,95,0.3)",
-      quote: "“Lửa không cần bùng to, chỉ cần giữ hồng bên trong lõi than.”",
-      inhale: "Nuôi đốm hồng", hold: "Ủ ấm lõi", exhale: "Nhả khói mỏng",
-      doneEmblem: "🔥",
-      doneSub: "Lõi than vẫn còn hồng. Không cần thêm gì nữa.",
-      bellFreqs: [432, 324, 216]
+      id:"03-archimedes", num:"03", name:"Archimedes",
+      quote:""Tìm đúng một điểm tựa nhỏ để tạo đòn bẩy nâng cả khối việc lớn."",
+      inhale:"Tìm điểm tựa", hold:"Giữ lực", exhale:"Nâng lên",
+      doneEmblem:"⚖", doneSub:"Đòn bẩy đã đặt đúng chỗ. Nghỉ tay thôi.",
+      counterpartId:"27-zeno",
+      p:0
     },
     {
-      id: "bai-boi",
-      name: "Bãi Bồi Bình Minh",
-      bg: "#f4f1ea", surface: "#e6e2d6", accent: "#2d5a43",
-      textPrimary: "#1a241e", textSecondary: "#526359",
-      border: "rgba(45,90,67,0.25)",
-      quote: "“Mặt nước phẳng lặng trước khi con nước ròng. Chỉ cần 12 giây này thôi.”",
-      inhale: "Nước triều lên", hold: "Đứng nước", exhale: "Nước rút êm",
-      doneEmblem: "🌅",
-      doneSub: "Con nước đã ròng. Bãi bồi lộ ra yên tĩnh dưới nắng.",
-      bellFreqs: [285, 396, 528]
+      id:"04-descartes", num:"04", name:"Descartes",
+      quote:""Chia nhỏ mọi bài toán rối thành từng trục tọa độ rõ ràng để giải quyết."",
+      inhale:"Hít vào rõ", hold:"Phân tích", exhale:"Thả bớt",
+      doneEmblem:"✛", doneSub:"Các trục đã thẳng. Vị trí rõ ràng rồi.",
+      counterpartId:"28-pascal-intuition",
+      p:1
     },
     {
-      id: "gio-bac",
-      name: "Gió Bấc Qua Sông",
-      bg: "#0f1c2e", surface: "#172840", accent: "#8ecae6",
-      textPrimary: "#f1f6f9", textSecondary: "#9bb1c4",
-      border: "rgba(142,202,230,0.3)",
-      quote: "“Không giữ gió lại, chỉ mở cửa cho gió đi xuyên qua rồi đi tiếp.”",
-      inhale: "Đón luồng gió", hold: "Lặng giữa dòng", exhale: "Tiễn gió đi",
-      doneEmblem: "🌊",
-      doneSub: "Gió đã qua. Mặt sông phẳng lại như chưa có gì.",
-      bellFreqs: [396, 528, 639]
+      id:"05-hilbert", num:"05", name:"Hilbert",
+      quote:""Xác lập bộ quy tắc minh bạch và nhất quán trước khi bước vào cuộc chơi."",
+      inhale:"Đặt quy tắc", hold:"Giữ nhất quán", exhale:"Mở ra",
+      doneEmblem:"▦", doneSub:"Hệ thống đã được thiết lập. Nhất quán rồi.",
+      counterpartId:"29-brouwer",
+      p:1
     },
     {
-      id: "phu-sa",
-      name: "Đất Phù Sa Sau Mưa",
-      bg: "#231f1d", surface: "#302a27", accent: "#c9a66b",
-      textPrimary: "#f2ece4", textSecondary: "#afa395",
-      border: "rgba(201,166,107,0.3)",
-      quote: "“Mưa rơi xuống đất là chuyện của trời; đất ngậm nước lặng thinh.”",
-      inhale: "Thấm hơi sương", hold: "Ngậm đất", exhale: "Trả hơi nhẹ",
-      doneEmblem: "🌱",
-      doneSub: "Đất đã no hơi nước. Hạt mầm nằm yên chờ sáng.",
-      bellFreqs: [174, 285, 396]
-    }
+      id:"06-noether", num:"06", name:"Emmy Noether",
+      quote:""Nhận diện định luật bảo toàn ẩn sau mọi biến đổi đối xứng."",
+      inhale:"Nhận diện", hold:"Bảo toàn", exhale:"Chuyển hóa",
+      doneEmblem:"⟳", doneSub:"Cái bất biến vẫn còn đó. Mọi biến đổi không xóa được lõi.",
+      counterpartId:"30-boltzmann",
+      p:2
+    },
+    {
+      id:"07-newton", num:"07", name:"Isaac Newton",
+      quote:""Đo gia tốc biến đổi và đặt lực tác động đủ mạnh để bẻ hướng chuyển động."",
+      inhale:"Lấy đà", hold:"Nén lực", exhale:"Bẻ hướng",
+      doneEmblem:"◉", doneSub:"Lực đã được đặt đúng hướng. Quỹ đạo đã thay đổi.",
+      counterpartId:"31-leibniz-notation",
+      p:2
+    },
+    {
+      id:"08-leibniz", num:"08", name:"Leibniz",
+      quote:""Tích lũy từng bước vi phân nhỏ bé mỗi ngày để tạo thành đại lượng lớn."",
+      inhale:"Hít từng chút", hold:"Cộng dồn", exhale:"Buông bớt",
+      doneEmblem:"∫", doneSub:"Vi phân đã tích lại. Tổng thể lớn hơn từng mảnh cộng lại.",
+      counterpartId:"32-newton-leap",
+      p:3
+    },
+    {
+      id:"09-euler", num:"09", name:"Leonhard Euler",
+      quote:""Nối các điểm nút thành sơ đồ để tìm ra đường đi ngắn nhất."",
+      inhale:"Nối điểm", hold:"Chọn đường", exhale:"Đi thẳng",
+      doneEmblem:"◈", doneSub:"Sơ đồ đã được vẽ. Con đường hiện ra đơn giản hơn tưởng.",
+      counterpartId:"33-hamilton",
+      p:3
+    },
+    {
+      id:"10-fourier", num:"10", name:"Joseph Fourier",
+      quote:""Tách mớ hỗn độn phức tạp thành từng nhịp sóng đơn giản xếp chồng."",
+      inhale:"Tách lớp", hold:"Nghe riêng", exhale:"Thả hỗn hợp",
+      doneEmblem:"≋", doneSub:"Tiếng ồn đã được phân giải. Mỗi sóng lại rõ ràng.",
+      counterpartId:"34-heisenberg",
+      p:4
+    },
+    {
+      id:"11-riemann", num:"11", name:"Bernhard Riemann",
+      quote:""Thừa nhận không gian có thể uốn cong theo bối cảnh thực tế."",
+      inhale:"Mở không gian", hold:"Cảm uốn cong", exhale:"Chấp nhận",
+      doneEmblem:"∿", doneSub:"Không gian đã uốn theo hình dạng thực của nó. Không cần ép thẳng.",
+      counterpartId:"35-klein",
+      p:4
+    },
+    {
+      id:"12-poincare", num:"12", name:"Henri Poincaré",
+      quote:""Kiểm soát sai số ngay từ điều kiện ban đầu để chặn hệ lụy dây chuyền."",
+      inhale:"Vào từ gốc", hold:"Giữ chặt đầu", exhale:"Lan chậm thôi",
+      doneEmblem:"◌", doneSub:"Điều kiện ban đầu đã được giữ sạch. Hệ lụy sẽ nhỏ hơn.",
+      counterpartId:"36-lorenz",
+      p:5
+    },
+    {
+      id:"13-alkhwarizmi", num:"13", name:"Al-Khwarizmi",
+      quote:""Chuyển vế và khôi phục thế cân bằng giữa hai vế của phương trình đời sống."",
+      inhale:"Hít để cân", hold:"Giữ thăng bằng", exhale:"Chuyển vế",
+      doneEmblem:"＝", doneSub:"Hai vế đã cân bằng. Phương trình đã có lời giải.",
+      counterpartId:"37-diophantus",
+      p:5
+    },
+    {
+      id:"14-galois", num:"14", name:"Évariste Galois",
+      quote:""Nhìn cấu trúc đối xứng của cả nhóm thay vì sa lầy vào từng con số lẻ."",
+      inhale:"Nhìn toàn nhóm", hold:"Thấy đối xứng", exhale:"Bỏ bớt chi tiết",
+      doneEmblem:"✦", doneSub:"Cấu trúc nhóm đã hiện ra. Chi tiết lẻ không còn quan trọng.",
+      counterpartId:"38-abel",
+      p:6
+    },
+    {
+      id:"15-gauss", num:"15", name:"Carl Friedrich Gauss",
+      quote:""Gộp hai đầu đối xứng để rút ngắn một nửa đường tính toán."",
+      inhale:"Hít từ hai đầu", hold:"Gộp lại", exhale:"Thở ra gọn",
+      doneEmblem:"⌀", doneSub:"Hai đầu đã gặp nhau ở giữa. Nhanh hơn nhiều so với đi từng bước.",
+      counterpartId:"39-galois-draft",
+      p:7
+    },
+    {
+      id:"16-ramanujan", num:"16", name:"Srinivasa Ramanujan",
+      quote:""Tin vào tia sáng trực giác đầu tiên chạm thẳng tới lõi vấn đề."",
+      inhale:"Đón tia sáng", hold:"Tin vào đó", exhale:"Buông nghi ngờ",
+      doneEmblem:"✧", doneSub:"Trực giác đã được tin tưởng. Lõi đã được chạm tới.",
+      counterpartId:"40-hardy",
+      p:7
+    },
+    {
+      id:"17-turing", num:"17", name:"Alan Turing",
+      quote:""Chia mọi bài toán khả tính thành từng bước chuyển trạng thái rành mạch."",
+      inhale:"Vào trạng thái", hold:"Xử lý", exhale:"Chuyển bước",
+      doneEmblem:"▷", doneSub:"Từng bước đã được thực thi. Chương trình hoàn thành.",
+      counterpartId:"41-church",
+      p:1
+    },
+    {
+      id:"18-vonneumann", num:"18", name:"John von Neumann",
+      quote:""Tính phương án giảm thiểu thiệt hại tối đa trong tình huống bất định."",
+      inhale:"Hít để chuẩn bị", hold:"Tính phương án", exhale:"Chọn an toàn",
+      doneEmblem:"◧", doneSub:"Rủi ro đã được tính. Phương án tốt nhất trong tình huống xấu nhất.",
+      counterpartId:"42-nash",
+      p:5
+    },
+    {
+      id:"19-brahmagupta", num:"19", name:"Brahmagupta",
+      quote:""Đưa tâm trí về điểm 0 cân bằng trung tâm giữa được và mất."",
+      inhale:"Về điểm 0", hold:"Ở lại đây", exhale:"Không nghiêng",
+      doneEmblem:"○", doneSub:"Điểm 0 đã được chạm. Không được không mất — chỉ là.",
+      counterpartId:"43-peano",
+      p:3
+    },
+    {
+      id:"20-pascal", num:"20", name:"Blaise Pascal",
+      quote:""Chuẩn bị phương án dự phòng cho cả hai ngả của yếu tố ngẫu nhiên."",
+      inhale:"Hít để dự phòng", hold:"Giữ cả hai ngả", exhale:"Chấp nhận ngẫu nhiên",
+      doneEmblem:"◑", doneSub:"Cả hai khả năng đều đã được chuẩn bị. Ngẫu nhiên không còn đáng sợ.",
+      counterpartId:"44-fermat-dialog",
+      p:0
+    },
+    {
+      id:"21-fermat", num:"21", name:"Pierre de Fermat",
+      quote:""Chộp lấy ý tưởng sắc bén chợt lóe bên lề trang giấy trước khi nó trôi qua."",
+      inhale:"Đón ý tưởng", hold:"Giữ chặt", exhale:"Ghi lại bên lề",
+      doneEmblem:"✎", doneSub:"Ghi chú bên lề đã xong. Ý tưởng không trôi mất nữa.",
+      counterpartId:"45-wiles",
+      p:1
+    },
+    {
+      id:"22-cantor", num:"22", name:"Georg Cantor",
+      quote:""Mở rộng khung nhìn lên các cấp độ vô hạn vượt khỏi giới hạn trước mắt."",
+      inhale:"Hít để mở rộng", hold:"Nhìn xa hơn", exhale:"Buông giới hạn",
+      doneEmblem:"∞", doneSub:"Khung đã được mở. Vô hạn chứa vô hạn — và vẫn còn chỗ cho bạn.",
+      counterpartId:"46-kronecker",
+      p:6
+    },
+    {
+      id:"23-godel", num:"23", name:"Kurt Gödel",
+      quote:""Chừa một khoảng mở vì không hệ thống nào tự khép kín 100%."",
+      inhale:"Hít để chừa chỗ", hold:"Giữ khoảng hở", exhale:"Không ép kín",
+      doneEmblem:"◯", doneSub:"Lỗ xốp vẫn còn đó. Hệ thống thở được là hệ thống sống được.",
+      counterpartId:"47-tarski",
+      p:6
+    },
+    {
+      id:"24-lovelace", num:"24", name:"Ada Lovelace",
+      quote:""Kết hợp kỷ luật thuật toán với trí tưởng tượng mềm mại để viết bước tiếp theo."",
+      inhale:"Hít trí tưởng tượng", hold:"Kỷ luật thuật toán", exhale:"Viết bước tiếp",
+      doneEmblem:"◈", doneSub:"Thơ ca và thuật toán đã gặp nhau. Bước tiếp theo đã được viết.",
+      counterpartId:"48-babbage",
+      p:7
+    },
+
+    // ── NHÓM B: 24 MỆNH ĐỀ ĐỐI TRỌNG ──
+    {
+      id:"25-lobachevsky", num:"25", name:"Lobachevsky",
+      quote:""Khi mặt phẳng quen thuộc bế tắc, hãy đổi sang không gian cong nơi lối rẽ mở ra."",
+      inhale:"Vào không gian cong", hold:"Thấy lối rẽ", exhale:"Thả mặt phẳng cũ",
+      doneEmblem:"⌒", doneSub:"Không gian cong đã được nhận ra. Đường song song có thể gặp nhau.",
+      counterpartId:"01-euclid",
+      p:0
+    },
+    {
+      id:"26-hippasus", num:"26", name:"Hippasus",
+      quote:""Chấp nhận những đại lượng lẻ và bất khả ước — đời sống không phải lúc nào cũng chia chẵn."",
+      inhale:"Hít bất khả ước", hold:"Chấp nhận lẻ", exhale:"Thả cầu toàn",
+      doneEmblem:"√", doneSub:"Số vô tỷ vẫn thực tồn tại. Không chia chẵn không có nghĩa là sai.",
+      counterpartId:"02-pythagoras",
+      p:0
+    },
+    {
+      id:"27-zeno", num:"27", name:"Zeno",
+      quote:""Đừng chỉ tính lực bẩy tổng thể; hãy soi kỹ từng khoảng chia nhỏ khiến bước chân khựng lại."",
+      inhale:"Hít từng khoảng", hold:"Soi chi tiết", exhale:"Bước qua nghịch lý",
+      doneEmblem:"⋯", doneSub:"Nghịch lý đã được nhìn thẳng. Bước chân vẫn tiếp tục.",
+      counterpartId:"03-archimedes",
+      p:0
+    },
+    {
+      id:"28-pascal-intuition", num:"28", name:"Pascal · Trực cảm",
+      quote:""Không phải điều gì cũng đo được bằng trục tọa độ; hãy lắng nghe lý lẽ lặng lẽ của trực cảm."",
+      inhale:"Hít trực cảm", hold:"Lắng nghe thầm", exhale:"Tin mà không đo",
+      doneEmblem:"◎", doneSub:"Trực cảm đã được lắng nghe. Có những thứ không đo được vẫn thật.",
+      counterpartId:"04-descartes",
+      p:1
+    },
+    {
+      id:"29-brouwer", num:"29", name:"Brouwer",
+      quote:""Đừng tin vào tiên đề trừu tượng nếu chưa tự tay dựng được bước đi cụ thể trong thực tế."",
+      inhale:"Hít để thực thi", hold:"Tự tay dựng", exhale:"Bỏ trừu tượng rỗng",
+      doneEmblem:"◁", doneSub:"Bước đi đã được dựng bằng tay thật. Chứng minh bằng hành động.",
+      counterpartId:"05-hilbert",
+      p:1
+    },
+    {
+      id:"30-boltzmann", num:"30", name:"Boltzmann · Entropy",
+      quote:""Bên cạnh cái bất biến, luôn có phần năng lượng phân tán cần xả bớt để hệ không quá tải."",
+      inhale:"Hít để nạp", hold:"Giữ lõi", exhale:"Xả entropy",
+      doneEmblem:"⌁", doneSub:"Entropy đã được xả. Hệ thống mát lại và thở được rồi.",
+      counterpartId:"06-noether",
+      p:2
+    },
+    {
+      id:"31-leibniz-notation", num:"31", name:"Leibniz · Ký hiệu",
+      quote:""Thay vì chỉ dùng lực đẩy trực diện, hãy đổi cách đặt tên để bài toán tự trôi chảy."",
+      inhale:"Hít để đặt tên", hold:"Chọn ký hiệu", exhale:"Để nó chảy",
+      doneEmblem:"dx", doneSub:"Ký hiệu mới đã được đặt. Vấn đề cũ trở nên dễ nhìn hơn.",
+      counterpartId:"07-newton",
+      p:2
+    },
+    {
+      id:"32-newton-leap", num:"32", name:"Newton · Bước nhảy",
+      quote:""Đừng chỉ gom góp vi phân đều đều; hãy nhận ra khi tích lũy đủ lượng để tạo bước nhảy chất."",
+      inhale:"Tích dần", hold:"Chờ đủ ngưỡng", exhale:"Bước nhảy",
+      doneEmblem:"↑", doneSub:"Lượng đã đủ. Bước nhảy chất đã xảy ra.",
+      counterpartId:"08-leibniz",
+      p:3
+    },
+    {
+      id:"33-hamilton", num:"33", name:"Hamilton",
+      quote:""Đôi khi không cần đường tắt nhất, mà cần đi trọn một vòng qua đủ mọi điểm cần thiết."",
+      inhale:"Hít để đi vòng", hold:"Chạm đủ điểm", exhale:"Về điểm đầu",
+      doneEmblem:"⟲", doneSub:"Vòng đã đi trọn. Mọi điểm cần thiết đã được chạm.",
+      counterpartId:"09-euler",
+      p:3
+    },
+    {
+      id:"34-heisenberg", num:"34", name:"Heisenberg · Giới hạn",
+      quote:""Tách sóng càng chi tiết thì càng mất độ nét khoảnh khắc hiện tại — biết dừng phân tích để hành động."",
+      inhale:"Hít để hiện diện", hold:"Đủ rồi", exhale:"Thôi phân tích",
+      doneEmblem:"≃", doneSub:"Phân tích đã dừng đúng lúc. Hành động từ bây giờ.",
+      counterpartId:"10-fourier",
+      p:4
+    },
+    {
+      id:"35-klein", num:"35", name:"Felix Klein",
+      quote:""Dù không gian có uốn cong thế nào, hãy giữ vững nhóm tính chất cốt lõi không đổi qua mọi biến hình."",
+      inhale:"Hít bất biến", hold:"Giữ cốt lõi", exhale:"Chấp nhận biến hình",
+      doneEmblem:"⟺", doneSub:"Cốt lõi vẫn còn sau mọi biến đổi. Bất biến không cần phải cứng nhắc.",
+      counterpartId:"11-riemann",
+      p:4
+    },
+    {
+      id:"36-lorenz", num:"36", name:"Edward Lorenz · Bướm",
+      quote:""Khi mọi thứ đã rơi vào hỗn độn, đừng cố kiểm soát chi tiết; hãy đổi bầu khí quyển bao quanh."",
+      inhale:"Hít không khí mới", hold:"Đổi bầu khí", exhale:"Buông kiểm soát",
+      doneEmblem:"≈", doneSub:"Bầu khí đã thay đổi. Hệ hỗn độn sẽ tìm điểm hút mới.",
+      counterpartId:"12-poincare",
+      p:5
+    },
+    {
+      id:"37-diophantus", num:"37", name:"Diophantus",
+      quote:""Không phải lúc nào cũng chia cân hai vế; có những lựa chọn chỉ nhận giá trị nguyên — hoặc làm, hoặc buông."",
+      inhale:"Hít để quyết", hold:"Chọn số nguyên", exhale:"Không thỏa hiệp",
+      doneEmblem:"ℤ", doneSub:"Nghiệm nguyên đã được chọn. Không có phân số ở đây.",
+      counterpartId:"13-alkhwarizmi",
+      p:5
+    },
+    {
+      id:"38-abel", num:"38", name:"Niels Henrik Abel",
+      quote:""Thừa nhận có những nút thắt không thể tháo bằng công thức đóng, buộc phải đổi sang xấp xỉ mềm."",
+      inhale:"Hít chấp nhận", hold:"Nhìn giới hạn", exhale:"Chuyển sang xấp xỉ",
+      doneEmblem:"≈", doneSub:"Giới hạn đã được nhận ra. Xấp xỉ đủ gần cũng là một lời giải.",
+      counterpartId:"14-galois",
+      p:6
+    },
+    {
+      id:"39-galois-draft", num:"39", name:"Galois · Phác thảo",
+      quote:""Đừng đợi mọi thứ chín muồi hoàn hảo; đôi khi một phác thảo táo bạo mở đường cho cả thế hệ."",
+      inhale:"Hít táo bạo", hold:"Phác thảo ngay", exhale:"Bỏ hoàn hảo",
+      doneEmblem:"✏", doneSub:"Phác thảo đã được vẽ. Táo bạo hơn hoàn hảo khi thời gian có hạn.",
+      counterpartId:"15-gauss",
+      p:7
+    },
+    {
+      id:"40-hardy", num:"40", name:"G. H. Hardy",
+      quote:""Trực giác lóe sáng cần một người bạn nghiêm ngặt để kiểm chứng và đứng vững trước thực tế."",
+      inhale:"Hít trực giác", hold:"Kiểm chứng", exhale:"Đứng vững",
+      doneEmblem:"✓", doneSub:"Trực giác đã được kiểm chứng. Hai người bạn đã làm nên điều lớn hơn.",
+      counterpartId:"16-ramanujan",
+      p:7
+    },
+    {
+      id:"41-church", num:"41", name:"Alonzo Church",
+      quote:""Thay vì nhích từng trạng thái rời rạc, hãy nhìn toàn bộ quy trình như một dòng biến đổi xuyên suốt."",
+      inhale:"Hít dòng liên tục", hold:"Nhìn toàn quy trình", exhale:"Chảy xuyên suốt",
+      doneEmblem:"λ", doneSub:"Dòng biến đổi đã được nhìn thấy toàn bộ. Liên tục và trọn vẹn.",
+      counterpartId:"17-turing",
+      p:1
+    },
+    {
+      id:"42-nash", num:"42", name:"John Nash",
+      quote:""Không phải cuộc chơi nào cũng thắng–thua tổng bằng không; hãy tìm điểm cân bằng để các bên cùng đứng."",
+      inhale:"Hít để hợp tác", hold:"Tìm cân bằng", exhale:"Cùng đứng vững",
+      doneEmblem:"◈", doneSub:"Điểm Nash đã được tìm. Không ai cần thua để ai đó thắng.",
+      counterpartId:"18-vonneumann",
+      p:5
+    },
+    {
+      id:"43-peano", num:"43", name:"Giuseppe Peano",
+      quote:""Khi đã ở điểm 0 đủ lâu, hãy mạnh dạn đặt bước chân số 1 đầu tiên để khởi động chuỗi mới."",
+      inhale:"Hít để khởi động", hold:"Điểm 1 đầu tiên", exhale:"Chuỗi bắt đầu",
+      doneEmblem:"①", doneSub:"Bước số 1 đã được đặt. Từ đây, mọi số tự nhiên đều đến được.",
+      counterpartId:"19-brahmagupta",
+      p:3
+    },
+    {
+      id:"44-fermat-dialog", num:"44", name:"Fermat · Đối thoại",
+      quote:""Đừng ôm rủi ro một mình; hãy đem bài toán bất định ra đối thoại với người đồng hành tin cậy."",
+      inhale:"Hít để chia sẻ", hold:"Đối thoại", exhale:"Bớt gánh một mình",
+      doneEmblem:"↔", doneSub:"Bài toán đã được đặt lên bàn hai người. Nhẹ hơn khi không một mình.",
+      counterpartId:"20-pascal",
+      p:0
+    },
+    {
+      id:"45-wiles", num:"45", name:"Andrew Wiles",
+      quote:""Một ghi chú ngắn bên lề đôi khi cần nhiều năm kiên nhẫn ghép nối mới thành công trình trọn vẹn."",
+      inhale:"Hít kiên nhẫn", hold:"Ghép từng mảnh", exhale:"Tin vào thời gian",
+      doneEmblem:"◇", doneSub:"Từng mảnh đã được ghép lại. Kiên nhẫn dài hơi hơn trí thông minh.",
+      counterpartId:"21-fermat",
+      p:1
+    },
+    {
+      id:"46-kronecker", num:"46", name:"Leopold Kronecker",
+      quote:""Đừng để vô hạn làm choáng ngợp; hãy quay về những con số hữu hạn mà bàn tay chạm tới được ngay lúc này."",
+      inhale:"Hít hữu hạn", hold:"Chạm điều thực", exhale:"Bỏ bớt vô hạn",
+      doneEmblem:"ℕ", doneSub:"Những con số hữu hạn đã đủ. Bàn tay chạm tới được là đủ thực.",
+      counterpartId:"22-cantor",
+      p:6
+    },
+    {
+      id:"47-tarski", num:"47", name:"Alfred Tarski",
+      quote:""Khi hệ thống bên trong tự mâu thuẫn, hãy bước ra ngoài đứng ở tầng cao hơn để nhìn lại toàn cảnh."",
+      inhale:"Hít để bước ra", hold:"Nhìn từ tầng cao", exhale:"Thấy toàn cảnh",
+      doneEmblem:"⊤", doneSub:"Góc nhìn tầng trên đã được lấy. Mâu thuẫn bên trong trở nên nhỏ hơn.",
+      counterpartId:"23-godel",
+      p:6
+    },
+    {
+      id:"48-babbage", num:"48", name:"Charles Babbage",
+      quote:""Ý tưởng thi ca cần một bộ máy thực thi chắc chắn, đều đặn từng bánh răng mới chạm tới đời sống."",
+      inhale:"Hít để vận hành", hold:"Bánh răng quay đều", exhale:"Chạm đời sống",
+      doneEmblem:"⚙", doneSub:"Bộ máy đã quay. Ý tưởng đã có hình hài trong thế giới thực.",
+      counterpartId:"24-lovelace",
+      p:7
+    },
   ];
 
   // ============================================================
-  // 2. THEME ENGINE — random, chống trùng lần trước
+  // 2. THEME ENGINE — random, chống trùng, anti-repeat localStorage
   // ============================================================
   let currentTheme = THEMES[0];
+  const STORAGE_KEY = "last_426_theme";
+
+  function getPalette(theme) {
+    return PALETTES[theme.p % PALETTES.length];
+  }
 
   function applyTheme(theme) {
     currentTheme = theme;
+    const pal = getPalette(theme);
     const r = document.documentElement;
-    r.style.setProperty("--bg-color",        theme.bg);
-    r.style.setProperty("--surface-color",   theme.surface);
-    r.style.setProperty("--accent-color",     theme.accent);
-    r.style.setProperty("--text-primary",     theme.textPrimary);
-    r.style.setProperty("--text-secondary",   theme.textSecondary);
-    r.style.setProperty("--border-color",     theme.border);
+    r.style.setProperty("--bg-color",        pal.bg);
+    r.style.setProperty("--surface-color",   pal.surface);
+    r.style.setProperty("--accent-color",     pal.accent);
+    r.style.setProperty("--text-primary",     pal.textPrimary);
+    r.style.setProperty("--text-secondary",   pal.textSecondary);
+    r.style.setProperty("--border-color",     pal.border);
 
     const el = id => document.getElementById(id);
-    if (el("themeName"))   el("themeName").textContent   = theme.name;
-    if (el("introQuote"))  el("introQuote").textContent  = theme.quote;
-    if (el("doneEmblem"))  el("doneEmblem").textContent  = theme.doneEmblem;
-    if (el("doneSub"))     el("doneSub").textContent     = theme.doneSub;
+    if (el("themeName"))  el("themeName").textContent  = theme.num + " · " + theme.name;
+    if (el("introQuote")) el("introQuote").textContent = theme.quote;
+    if (el("doneEmblem")) el("doneEmblem").textContent = theme.doneEmblem;
+    if (el("doneSub"))    el("doneSub").textContent    = theme.doneSub;
+
+    // Hiển thị mệnh đề đối trọng trong done overlay
+    const counterpart = THEMES.find(t => t.id === theme.counterpartId);
+    if (counterpart && el("donePropText")) {
+      const label = theme.num <= 24 ? "Đối trọng " + counterpart.num + " · " + counterpart.name : "Trụ cột " + counterpart.num + " · " + counterpart.name;
+      el("donePropText").textContent = label + ": " + counterpart.quote;
+    }
 
     if (isRunning) updatePhaseText(PHASES[phaseIndex]);
 
-    try { localStorage.setItem("last_426_theme", theme.id); } catch(e) {}
+    try { localStorage.setItem(STORAGE_KEY, theme.id); } catch(e) {}
   }
 
   function pickTheme(excludeId) {
     const pool = THEMES.filter(t => t.id !== excludeId);
-    return (pool.length ? pool : THEMES)[Math.floor(Math.random() * (pool.length || THEMES.length))];
+    return pool[Math.floor(Math.random() * pool.length)];
   }
 
   document.addEventListener("DOMContentLoaded", function() {
     let last = null;
-    try { last = localStorage.getItem("last_426_theme"); } catch(e) {}
+    try { last = localStorage.getItem(STORAGE_KEY); } catch(e) {}
     applyTheme(pickTheme(last));
   });
 
@@ -547,7 +926,7 @@
   });
 
   // ============================================================
-  // 4. ÂM THANH — FM Synthesis (chuông bát ấm hơn sine đơn)
+  // 4. ÂM THANH — FM Synthesis
   // ============================================================
   let soundEnabled = true;
   let audioCtx = null;
@@ -568,21 +947,16 @@
         const gain = ctx.createGain();
         const mod  = ctx.createOscillator();
         const modG = ctx.createGain();
-
-        // FM: modulator → modGain → osc.frequency
         mod.frequency.value  = freq * 2.756;
         modG.gain.value      = freq * 1.4;
         mod.connect(modG);
         modG.connect(osc.frequency);
-
         osc.type = "sine";
         osc.frequency.setValueAtTime(freq, now);
-
         const vol = volume / (i + 1);
         gain.gain.setValueAtTime(0.001, now + i * 0.015);
         gain.gain.exponentialRampToValueAtTime(vol, now + i * 0.015 + 0.04);
         gain.gain.exponentialRampToValueAtTime(0.0001, now + i * 0.015 + 2.6);
-
         osc.connect(gain);
         gain.connect(ctx.destination);
         mod.start(now + i * 0.015);
@@ -659,8 +1033,8 @@
   const startStopBtn = document.getElementById("startStopBtn");
 
   function updatePhaseText(ph) {
-    phaseLabel.textContent = currentTheme[ph.key];
-    phaseSub.textContent   = ph.sub;
+    if (phaseLabel) phaseLabel.textContent = currentTheme[ph.key];
+    if (phaseSub)   phaseSub.textContent   = ph.sub;
   }
 
   function updateProgress() {
@@ -673,16 +1047,20 @@
     phaseIndex = idx;
     const ph = PHASES[idx];
     secLeft = ph.dur;
-
     updatePhaseText(ph);
-    timerDisplay.textContent = secLeft;
+    if (timerDisplay) timerDisplay.textContent = secLeft;
 
-    orbRing.style.transition = `transform ${ph.dur}s ease-in-out, border-color 0.8s ease`;
-    orbRing.style.transform  = `scale(${ph.scale})`;
-    orbGlow.style.transition = `opacity ${ph.dur}s ease-in-out`;
-    orbGlow.style.opacity    = ph.glowOpacity;
+    const pal = getPalette(currentTheme);
+    if (orbRing) {
+      orbRing.style.transition = `transform ${ph.dur}s ease-in-out, border-color 0.8s ease`;
+      orbRing.style.transform  = `scale(${ph.scale})`;
+    }
+    if (orbGlow) {
+      orbGlow.style.transition = `opacity ${ph.dur}s ease-in-out`;
+      orbGlow.style.opacity    = ph.glowOpacity;
+    }
 
-    playBell(currentTheme.bellFreqs);
+    playBell(pal.bellFreqs);
     speak(currentTheme[ph.key]);
 
     if (ph.key === "inhale")      vibrate([60]);
@@ -694,17 +1072,16 @@
     totalSecs++;
     secLeft--;
     if (secLeft > 0) {
-      timerDisplay.textContent = secLeft;
+      if (timerDisplay) timerDisplay.textContent = secLeft;
       return;
     }
     const next = (phaseIndex + 1) % PHASES.length;
     if (next === 0) {
       cycleCount++;
-      cycleCounter.textContent = targetCycles
+      if (cycleCounter) cycleCounter.textContent = targetCycles
         ? `Vòng thở: ${cycleCount} / ${targetCycles}`
         : `Vòng thở: ${cycleCount}`;
       updateProgress();
-
       if (targetCycles > 0 && cycleCount >= targetCycles) {
         finishSession();
         return;
@@ -717,8 +1094,8 @@
     isRunning = true;
     cycleCount = 0;
     totalSecs  = 0;
-    cycleCounter.textContent = targetCycles ? `Vòng thở: 0 / ${targetCycles}` : `Vòng thở: 0`;
-    startStopBtn.textContent = "Tạm dừng";
+    if (cycleCounter) cycleCounter.textContent = targetCycles ? `Vòng thở: 0 / ${targetCycles}` : `Vòng thở: 0`;
+    if (startStopBtn) startStopBtn.textContent = "Tạm dừng";
     updateProgress();
     enterPhase(0);
     acquireWakeLock();
@@ -730,42 +1107,45 @@
     clearInterval(timerInterval);
     if ("speechSynthesis" in window) window.speechSynthesis.cancel();
     releaseWakeLock();
-    orbRing.style.transition = "transform 0.6s ease";
-    orbRing.style.transform  = "scale(1)";
-    orbGlow.style.opacity    = 0;
-    phaseLabel.textContent   = "Tạm nghỉ";
-    timerDisplay.textContent = "4-2-6";
-    phaseSub.textContent     = "Bấm để tiếp tục nhịp";
+    if (orbRing) { orbRing.style.transition = "transform 0.6s ease"; orbRing.style.transform = "scale(1)"; }
+    if (orbGlow) orbGlow.style.opacity = 0;
+    if (phaseLabel) phaseLabel.textContent   = "Tạm nghỉ";
+    if (timerDisplay) timerDisplay.textContent = "4-2-6";
+    if (phaseSub) phaseSub.textContent       = "Bấm để tiếp tục nhịp";
     if (!keepCount) {
-      cycleCounter.textContent = "Vòng thở: 0";
+      if (cycleCounter) cycleCounter.textContent = "Vòng thở: 0";
       progressBar.style.width  = "0%";
     }
-    startStopBtn.textContent = "Tiếp tục thở";
+    if (startStopBtn) startStopBtn.textContent = "Tiếp tục thở";
   }
 
   function finishSession() {
     stopBreathing(true);
     const mins = Math.round(totalSecs / 60);
-    document.getElementById("doneSub").textContent =
-      currentTheme.doneSub + ` (${cycleCount} vòng · ${mins} phút)`;
-    document.getElementById("doneOverlay").classList.add("show");
+    const doneSub = document.getElementById("doneSub");
+    if (doneSub) doneSub.textContent = currentTheme.doneSub + ` (${cycleCount} vòng · ${mins} phút)`;
+    const overlay = document.getElementById("doneOverlay");
+    if (overlay) overlay.classList.add("show");
     speak("Hoàn thành. " + currentTheme.doneSub);
     vibrate([100, 50, 100, 50, 200]);
   }
 
-  startStopBtn.addEventListener("click", () => {
+  if (startStopBtn) startStopBtn.addEventListener("click", () => {
     isRunning ? stopBreathing() : startBreathing();
   });
 
-  document.getElementById("doneBtn").addEventListener("click", () => {
-    document.getElementById("doneOverlay").classList.remove("show");
-    cycleCounter.textContent = "Vòng thở: 0";
+  const doneBtn = document.getElementById("doneBtn");
+  if (doneBtn) doneBtn.addEventListener("click", () => {
+    const overlay = document.getElementById("doneOverlay");
+    if (overlay) overlay.classList.remove("show");
+    if (cycleCounter) cycleCounter.textContent = "Vòng thở: 0";
     progressBar.style.width  = "0%";
-    startStopBtn.textContent = "Bắt đầu thở";
+    if (startStopBtn) startStopBtn.textContent = "Bắt đầu thở";
   });
 
   // Target chips
-  document.getElementById("targetSelector").addEventListener("click", e => {
+  const targetSelector = document.getElementById("targetSelector");
+  if (targetSelector) targetSelector.addEventListener("click", e => {
     const chip = e.target.closest(".target-chip");
     if (!chip) return;
     document.querySelectorAll(".target-chip").forEach(c => c.classList.remove("active"));
@@ -779,18 +1159,18 @@
   const voiceBtn = document.getElementById("voiceToggleBtn");
   const vibBtn   = document.getElementById("vibToggleBtn");
 
-  soundBtn.addEventListener("click", () => {
+  if (soundBtn) soundBtn.addEventListener("click", () => {
     soundEnabled = !soundEnabled;
     soundBtn.textContent = soundEnabled ? "🔔 Chuông" : "🔕 Chuông";
   });
 
-  voiceBtn.addEventListener("click", () => {
+  if (voiceBtn) voiceBtn.addEventListener("click", () => {
     voiceEnabled = !voiceEnabled;
     if (!voiceEnabled && "speechSynthesis" in window) window.speechSynthesis.cancel();
     voiceBtn.textContent = voiceEnabled ? "🗣 Giọng đọc" : "🔇 Giọng đọc";
   });
 
-  vibBtn.addEventListener("click", () => {
+  if (vibBtn) vibBtn.addEventListener("click", () => {
     vibEnabled = !vibEnabled;
     vibBtn.textContent = vibEnabled ? "📳 Rung" : "📴 Rung";
   });
